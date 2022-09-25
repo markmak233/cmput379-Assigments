@@ -77,9 +77,11 @@ int main(int argc,char *argv[]){
     //while not requested exit keeping looping
     while (!(exit_state)){
         //septarting the code by space
+        cout << endl << "SHELL379: ";
         string usr_instruct;
         getline(cin, usr_instruct);
 
+        // create a stream for sepration
         vector<string> usr_s1;
         stringstream arguss(usr_instruct);
         
@@ -87,19 +89,27 @@ int main(int argc,char *argv[]){
             while(arguss >> arg) {
                 usr_s1.push_back(arg);
         }
-        for (string x:usr_s1){
-            cout << x << endl;
+
+
+        cout << "code dispaying:" << endl;
+
+        for (int ix=0; ix<usr_s1.size(); ix++){
+        cout << ix << " " <<usr_s1[ix] << endl;
         }
+        cout << endl;
+
         
 
 
-
-        if ((argc==2) && (str_cp_argv[1] == "jobs")){
+        if ((usr_s1.size()==1) && (usr_s1[0] == "jobs")){
             printf("show current");
             show_jobs_sum();
         }
-        else if ((argc>=3) && (str_cp_argv[argc-1]== "&")){
-            shell_running(argc,str_cp_argv);
+        else if ((usr_s1.size()>=2) && (usr_s1[usr_s1.size()-1]== "&")){
+            shell_running(argc,usr_s1);
+        }
+        else if ((usr_s1.size()==1) && (usr_s1[0]== "exit")){
+            exit_state=1;
         }
 
     }
