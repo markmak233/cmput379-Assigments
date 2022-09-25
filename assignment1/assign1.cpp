@@ -1,57 +1,106 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <stdio.h>
+#include <errno.h>
 #include <vector>
+#include<sstream>
+
+#include <unistd.h>
+#include <sys/types.h>
+
+#include <linux/unistd.h>
+#include <linux/kernel.h>
+#include <sys/sysinfo.h>
+
 #include "assign1.h"
+
+
+
 using namespace std;
 
-
-int input_trans(string usr_input){
-    // detacting if the length is out
-    if (size(usr_input)>MAX_LENGTH*sizeof(char))
-    {
-        cout << "length max out of "<< MAX_LENGTH*sizeof(char) << "."<< endl;
-        return 2;
+long get_sys_up_time(){
+    //https://stackoverflow.com/questions/1540627/what-api-do-i-call-to-get-the-system-uptime
+    struct sysinfo s_info;
+    int error = sysinfo(&s_info);
+    if(error != 0){
+        cout << "code error" << error << endl;
     }
-    // seprating into different args
-    vector <string> str_args;
-    string cur_args;
-    for (int i=0;i<size(usr_input);i++){
-        cout << usr_input[i] << endl;
-
-        // space detected save it to a vector
-        if (stoi(usr_input[i])==" "){
-            cout << cur_args << endl;
-            cur_args.clear();
-        }
-    }
-
-
-    return 1;
+    return s_info.uptime;
 }
 
+void get_states(){
+    pid_t subpid = fork();
+    pid_t pid=fork();
+    fork();
+    switch(subpid){
+        case -1:
+            cout<< "Process = \t 0 active" << endl;
+            break;
 
-int main(){
+        case 0:
+            subpid = getpid();
+            cout << "pid=" <<pid << endl;
+            
+            break;
+        default:
+            cout << "sys time = \t" << (get_sys_up_time()/1000) << " second."<< endl;
+            break;
+    }
+    return;
+}
+
+void show_jobs_sum(){
+    cout << "jopbs display" << endl;
+    get_states();
+    
+
+
+
+    //cout << "sys time = \t" << (get_sys_up_time()/1000) << " second."<< endl;
+
+    return;
+}
+
+void shell_running(int argc,vector<string> str_cp_argv){
+    printf("running shell");
+    string r_str="";
+    for (int i=1;i<argc-1;i++){
+        r_str=r_str+str_cp_argv[i];
+    }
+    cout << r_str << endl;
+}
+
+int main(int argc,char *argv[]){
 //this programme start a loop, it stop until user ask to exit the programme
-    int exit_stat=0;
+    int exit_state=0;
+    //while not requested exit keeping looping
+    while (!(exit_state)){
+        //septarting the code by space
+        string usr_instruct;
+        getline(cin, usr_instruct);
 
-    // 0 for continue loop
-    // 1 for exit
-    // 2 for unidentified input
-    while (!exit_stat){
-        string usr_input; // 100 size of char
-        cout << "SHELL 379: ";
-        getline( cin , usr_input );
-        //istringstream iss(usr_input );
-
-        input_trans(usr_input);
-        if (exit_stat==2) {
-            cout << "unidentified input";
+        vector<string> usr_s1;
+        stringstream arguss(usr_instruct);
+        
+        string arg;
+            while(arguss >> arg) {
+                usr_s1.push_back(arg);
         }
-        if (usr_input == "exit") {
-            exit_stat = 1;
+        for (string x:usr_s1){
+            cout << x << endl;
         }
+        
 
+
+
+        if ((argc==2) && (str_cp_argv[1] == "jobs")){
+            printf("show current");
+            show_jobs_sum();
+        }
+        else if ((argc>=3) && (str_cp_argv[argc-1]== "&")){
+            shell_running(argc,str_cp_argv);
+        }
 
     }
     return 0;
