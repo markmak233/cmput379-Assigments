@@ -1,27 +1,17 @@
-#include <iostream>
-#include <string>
-#include <fstream>
-#include <stdio.h>
-#include <errno.h>
-#include <vector>
-#include<sstream>
 
-#include <unistd.h>
-#include <sys/types.h>
-
-#include <linux/unistd.h>
-#include <linux/kernel.h>
-#include <sys/sysinfo.h>
 
 #include "assign1.h"
 
+// remember split in to 3 file
+map <pid_t,piddict> pinstru;
 
 
-using namespace std;
+
 
 long get_sys_up_time(){
     //https://stackoverflow.com/questions/1540627/what-api-do-i-call-to-get-the-system-uptime
     struct sysinfo s_info;
+    
     int error = sysinfo(&s_info);
     if(error != 0){
         cout << "code error" << error << endl;
@@ -31,8 +21,6 @@ long get_sys_up_time(){
 
 void get_states(){
     pid_t subpid = fork();
-    pid_t pid=fork();
-    fork();
     switch(subpid){
         case -1:
             cout<< "Process = \t 0 active" << endl;
@@ -40,13 +28,15 @@ void get_states(){
 
         case 0:
             subpid = getpid();
-            cout << "pid=" <<pid << endl;
+            cout << "pid=" <<subpid << endl;
             
             break;
         default:
-            cout << "sys time = \t" << (get_sys_up_time()/1000) << " second."<< endl;
+            kill(subpid, SIGKILL);
             break;
     }
+    kill(subpid, SIGKILL);
+
     return;
 }
 
@@ -62,18 +52,85 @@ void show_jobs_sum(){
     return;
 }
 
-void shell_running(int argc,vector<string> str_cp_argv){
+
+void kill_process(int argc,vector<std::string> str_cp_argv){
+    // kill a process if they exist
+    string temp =str_cp_argv[1];
+    int pidnum = stoi(temp);
+    if (pinstru.find(pidnum) == pinstru.end()){
+        cout << "dne pid"<< endl;
+        return;
+    }
+    kill(pidnum, SIGKILL);
+    pinstru.erase(pidnum);
+}
+
+void resume_process(int argc,vector<string> str_cp_argv){
+    // resume a process if they exist
+    string temp =str_cp_argv[1];
+    int pidnum = stoi(temp);
+    if (pinstru.find(pidnum) == pinstru.end()){
+        cout << "dne pid"<< endl;
+        return;
+    }
+    kill(pidnum, SIGCONT);
+    pinstru[pidnum].state = 'S';
+    return;
+}
+
+void suspend_process(int argc,vector<string> str_cp_argv){
+    // suspand a process if they exist
+    string temp =str_cp_argv[1];
+    int pidnum = stoi(temp);
+    if (pinstru.find(pidnum) == pinstru.end()){
+        cout << "dne pid"<< endl;
+        return;
+    }
+    kill(pidnum, SIGSTOP);
+    pinstru[pidnum].state = 'R';
+    return;
+}
+
+void wait_process(int argc,vector<string> str_cp_argv){
+    // suspand a process if they exist
+    string temp =str_cp_argv[1];
+    int pidnum = stoi(temp);
+    if (pinstru.find(pidnum) == pinstru.end()){
+        cout << "dne pid"<< endl;
+        return;
+    }
+    //https://stackoverflow.com/questions/21248840/example-of-waitpid-in-use
+    waitpid(pidnum,0,WUNTRACED);
+    return;
+}
+
+void sleep_process(int argc,vector<string> str_cp_argv){
+    int timenum = stoi(str_cp_argv[1]);
+    unsigned int msecond = 1*10^6;
+    cout << "sleep for "<< timenum << endl;
+    sleep(timenum);
+    return;
+}
+
+void shell_running(int argc,int bg,vector<string> str_cp_argv){
     printf("running shell");
     string r_str="";
-    for (int i=1;i<argc-1;i++){
-        r_str=r_str+str_cp_argv[i];
+    if (bg == 1){
+        for (int i=1;i<argc-1;i++){
+            r_str=r_str+str_cp_argv[i];
+        }
+    }
+    else{
+        for (int i=1;i<argc;i++){
+            r_str=r_str+str_cp_argv[i];
+        }
     }
     cout << r_str << endl;
 }
-
 int main(int argc,char *argv[]){
 //this programme start a loop, it stop until user ask to exit the programme
     int exit_state=0;
+    
     //while not requested exit keeping looping
     while (!(exit_state)){
         //septarting the code by space
@@ -105,11 +162,29 @@ int main(int argc,char *argv[]){
             printf("show current");
             show_jobs_sum();
         }
-        else if ((usr_s1.size()>=2) && (usr_s1[usr_s1.size()-1]== "&")){
-            shell_running(argc,usr_s1);
+        else if ((usr_s1.size()>=2) && (usr_s1[0]=="kill")){
+            kill_process(usr_s1.size(),usr_s1);
+        }
+        else if ((usr_s1.size()>=2) && (usr_s1[0]=="resume")){
+            resume_process(usr_s1.size(),usr_s1);
+        }
+        else if ((usr_s1.size()>=2) && (usr_s1[0]=="suspend")){
+            suspend_process(usr_s1.size(),usr_s1);
+        }
+        else if ((usr_s1.size()>=2) && (usr_s1[0]=="wait")){
+            wait_process(usr_s1.size(),usr_s1);
+        }
+         else if ((usr_s1.size()>=2) && (usr_s1[0]=="sleep")){
+            sleep_process(usr_s1.size(),usr_s1);
         }
         else if ((usr_s1.size()==1) && (usr_s1[0]== "exit")){
             exit_state=1;
+        }
+        else if ((usr_s1.size()>=2) && (usr_s1[usr_s1.size()-1]== "&")){
+            shell_running(argc,1,usr_s1);
+        }
+        else{
+            shell_running(argc,0,usr_s1);
         }
 
     }

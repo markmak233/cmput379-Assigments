@@ -1,6 +1,28 @@
 //
 // Created by birdd on 9/20/2022.
 //
+
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <stdio.h>
+#include <errno.h>
+#include <vector>
+#include <sstream>
+#include <string>
+#include <map>
+
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+
+#include <linux/unistd.h>
+#include <linux/kernel.h>
+#include <sys/sysinfo.h>
+#include <signal.h>
+
+using namespace std;
+
 #pragma once
 #ifndef ASSIGN1_CPP_ASSIGN1_H
 #define ASSIGN1_CPP_ASSIGN1_H
@@ -8,10 +30,13 @@
 #define MAX_ARGS 7          // Max number of arguments to a command
 #define MAX_LENGTH 20       // Max # of characters in an arguements
 #define MAX_PT_ENTRIES 32   // Max entries in the Process Table
+#endif //ASSIGN1_CPP_ASSIGN1_H
 
-
-class SHELLL379 {
+struct piddict {
+    pid_t npid;
+    char state;
+    string cmd;
 };
 
 
-#endif //ASSIGN1_CPP_ASSIGN1_H
+
