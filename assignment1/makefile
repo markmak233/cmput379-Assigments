@@ -1,8 +1,16 @@
-makefile:
+CC := g++
+CFLAGS := -std=c++17
+EXTO := shell379
+
 all:assign1
 
-clean:
--rm shell379
+assign1: ./assign1.cpp
+	${CC}  -o $(EXTO) ./assign1.cpp ./pcontrol.cpp ./pfind.cpp
 
-assign1:assign1.cpp
-g++ ./assign1.cpp -o shell379
+
+submition:
+	tar -czvf assignment1.tar makefile *.h *.cpp
+
+clean:
+	-rm shell379
+
