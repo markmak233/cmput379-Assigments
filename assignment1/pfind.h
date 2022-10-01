@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include <string>
 #include <cstring>
 #include <fstream>
@@ -8,6 +9,8 @@
 #include <sstream>
 #include <string>
 #include <map>
+
+#include <bits/stdc++.h>
 
 #include <unistd.h>
 #include <sys/types.h>

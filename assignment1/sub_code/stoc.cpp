@@ -9,6 +9,8 @@
 #include <string>
 #include <map>
 
+#include <bits/stdc++.h>
+
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/wait.h>
@@ -29,31 +31,20 @@ int main(){
     bool bg=0;
     int argc=str_cp_argv.size();
 
-
-
-    char *cp_argv[40];
-    int cp_c=0;
-    for (int i=1;i<argc;i++){
-        cout << "index "<< i << " 1" << endl; //1
+    vector<string> modified_argv;
+    for (int i=0;i<argc;i++){
         if (bg==1 && i==argc-1){
-            cout << "bg pass" << endl;
             continue;
         }else if(str_cp_argv[i][0]=='>' || str_cp_argv[i][0]=='<'){
-            cout << "fname" << endl;
             continue;
         }
-        cout << "index "<< i <<" 2" <<endl; //2
-        const char* temp=str_cp_argv[i].c_str();
-        cout << "index "<< i <<" 3" <<endl; //3
-        cout << "cpc: "<< cp_c << endl;
-        strcpy(cp_argv[cp_c],temp);
-        cout << "index "<< i <<" 4" <<endl; //4
-        cp_c=cp_c+4*str_cp_argv[i].length();
-        cout << "index "<< i <<" 5" <<endl; //5
+        modified_argv.push_back(str_cp_argv[i]);
     }
 
-    cout << "checking "<<endl;
-    for (int i=0;i<40;i++){
-        cout<< cp_argv[i] << endl;
-    }
-    }
+    vector<char*> pvec(str_cp_argv.size());
+    std::transform(str_cp_argv.begin(),str_cp_argv.end(),pvec.begin(),[](auto& str){
+    return &str[0];
+   });
+
+    execvp(str_cp_argv[0].c_str(),pvec.data());
+}

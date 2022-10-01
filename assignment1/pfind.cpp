@@ -5,7 +5,7 @@ using namespace std;
 
 
 void shell_running(int argc,int bg,vector<string> str_cp_argv,map <pid_t,pidinfo> *piddict){
-    printf("running shell\n");
+    // running shell
     string r_str="";
     bool opt=0;
     string fname;
@@ -13,7 +13,7 @@ void shell_running(int argc,int bg,vector<string> str_cp_argv,map <pid_t,pidinfo
         
         if (bg==1 && i==argc-1){
             continue;
-        }else if(str_cp_argv[i][0]=='>' || str_cp_argv[i][0]=='<'){
+        }else if(str_cp_argv[i][0]=='>' ){
             fname=str_cp_argv[i].erase(0,1);
             opt=1;
             continue;
@@ -23,62 +23,65 @@ void shell_running(int argc,int bg,vector<string> str_cp_argv,map <pid_t,pidinfo
         }
         r_str=r_str+str_cp_argv[i];
     }
-    cout <<"length "<< argc << "cmd: " <<r_str<< endl;
 
     pid_t pid = fork();
-    cout << "running pid: "<< pid<<endl;;
     if(pid<0){
-        printf("creating child failed");
+        cout << "creating child failed" << endl;
         _exit(EXIT_FAILURE);
 
     }
 
     else if(pid==0){
-        cout << "running children" << endl;
         //child
+
+        //https://stackoverflow.com/questions/40576003/ignoring-warning-wunused-result
          if (opt){
-            freopen(fname.c_str(),"w",stdout);
+            (void)!freopen(fname.c_str(),"w",stdout);
         }
 
-        cout<< "instru " << str_cp_argv[0].c_str() << endl;
 
-        //converting cmd to char
-        char *cp_argv[40];
-        int cp_c=0;
-        for (int i=1;i<argc;i++){
-            cout << "index "<< i <<endl; //1
+        
+        vector<string> modified_argv;
+        for (int i=0;i<argc;i++){
             if (bg==1 && i==argc-1){
-                cout << "bg pass" << endl;
                 continue;
-            }else if(str_cp_argv[i][0]=='>' || str_cp_argv[i][0]=='<'){
-                cout << "fname" << endl;
+            }else if(str_cp_argv[i][0]=='>' ){
                 continue;
+            }else if(str_cp_argv[i][0]=='<' ){
+                // read the file and input it into the argv(s)
+                ifstream ipfile (str_cp_argv[i].erase(0,1).c_str());
+                string filestring,perstr;
+                if (getline(ipfile,perstr)){
+                    filestring=filestring+perstr+"\n";
+                }
+                modified_argv.push_back(filestring);
+                ipfile.close();
+                
+            }else{
+                modified_argv.push_back(str_cp_argv[i]);
             }
-            cout << "index "<< i <<endl;
-            const char* temp=str_cp_argv[i].c_str();
-            strcpy(cp_argv[cp_c],temp);
-            cout << "index "<< i <<endl; //2
-            cp_c=cp_c+str_cp_argv[i].length()*2;
-            cout << "index "<< i <<endl; //3
         }
+        // convert vector string to char ** 
+        // https://stackoverflow.com/questions/71302334/convert-vectorstring-to-char-for-use-in-execvp
+        vector<char*> pvec(str_cp_argv.size());
+        std::transform(modified_argv.begin(),modified_argv.end(),pvec.begin(),[](auto& str){
+        return &str[0];
+        });
 
-        cout << "checking "<<endl;
-        //for (int i=1;i<cp_c+1;i++){
-        //    cout << i << ":ag-> "<< cp_argv[i]<< endl;
-        //}
-       
-        //https://www.geeksforgeeks.org/exec-family-of-functions-in-c/
-        if(execvp(str_cp_argv[0].c_str(),cp_argv)<0){
-            cout << "run failed";
+        // run the programme
+        // https://www.geeksforgeeks.org/exec-family-of-functions-in-c/
+        if(execvp(str_cp_argv[0].c_str(),pvec.data())<0){
+            cout << "run failed,exit unnormaly." << endl;;
             _exit(EXIT_FAILURE);
         }
 
-        fflush(stdout);
-
+        if (!opt){
+            fflush(stdout);
+        }
         
     }else{
         //parent
-        cout << "running parent" << endl;
+        //cout << "running parent" << endl;
 
         struct pidinfo temppid;
         temppid.command=r_str;
