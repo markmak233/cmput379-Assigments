@@ -30,4 +30,4 @@ struct pidinfo{
 };
 
 #endif
-void shell_running(int argc,int bg,std::vector<std::string> str_cp_argv,const std::map <pid_t,pidinfo> *piddict);
+void shell_running(int argc,int bg,std::vector<std::string> str_cp_argv,std::map <pid_t,pidinfo> *piddict);

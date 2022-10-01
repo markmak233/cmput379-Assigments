@@ -27,10 +27,10 @@
 
 
 
-void kill_process(int argc,std::vector<std::string> str_cp_argv,const std::map <pid_t,pidinfo> *piddict);
-void resume_process(int argc,std::vector<std::string> str_cp_argv,const std::map <pid_t,pidinfo> *piddict);
-void suspend_process(int argc,std::vector<std::string> str_cp_argv,const std::map <pid_t,pidinfo> *piddict);
-void wait_process(int argc,std::vector<std::string> str_cp_argv,const std::map <pid_t,pidinfo> *piddict);
+void kill_process(int argc,std::vector<std::string> str_cp_argv,std::map <pid_t,pidinfo> *piddict);
+void resume_process(int argc,std::vector<std::string> str_cp_argv,std::map <pid_t,pidinfo> *piddict);
+void suspend_process(int argc,std::vector<std::string> str_cp_argv,std::map <pid_t,pidinfo> *piddict);
+void wait_process(int argc,std::vector<std::string> str_cp_argv,std::map <pid_t,pidinfo> *piddict);
 void sleep_process(int argc,std::vector<std::string> str_cp_argv);
 
 

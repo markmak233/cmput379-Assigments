@@ -1,11 +1,11 @@
 CC := g++
-CFLAGS := -std=c++17
+CFLAGS := -Wall -O2
 EXTO := shell379
 
 all:assign1
 
 assign1: ./assign1.cpp
-	${CC}  -o $(EXTO) ./assign1.cpp ./pcontrol.cpp ./pfind.cpp
+	${CC} ${CFLAGS} -o $(EXTO) ./assign1.cpp ./pcontrol.cpp ./pfind.cpp
 
 
 submition:

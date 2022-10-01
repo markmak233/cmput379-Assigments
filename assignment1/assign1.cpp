@@ -55,7 +55,7 @@ int main(int argc,char *argv[]){
 //this programme start a loop, it stop until user ask to exit the programme
     int exit_state=0;
     map <pid_t,pidinfo> *piddict;
-    piddict= new map <pid_t,pidinfo>();
+    piddict= new map <pid_t,pidinfo>;
     //while not requested exit keeping looping
     while (!(exit_state)){
         //septarting the code by space
@@ -104,12 +104,13 @@ int main(int argc,char *argv[]){
             exit_state=1;
         }
         else if ((usr_s1.size()>=2) && (usr_s1[usr_s1.size()-1]== "&")){
-            shell_running(argc,1,usr_s1,piddict);
+            shell_running(usr_s1.size(),1,usr_s1,piddict);
         }
-        else{
-            shell_running(argc,0,usr_s1,piddict);
+        else if (usr_s1.size()>0){
+            shell_running(usr_s1.size(),0,usr_s1,piddict);
         }
 
+        usr_instruct.clear();
         usr_s1.clear();
 
     }
