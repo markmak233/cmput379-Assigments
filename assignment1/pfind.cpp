@@ -100,27 +100,37 @@ void current_process(map <pid_t,pidinfo> *piddict){
         // killing the follow and remove the details
         // X    dead 
         // Z    zombie
-        int ct=0;
         map <pid_t,pidinfo>::iterator it=piddict->begin();
+        vector <int> rmpid;
         for (;it!=piddict->end();it++){
             string sta =pid_status(it->first);
-            if (sta=="x" || sta=="z"){
+            if (sta=="Z"){
                 kill(it->first, SIGKILL);
-                piddict->erase(it->first);
+                rmpid.push_back(it->first);
+                cout << it->first << "killed with zombie states" << endl;
+            }
+            
+        }
+
+        if (!rmpid.empty()){
+            for (size_t it2=0;it2< rmpid.size();it2++){
+                piddict->erase(rmpid[it2]);
             }
         }
-        ct=0;
+    }
+    if (piddict->size()!=0){
+        int ct=0;
         //loop through each running process to get information
-        it=piddict->begin();
+        map <pid_t,pidinfo>::iterator it3=piddict->begin();
         cout << endl;
         cout << "# : PID \t States \t\tSec \tCommand"<<endl;
-        for (;it!=piddict->end();it++){
+        for (;it3!=piddict->end();it3++){
             //pid_t aa = getpid(it->first);
             //cout << aa << endl;
-            cout << ct << " : "<< it->first << " \t";
-            cout << " "<< (it->second).status << " \t";
-            cout << pid_up_time(it->first) << " \t";
-            cout << (it->second).command << endl;
+            cout << ct << " : "<< it3->first << " \t";
+            cout << " "<< (it3->second).status << " \t";
+            cout << pid_up_time(it3->first) << " \t";
+            cout << (it3->second).command << endl;
             ct++;
         }
     }

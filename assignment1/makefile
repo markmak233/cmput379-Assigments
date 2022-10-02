@@ -8,8 +8,8 @@ assign1: ./assign1.cpp ./pcontrol.cpp ./pfind.cpp
 	${CC} ${CFLAGS} -o $(EXTO) ./assign1.cpp ./pcontrol.cpp ./pfind.cpp
 
 
-submition:
-	tar -czvf assignment1.tar makefile *.h *.cpp
+submit:
+	tar -czvf assignment1.tar makefile *.h *.cpp *.md
 
 clean:
 	-rm shell379
