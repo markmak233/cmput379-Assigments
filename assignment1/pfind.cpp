@@ -98,70 +98,42 @@ void shell_running(int argc,int bg,vector<string> str_cp_argv,map <pid_t,pidinfo
 
 
 void current_process(map <pid_t,pidinfo> *piddict){
-    if (piddict.size()!=0){
+    if (piddict->size()!=0){
         int ct=0;
         map <pid_t,pidinfo>::iterator it=piddict->begin();
+        cout << "#  PID States Seconds Command"<<endl;
         for (;it!=piddict->end();it++){
-            cout << ct << " : "<< it->first ;
-            cout << " "<< (it->second).status ;
+            cout << ct << " : "<< it->first << " ";
+            cout << " "<< (it->second).status << " ";
+            cout << pid_up_time(it->first); << " ";
             cout << (it->second).command << endl;
+            ct++;
         }
     }
     cout << "Proesss = \t"<< piddict->size() << " Active" <<endl;
     cout << "Complete Process:"<< endl;
+    resources_up_time();
 };
 
 int pid_up_time(pid_t pid){
     int rtime;
+    char buffer[100];
+    FILE *Infile;
+    sprintf(buffer,"ps %d -o times=",pid);
+    Infile = popen(buffer,"r");
+    (void)!fscanf(Infile,"%d",&rtime);
+    pclose(Infile);
     return rtime;
 }
 
 void resources_up_time(){
-    cout << "sys time = \t" << (get_sys_up_time()/1000) << " second."<< endl;
-}
-long get_sys_up_time(){
-    //https://stackoverflow.com/questions/1540627/what-api-do-i-call-to-get-the-system-uptime
-    struct sysinfo s_info;
-    
-    int error = sysinfo(&s_info);
-    if(error != 0){
-       cout << "code error" << error << endl;
-    }
-    return s_info.uptime;
-    
-    //https://levelup.gitconnected.com/8-ways-to-measure-execution-time-in-c-c-48634458d0f9
+    // https://man7.org/linux/man-pages/man2/getrusage.2.html
+    struct rusage myusage{};
+    getrusage(RUSAGE_CHILDREN,&myusage);
+    int nSysTime=myusage.ru_stime.tv_sec;
+    int nUserTime=myusage.ru_utime.tv_sec;
+    cout << "User time = \t" << nUserTime << " seconds" << endl;
+    cout << "Sys  time = \t" << nSysTime << " seconds" << endl; 
 }
 
-
-
-//void get_states(){
-//    pid_t subpid = fork();
-//    switch(subpid){
-//        case -1:
-//            cout<< "Process = \t 0 active" << endl;
-//            break;
-//
-//        case 0:
-//            subpid = getpid();
-//            cout << "pid=" <<subpid << endl;
-//            
-//            break;
-//        default:
-//            kill(subpid, SIGKILL);
-//            break;
-//    }
-//    kill(subpid, SIGKILL);
-//
-//    return;
-//}
-
-// void show_jobs_sum(){
-//     cout << "jopbs display" << endl;
-//     get_states();
-
-//     //cout << "sys time = \t" << (get_sys_up_time()/1000) << " second."<< endl;
-
-//     return;
-// }
-
-
+ 

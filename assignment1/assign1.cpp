@@ -1,10 +1,6 @@
 #include "assign1.h"
 
-
 using namespace std;
-// remember split in to 3 file
-
-
 
 int main(int argc,char *argv[]){
 //this programme start a loop, it stop until user ask to exit the programme
@@ -57,6 +53,7 @@ int main(int argc,char *argv[]){
         }
         else if ((usr_s1.size()==1) && (usr_s1[0]== "exit")){
             exit_state=1;
+            exit_programme(piddict);
         }
         else if ((usr_s1.size()>=2) && (usr_s1[usr_s1.size()-1]== "&")){
             shell_running(usr_s1.size(),1,usr_s1,piddict);

@@ -83,3 +83,16 @@ void sleep_process(int argc,vector<string> str_cp_argv){
     return;
 }
 
+void exit_programme(map<pid_t,pidinfo> *piddict){
+    if (piddict->size()!=0){
+        map <pid_t,pidinfo>::iterator it=piddict->begin();
+        for (;it!=piddict->end();it++){
+            int pksig=kill(it->first,SIGKILL);
+            if (pksig == 0){
+                cout << "fail to kill:" << it->first <<endl;
+            }
+        }
+    }
+    cout << endl << "resources used:"<<endl;
+    resources_up_time();
+}

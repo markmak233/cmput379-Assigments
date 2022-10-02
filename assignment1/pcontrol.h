@@ -32,6 +32,7 @@ void resume_process(int argc,std::vector<std::string> str_cp_argv,std::map <pid_
 void suspend_process(int argc,std::vector<std::string> str_cp_argv,std::map <pid_t,pidinfo> *piddict);
 void wait_process(int argc,std::vector<std::string> str_cp_argv,std::map <pid_t,pidinfo> *piddict);
 void sleep_process(int argc,std::vector<std::string> str_cp_argv);
+void exit_programme(std::map<pid_t,pidinfo> *piddict);
 
 
 

@@ -21,6 +21,7 @@
 #include <linux/unistd.h>
 #include <linux/kernel.h>
 #include <sys/sysinfo.h>
+#include <sys/resource.h>
 #include <signal.h>
 
 #pragma once
