@@ -9,6 +9,8 @@
 #include <sstream>
 #include <string>
 #include <map>
+#include <time.h>
+
 
 #include <bits/stdc++.h>
 
@@ -34,3 +36,6 @@ struct pidinfo{
 
 #endif
 void shell_running(int argc,int bg,std::vector<std::string> str_cp_argv,std::map <pid_t,pidinfo> *piddict);
+void current_process(std::map <pid_t,pidinfo> *piddict);
+void resources_up_time();
+long get_sys_up_time();

@@ -6,51 +6,6 @@ using namespace std;
 
 
 
-
-
-//long get_sys_up_time(){
-//    //https://stackoverflow.com/questions/1540627/what-api-do-i-call-to-get-the-system-uptime
-//    struct sysinfo s_info;
-//    
-//    int error = sysinfo(&s_info);
-//    if(error != 0){
-//        cout << "code error" << error << endl;
-//    }
-//    return s_info.uptime;
-//}
-
-//void get_states(){
-//    pid_t subpid = fork();
-//    switch(subpid){
-//        case -1:
-//            cout<< "Process = \t 0 active" << endl;
-//            break;
-//
-//        case 0:
-//            subpid = getpid();
-//            cout << "pid=" <<subpid << endl;
-//            
-//            break;
-//        default:
-//            kill(subpid, SIGKILL);
-//            break;
-//    }
-//    kill(subpid, SIGKILL);
-//
-//    return;
-//}
-
-// void show_jobs_sum(){
-//     cout << "jopbs display" << endl;
-//     get_states();
-
-//     //cout << "sys time = \t" << (get_sys_up_time()/1000) << " second."<< endl;
-
-//     return;
-// }
-
-
-
 int main(int argc,char *argv[]){
 //this programme start a loop, it stop until user ask to exit the programme
     int exit_state=0;
@@ -83,7 +38,7 @@ int main(int argc,char *argv[]){
         
         
         if ((usr_s1.size()==1) && (usr_s1[0] == "jobs")){
-            printf("show current");
+            current_process(piddict);
         }
         else if ((usr_s1.size()>=2) && (usr_s1[0]=="kill")){
             kill_process(usr_s1.size(),usr_s1,piddict);
@@ -113,6 +68,8 @@ int main(int argc,char *argv[]){
         usr_instruct.clear();
         usr_s1.clear();
 
+
     }
+    resources_up_time();
     return 0;
 }
