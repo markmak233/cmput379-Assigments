@@ -2,15 +2,13 @@
 
 using namespace std;
 
-
-
 void shell_running(int argc,int bg,vector<string> str_cp_argv,map <pid_t,pidinfo> *piddict){
     // running shell
     string r_str="";
     bool opt=0;
     string fname;
+    // convert a vector to string
     for (int i=0;i<argc;i++){
-        
         if (bg==1 && i==argc-1){
             continue;
         }else if(str_cp_argv[i][0]=='>' ){
@@ -23,28 +21,26 @@ void shell_running(int argc,int bg,vector<string> str_cp_argv,map <pid_t,pidinfo
         }
         r_str=r_str+str_cp_argv[i];
     }
-
+    // create a new children
     pid_t pid = fork();
     if(pid<0){
         cout << "creating child failed" << endl;
         _exit(EXIT_FAILURE);
-
     }
-
     else if(pid==0){
         //child
 
         //https://stackoverflow.com/questions/40576003/ignoring-warning-wunused-result
+        //stdout to file
          if (opt){
             (void)!freopen(fname.c_str(),"w",stdout);
         }
 
-
-        
+        // modified the command to remove input/output file,and remove backgroud & sign. 
         vector<string> modified_argv;
         for (int i=0;i<argc;i++){
             if (bg==1 && i==argc-1){
-                continue;
+                continue;//skipping backgroud sign
             }else if(str_cp_argv[i][0]=='>' ){
                 continue;
             }else if(str_cp_argv[i][0]=='<' ){
@@ -56,8 +52,8 @@ void shell_running(int argc,int bg,vector<string> str_cp_argv,map <pid_t,pidinfo
                 }
                 modified_argv.push_back(filestring);
                 ipfile.close();
-                
             }else{
+                // normal extending
                 modified_argv.push_back(str_cp_argv[i]);
             }
         }
@@ -74,7 +70,7 @@ void shell_running(int argc,int bg,vector<string> str_cp_argv,map <pid_t,pidinfo
             cout << "run failed,exit unnormaly." << endl;;
             _exit(EXIT_FAILURE);
         }
-
+        // if running not backgroudly printout all the output
         if (!opt){
             fflush(stdout);
         }
@@ -82,14 +78,13 @@ void shell_running(int argc,int bg,vector<string> str_cp_argv,map <pid_t,pidinfo
     }else{
         //parent
         //cout << "running parent" << endl;
-
         struct pidinfo temppid;
         temppid.command=r_str;
         temppid.status="Running";
         temppid.npid=pid;
         // insert file into piddict
         piddict->insert({pid,temppid});
-        if(!bg){
+        if(!bg){//if not backgroud,wait until it finish
             waitpid(pid,nullptr,0);
             piddict->erase(pid);
         }
@@ -98,24 +93,28 @@ void shell_running(int argc,int bg,vector<string> str_cp_argv,map <pid_t,pidinfo
 
 
 void current_process(map <pid_t,pidinfo> *piddict){
+    //trace the information of running process
     if (piddict->size()!=0){
         int ct=0;
+        //loop through each running process to get information
         map <pid_t,pidinfo>::iterator it=piddict->begin();
         cout << "#  PID States Seconds Command"<<endl;
         for (;it!=piddict->end();it++){
             cout << ct << " : "<< it->first << " ";
             cout << " "<< (it->second).status << " ";
-            cout << pid_up_time(it->first); << " ";
+            cout << pid_up_time(it->first) << " ";
             cout << (it->second).command << endl;
             ct++;
         }
     }
+    //print runed second
     cout << "Proesss = \t"<< piddict->size() << " Active" <<endl;
     cout << "Complete Process:"<< endl;
     resources_up_time();
 };
 
 int pid_up_time(pid_t pid){
+    //acces shell to get the how many second up on the cpu
     int rtime;
     char buffer[100];
     FILE *Infile;

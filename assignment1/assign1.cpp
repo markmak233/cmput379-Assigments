@@ -3,8 +3,9 @@
 using namespace std;
 
 int main(int argc,char *argv[]){
-//this programme start a loop, it stop until user ask to exit the programme
+    //this programme start a loop, it stop until user ask to exit the programme
     int exit_state=0;
+    // create a dictionary save all the running/suspanding children
     map <pid_t,pidinfo> *piddict;
     piddict= new map <pid_t,pidinfo>;
     //while not requested exit keeping looping
@@ -17,22 +18,14 @@ int main(int argc,char *argv[]){
         // create a stream for sepration
         vector<string> usr_s1;
         stringstream arguss(usr_instruct);
-        
         string arg;
             while(arguss >> arg) {
                 usr_s1.push_back(arg);
         }
 
-
-        cout << "code dispaying:" << endl;
-
-        for (int ix=0; ix<((int)usr_s1.size()); ix++){
-        cout << ix << " " <<usr_s1[ix] << endl;
-        }
         cout << endl;
 
-        
-        
+        //determinate which programme user requested        
         if ((usr_s1.size()==1) && (usr_s1[0] == "jobs")){
             current_process(piddict);
         }
@@ -61,12 +54,11 @@ int main(int argc,char *argv[]){
         else if (usr_s1.size()>0){
             shell_running(usr_s1.size(),0,usr_s1,piddict);
         }
-
+        // clean the input
         usr_instruct.clear();
         usr_s1.clear();
 
 
     }
-    resources_up_time();
     return 0;
 }
