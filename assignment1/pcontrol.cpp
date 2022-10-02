@@ -75,6 +75,7 @@ void wait_process(int argc,vector<string> str_cp_argv,map <pid_t,pidinfo> *piddi
     }
     // //https://stackoverflow.com/questions/21248840/example-of-waitpid-in-use
     waitpid(pidnum,0,WUNTRACED);
+    piddict->erase(pidnum);
     return;
 }
 

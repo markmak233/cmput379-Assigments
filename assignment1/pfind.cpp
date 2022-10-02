@@ -95,14 +95,31 @@ void shell_running(int argc,int bg,vector<string> str_cp_argv,map <pid_t,pidinfo
 void current_process(map <pid_t,pidinfo> *piddict){
     //trace the information of running process
     if (piddict->size()!=0){
+        //check if a process already finshed
+        // https://medium.com/100-days-of-linux/understanding-the-output-of-ps-commands-e9e270a418f9
+        // killing the follow and remove the details
+        // X    dead 
+        // Z    zombie
         int ct=0;
-        //loop through each running process to get information
         map <pid_t,pidinfo>::iterator it=piddict->begin();
-        cout << "#  PID States Seconds Command"<<endl;
         for (;it!=piddict->end();it++){
-            cout << ct << " : "<< it->first << " ";
-            cout << " "<< (it->second).status << " ";
-            cout << pid_up_time(it->first) << " ";
+            string sta =pid_status(it->first);
+            if (sta=="x" || sta=="z"){
+                kill(it->first, SIGKILL);
+                piddict->erase(it->first);
+            }
+        }
+        ct=0;
+        //loop through each running process to get information
+        it=piddict->begin();
+        cout << endl;
+        cout << "# : PID \t States \t\tSec \tCommand"<<endl;
+        for (;it!=piddict->end();it++){
+            //pid_t aa = getpid(it->first);
+            //cout << aa << endl;
+            cout << ct << " : "<< it->first << " \t";
+            cout << " "<< (it->second).status << " \t";
+            cout << pid_up_time(it->first) << " \t";
             cout << (it->second).command << endl;
             ct++;
         }
@@ -112,20 +129,37 @@ void current_process(map <pid_t,pidinfo> *piddict){
     cout << "Complete Process:"<< endl;
     resources_up_time();
 };
-
 int pid_up_time(pid_t pid){
     //acces shell to get the how many second up on the cpu
     int rtime;
     char buffer[100];
     FILE *Infile;
-    sprintf(buffer,"ps %d -o times=",pid);
+    sprintf(buffer,"ps -p %d -o times=",pid);
     Infile = popen(buffer,"r");
     (void)!fscanf(Infile,"%d",&rtime);
     pclose(Infile);
     return rtime;
 }
 
+string pid_status(pid_t pid){
+    //acces shell to get the status
+    char buffer2;
+    char buffer[100];
+    FILE *Infile;
+    sprintf(buffer,"ps -p %d -o s=",pid);
+    Infile = popen(buffer,"r");
+    (void)!fscanf(Infile,"%s",&buffer2);
+    pclose(Infile);
+    // covert input buffer to string
+    string buf;
+    stringstream ss;
+    ss << buffer2;
+    ss >> buf;
+    return buf;
+}
+
 void resources_up_time(){
+    // get the length of the time of sys/user time
     // https://man7.org/linux/man-pages/man2/getrusage.2.html
     struct rusage myusage{};
     getrusage(RUSAGE_CHILDREN,&myusage);

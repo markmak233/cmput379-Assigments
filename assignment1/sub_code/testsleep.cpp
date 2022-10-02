@@ -21,20 +21,16 @@
 #include <sys/sysinfo.h>
 #include <signal.h>
 
-#pragma once
 
-#ifndef ASSIGN1_H
-#define ASSIGN1_H
+using namespace std;
 
-struct pidinfo{
-    pid_t npid;
-    std::string status;
-    std::string command;
-};
 
-#endif
-void shell_running(int argc,int bg,std::vector<std::string> str_cp_argv,std::map <pid_t,pidinfo> *piddict);
-void current_process(std::map <pid_t,pidinfo> *piddict);
-int pid_up_time(pid_t pid);
-void resources_up_time();
-std::string pid_status(pid_t pid);
+int main(int argc,char *argv[]){
+    //let a programme sleep for certain time
+    if (argc==2){
+        int timenum;
+        sscanf(argv[1], "%d", &timenum);
+        sleep(timenum);
+    }
+    return 0;
+}
