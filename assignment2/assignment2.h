@@ -4,7 +4,5 @@
 # include <vector>
 # include <fstream>
 
-# include "thread_man.h"
-
-void writefiles(string filename,vector<string> outputss);
+void writefiles(std::string filename,std::vector<std::string> outputss);
 int main(int argc,char* argv[]);

@@ -1,10 +1,12 @@
-#include "assignment2.h"
+# include "assignment2.h"
+# include "thread_man.h"
 
-using namespace std;
+using namespace std;\
+
 void writefiles(string filename,vector<string> outputss){
     // geting a list of string and save it into a file
     //https://www.tutorialspoint.com/how-to-append-text-to-a-text-file-in-cplusplus
-    for (int ind=0;ind<outputss.size();ind++){
+    for (int ind=0;(unsigned)ind<outputss.size();ind++){
         cout << ind;
         ofstream fout;
         ifstream fin;
@@ -39,24 +41,23 @@ int main(int argc,char* argv[]){
     }
     // inputting instructions
     vector<string> instruct;
-    cout << "The following in input instructions:" << endl;
     int running=1;
     while (running){
         string as;
         cin >> as;
-        cout << as << endl;
         instruct.push_back(as);
         if (as.size()==0){
             running=0;
         }
     }
 
-    cout <<nThread << endl;
-
-
     vector<string>outputss;
 
-    writefiles(filename,outputss);
+    outputss=thread_management(nThread,instruct);
+
+    
+    // write file to dedicated destinaction.
+    //writefiles(filename,outputss);
     return 1;
 }
 
