@@ -1,8 +1,22 @@
 #include "assignment2.h"
 
 using namespace std;
-void writefiles(string filename,string data){
-
+void writefiles(string filename,vector<string> outputss){
+    // geting a list of string and save it into a file
+    //https://www.tutorialspoint.com/how-to-append-text-to-a-text-file-in-cplusplus
+    for (int ind=0;ind<outputss.size();ind++){
+        cout << ind;
+        ofstream fout;
+        ifstream fin;
+        fin.open(filename);
+        fout.open(filename,ios_base::app);
+        if (fout.is_open()){
+            fout << outputss[ind];
+        }
+        fin.close();
+        fout.close();
+    }
+    return;
 }
 
 
@@ -36,6 +50,14 @@ int main(int argc,char* argv[]){
             running=0;
         }
     }
+
+    cout <<nThread << endl;
+
+
+    vector<string>outputss;
+
+    writefiles(filename,outputss);
+    return 1;
 }
 
 
