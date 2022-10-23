@@ -1,2 +1,4 @@
 
 *.tar
+*.o
+assignment2/prodcon
