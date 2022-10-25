@@ -50,10 +50,10 @@ int main(int argc,char* argv[]){
             running=0;
         }
     }
-
+    //cout <<" start running to looging device" << endl;
     vector<string>outputss;
 
-    outputss=thread_management(nThread,instruct);
+    outputss=event_management(nThread,instruct);
 
     
     // write file to dedicated destinaction.
