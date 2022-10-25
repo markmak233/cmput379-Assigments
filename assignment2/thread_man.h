@@ -1,4 +1,5 @@
 # include <iostream>
+# include <ostream>
 # include <stdio.h>
 # include <stdlib.h>
 # include <string>
@@ -9,6 +10,10 @@
 # include <mutex>
 # include <semaphore.h>
 
+
+# include <chrono>
+# include <ctime>
+# include <cstring>
 struct inst_kind{
     std::string TS;
     int numb; 
@@ -28,6 +33,7 @@ struct main_kid{
     int nth;
     std::string status;
     std::string last_saved_status;
+    int workingnum;
     std::vector<children_thread*> *childThread;
     std::vector<inst_kind> *instructions;
     std::vector<sem_t>* semaph;
