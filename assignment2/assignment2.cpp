@@ -7,7 +7,6 @@ void writefiles(string filename,vector<string> outputss){
     // geting a list of string and save it into a file
     //https://www.tutorialspoint.com/how-to-append-text-to-a-text-file-in-cplusplus
     for (int ind=0;(unsigned)ind<outputss.size();ind++){
-        cout << ind;
         ofstream fout;
         ifstream fin;
         fin.open(filename);
@@ -57,7 +56,7 @@ int main(int argc,char* argv[]){
 
     
     // write file to dedicated destinaction.
-    //writefiles(filename,outputss);
+    writefiles(filename,outputss);
     return 1;
 }
 

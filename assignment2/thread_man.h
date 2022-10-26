@@ -9,6 +9,8 @@
 # include <pthread.h>
 # include <mutex>
 # include <semaphore.h>
+#include<sys/timeb.h>
+#include <algorithm>
 
 
 # include <chrono>
@@ -25,7 +27,8 @@ struct children_thread{
     std::string last_saved_status;
     int isnewWork;
     int newWorknum;
-    sem_t *semaph;
+    int nomorework;
+    std::vector<sem_t> semaph2;
 };
 
 struct main_kid{
@@ -41,7 +44,7 @@ struct main_kid{
 };
 
 struct log_event{
-    double currentTime;
+    std::chrono::duration<double> currentTime;
     int tid;
     int queue;
     std::string Status;
@@ -49,5 +52,7 @@ struct log_event{
 };
 
 std::vector<inst_kind> translate_txt_to_struct(std::vector<std::string> instru);
+std::vector<std::string> log_event_convert(std::vector<log_event> tlog2);
 std::vector<std::string> event_management(int nThread,std::vector<std::string> instru);
 void *Parent_thread(void *data);
+void *Children_run_thread(void *data2);
