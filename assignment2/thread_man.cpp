@@ -125,7 +125,6 @@ vector<string> event_management(int nThread,vector<string> instru){
         pthread_t cp;
         cout <<i << " cthread"<< childthinfo[i].semaph2.size() << endl;
         pthread_create(&cp,NULL,Children_run_thread,childthinfo_vector[i]);
-        pthread_join(cp,NULL);
         bkpt.push_back(cp);
         cout << i << endl;
     }
@@ -170,25 +169,33 @@ vector<string> event_management(int nThread,vector<string> instru){
 
 
         //checking if thread ended,if all thread ended stop logging
-
-        for(int i=0;(unsigned)i<childthinfo.size();i++){
-            if (!binary_search(ted_thread.begin(),ted_thread.end(),i)){
-                cout<< terminated_thread << endl;
-                sem_wait(&(sema[i+1]));
-                sem_wait(&(childthinfo[i].semaph2[0]));
-                cout << i<< " "<<childthinfo_vector[i]->nomorework << " " << childthinfo_vector[i]->status << endl;
-                if (childthinfo_vector[i]->nomorework && childthinfo_vector[i]->status=="End"){
-                    terminated_thread++;
-                    ted_thread.push_back(i);
-                    cout <<"ID="<<i+1 <<"Thread termed"<< terminated_thread << endl;
+        // adding untill the parent end start checking
+        if (terminated_thread>0){
+            for(int i=0;(unsigned)i<childthinfo.size();i++){
+                if (!binary_search(ted_thread.begin(),ted_thread.end(),i)){
+                    // check if busy,if it is ,check back later
+                    int st;
+                    sem_getvalue(&(sema[i+1]),&st);
+                    int st2;
+                    sem_getvalue(&(childthinfo[i].semaph2[0]),&st2);
+                    if (st && st2){
+                        cout<< terminated_thread << endl;
+                        sem_wait(&(sema[i+1]));
+                        sem_wait(&(childthinfo[i].semaph2[0]));
+                        cout << i<< " "<<childthinfo_vector[i]->nomorework << " " << childthinfo_vector[i]->status << endl;
+                        if (childthinfo_vector[i]->nomorework && childthinfo_vector[i]->status=="End"){
+                            terminated_thread++;
+                            ted_thread.push_back(i);
+                            cout <<"ID="<<i+1 <<"Thread termed"<< terminated_thread << endl;
+                        }
+                        sem_post(&(childthinfo[i].semaph2[0]));
+                        sem_post(&(sema[i+1]));
+                        
+                        cout<< terminated_thread << endl;
+                    }
                 }
-                sem_post(&(childthinfo[i].semaph2[0]));
-                sem_post(&(sema[i+1]));
-                
-                cout<< terminated_thread << endl;
             }
         }
-
         
         if (terminated_thread==nThread+1){
             checking=0;
@@ -233,6 +240,37 @@ void *Parent_thread(void *data){
             sem_post(&(data_cp->semaph->at(myid)));
         }
         //if trans requested
+        else if (data_cp->instructions->at(i).TS=="T"){
+            int work_assigned=0;
+            check needed;
+            while (!work_assigned){
+                for (int tx=0;tx<data_cp->childThread->size();tx++){
+                    // checking if locking, if it is check back later
+                    int st;
+                    sem_getvalue(&(data_cp->semaph->at(tx+1)),&st);
+                    int st2;
+                    sem_getvalue(&(data_cp->childThread->at(tx)->semaph2.at(0)),&st2);
+                    if (st && st2){
+                        cout<< terminated_thread << endl;
+                        sem_wait(&(data_cp->semaph->at(tx+1)));
+                        sem_wait(&(data_cp->childThread->at(tx)->semaph2.at(0)));
+                        
+                        if (data_cp->childThread->at(tx)->status=="Ask"){
+                            data_cp->childThread->at(tx)->isnewWork =1;
+                            data_cp->childThread->at(tx)->newWorknum = data_cp->instructions->at(i).numb;
+                            work_assigned =1;
+                        }
+                        sem_post(&(data_cp->childThread->at(tx)->semaph2.at(0)));
+                        sem_post(&(data_cp->semaph->at(tx+1)));
+                        if (work_assigned){
+                            tx=data_cp->childThread->size();
+                        }
+                        
+                        cout<< terminated_thread << endl;
+                    }
+                }
+            }
+        }
     }
     cout << "term-ing" << endl;
 
@@ -265,16 +303,20 @@ void *Children_run_thread(void *data2){
     int myid=data2_cp->tid;
     sem_post(&(data2_cp->semaph2.at(0)));
 
-    // int end_thread=0;
-    // cout << myid << endl;
-    // while (end_thread==0){
-    //     // checking if all the task has been handout,and it is ok to terminate
-    //     sem_wait(&(data2_cp->semaph2.at(0)));
-    //     if (data2_cp->nomorework==1){
-    //         end_thread=1;
-    //     }
-    //     sem_post(&(data2_cp->semaph2.at(0)));
-    // }
+    int end_thread=0;
+    cout << myid << endl;
+    while (end_thread==0){
+         // checking if all the task has been handout,and it is ok to terminate
+        int sm;
+        sem_getvalue(&(data2_cp->semaph2.at(0)),&sm);
+        if (sm){
+            sem_wait(&(data2_cp->semaph2.at(0)));
+            if (data2_cp->nomorework==1){
+                end_thread=1;
+            }
+            sem_post(&(data2_cp->semaph2.at(0)));
+        }
+    }
 
     sem_wait(&(data2_cp->semaph2.at(0)));
     data2_cp->status="End";
