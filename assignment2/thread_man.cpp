@@ -242,7 +242,7 @@ void *Parent_thread(void *data){
         //if trans requested
         else if (data_cp->instructions->at(i).TS=="T"){
             int work_assigned=0;
-            check needed;
+            //check needed;
             while (!work_assigned){
                 for (int tx=0;tx<data_cp->childThread->size();tx++){
                     // checking if locking, if it is check back later
@@ -251,11 +251,10 @@ void *Parent_thread(void *data){
                     int st2;
                     sem_getvalue(&(data_cp->childThread->at(tx)->semaph2.at(0)),&st2);
                     if (st && st2){
-                        cout<< terminated_thread << endl;
                         sem_wait(&(data_cp->semaph->at(tx+1)));
                         sem_wait(&(data_cp->childThread->at(tx)->semaph2.at(0)));
                         
-                        if (data_cp->childThread->at(tx)->status=="Ask"){
+                        if (data_cp->childThread->at(tx)->status=="Ask" && data_cp->childThread->at(tx)->newWorknum==0){
                             data_cp->childThread->at(tx)->isnewWork =1;
                             data_cp->childThread->at(tx)->newWorknum = data_cp->instructions->at(i).numb;
                             work_assigned =1;
@@ -266,7 +265,6 @@ void *Parent_thread(void *data){
                             tx=data_cp->childThread->size();
                         }
                         
-                        cout<< terminated_thread << endl;
                     }
                 }
             }
