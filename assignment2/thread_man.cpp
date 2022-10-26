@@ -100,7 +100,7 @@ vector<string> event_management(int nThread,vector<string> instru){
     Parent->tid=0;
     Parent->nth=nThread;
     Parent->workingnum=0;
-    Parent->status="Running";
+    Parent->status="init";
     Parent->last_saved_status="None";
     Parent->childThread=&childthinfo_vector;
     Parent->instructions=&translated_instru;
@@ -139,33 +139,91 @@ vector<string> event_management(int nThread,vector<string> instru){
     while (checking){
         auto now_time =chrono::system_clock::now();
         // data the associate with parent
-        sem_wait(&(Parent->semaph->at(0)));
-        if(Parent->status=="End" && !parent_end){
-            cout << "added" << endl;
-            terminated_thread++;
-            parent_end=1;
-            cout << "thread end" << terminated_thread <<endl;
-        } else if (Parent->status!=Parent->last_saved_status){
-            //cout << "status change to " << Parent->status << endl;
-            //cout << "working on" << Parent->workingnum << endl;
-            if (Parent->status!="Running"){
-                struct log_event temp_log;
-                temp_log.Status=Parent->status;
-                temp_log.tid=Parent->tid;
-                temp_log.run_num=Parent->workingnum;
+        int st;
+        sem_getvalue(&(Parent->semaph->at(0)),&st);
+        if (st){
+            sem_wait(&(Parent->semaph->at(0)));
+            if(Parent->status=="End" && !parent_end){
+                cout << "added" << endl;
+                terminated_thread++;
+                parent_end=1;
+                cout << "thread end" << terminated_thread <<endl;
+            } else if (Parent->status!=Parent->last_saved_status){
+                //cout << "status change to " << Parent->status << endl;
+                //cout << "working on" << Parent->workingnum << endl;
+                if (Parent->status!="Running"){
+                    struct log_event temp_log;
+                    temp_log.Status=Parent->status;
+                    temp_log.tid=Parent->tid;
+                    temp_log.run_num=Parent->workingnum;
 
-                //https://stackoverflow.com/questions/997946/how-to-get-current-time-and-date-in-c
-                chrono::duration<double> durtime=now_time-init_log_time;
-                temp_log.currentTime=durtime;
+                    //https://stackoverflow.com/questions/997946/how-to-get-current-time-and-date-in-c
+                    chrono::duration<double> durtime=now_time-init_log_time;
+                    temp_log.currentTime=durtime;
 
-                temp_log.queue=free_queue;
-                thlog1.push_back(temp_log);
+                    temp_log.queue=free_queue;
+                    thlog1.push_back(temp_log);
+                }
+                Parent->last_saved_status=Parent->status;
+                
             }
-            Parent->last_saved_status=Parent->status;
-            
+            sem_post(&(Parent->semaph->at(0)));
         }
-        sem_post(&(Parent->semaph->at(0)));
 
+        // data that associate with 
+        // for (int i=0;i<(signed)childthinfo.size();i++){
+        //     int st,st2;
+        //     sem_getvalue(&(childthinfo[i].semaph2[0]),&st);
+        //     sem_getvalue(&(childthinfo[i].semaph2[0]),&st2);
+        //     if (st){
+        //         sem_wait(&(sema[i+1]));
+        //         sem_wait(&(childthinfo[i].semaph2[0]));
+        //         if (childthinfo[i].status!=childthinfo[i].last_saved_status){   
+        //             struct log_event temp_log;
+        //             temp_log.Status=childthinfo[i].status;
+        //             temp_log.tid=childthinfo[i].tid;
+        //             //run num does not exist
+        //             if (childthinfo[i].status!="Ask"){
+        //                 temp_log.run_num=childthinfo[i].newWorknum;
+        //             };
+        //             chrono::duration<double> durtime=now_time-init_log_time;
+        //             temp_log.currentTime=durtime;
+        //             temp_log.queue=free_queue;
+        //             thlog1.push_back(temp_log);
+                    
+        //             if(childthinfo[i].status=="Complete"){
+        //                 // logging for parent
+        //                 struct log_event temp_log2;
+        //                 temp_log.Status="Work";
+        //                 temp_log.tid=0;
+        //                 //run num does not exist
+        //                 temp_log.run_num=childthinfo[i].newWorknum;
+        //                 temp_log.currentTime=durtime;
+        //                 temp_log.queue=free_queue;
+        //                 thlog1.push_back(temp_log);
+        //                 // update the statuśof parent that work received
+
+        //                 childthinfo[i].status="Ask";
+        //                 struct log_event temp_log3;
+        //                 temp_log.Status=childthinfo[i].status;
+        //                 temp_log.tid=childthinfo[i].tid;
+        //                 temp_log.currentTime=durtime;
+        //                 temp_log.queue=free_queue;
+        //                 thlog1.push_back(temp_log);
+                        
+        //             } 
+        //             childthinfo[i].last_saved_status=childthinfo[i].status;
+                    
+        //         }
+                
+        //         sem_post(&(childthinfo[i].semaph2[0]));
+        //         sem_post(&(sema[i+1]));
+
+        //     }
+        // }
+        
+        
+        
 
 
         //checking if thread ended,if all thread ended stop logging
@@ -195,16 +253,18 @@ vector<string> event_management(int nThread,vector<string> instru){
                     }
                 }
             }
+            cout << "Term" << terminated_thread <<"," << nThread << endl;
         }
         
-        if (terminated_thread==nThread+1){
+        if (terminated_thread>=nThread+1){
             checking=0;
         }
+        cout << "checking:"<< checking << endl;
     }
     cout << Parent->tid << endl;
     //cout << "end Parent Process" << endl;
 
-
+    cout << "loop exited"<< endl;
     vector<string> op1;
     op1=log_event_convert(thlog1);
     return op1;
@@ -244,7 +304,7 @@ void *Parent_thread(void *data){
             int work_assigned=0;
             //check needed;
             while (!work_assigned){
-                for (int tx=0;tx<data_cp->childThread->size();tx++){
+                for (int tx=0;tx<(signed)data_cp->childThread->size();tx++){
                     // checking if locking, if it is check back later
                     int st;
                     sem_getvalue(&(data_cp->semaph->at(tx+1)),&st);
@@ -299,17 +359,36 @@ void *Children_run_thread(void *data2){
     
     sem_wait(&(data2_cp->semaph2.at(0)));
     int myid=data2_cp->tid;
+    data2_cp->status="Ask";
     sem_post(&(data2_cp->semaph2.at(0)));
 
     int end_thread=0;
     cout << myid << endl;
     while (end_thread==0){
-         // checking if all the task has been handout,and it is ok to terminate
+        // checking if all the task has been handout,and it is ok to terminate
         int sm;
         sem_getvalue(&(data2_cp->semaph2.at(0)),&sm);
+        // finded a work given
         if (sm){
             sem_wait(&(data2_cp->semaph2.at(0)));
-            if (data2_cp->nomorework==1){
+            data2_cp->status="Receive";
+            int worknum=data2_cp->newWorknum;
+            sem_post(&(data2_cp->semaph2.at(0)));
+
+            Trans(worknum);
+
+            sem_wait(&(data2_cp->semaph2.at(0)));
+            data2_cp->status="Complete";
+            sem_post(&(data2_cp->semaph2.at(0)));
+
+            // changeing from Comlete to Ask will be host's logging work
+        }
+
+        int sm2;
+        sem_getvalue(&(data2_cp->semaph2.at(0)),&sm2);
+        if (sm2){
+            sem_wait(&(data2_cp->semaph2.at(0)));
+            if (data2_cp->nomorework==1 && data2_cp->newWorknum==0){
                 end_thread=1;
             }
             sem_post(&(data2_cp->semaph2.at(0)));

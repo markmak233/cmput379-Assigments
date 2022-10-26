@@ -6,6 +6,7 @@ using namespace std;\
 void writefiles(string filename,vector<string> outputss){
     // geting a list of string and save it into a file
     //https://www.tutorialspoint.com/how-to-append-text-to-a-text-file-in-cplusplus
+    
     for (int ind=0;(unsigned)ind<outputss.size();ind++){
         ofstream fout;
         ifstream fin;
@@ -54,9 +55,10 @@ int main(int argc,char* argv[]){
 
     outputss=event_management(nThread,instruct);
 
-    
+    cout << "writting" << endl;
     // write file to dedicated destinaction.
     writefiles(filename,outputss);
+    cout << "entireprograme done" <<endl;
     return 1;
 }
 
