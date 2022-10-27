@@ -11,6 +11,7 @@
 # include <semaphore.h>
 #include<sys/timeb.h>
 #include <algorithm>
+#include <map>
 
 
 # include <chrono>
@@ -53,6 +54,6 @@ struct log_event{
 
 std::vector<inst_kind> translate_txt_to_struct(std::vector<std::string> instru);
 std::vector<std::string> log_event_convert(std::vector<log_event> tlog2);
-std::vector<std::string> event_management(int nThread,std::vector<std::string> instru);
+std::vector<std::string> event_management(int nThread,std::vector<std::string> instru,std::vector<std::string>* outputss);
 void *Parent_thread(void *data);
 void *Children_run_thread(void *data2);

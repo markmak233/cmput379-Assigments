@@ -1,5 +1,5 @@
 CC		:= g++
-CFLAGS	:= -Wall -O
+CFLAGS	:= -Wall -O -g
 TARGET = prodcon
 
 all: link

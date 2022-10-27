@@ -6,8 +6,22 @@ using namespace std;\
 void writefiles(string filename,vector<string> outputss){
     // geting a list of string and save it into a file
     //https://www.tutorialspoint.com/how-to-append-text-to-a-text-file-in-cplusplus
+    //https://www.codeproject.com/Questions/5299415/I-get-a-warning-when-I-try-to-use-a-for-loop-to-pr
     cout << outputss.size() <<endl;
-    for (int ind=0;(unsigned)ind<outputss.size();ind++){
+    cout << "output" << endl;
+    // for (unsigned ind=0;ind<outputss.size();ind++){
+    //     if ((int)ind==(int)outputss.size()){
+    //         break;
+    //     }
+    //     cout << "index"<< ind <<"/"<< outputss.size()-1 << endl;
+    //     cout  <<"index"<< ind <<"/"<< outputss.size()-1 << " : "<<  outputss[ind] << endl;
+    // }
+    cout << "file writing"<< endl;
+    cout << outputss.size() <<endl;
+    for (unsigned ind=0;ind<outputss.size();ind++){
+        if (ind==outputss.size()){
+            break;
+        }
         ofstream fout;
         ifstream fin;
         fin.open(filename);
@@ -35,9 +49,9 @@ int main(int argc,char* argv[]){
         string nid=argv[2];
         filename.append("prodcon.");
         filename.append(nid);
-        filename.append(".log");
+        filename.append(".txt");
     } else{
-        filename = "prodcon.log";
+        filename = "prodcon.txt";
     }
     // inputting instructions
     vector<string> instruct;
@@ -53,8 +67,9 @@ int main(int argc,char* argv[]){
     //cout <<" start running to looging device" << endl;
     vector<string>outputss;
 
-    outputss=event_management(nThread,instruct);
+    outputss=event_management(nThread,instruct,&outputss);
 
+    cout << outputss[outputss.size()-2] << endl;
     cout << "writting" << endl;
     // write file to dedicated destinaction.
     writefiles(filename,outputss);

@@ -6,7 +6,7 @@ using namespace std;
 
 vector<inst_kind> translate_txt_to_struct(vector<string> instru){
     vector<inst_kind> transed_instru;
-    for (int ind=0;(unsigned)ind<instru.size()-1;ind++){
+    for (unsigned ind=0;ind<instru.size()-1;ind++){
         struct inst_kind temp1;
         temp1.TS=instru[ind][0];
         string temp2 = instru[ind];
@@ -17,12 +17,16 @@ vector<inst_kind> translate_txt_to_struct(vector<string> instru){
         ss << temp2;
         ss >> temp1.numb;
 
+        if (temp1.numb<1 || temp1.numb>100){
+            temp1.numb=1;
+        }
+
         transed_instru.push_back(temp1);
     }
     return transed_instru;
 }
 
-vector<string> log_event_convert(vector<log_event> tlog2){
+vector<string> log_event_convert(vector<log_event> tlog2,int nThread){
     vector<string> s1;
     // struct log_event{
     // double currentTime;
@@ -30,31 +34,83 @@ vector<string> log_event_convert(vector<log_event> tlog2){
     // int queue;
     // std::string Status;
     // int run_num;
-    for (int i=0;(unsigned)i<tlog2.size();i++){
+    map <string,int> commcount;
+    vector <int> tcout;
+    for (int i=0;i<nThread+1;i++){
+        tcout.push_back(0);
+    }
+    
+    for (unsigned i=0;i<tlog2.size();i++){
+        // string part
         string tempstr;
         char temp[100];
-        sprintf(temp,"%2.3f ID=%2d Q=%2d ",tlog2[i].currentTime,tlog2[i].tid,tlog2[i].queue);
+        if (tlog2[i].Status=="Work" || tlog2[i].Status=="Receive" ){
+            sprintf(temp,"%2.3f ID=%3d Q=%3d ",tlog2[i].currentTime.count(),tlog2[i].tid,tlog2[i].queue);
+        } else {
+            sprintf(temp,"%2.3f ID=%3d       ",tlog2[i].currentTime.count(),tlog2[i].tid);
+        }
         tempstr.append(temp);
 
-        tlog2[i].Status.resize(12*sizeof(char));
         tempstr.append(tlog2[i].Status);
-        char temp2[50];
-        sprintf(temp2,"%2d   //",tlog2[i].run_num);
-        tempstr.append(temp2);
+        while (tempstr.size()<(35*sizeof(char))){
+            tempstr.append(" ");
+        }
+
+        if (tlog2[i].run_num==0){
+            tempstr.append("     //");
+        }else{
+            char temp2[50];
+            sprintf(temp2,"%2d   //",tlog2[i].run_num);
+            tempstr.append(temp2);
+        }
         tempstr.append("\n");
         s1.push_back(tempstr);
+        // couning part
+        if(tlog2[i].Status=="Receive" ){
+            commcount["Receive"]=commcount["Receive"]+1;
+            tcout[tlog2[i].tid]=tcout[tlog2[i].tid]+1;
+        } else if  (tlog2[i].Status=="Work" ||
+                    tlog2[i].Status=="Ask" ||
+                    tlog2[i].Status=="Complete" ||
+                    tlog2[i].Status=="Sleep" ){
+            commcount[tlog2[i].Status]=commcount[tlog2[i].Status]+1;
+        }
         
     }
+    s1.push_back("Summary:                                //\n");
+    map<string, int>::iterator it;
+    for (it = commcount.begin(); it != commcount.end(); it++){
+        string temp3 ="    "+it->first;
+        while (temp3.size()<(18*sizeof(char))){
+            temp3.append(" ");
+        }
+        char temp4[100];
+        sprintf(temp4,"%3d                   // \n",it->second);
+        temp3.append(temp4);
+        s1.push_back(temp3);
+    }
+    for (unsigned i=1;i<tcout.size();i++){
+        char temp3[100];
+        sprintf(temp3,"    Thread %3d \t%3d \t\t\t\t    //\n",i,tcout[i]);
+        s1.push_back(temp3);
+    }
+    double tps=commcount["Receive"];
+    auto totaltime=tlog2[tlog2.size()-1].currentTime.count();
+    tps=tps/totaltime;
+    char temp4[100];
+    sprintf(temp4,"Trabsactions per second: %3.3f \t    //\n",tps);
+    s1.push_back(temp4);
+    s1.push_back("----------------------------------\n");
     return s1;
 }
 
-vector<string> event_management(int nThread,vector<string> instru){
+vector<string> event_management(int nThread,vector<string> instru,vector<string>* outputss){
     // this function many logging the event of each device
     vector<inst_kind> translated_instru;
     translated_instru=translate_txt_to_struct(instru);
     //cout << "result" << endl;
     // result output
-    for (int i=0;(unsigned)i<translated_instru.size();i++){
+    for (unsigned i=0;i<translated_instru.size();i++){
         cout << instru[i] <<" "<< translated_instru[i].TS << " " << translated_instru[i].numb << endl;
     }
     //cout << "data displed" << endl;
@@ -90,7 +146,7 @@ vector<string> event_management(int nThread,vector<string> instru){
     }
 
     vector<children_thread*> childthinfo_vector;
-    for (int i=0;i<(signed)childthinfo.size();i++){
+    for (unsigned i=0;i<childthinfo.size();i++){
         childthinfo_vector.push_back(&childthinfo[i]);
     }
 
@@ -118,15 +174,13 @@ vector<string> event_management(int nThread,vector<string> instru){
     
     vector<pthread_t> bkpt;
     cout << "size "<<childthinfo.size() << endl;
-    for(int i=0;i<(signed)childthinfo.size();i++){
+    for(unsigned i=0;i<childthinfo.size();i++){
         // start second children sephnore
-        cout << i << endl;
         // start pthread
         pthread_t cp;
         cout <<i << " cthread"<< childthinfo[i].semaph2.size() << endl;
         pthread_create(&cp,NULL,Children_run_thread,childthinfo_vector[i]);
         bkpt.push_back(cp);
-        cout << i << endl;
     }
 
     cout << "start Parent thread" << endl;
@@ -144,14 +198,12 @@ vector<string> event_management(int nThread,vector<string> instru){
         if (st){
             sem_wait(&(Parent->semaph->at(0)));
             if(Parent->status=="End" && !parent_end){
-                cout << "added" << endl;
                 terminated_thread++;
                 parent_end=1;
-                cout << "thread end" << terminated_thread <<endl;
             } else if (Parent->status!=Parent->last_saved_status){
                 //cout << "status change to " << Parent->status << endl;
                 //cout << "working on" << Parent->workingnum << endl;
-                if (Parent->status!="Running"){
+                if (Parent->status!="Running" && Parent->status!="init"){
                     struct log_event temp_log;
                     temp_log.Status=Parent->status;
                     temp_log.tid=Parent->tid;
@@ -171,14 +223,14 @@ vector<string> event_management(int nThread,vector<string> instru){
         }
 
         // data that associate with 
-        for (int i=0;i<(signed)childthinfo.size();i++){
+        for (unsigned i=0;i<childthinfo.size();i++){
             int st,st2;
             sem_getvalue(&(childthinfo[i].semaph2[0]),&st);
             sem_getvalue(&(childthinfo[i].semaph2[0]),&st2);
-            if (st){
+            if (st&&st2){
                 sem_wait(&(sema[i+1]));
                 sem_wait(&(childthinfo[i].semaph2[0]));
-                if (childthinfo[i].status!=childthinfo[i].last_saved_status){   
+                if (childthinfo[i].status!=childthinfo[i].last_saved_status && childthinfo[i].status!="End"){   
                     struct log_event temp_log;
                     temp_log.Status=childthinfo[i].status;
                     temp_log.tid=childthinfo[i].tid;
@@ -195,18 +247,22 @@ vector<string> event_management(int nThread,vector<string> instru){
                     childthinfo[i].last_saved_status=childthinfo[i].status;
                     
                     if(childthinfo[i].status=="Complete"){
+                        free_queue++;
                         // logging for parent
                         struct log_event temp_log2;
-                        temp_log.Status="Work";
-                        temp_log.tid=0;
+                        temp_log2.Status="Work";
+                        temp_log2.tid=0;
                         //run num does not exist
-                        temp_log.run_num=childthinfo[i].newWorknum;
-                        temp_log.currentTime=durtime;
-                        temp_log.queue=free_queue;
+                        temp_log2.run_num=childthinfo[i].newWorknum;
+                        temp_log2.currentTime=durtime;
+                        temp_log2.queue=free_queue;
                         thlog1.push_back(temp_log2);
                         // update the statuśof parent that work received
                         Parent->last_saved_status=Parent->status;
-                        
+
+                        // clear out the instruction
+                        childthinfo[i].newWorknum=0;
+                        childthinfo[i].isnewWork=0;
 
                         childthinfo[i].status="Ask";
                         struct log_event temp_log3;
@@ -218,7 +274,11 @@ vector<string> event_management(int nThread,vector<string> instru){
                         thlog1.push_back(temp_log3);
                         childthinfo[i].last_saved_status=childthinfo[i].status;
                         
-                    } 
+                    } else if (childthinfo[i].status=="Receive")
+                    {
+                        free_queue--;
+                    }
+                    
                     childthinfo[i].last_saved_status=childthinfo[i].status;
                     
                 }
@@ -236,7 +296,7 @@ vector<string> event_management(int nThread,vector<string> instru){
         //checking if thread ended,if all thread ended stop logging
         // adding untill the parent end start checking
         if (terminated_thread>0){
-            for(int i=0;(unsigned)i<childthinfo.size();i++){
+            for(unsigned i=0;i<childthinfo.size();i++){
                 if (!binary_search(ted_thread.begin(),ted_thread.end(),i)){
                     // check if busy,if it is ,check back later
                     int st;
@@ -244,10 +304,8 @@ vector<string> event_management(int nThread,vector<string> instru){
                     int st2;
                     sem_getvalue(&(childthinfo[i].semaph2[0]),&st2);
                     if (st && st2){
-                        cout<< terminated_thread << endl;
                         sem_wait(&(sema[i+1]));
                         sem_wait(&(childthinfo[i].semaph2[0]));
-                        cout << i<< " "<<childthinfo_vector[i]->nomorework << " " << childthinfo_vector[i]->status << endl;
                         if (childthinfo_vector[i]->nomorework && childthinfo_vector[i]->status=="End"){
                             terminated_thread++;
                             ted_thread.push_back(i);
@@ -255,12 +313,9 @@ vector<string> event_management(int nThread,vector<string> instru){
                         }
                         sem_post(&(childthinfo[i].semaph2[0]));
                         sem_post(&(sema[i+1]));
-                        
-                        cout<< terminated_thread << endl;
                     }
                 }
             }
-            cout << "Term" << terminated_thread <<"," << nThread << endl;
         }
         
         if (terminated_thread>=nThread+1){
@@ -268,13 +323,21 @@ vector<string> event_management(int nThread,vector<string> instru){
         }
     }
     cout << Parent->tid << endl;
-    //cout << "end Parent Process" << endl;
 
     cout << "loop exited"<< endl;
     vector<string> op1;
-    op1=log_event_convert(thlog1);
-    return op1;
+    for (unsigned idx=0;idx<op1.size();idx++){
+        outputss->push_back(op1[idx]);
+    }
 
+    op1=log_event_convert(thlog1,nThread);
+    return op1;
+    for (unsigned i=0;i<sema.size();i++){
+        sem_destroy(&sema[i]);
+        if (i!=0){
+            sem_destroy(&childthinfo[i-1].semaph2[0]);
+        }
+    }
     
 }
 
@@ -286,19 +349,17 @@ void *Parent_thread(void *data){
     data_cp->status="Running";
     sem_post(&(data_cp->semaph->at(0)));
     
-    for (int i=0;(unsigned)i<data_cp->instructions->size();i++) {
+    for (unsigned i=0;i<data_cp->instructions->size();i++) {
         // if sleeping requested
         if (data_cp->instructions->at(i).TS=="S"){
             // start signaling
             sem_wait(&(data_cp->semaph->at(myid)));
-            data_cp->status="Sleeping";
+            data_cp->status="Sleep";
             data_cp->workingnum=data_cp->instructions->at(i).numb;
             sem_post(&(data_cp->semaph->at(myid)));
 
             // testing purpose showing
-            cout << data_cp->instructions->at(i).TS << " " << data_cp->instructions->at(i).numb << endl;
             Sleep(data_cp->instructions->at(i).numb);
-            cout << "Completed next" << endl;
 
             //sleeping done singaling
             sem_wait(&(data_cp->semaph->at(myid)));
@@ -311,7 +372,7 @@ void *Parent_thread(void *data){
             int work_assigned=0;
             //check needed;
             while (!work_assigned){
-                for (int tx=0;tx<(signed)data_cp->childThread->size();tx++){
+                for (unsigned tx=0;tx<data_cp->childThread->size();tx++){
                     // checking if locking, if it is check back later
                     int st;
                     sem_getvalue(&(data_cp->semaph->at(tx+1)),&st);
@@ -329,7 +390,8 @@ void *Parent_thread(void *data){
                         sem_post(&(data_cp->childThread->at(tx)->semaph2.at(0)));
                         sem_post(&(data_cp->semaph->at(tx+1)));
                         if (work_assigned){
-                            tx=data_cp->childThread->size();
+                            tx=data_cp->childThread->size()-1;
+                            
                         }
                         
                     }
@@ -337,10 +399,9 @@ void *Parent_thread(void *data){
             }
         }
     }
-    cout << "term-ing" << endl;
 
     // call all the function ok to terminate
-    for(int i=0;(unsigned)i<data_cp->childThread->size();i++){
+    for(unsigned i=0;i<data_cp->childThread->size();i++){
         cout << "waiting" << endl;
         sem_wait(&(data_cp->semaph->at(i+1)));
         sem_wait(&(data_cp->childThread->at(i)->semaph2.at(0)));
@@ -354,23 +415,22 @@ void *Parent_thread(void *data){
     data_cp->status="End";
     sem_post(&(data_cp->semaph->at(myid)));
     cout << "bye" << endl;
-    pthread_exit(NULL);
+    //pthread_exit(NULL);
     return data;
 }
 
 void *Children_run_thread(void *data2){
     // rocover from the data
-
+    cout << "children process started" << endl;
     struct children_thread *data2_cp = (struct children_thread*)data2;
 
     
     sem_wait(&(data2_cp->semaph2.at(0)));
-    int myid=data2_cp->tid;
+    //int myid=data2_cp->tid;
     data2_cp->status="Ask";
     sem_post(&(data2_cp->semaph2.at(0)));
 
     int end_thread=0;
-    cout << myid << endl;
     while (end_thread==0){
         // checking if all the task has been handout,and it is ok to terminate
         int sm;
@@ -379,12 +439,11 @@ void *Children_run_thread(void *data2){
         if (sm){
             sem_wait(&(data2_cp->semaph2.at(0)));
             int worknum=data2_cp->newWorknum;
+
             if (worknum!=0){
                 data2_cp->status="Receive";
                 sem_post(&(data2_cp->semaph2.at(0)));
-
                 Trans(worknum);
-
                 sem_wait(&(data2_cp->semaph2.at(0)));
                 data2_cp->status="Complete";
             }
@@ -403,10 +462,9 @@ void *Children_run_thread(void *data2){
             sem_post(&(data2_cp->semaph2.at(0)));
         }
     }
-
     sem_wait(&(data2_cp->semaph2.at(0)));
     data2_cp->status="End";
     sem_post(&(data2_cp->semaph2.at(0)));
-    pthread_exit(NULL);
+    //pthread_exit(NULL);
     return data2;
 }
