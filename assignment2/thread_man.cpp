@@ -71,7 +71,7 @@ vector<string> event_management(int nThread,vector<string> instru){
     for (int i=0;i<nThread;i++){
         struct children_thread temp;
         temp.tid=i+1;
-        temp.status="Ask";
+        temp.status="init";
         temp.last_saved_status="None";
         temp.isnewWork=0;
         temp.newWorknum=0;
@@ -171,56 +171,63 @@ vector<string> event_management(int nThread,vector<string> instru){
         }
 
         // data that associate with 
-        // for (int i=0;i<(signed)childthinfo.size();i++){
-        //     int st,st2;
-        //     sem_getvalue(&(childthinfo[i].semaph2[0]),&st);
-        //     sem_getvalue(&(childthinfo[i].semaph2[0]),&st2);
-        //     if (st){
-        //         sem_wait(&(sema[i+1]));
-        //         sem_wait(&(childthinfo[i].semaph2[0]));
-        //         if (childthinfo[i].status!=childthinfo[i].last_saved_status){   
-        //             struct log_event temp_log;
-        //             temp_log.Status=childthinfo[i].status;
-        //             temp_log.tid=childthinfo[i].tid;
-        //             //run num does not exist
-        //             if (childthinfo[i].status!="Ask"){
-        //                 temp_log.run_num=childthinfo[i].newWorknum;
-        //             };
-        //             chrono::duration<double> durtime=now_time-init_log_time;
-        //             temp_log.currentTime=durtime;
-        //             temp_log.queue=free_queue;
-        //             thlog1.push_back(temp_log);
+        for (int i=0;i<(signed)childthinfo.size();i++){
+            int st,st2;
+            sem_getvalue(&(childthinfo[i].semaph2[0]),&st);
+            sem_getvalue(&(childthinfo[i].semaph2[0]),&st2);
+            if (st){
+                sem_wait(&(sema[i+1]));
+                sem_wait(&(childthinfo[i].semaph2[0]));
+                if (childthinfo[i].status!=childthinfo[i].last_saved_status){   
+                    struct log_event temp_log;
+                    temp_log.Status=childthinfo[i].status;
+                    temp_log.tid=childthinfo[i].tid;
+                    //run num does not exist
+                    if (childthinfo[i].status!="Ask"){
+                        temp_log.run_num=childthinfo[i].newWorknum;
+                    }else{
+                        temp_log.run_num=0;
+                    }
+                    chrono::duration<double> durtime=now_time-init_log_time;
+                    temp_log.currentTime=durtime;
+                    temp_log.queue=free_queue;
+                    thlog1.push_back(temp_log);
+                    childthinfo[i].last_saved_status=childthinfo[i].status;
                     
-        //             if(childthinfo[i].status=="Complete"){
-        //                 // logging for parent
-        //                 struct log_event temp_log2;
-        //                 temp_log.Status="Work";
-        //                 temp_log.tid=0;
-        //                 //run num does not exist
-        //                 temp_log.run_num=childthinfo[i].newWorknum;
-        //                 temp_log.currentTime=durtime;
-        //                 temp_log.queue=free_queue;
-        //                 thlog1.push_back(temp_log);
-        //                 // update the statuśof parent that work received
-
-        //                 childthinfo[i].status="Ask";
-        //                 struct log_event temp_log3;
-        //                 temp_log.Status=childthinfo[i].status;
-        //                 temp_log.tid=childthinfo[i].tid;
-        //                 temp_log.currentTime=durtime;
-        //                 temp_log.queue=free_queue;
-        //                 thlog1.push_back(temp_log);
+                    if(childthinfo[i].status=="Complete"){
+                        // logging for parent
+                        struct log_event temp_log2;
+                        temp_log.Status="Work";
+                        temp_log.tid=0;
+                        //run num does not exist
+                        temp_log.run_num=childthinfo[i].newWorknum;
+                        temp_log.currentTime=durtime;
+                        temp_log.queue=free_queue;
+                        thlog1.push_back(temp_log2);
+                        // update the statuśof parent that work received
+                        Parent->last_saved_status=Parent->status;
                         
-        //             } 
-        //             childthinfo[i].last_saved_status=childthinfo[i].status;
-                    
-        //         }
-                
-        //         sem_post(&(childthinfo[i].semaph2[0]));
-        //         sem_post(&(sema[i+1]));
 
-        //     }
-        // }
+                        childthinfo[i].status="Ask";
+                        struct log_event temp_log3;
+                        temp_log3.Status=childthinfo[i].status;
+                        temp_log3.tid=childthinfo[i].tid;
+                        temp_log3.currentTime=durtime;
+                        temp_log3.run_num=0;
+                        temp_log3.queue=free_queue;
+                        thlog1.push_back(temp_log3);
+                        childthinfo[i].last_saved_status=childthinfo[i].status;
+                        
+                    } 
+                    childthinfo[i].last_saved_status=childthinfo[i].status;
+                    
+                }
+                
+                sem_post(&(childthinfo[i].semaph2[0]));
+                sem_post(&(sema[i+1]));
+
+            }
+        }
         
         
         
@@ -259,7 +266,6 @@ vector<string> event_management(int nThread,vector<string> instru){
         if (terminated_thread>=nThread+1){
             checking=0;
         }
-        cout << "checking:"<< checking << endl;
     }
     cout << Parent->tid << endl;
     //cout << "end Parent Process" << endl;
@@ -277,6 +283,7 @@ void *Parent_thread(void *data){
     struct main_kid *data_cp = (struct main_kid*)data;
     sem_wait(&(data_cp->semaph->at(0)));
     int myid=data_cp->tid;
+    data_cp->status="Running";
     sem_post(&(data_cp->semaph->at(0)));
     
     for (int i=0;(unsigned)i<data_cp->instructions->size();i++) {
@@ -371,14 +378,16 @@ void *Children_run_thread(void *data2){
         // finded a work given
         if (sm){
             sem_wait(&(data2_cp->semaph2.at(0)));
-            data2_cp->status="Receive";
             int worknum=data2_cp->newWorknum;
-            sem_post(&(data2_cp->semaph2.at(0)));
+            if (worknum!=0){
+                data2_cp->status="Receive";
+                sem_post(&(data2_cp->semaph2.at(0)));
 
-            Trans(worknum);
+                Trans(worknum);
 
-            sem_wait(&(data2_cp->semaph2.at(0)));
-            data2_cp->status="Complete";
+                sem_wait(&(data2_cp->semaph2.at(0)));
+                data2_cp->status="Complete";
+            }
             sem_post(&(data2_cp->semaph2.at(0)));
 
             // changeing from Comlete to Ask will be host's logging work

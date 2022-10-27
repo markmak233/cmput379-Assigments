@@ -6,7 +6,7 @@ using namespace std;\
 void writefiles(string filename,vector<string> outputss){
     // geting a list of string and save it into a file
     //https://www.tutorialspoint.com/how-to-append-text-to-a-text-file-in-cplusplus
-    
+    cout << outputss.size() <<endl;
     for (int ind=0;(unsigned)ind<outputss.size();ind++){
         ofstream fout;
         ifstream fin;
