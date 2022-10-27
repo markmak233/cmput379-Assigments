@@ -24,20 +24,20 @@ struct inst_kind{
 
 struct children_thread{
     int tid;
-    std::string status;
-    std::string last_saved_status;
-    int isnewWork;
-    int newWorknum;
-    int nomorework;
+    std::string status="init";
+    std::string last_saved_status="None";
+    int isnewWork=0;
+    int newWorknum=0;
+    int nomorework=0;
     std::vector<sem_t> semaph2;
 };
 
 struct main_kid{
-    int tid;
+    int tid=0;
     int nth;
-    std::string status;
-    std::string last_saved_status;
-    int workingnum;
+    std::string status="init";
+    std::string last_saved_status="None";
+    int workingnum=0;
     std::vector<children_thread*> *childThread;
     std::vector<inst_kind> *instructions;
     std::vector<sem_t>* semaph;
@@ -47,13 +47,13 @@ struct main_kid{
 struct log_event{
     std::chrono::duration<double> currentTime;
     int tid;
-    int queue;
+    int queue=0;
     std::string Status;
     int run_num;
 };
 
 std::vector<inst_kind> translate_txt_to_struct(std::vector<std::string> instru);
-std::vector<std::string> log_event_convert(std::vector<log_event> tlog2);
-std::vector<std::string> event_management(int nThread,std::vector<std::string> instru,std::vector<std::string>* outputss);
+std::vector<std::string> log_event_convert(std::vector<log_event> tlog2,int nThread);
+void writefiles(std::string filename,std::vector<std::string> outputss);
 void *Parent_thread(void *data);
 void *Children_run_thread(void *data2);

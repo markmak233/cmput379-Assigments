@@ -4,5 +4,5 @@
 # include <vector>
 # include <fstream>
 
-void writefiles(std::string filename,std::vector<std::string> outputss);
+std::vector<std::string> event_management(int nThread,std::vector<std::string> instru,std::string filename);
 int main(int argc,char* argv[]);

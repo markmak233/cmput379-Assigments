@@ -18,7 +18,7 @@ tands.o: tands.cpp
 
 
 submit:
-	tar -cxvf assigment2.tar Makefile *.cpp *.h
+	tar -czvf assigment2.tar makefile *.cpp *.h markdown
 
 clean:
 	rm -f *.o prodcon
