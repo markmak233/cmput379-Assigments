@@ -59,7 +59,7 @@ struct main_kid{
     int tid=0;
     int nth;
     int* qsnow2;
-    std::string status="init";
+    std::string status="Running";
     int workingnum=0;
     std::vector<children_thread*> *childThread;
     std::vector<inst_kind> *instructions;
@@ -78,7 +78,8 @@ struct main_kid{
 std::vector<inst_kind> translate_txt_to_struct(std::vector<std::string> instru);
 std::vector<std::string> log_event_convert(std::vector<log_event> tlog2,int nThread);
 std::vector<log_event> log_merge(std::vector<std::vector<log_event>>);
-void rapidwrite(struct log_event data,std::string filename,int* qsnow3,std::map <std::string,int>* commcount,std::vecot<int>*tcount);
+void rapidwrite(struct log_event data,std::string filename,int* qsnow3,std::map <std::string,int>* commcount,std::vector<int>*tcount);
+void summarywrite(std::map <std::string,int>* commcount,std::vector<int>*tcount, double lengthtime,std::string filename);
 void writefiles(std::string filename,std::vector<std::string> outputss);
 void *Parent_thread(void *data);
 void *Children_run_thread(void *data2);

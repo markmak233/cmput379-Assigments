@@ -12,7 +12,7 @@ void event_management(int nThread,vector<string> instru,string filename){
     // where this log devices also able to access
     vector<children_thread> childthinfo;
     vector<children_thread*> childthinfo_vector;
-    std::vector<std::vector<log_event>> childrenlog;
+    //std::vector<std::vector<log_event>> childrenlog;
     vector<sem_t> sema;
     vector<int> ted_thread;
     queue<int> tasks;
@@ -30,6 +30,8 @@ void event_management(int nThread,vector<string> instru,string filename){
     sem_t gb_log;
     sem_init(&gb_log,1,1);
     int qs=nThread;
+    double lastime=0;
+    tcout.push_back(0);
 
     // children info setup and semphore init
     for (int i=0;i<nThread;i++){
@@ -46,16 +48,11 @@ void event_management(int nThread,vector<string> instru,string filename){
         temp.gblog1=&global_log;
         temp.qsnow=&qs;
         tcout.push_back(0);
-        //push into list
-        childrenlog.push_back(temp4);
-
         childthinfo.push_back(temp);
-        
     }
     // pointer for readu distribure to each children
     for (unsigned i=0;i<childthinfo.size();i++){
         childthinfo_vector.push_back(&childthinfo[i]);
-        childthinfo[i].loge=&(childrenlog[i]);
 
     }
 
@@ -76,14 +73,11 @@ void event_management(int nThread,vector<string> instru,string filename){
     
     // //https://www.tutorialspoint.com/how-to-get-time-in-milliseconds-using-cplusplus-on-linux
     
-    cout << "all variable ready" << endl;
     struct timeval stime;
     gettimeofday(&stime,NULL);
 
     Parent->start_time=stime;
-    //int free_queue=nThread;
 
-    cout << "starting children" << endl;
     //preation done from here
 
     // start children tread    
@@ -91,13 +85,11 @@ void event_management(int nThread,vector<string> instru,string filename){
     for(unsigned i=0;i<childthinfo_vector.size();i++){
         // start second children sephnore
         // start pthread
-        cout << "Starting Children " << i << endl;
         pthread_t cp1;
         childthinfo[i].start_time=stime;
         pthread_create(&cp1,NULL,Children_run_thread,childthinfo_vector[i]);
         bkpt.push_back(cp1);
     }
-    cout << "staring Producer" << endl;
     // start parent thread
     //creating main parent thread
     pthread_t p;
@@ -111,9 +103,9 @@ void event_management(int nThread,vector<string> instru,string filename){
     while (checking){
         int st;
         sem_getvalue(&(Parent->semaph->at(0)),&st);
-        if (st){
+        if (st && !parent_end){
             sem_wait(&(Parent->semaph->at(0)));
-            if(Parent->status=="End" && !parent_end){
+            if(Parent->status=="End"){
                 terminated_thread++;
                 parent_end=1;
             }
@@ -132,6 +124,7 @@ void event_management(int nThread,vector<string> instru,string filename){
                 while (!(global_log_cache.empty()))
                 {
                     rapidwrite(global_log_cache.front(),filename,&qs,&commcount,&tcout);
+                    lastime=global_log_cache.front().currentTime;
                     global_log_cache.pop();
                 }
                 
@@ -171,12 +164,13 @@ void event_management(int nThread,vector<string> instru,string filename){
 
     if (!(global_log.empty())){
         rapidwrite(global_log.front(),filename,&qs,&commcount,&tcout);
+        lastime=global_log_cache.front().currentTime;
         global_log_cache.pop();
     }
 
 
     cout << "children ended" << endl;
-    childrenlog.push_back(thlog1);
+    //childrenlog.push_back(thlog1);
        
     for (unsigned i=0;i<sema.size();i++){
         sem_destroy(&sema[i]);
@@ -185,19 +179,15 @@ void event_management(int nThread,vector<string> instru,string filename){
         }
     }
 
+    summarywrite(&commcount,&tcout,lastime,filename);
     // process with the log
-    vector<string> op1;
-    vector<log_event> all_log=log_merge(childrenlog);
-    op1=log_event_convert(all_log,nThread);
-    cout << "writing file"<< endl;
-    writefiles(filename,op1);
+    // vector<string> op1;
+    // vector<log_event> all_log=log_merge(childrenlog);
+    // op1=log_event_convert(all_log,nThread);
+    // op1.push_back("\n\n\n\n\n\n");
+    // cout << "writing file"<< endl;
+    // writefiles(filename,op1);
 
-    //debug for each thread output only
-    for (unsigned i=0;i<childrenlog.size();i++){
-        vector<string> op2;
-        op2=log_event_convert(childrenlog[i],nThread);
-        writefiles(filename,op2);
-    }
     return;
     
 }
