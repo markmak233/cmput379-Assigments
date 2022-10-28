@@ -17,7 +17,7 @@ vector<string> event_management(int nThread,vector<string> instru,string filenam
     // where this log devices also able to access
     vector<children_thread> childthinfo;
     vector<children_thread*> childthinfo_vector;
-    //vector<vector<log_event>> childrenlog;
+    vector<vector<log_event>> childrenlog;
     vector<sem_t> sema;
     vector<int> ted_thread;
     // main Parent semphore init
@@ -36,15 +36,17 @@ vector<string> event_management(int nThread,vector<string> instru,string filenam
         mysem.push_back(temp3);
         temp.semaph2=mysem;
         cout <<"sem size "<< temp.semaph2.size() << endl;
+        vector<log_event> temp4;
         //push into list
-
-
+        childrenlog.push_back(temp4);
         childthinfo.push_back(temp);
         
     }
     // pointer for readu distribure to each children
     for (unsigned i=0;i<childthinfo.size();i++){
         childthinfo_vector.push_back(&childthinfo[i]);
+        childthinfo[i].loge=&(childrenlog[i]);
+
     }
 
     // creating Parent infomation
@@ -57,7 +59,10 @@ vector<string> event_management(int nThread,vector<string> instru,string filenam
 
     vector<log_event> thlog1;
     // https://stackoverflow.com/questions/997946/how-to-get-current-time-and-date-in-c
-    auto init_log_time=chrono::system_clock::now();
+    
+    struct  timeval stime;
+    gettimeofday(&stime,NULL);
+
     //int free_queue=nThread;
     int parent_end=0;
     int terminated_thread=0;
@@ -71,6 +76,7 @@ vector<string> event_management(int nThread,vector<string> instru,string filenam
         // start pthread
         pthread_t cp;
         cout <<i << " cthread"<< childthinfo[i].semaph2.size() << endl;
+        childthinfo[i].start_time=stime;
         pthread_create(&cp,NULL,Children_run_thread,childthinfo_vector[i]);
         bkpt.push_back(cp);
     }
@@ -84,7 +90,7 @@ vector<string> event_management(int nThread,vector<string> instru,string filenam
     
     int checking=1;
     while (checking){
-        auto now_time =chrono::system_clock::now();
+       
         // data the associate with parent
         int st;
         sem_getvalue(&(Parent->semaph->at(0)),&st);
@@ -103,8 +109,9 @@ vector<string> event_management(int nThread,vector<string> instru,string filenam
                     temp_log.run_num=Parent->workingnum;
 
                     //https://stackoverflow.com/questions/997946/how-to-get-current-time-and-date-in-c
-                    chrono::duration<double> durtime=now_time-init_log_time;
-                    temp_log.currentTime=durtime;
+                    struct  timeval etime;
+                    gettimeofday(&etime,NULL);
+                    temp_log.currentTime = ((etime.tv_sec - stime.tv_sec) * 1000 + (etime.tv_usec-stime.tv_usec)/1000.0)/1000;
 
                     thlog1.push_back(temp_log);
                 }
@@ -115,49 +122,53 @@ vector<string> event_management(int nThread,vector<string> instru,string filenam
         }
 
         // data that associate with children
-        for (unsigned i=0;i<childthinfo.size();i++){
-            int st;
-            sem_getvalue(&(childthinfo[i].semaph2[0]),&st);
-            if (st){
-                sem_wait(&(childthinfo[i].semaph2[0]));
-                if (childthinfo[i].status!=childthinfo[i].last_saved_status && childthinfo[i].status!="End"){   
-                    struct log_event temp_log;
-                    temp_log.Status=childthinfo[i].status;
-                    temp_log.tid=childthinfo[i].tid;
-                    //run num does not exist
-                    if (childthinfo[i].status!="Ask"){
-                        temp_log.run_num=childthinfo[i].newWorknum;
-                    }else{
-                        temp_log.run_num=0;
-                    }
-                    chrono::duration<double> durtime=now_time-init_log_time;
-                    temp_log.currentTime=durtime;
-                    thlog1.push_back(temp_log);
-                    childthinfo[i].last_saved_status=childthinfo[i].status;
-                    // additional information for the 
-                    if(childthinfo[i].status=="Complete"){
-                        // clear out the instruction
-                        childthinfo[i].newWorknum=0;
-                        childthinfo[i].isnewWork=0;
-
-                        childthinfo[i].status="Ask";
-                        struct log_event temp_log3;
-                        temp_log3.Status=childthinfo[i].status;
-                        temp_log3.tid=childthinfo[i].tid;
-                        temp_log3.currentTime=durtime;
-                        temp_log3.run_num=0;
-                        thlog1.push_back(temp_log3);
-                        childthinfo[i].last_saved_status=childthinfo[i].status;
-                        
-                    }
-                    childthinfo[i].last_saved_status=childthinfo[i].status;
+        // for (unsigned i=0;i<childthinfo.size();i++){
+        //     int st;
+        //     sem_getvalue(&(childthinfo[i].semaph2[0]),&st);
+        //     if (st){
+        //         sem_wait(&(childthinfo[i].semaph2[0]));
+        //         if (childthinfo[i].status!=childthinfo[i].last_saved_status && childthinfo[i].status!="End"){   
+        //             struct log_event temp_log;
+        //             temp_log.Status=childthinfo[i].status;
+        //             temp_log.tid=childthinfo[i].tid;
+        //             //run num does not exist
+        //             if (childthinfo[i].status!="Ask"){
+        //                 temp_log.run_num=childthinfo[i].newWorknum;
+        //             }else{
+        //                 temp_log.run_num=0;
+        //             }
                     
-                }
-                
-                sem_post(&(childthinfo[i].semaph2[0]));
+        //             struct  timeval etime;
+        //             gettimeofday(&etime,NULL);
+        //             double durtime = ((etime.tv_sec - stime.tv_sec) * 1000 + (etime.tv_usec-stime.tv_usec)/1000.0)/1000;
 
-            }
-        }
+        //             temp_log.currentTime=durtime;
+        //             thlog1.push_back(temp_log);
+        //             childthinfo[i].last_saved_status=childthinfo[i].status;
+        //             // additional information for the 
+        //             if(childthinfo[i].status=="Complete"){
+        //                 // clear out the instruction
+        //                 childthinfo[i].newWorknum=0;
+        //                 childthinfo[i].isnewWork=0;
+
+        //                 childthinfo[i].status="Ask";
+        //                 struct log_event temp_log3;
+        //                 temp_log3.Status=childthinfo[i].status;
+        //                 temp_log3.tid=childthinfo[i].tid;
+        //                 temp_log3.currentTime=durtime;
+        //                 temp_log3.run_num=0;
+        //                 thlog1.push_back(temp_log3);
+        //                 childthinfo[i].last_saved_status=childthinfo[i].status;
+                        
+        //             }
+        //             childthinfo[i].last_saved_status=childthinfo[i].status;
+                    
+        //         }
+                
+        //         sem_post(&(childthinfo[i].semaph2[0]));
+
+        //     }
+        // }
         
         
         
@@ -203,6 +214,19 @@ vector<string> event_management(int nThread,vector<string> instru,string filenam
             sem_destroy(&childthinfo[i-1].semaph2[0]);
         }
     }
+
+    for (unsigned i=0;i<childrenlog.size();i++){
+        vector<string> op2;
+        op2=log_event_convert(childrenlog[i],nThread);
+        writefiles(filename,op2);
+    }
+
+    //https://www.tutorialspoint.com/how-to-get-time-in-milliseconds-using-cplusplus-on-linux
+    struct  timeval etime;
+    gettimeofday(&etime,NULL);
+    double intl =  ((etime.tv_sec - stime.tv_sec) * 1000 + (etime.tv_usec-stime.tv_usec)/1000.0)/1000;
+    cout << "total run_time " << intl << endl;   
+
     return op1;
     
 }

@@ -47,9 +47,9 @@ vector<string> log_event_convert(vector<log_event> tlog2,int nThread){
         string tempstr;
         char temp[100];
         if (tlog2[i].Status=="Work" || tlog2[i].Status=="Receive" ){
-            sprintf(temp,"%2.3f ID=%3d Q=%3d ",tlog2[i].currentTime.count(),tlog2[i].tid,tlog2[i].queue);
+            sprintf(temp,"%2.3f ID=%3d Q=%3d ",tlog2[i].currentTime,tlog2[i].tid,tlog2[i].queue);
         } else {
-            sprintf(temp,"%2.3f ID=%3d       ",tlog2[i].currentTime.count(),tlog2[i].tid);
+            sprintf(temp,"%2.3f ID=%3d       ",tlog2[i].currentTime,tlog2[i].tid);
         }
         tempstr.append(temp);
 
@@ -98,7 +98,7 @@ vector<string> log_event_convert(vector<log_event> tlog2,int nThread){
         s1.push_back(temp3);
     }
     double tps=commcount["Receive"];
-    auto totaltime=tlog2[tlog2.size()-1].currentTime.count();
+    auto totaltime=tlog2[tlog2.size()-1].currentTime;
     tps=tps/totaltime;
     char temp4[100];
     sprintf(temp4,"Trabsactions per second: %3.3f \t    //\n",tps);
@@ -219,12 +219,18 @@ void *Children_run_thread(void *data2){
     // rocover from the data
     cout << "children process started" << endl;
     struct children_thread *data2_cp = (struct children_thread*)data2;
-
-    
     sem_wait(&(data2_cp->semaph2.at(0)));
     //int myid=data2_cp->tid;
     data2_cp->status="Ask";
+    struct log_event templog1;
+    struct  timeval etime;
+    templog1.Status=data2_cp->status;
+    templog1.tid=data2_cp->tid;
     sem_post(&(data2_cp->semaph2.at(0)));
+    // gete time
+    gettimeofday(&etime,NULL);
+    templog1.currentTime= ((etime.tv_sec - data2_cp->start_time.tv_sec) * 1000 + (etime.tv_usec-data2_cp->start_time.tv_usec)/1000.0)/1000;
+    data2_cp->loge->push_back(templog1);
 
     int end_thread=0;
     while (end_thread==0){
@@ -238,10 +244,31 @@ void *Children_run_thread(void *data2){
 
             if (worknum!=0){
                 data2_cp->status="Receive";
+                templog1.Status=data2_cp->status;
                 sem_post(&(data2_cp->semaph2.at(0)));
+                gettimeofday(&etime,NULL);
+                templog1.run_num=worknum;
+
+                templog1.currentTime= ((etime.tv_sec - data2_cp->start_time.tv_sec) * 1000 + (etime.tv_usec-data2_cp->start_time.tv_usec)/1000.0)/1000;
+                data2_cp->loge->push_back(templog1);
+
                 Trans(worknum);
+
                 sem_wait(&(data2_cp->semaph2.at(0)));
                 data2_cp->status="Complete";
+                templog1.Status=data2_cp->status;
+                gettimeofday(&etime,NULL);
+                templog1.currentTime= ((etime.tv_sec - data2_cp->start_time.tv_sec) * 1000 + (etime.tv_usec-data2_cp->start_time.tv_usec)/1000.0)/1000;
+                data2_cp->loge->push_back(templog1);
+
+                data2_cp->status="Ask";
+                data2_cp->isnewWork=0;
+                data2_cp->newWorknum=0;
+                templog1.Status=data2_cp->status;
+                templog1.run_num=0;
+                templog1.currentTime= ((etime.tv_sec - data2_cp->start_time.tv_sec) * 1000 + (etime.tv_usec-data2_cp->start_time.tv_usec)/1000.0)/1000;
+                data2_cp->loge->push_back(templog1);
+
             }
             sem_post(&(data2_cp->semaph2.at(0)));
 

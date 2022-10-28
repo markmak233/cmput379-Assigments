@@ -13,13 +13,23 @@
 #include <algorithm>
 #include <map>
 
+#include <typeinfo>
 
-# include <chrono>
-# include <ctime>
+
 # include <cstring>
+# include <sys/time.h>
+
 struct inst_kind{
     std::string TS;
     int numb; 
+};
+
+struct log_event{
+    double currentTime;
+    int tid;
+    int queue=0;
+    std::string Status;
+    int run_num=0;
 };
 
 struct children_thread{
@@ -30,6 +40,8 @@ struct children_thread{
     int newWorknum=0;
     int nomorework=0;
     std::vector<sem_t> semaph2;
+    std::vector<log_event>*loge;
+    struct timeval start_time;
 };
 
 struct main_kid{
@@ -44,13 +56,7 @@ struct main_kid{
     
 };
 
-struct log_event{
-    std::chrono::duration<double> currentTime;
-    int tid;
-    int queue=0;
-    std::string Status;
-    int run_num;
-};
+
 
 std::vector<inst_kind> translate_txt_to_struct(std::vector<std::string> instru);
 std::vector<std::string> log_event_convert(std::vector<log_event> tlog2,int nThread);
