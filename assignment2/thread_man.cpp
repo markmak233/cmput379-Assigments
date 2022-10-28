@@ -9,18 +9,27 @@ vector<inst_kind> translate_txt_to_struct(vector<string> instru){
     for (unsigned ind=0;ind<instru.size()-1;ind++){
         struct inst_kind temp1;
         temp1.TS=instru[ind][0];
+        if (temp1.TS!="T"&& temp1.TS!="S"){
+            continue;
+        }
         string temp2 = instru[ind];
         temp2.erase(0,1);
 
+        // if error occer go to next one
         // https://www.educative.io/answers/how-to-convert-a-string-to-an-int-in-cpp
-        stringstream ss;
-        ss << temp2;
-        ss >> temp1.numb;
-
-        if (temp1.numb<1 || temp1.numb>100){
-            temp1.numb=1;
+        // https://en.cppreference.com/w/cpp/language/try_catch
+        try{
+            stringstream ss;
+            ss << temp2;
+            ss >> temp1.numb;
+        } catch (const exception& e){
+            cout << "error occur while converting numbers" << endl;
+            continue;
         }
 
+        if (temp1.TS=="S" && (temp1.numb<1 || temp1.numb>100)){
+            temp1.numb=1;
+        }
         transed_instru.push_back(temp1);
     }
     return transed_instru;
@@ -183,6 +192,7 @@ void *Parent_thread(void *data){
     for (unsigned i=0;i<data_cp->instructions->size();i++) {
         ////https://www.tutorialspoint.com/how-to-get-time-in-milliseconds-using-cplusplus-on-linux
         // if sleeping requested
+        cout << "working on" << i <<endl;
         if (data_cp->instructions->at(i).TS=="S"){
             // start signaling
             sem_wait(&(data_cp->semaph->at(myid)));
@@ -222,26 +232,17 @@ void *Parent_thread(void *data){
             data_cp->loge->push_back(temp_log);
 
             while (!work_assigned){
-                for (unsigned tx=0;tx<data_cp->childThread->size();tx++){
-                    // checking if locking, if it is check back later
-                    int st;
-                    sem_getvalue(&(data_cp->childThread->at(tx)->semaph2),&st);
-                    if (st){
-                        sem_wait(&(data_cp->childThread->at(tx)->semaph2));
-                        
-                        if (data_cp->childThread->at(tx)->status=="Ask" && data_cp->childThread->at(tx)->newWorknum==0){
-                            data_cp->childThread->at(tx)->isnewWork =1;
-                            data_cp->childThread->at(tx)->newWorknum = data_cp->instructions->at(i).numb;
-                            work_assigned =1;
-                        }
-                        sem_post(&(data_cp->childThread->at(tx)->semaph2));
-                        if (work_assigned){
-                            tx=data_cp->childThread->size()-1;
-                            
-                        }
-                        
+                // checking if locking, if it is check back later
+                int st;
+                sem_getvalue((data_cp->global_sem),&st);
+                if (st){
+                    sem_wait((data_cp->global_sem));
+                    if (data_cp->tasks->size()<data_cp->nth*2){
+                        data_cp->tasks->push(data_cp->instructions->at(i).numb);
+                        work_assigned=1;
                     }
-                }
+                    sem_post((data_cp->global_sem));
+                } 
             }
             sem_wait(&(data_cp->semaph->at(myid)));
             data_cp->status="Running";
@@ -277,7 +278,7 @@ void *Children_run_thread(void *data2){
     // rocover from the data
     struct children_thread *data2_cp = (struct children_thread*)data2;
     sem_wait(&(data2_cp->semaph2));
-    //int myid=data2_cp->tid;
+    int myid=data2_cp->tid;
     data2_cp->status="Ask";
     struct log_event templog1;
     struct  timeval etime;
@@ -293,6 +294,23 @@ void *Children_run_thread(void *data2){
     while (end_thread==0){
         // checking if all the task has been handout,and it is ok to terminate
         int sm;
+        sem_getvalue((data2_cp->global_sem),&sm);
+        if (sm){
+            sem_wait((data2_cp->global_sem));
+            if (!(data2_cp->tasks->empty())){
+                data2_cp->newWorknum=data2_cp->tasks->front();
+                data2_cp->tasks->pop();
+                data2_cp->emptyqueue=0;
+            } else {
+                cout << myid << " " << "empty queue" << endl;
+                data2_cp->emptyqueue=1;
+            }
+            sem_post((data2_cp->global_sem));
+            data2_cp->isnewWork=1;
+        }
+
+
+
         sem_getvalue(&(data2_cp->semaph2),&sm);
         // finded a work given
         if (sm){
@@ -340,7 +358,7 @@ void *Children_run_thread(void *data2){
         sem_getvalue(&(data2_cp->semaph2),&sm2);
         if (sm2){
             sem_wait(&(data2_cp->semaph2));
-            if (data2_cp->nomorework==1 && data2_cp->newWorknum==0){
+            if ((data2_cp->nomorework==1 && data2_cp->newWorknum==0) && data2_cp->emptyqueue==1){
                 end_thread=1;
             }
             sem_post(&(data2_cp->semaph2));

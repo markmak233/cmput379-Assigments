@@ -15,10 +15,14 @@ void event_management(int nThread,vector<string> instru,string filename){
     std::vector<std::vector<log_event>> childrenlog;
     vector<sem_t> sema;
     vector<int> ted_thread;
+    queue<int> tasks;
     // main Parent semphore init
     sem_t sp;
     sem_init(&sp,1,1);
     sema.push_back(sp);
+    // global semphore init
+    sem_t gb;
+    sem_init(&gb,1,1);
 
     // children info setup and semphore init
     for (int i=0;i<nThread;i++){
@@ -29,6 +33,8 @@ void event_management(int nThread,vector<string> instru,string filename){
         sem_init(&temp3,1,1);
         temp.semaph2=temp3;
         vector<log_event> temp4;
+        temp.global_sem=&gb;
+        temp.tasks=&tasks;
         //push into list
         childrenlog.push_back(temp4);
         childthinfo.push_back(temp);
@@ -50,6 +56,8 @@ void event_management(int nThread,vector<string> instru,string filename){
     Parent->instructions=&translated_instru;
     Parent->semaph=&sema;
     Parent->loge=&thlog1;
+    Parent->global_sem=&gb;
+    Parent->tasks=&tasks;
     
     // //https://www.tutorialspoint.com/how-to-get-time-in-milliseconds-using-cplusplus-on-linux
     
@@ -123,12 +131,12 @@ void event_management(int nThread,vector<string> instru,string filename){
     cout << "writing file"<< endl;
     writefiles(filename,op1);
 
-    // debug for each thread output only
-    // for (unsigned i=0;i<childrenlog.size();i++){
-    //     vector<string> op2;
-    //     op2=log_event_convert(childrenlog[i],nThread);
-    //     writefiles(filename,op2);
-    // }
+    //debug for each thread output only
+    for (unsigned i=0;i<childrenlog.size();i++){
+        vector<string> op2;
+        op2=log_event_convert(childrenlog[i],nThread);
+        writefiles(filename,op2);
+    }
     return;
     
 }

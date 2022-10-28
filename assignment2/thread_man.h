@@ -10,8 +10,9 @@
 
 # include <string>
 # include <vector>
-#include <algorithm>
-#include <map>
+# include <algorithm>
+# include <map>
+# include <queue>
 
 # include <pthread.h>
 # include <mutex>
@@ -40,8 +41,11 @@ struct children_thread{
     int isnewWork=0;
     int newWorknum=0;
     int nomorework=0;
+    int emptyqueue=0;
     sem_t semaph2;
+    sem_t *global_sem;
     std::vector<log_event>*loge;
+    std::queue<int>* tasks;
     struct timeval start_time;
 };
 
@@ -54,6 +58,8 @@ struct main_kid{
     std::vector<inst_kind> *instructions;
     std::vector<log_event> *loge;
     std::vector<sem_t>* semaph;
+    std::queue<int>*tasks;
+    sem_t *global_sem;
     struct timeval start_time;
     
 };
