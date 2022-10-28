@@ -11,7 +11,6 @@ void event_management(int nThread,vector<string> instru,string filename){
     //start a vector that contain the share memory information
     // where this log devices also able to access
     vector<children_thread> childthinfo;
-    vector<children_thread*> childthinfo_vector;
     vector<int> ted_thread;
     queue<int> tasks;
     queue<log_event> global_log;
@@ -35,9 +34,9 @@ void event_management(int nThread,vector<string> instru,string filename){
         struct children_thread temp;
         temp.tid=i+1;
         // setup semaphore
-        sem_t temp3;
-        sem_init(&temp3,1,1);
-        temp.semaph2=temp3;
+        //sem_t temp3;
+        sem_init(&temp.semaph2,1,1);
+       
 
         temp.global_sem=&gb;
         temp.tasks=&tasks;
@@ -49,62 +48,54 @@ void event_management(int nThread,vector<string> instru,string filename){
         tcout.push_back(0);
         childthinfo.push_back(temp);
     }
-    // pointer for readu distribure to each children
-    for (unsigned i=0;i<childthinfo.size();i++){
-        childthinfo_vector.push_back(&childthinfo[i]);
 
-    }
-
-    vector<log_event> thlog1;
     // creating Parent infomation
-    struct main_kid* Parent,Parent2;
-    Parent=&Parent2;
-    Parent->nth=nThread;
-    Parent->childThread=&childthinfo_vector;
-    Parent->instructions=&translated_instru;
-    Parent->semaph=&sp;
-    Parent->loge=&thlog1;
-    Parent->global_sem=&gb;
-    Parent->tasks=&tasks;
-    Parent->gblog2=&global_log;
-    Parent->global_sem_log2=&gb_log;
-    Parent->qsnow2=&qs;
+    struct main_kid Parent;
+    Parent.nth=nThread;
+    Parent.childThread=&childthinfo;
+    Parent.instructions=&translated_instru;
+    Parent.semaph=&sp;
+    Parent.global_sem=&gb;
+    Parent.tasks=&tasks;
+    Parent.gblog2=&global_log;
+    Parent.global_sem_log2=&gb_log;
+    Parent.qsnow2=&qs;
     
     // //https://www.tutorialspoint.com/how-to-get-time-in-milliseconds-using-cplusplus-on-linux
     
     struct timeval stime;
     gettimeofday(&stime,NULL);
 
-    Parent->start_time=stime;
+    Parent.start_time=stime;
 
     //preation done from here
 
     // start children tread    
     vector<pthread_t> bkpt;
-    for(unsigned i=0;i<childthinfo_vector.size();i++){
+    for(unsigned i=0;i<childthinfo.size();i++){
         // start second children sephnore
         // start pthread
         pthread_t cp1;
         childthinfo[i].start_time=stime;
-        pthread_create(&cp1,NULL,Children_run_thread,childthinfo_vector[i]);
+        pthread_create(&cp1,NULL,Children_run_thread,&childthinfo[i]);
         bkpt.push_back(cp1);
     }
     // start parent thread
     //creating main parent thread
     pthread_t p;
-    pthread_create(&p,NULL,Parent_thread,Parent);
+    pthread_create(&p,NULL,Parent_thread,&Parent);
     //pthread_join(p,NULL);
     
     int terminated_thread=0;
     while (terminated_thread<nThread+1){
         int st;
-        sem_getvalue((Parent->semaph),&st);
+        sem_getvalue((Parent.semaph),&st);
         if (st && terminated_thread==0){
-            sem_wait((Parent->semaph));
-            if(Parent->status=="End"){
+            sem_wait((Parent.semaph));
+            if(Parent.status=="End"){
                 terminated_thread++;
             }
-            sem_post((Parent->semaph));
+            sem_post((Parent.semaph));
         }
         //getting the log cache
         sem_getvalue(&(gb_log),&st);
@@ -141,7 +132,7 @@ void event_management(int nThread,vector<string> instru,string filename){
                     sem_getvalue(&(childthinfo[i].semaph2),&st);
                     if (st ){
                         sem_wait(&(childthinfo[i].semaph2));
-                        if (childthinfo_vector[i]->nomorework && childthinfo_vector[i]->status=="End"){
+                        if (childthinfo[i].nomorework && childthinfo[i].status=="End"){
                             terminated_thread++;
                             ted_thread.push_back(i);
                         }
@@ -161,7 +152,6 @@ void event_management(int nThread,vector<string> instru,string filename){
 
 
     cout << "children ended" << endl;
-    //childrenlog.push_back(thlog1);
        
     for (unsigned i=0;i<childthinfo.size();i++){
         sem_destroy(&childthinfo[i].semaph2);

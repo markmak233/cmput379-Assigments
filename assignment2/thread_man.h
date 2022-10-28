@@ -49,7 +49,6 @@ struct children_thread{
     sem_t semaph2;
     sem_t *global_sem;
     sem_t *global_sem_log1;
-    std::vector<log_event>*loge;
     std::queue<int>* tasks;
     std::queue<log_event>* gblog1;
     struct timeval start_time;
@@ -61,9 +60,8 @@ struct main_kid{
     int* qsnow2;
     std::string status="Running";
     int workingnum=0;
-    std::vector<children_thread*> *childThread;
+    std::vector<children_thread> *childThread;
     std::vector<inst_kind> *instructions;
-    std::vector<log_event> *loge;
     sem_t* semaph;
     std::queue<int>*tasks;
     std::queue<log_event>* gblog2;

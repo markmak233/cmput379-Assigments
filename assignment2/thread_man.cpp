@@ -203,7 +203,6 @@ void *Parent_thread(void *data){
 
             gettimeofday(&etime,NULL);
             temp_log.currentTime=((etime.tv_sec - data_cp->start_time.tv_sec) * 1000 + (etime.tv_usec-data_cp->start_time.tv_usec)/1000.0)/1000;
-            //data_cp->loge->push_back(temp_log);
 
             sem_wait((data_cp->global_sem_log2));
             data_cp->gblog2->push(temp_log);
@@ -231,9 +230,9 @@ void *Parent_thread(void *data){
 
     // call all the function ok to terminate
     for(unsigned i=0;i<data_cp->childThread->size();i++){
-        sem_wait(&(data_cp->childThread->at(i)->semaph2));
-        data_cp->childThread->at(i)->nomorework=1;
-        sem_post(&(data_cp->childThread->at(i)->semaph2));
+        sem_wait(&(data_cp->childThread->at(i).semaph2));
+        data_cp->childThread->at(i).nomorework=1;
+        sem_post(&(data_cp->childThread->at(i).semaph2));
     }
 
     sem_wait((data_cp->semaph));
@@ -274,7 +273,6 @@ void *Children_run_thread(void *data2){
     // gete time
     gettimeofday(&etime,NULL);
     templog1.currentTime= ((etime.tv_sec - data2_cp->start_time.tv_sec) * 1000 + (etime.tv_usec-data2_cp->start_time.tv_usec)/1000.0)/1000;
-    //data2_cp->loge->push_back(templog1);
 
     sem_wait((data2_cp->global_sem_log1));
     data2_cp->gblog1->push(templog1);
@@ -291,7 +289,6 @@ void *Children_run_thread(void *data2){
                 data2_cp->newWorknum=data2_cp->tasks->front();
                 data2_cp->tasks->pop();
                 data2_cp->emptyqueue=0;
-                // templog1.queue=*data2_cp->qsnow;
             } else {
                 data2_cp->emptyqueue=1;
             }
@@ -313,7 +310,6 @@ void *Children_run_thread(void *data2){
                 templog1.run_num=worknum;
 
                 templog1.currentTime= ((etime.tv_sec - data2_cp->start_time.tv_sec) * 1000 + (etime.tv_usec-data2_cp->start_time.tv_usec)/1000.0)/1000;
-                //data2_cp->loge->push_back(templog1);
 
                 sem_wait((data2_cp->global_sem_log1));
                 data2_cp->gblog1->push(templog1);
@@ -328,7 +324,6 @@ void *Children_run_thread(void *data2){
                 templog1.Status=data2_cp->status;
                 gettimeofday(&etime,NULL);
                 templog1.currentTime= ((etime.tv_sec - data2_cp->start_time.tv_sec) * 1000 + (etime.tv_usec-data2_cp->start_time.tv_usec)/1000.0)/1000;
-                //data2_cp->loge->push_back(templog1);
 
                 sem_wait((data2_cp->global_sem_log1));
                 data2_cp->gblog1->push(templog1);
@@ -341,7 +336,6 @@ void *Children_run_thread(void *data2){
                 templog1.Status=data2_cp->status;
                 templog1.run_num=0;
                 templog1.currentTime= ((etime.tv_sec - data2_cp->start_time.tv_sec) * 1000 + (etime.tv_usec-data2_cp->start_time.tv_usec)/1000.0)/1000;
-                //data2_cp->loge->push_back(templog1);
 
                 sem_wait((data2_cp->global_sem_log1));
                 data2_cp->gblog1->push(templog1);
