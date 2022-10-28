@@ -78,7 +78,7 @@ struct main_kid{
 std::vector<inst_kind> translate_txt_to_struct(std::vector<std::string> instru);
 std::vector<std::string> log_event_convert(std::vector<log_event> tlog2,int nThread);
 std::vector<log_event> log_merge(std::vector<std::vector<log_event>>);
-void rapidwrite(struct log_event data,std::string filename);
+void rapidwrite(struct log_event data,std::string filename,int* qsnow3,std::map <std::string,int>* commcount,std::vecot<int>*tcount);
 void writefiles(std::string filename,std::vector<std::string> outputss);
 void *Parent_thread(void *data);
 void *Children_run_thread(void *data2);

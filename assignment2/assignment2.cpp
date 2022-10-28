@@ -18,6 +18,8 @@ void event_management(int nThread,vector<string> instru,string filename){
     queue<int> tasks;
     queue<log_event> global_log;
     queue<log_event> global_log_cache;
+    map <string,int> commcount;
+    vector <int> tcout;
     // main Parent semphore init
     sem_t sp;
     sem_init(&sp,1,1);
@@ -43,6 +45,7 @@ void event_management(int nThread,vector<string> instru,string filename){
         temp.global_sem_log1=&gb_log;
         temp.gblog1=&global_log;
         temp.qsnow=&qs;
+        tcout.push_back(0);
         //push into list
         childrenlog.push_back(temp4);
 
@@ -128,7 +131,7 @@ void event_management(int nThread,vector<string> instru,string filename){
                 sem_post(&(gb_log));
                 while (!(global_log_cache.empty()))
                 {
-                    rapidwrite(global_log_cache.front(),filename);
+                    rapidwrite(global_log_cache.front(),filename,&qs,&commcount,&tcout);
                     global_log_cache.pop();
                 }
                 
@@ -167,7 +170,7 @@ void event_management(int nThread,vector<string> instru,string filename){
     }
 
     if (!(global_log.empty())){
-        rapidwrite(global_log.front(),filename);
+        rapidwrite(global_log.front(),filename,&qs,&commcount,&tcout);
         global_log_cache.pop();
     }
 

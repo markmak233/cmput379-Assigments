@@ -155,10 +155,17 @@ vector<log_event> log_merge(vector<vector<log_event>> log_2dlist){
     return allevent;
 }
 
-void rapidwrite(struct log_event data,string filename){
+void rapidwrite(struct log_event data,string filename,int* qsnow3,map <string,int>* commcount,vecot<int>*tcount){
     // string part
     string tempstr;
     char temp[100];
+    if (data.Status=="Complete"){
+    *qsnow3=*qsnow3+1;
+    }
+    if(data.Status=="Receive" ){
+    *qsnow3=*qsnow3-1;
+    }
+    data.queue=*qsnow3;
     if (data.Status=="Work" || data.Status=="Receive" ){
         sprintf(temp,"%2.3f ID=%3d Q=%3d ",data.currentTime,data.tid,data.queue);
     } else {
@@ -180,6 +187,16 @@ void rapidwrite(struct log_event data,string filename){
     }
     tempstr.append("\n");
     // couning part for summary
+
+    if(data.Status=="Receive" ){
+        commcount["Receive"]=commcount["Receive"]+1;
+        *tcout[data.tid]=*tcout[data.tid]+1;
+    } else if  (data.Status=="Work" ||
+                data.Status=="Ask" ||
+                data.Status=="Complete" ||
+                data.Status=="Sleep" ){
+        *commcount[data.Status]=*commcount[data.Status]+1;
+    }
 
     ofstream fout;
     ifstream fin;
@@ -219,7 +236,6 @@ void *Parent_thread(void *data){
     struct main_kid *data_cp = (struct main_kid*)data;
     struct log_event temp_log;
     struct timeval etime;
-    int qscache=0;
 
     cout << "Starting Parent" << endl;
 
@@ -265,9 +281,9 @@ void *Parent_thread(void *data){
         else if (data_cp->instructions->at(i).TS=="T"){
             int work_assigned=0;
             //check needed;
-            sem_wait((data_cp->global_sem));
-            temp_log.queue=*data_cp->qsnow2;
-            sem_post((data_cp->global_sem));
+            // sem_wait((data_cp->global_sem));
+            // temp_log.queue=*data_cp->qsnow2;
+            // sem_post((data_cp->global_sem));
 
             sem_wait(&(data_cp->semaph->at(myid)));
             data_cp->status="Work";
@@ -365,7 +381,7 @@ void *Children_run_thread(void *data2){
                 data2_cp->newWorknum=data2_cp->tasks->front();
                 data2_cp->tasks->pop();
                 data2_cp->emptyqueue=0;
-                templog1.queue=*data2_cp->qsnow;
+                // templog1.queue=*data2_cp->qsnow;
             } else {
                 cout << myid << " " << "empty queue" << endl;
                 data2_cp->emptyqueue=1;

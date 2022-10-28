@@ -1,0 +1,171 @@
+0.000 ID=  2 Q=  3 Ask                  //
+0.000 ID=  1 Q=  3 Ask                  //
+0.000 ID=  3 Q=  3 Ask                  //
+0.001 ID=  0 Q=  3 Work             4   //
+0.001 ID=  3 Q=  2 Receive          4   //
+0.001 ID=  0 Q=  2 Work             2   //
+0.001 ID=  0 Q=  2 Work             1   //
+0.001 ID=  0 Q=  2 Work             1   //
+0.001 ID=  2 Q=  1 Receive          2   //
+0.001 ID=  0 Q=  1 Sleep            9   //
+0.001 ID=  1 Q=  0 Receive          1   //
+0.002 ID=  2 Q=  1 Complete         2   //
+0.002 ID=  2 Q=  1 Ask                  //
+0.002 ID=  2 Q=  0 Receive          1   //
+0.002 ID=  1 Q=  1 Complete         1   //
+0.002 ID=  1 Q=  1 Ask                  //
+0.002 ID=  2 Q=  2 Complete         1   //
+0.002 ID=  2 Q=  2 Ask                  //
+0.003 ID=  3 Q=  3 Complete         4   //
+0.003 ID=  3 Q=  3 Ask                  //
+0.092 ID=  0 Q=  3 Work             5   //
+0.092 ID=  0 Q=  3 Sleep            1   //
+0.092 ID=  3 Q=  2 Receive          5   //
+0.094 ID=  3 Q=  3 Complete         5   //
+0.094 ID=  3 Q=  3 Ask                  //
+0.102 ID=  0 Q=  3 Work             1   //
+0.102 ID=  1 Q=  2 Receive          1   //
+0.102 ID=  0 Q=  2 Work             1   //
+0.102 ID=  0 Q=  2 Work             1   //
+0.102 ID=  0 Q=  2 End                  //
+0.102 ID=  3 Q=  1 Receive          1   //
+0.103 ID=  1 Q=  2 Complete         1   //
+0.103 ID=  1 Q=  2 Ask                  //
+0.103 ID=  1 Q=  1 Receive          1   //
+0.103 ID=  3 Q=  2 Complete         1   //
+0.103 ID=  3 Q=  2 Ask                  //
+0.103 ID=  1 Q=  3 Complete         1   //
+0.103 ID=  1 Q=  3 Ask                  //
+----------------------------------
+0.000 ID=  2       Ask                  //
+0.000 ID=  1       Ask                  //
+0.000 ID=  3       Ask                  //
+0.001 ID=  0 Q=  3 Work             4   //
+0.001 ID=  3 Q=  2 Receive          4   //
+0.001 ID=  0 Q=  2 Work             2   //
+0.001 ID=  0 Q=  2 Work             1   //
+0.001 ID=  0 Q=  2 Work             1   //
+0.001 ID=  2 Q=  1 Receive          2   //
+0.001 ID=  0       Sleep            9   //
+0.001 ID=  1 Q=  0 Receive          1   //
+0.002 ID=  2       Complete         2   //
+0.002 ID=  2       Ask                  //
+0.002 ID=  2 Q=  0 Receive          1   //
+0.002 ID=  1       Complete         1   //
+0.002 ID=  1       Ask                  //
+0.002 ID=  2       Complete         1   //
+0.002 ID=  2       Ask                  //
+0.002 ID=  2       End                  //
+0.003 ID=  3       Complete         4   //
+0.003 ID=  3       Ask                  //
+0.092 ID=  0 Q=  3 Work             5   //
+0.092 ID=  0       Sleep            1   //
+0.092 ID=  3 Q=  2 Receive          5   //
+0.094 ID=  3       Complete         5   //
+0.094 ID=  3       Ask                  //
+0.102 ID=  0 Q=  3 Work             1   //
+0.102 ID=  1 Q=  2 Receive          1   //
+0.102 ID=  0 Q=  2 Work             1   //
+0.102 ID=  0 Q=  2 Work             1   //
+0.102 ID=  0       End                  //
+0.102 ID=  3 Q=  1 Receive          1   //
+0.103 ID=  1       Complete         1   //
+0.103 ID=  1       Ask                  //
+0.103 ID=  1 Q=  1 Receive          1   //
+0.103 ID=  3       Complete         1   //
+0.103 ID=  3       Ask                  //
+0.103 ID=  3       End                  //
+0.103 ID=  1       Complete         1   //
+0.103 ID=  1       Ask                  //
+0.103 ID=  1       End                  //
+Summary:                                //
+    Ask            11                   // 
+    Complete        8                   // 
+    Receive         8                   // 
+    Sleep           2                   // 
+    Work            8                   // 
+    Thread   1 	  3 				    //
+    Thread   2 	  2 				    //
+    Thread   3 	  3 				    //
+Trabsactions per second: 77.604 	    //
+----------------------------------
+----------------------------------
+0.000 ID=  1       Ask                  //
+0.001 ID=  1 Q=  2 Receive          1   //
+0.002 ID=  1       Complete         1   //
+0.002 ID=  1       Ask                  //
+0.102 ID=  1 Q=  2 Receive          1   //
+0.103 ID=  1       Complete         1   //
+0.103 ID=  1       Ask                  //
+0.103 ID=  1 Q=  2 Receive          1   //
+0.103 ID=  1       Complete         1   //
+0.103 ID=  1       Ask                  //
+0.103 ID=  1       End                  //
+Summary:                                //
+    Ask             4                   // 
+    Complete        3                   // 
+    Receive         3                   // 
+    Thread   1 	  3 				    //
+    Thread   2 	  0 				    //
+    Thread   3 	  0 				    //
+Trabsactions per second: 29.101 	    //
+----------------------------------
+----------------------------------
+0.000 ID=  2       Ask                  //
+0.001 ID=  2 Q=  2 Receive          2   //
+0.002 ID=  2       Complete         2   //
+0.002 ID=  2       Ask                  //
+0.002 ID=  2 Q=  2 Receive          1   //
+0.002 ID=  2       Complete         1   //
+0.002 ID=  2       Ask                  //
+0.002 ID=  2       End                  //
+Summary:                                //
+    Ask             3                   // 
+    Complete        2                   // 
+    Receive         2                   // 
+    Thread   1 	  0 				    //
+    Thread   2 	  2 				    //
+    Thread   3 	  0 				    //
+Trabsactions per second: 837.170 	    //
+----------------------------------
+----------------------------------
+0.000 ID=  3       Ask                  //
+0.001 ID=  3 Q=  2 Receive          4   //
+0.003 ID=  3       Complete         4   //
+0.003 ID=  3       Ask                  //
+0.092 ID=  3 Q=  2 Receive          5   //
+0.094 ID=  3       Complete         5   //
+0.094 ID=  3       Ask                  //
+0.102 ID=  3 Q=  2 Receive          1   //
+0.103 ID=  3       Complete         1   //
+0.103 ID=  3       Ask                  //
+0.103 ID=  3       End                  //
+Summary:                                //
+    Ask             4                   // 
+    Complete        3                   // 
+    Receive         3                   // 
+    Thread   1 	  0 				    //
+    Thread   2 	  0 				    //
+    Thread   3 	  3 				    //
+Trabsactions per second: 29.140 	    //
+----------------------------------
+----------------------------------
+0.001 ID=  0 Q=  3 Work             4   //
+0.001 ID=  0 Q=  3 Work             2   //
+0.001 ID=  0 Q=  3 Work             1   //
+0.001 ID=  0 Q=  3 Work             1   //
+0.001 ID=  0       Sleep            9   //
+0.092 ID=  0 Q=  3 Work             5   //
+0.092 ID=  0       Sleep            1   //
+0.102 ID=  0 Q=  3 Work             1   //
+0.102 ID=  0 Q=  3 Work             1   //
+0.102 ID=  0 Q=  3 Work             1   //
+0.102 ID=  0       End                  //
+Summary:                                //
+    Sleep           2                   // 
+    Work            8                   // 
+    Thread   1 	  0 				    //
+    Thread   2 	  0 				    //
+    Thread   3 	  0 				    //
+Trabsactions per second: 0.000 	    //
+----------------------------------
