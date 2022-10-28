@@ -64,7 +64,7 @@ struct main_kid{
     std::vector<children_thread*> *childThread;
     std::vector<inst_kind> *instructions;
     std::vector<log_event> *loge;
-    std::vector<sem_t>* semaph;
+    sem_t* semaph;
     std::queue<int>*tasks;
     std::queue<log_event>* gblog2;
     sem_t *global_sem;

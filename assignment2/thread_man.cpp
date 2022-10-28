@@ -161,9 +161,9 @@ void *Parent_thread(void *data){
         // if sleeping requested
         if (data_cp->instructions->at(i).TS=="S"){
             // start signaling
-            sem_wait(&(data_cp->semaph->at(0)));
+            sem_wait((data_cp->semaph));
             data_cp->status="Sleep";
-            sem_post(&(data_cp->semaph->at(0)));
+            sem_post((data_cp->semaph));
             data_cp->workingnum=data_cp->instructions->at(i).numb;
             temp_log.Status=data_cp->status;
             temp_log.tid=data_cp->tid;
@@ -182,9 +182,9 @@ void *Parent_thread(void *data){
             Sleep(data_cp->instructions->at(i).numb);
 
             //sleeping done singaling
-            sem_wait(&(data_cp->semaph->at(0)));
+            sem_wait((data_cp->semaph));
             data_cp->status="Running";
-            sem_post(&(data_cp->semaph->at(0)));
+            sem_post((data_cp->semaph));
             data_cp->workingnum=0;
             
         }
@@ -193,9 +193,9 @@ void *Parent_thread(void *data){
             int work_assigned=0;
 
 
-            sem_wait(&(data_cp->semaph->at(0)));
+            sem_wait((data_cp->semaph));
             data_cp->status="Work";
-            sem_post(&(data_cp->semaph->at(0)));
+            sem_post((data_cp->semaph));
             data_cp->workingnum=data_cp->instructions->at(i).numb;
             temp_log.Status=data_cp->status;
             temp_log.run_num=data_cp->workingnum;
@@ -222,9 +222,9 @@ void *Parent_thread(void *data){
                     sem_post((data_cp->global_sem));
                 } 
             }
-            sem_wait(&(data_cp->semaph->at(0)));
+            sem_wait((data_cp->semaph));
             data_cp->status="Running";
-            sem_post(&(data_cp->semaph->at(0)));
+            sem_post((data_cp->semaph));
             data_cp->workingnum=0;
         }
     }
@@ -236,19 +236,20 @@ void *Parent_thread(void *data){
         sem_post(&(data_cp->childThread->at(i)->semaph2));
     }
 
-    sem_wait(&(data_cp->semaph->at(0)));
+    sem_wait((data_cp->semaph));
     data_cp->status="End";
     temp_log.Status=data_cp->status;
     temp_log.tid=data_cp->tid;
     temp_log.run_num=0;
     gettimeofday(&etime,NULL);
     temp_log.currentTime=((etime.tv_sec - data_cp->start_time.tv_sec) * 1000 + (etime.tv_usec-data_cp->start_time.tv_usec)/1000.0)/1000;
-    //data_cp->loge->push_back(temp_log);
-    sem_post(&(data_cp->semaph->at(0)));
-
+    // incase parent though the thread already end and actually still working
     sem_wait((data_cp->global_sem_log2));
     data_cp->gblog2->push(temp_log);
     sem_post((data_cp->global_sem_log2));
+    sem_post((data_cp->semaph));
+
+
 
 
     cout << "Ending Parent" << endl;

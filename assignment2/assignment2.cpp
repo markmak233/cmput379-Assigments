@@ -12,8 +12,6 @@ void event_management(int nThread,vector<string> instru,string filename){
     // where this log devices also able to access
     vector<children_thread> childthinfo;
     vector<children_thread*> childthinfo_vector;
-    //std::vector<std::vector<log_event>> childrenlog;
-    vector<sem_t> sema;
     vector<int> ted_thread;
     queue<int> tasks;
     queue<log_event> global_log;
@@ -23,7 +21,6 @@ void event_management(int nThread,vector<string> instru,string filename){
     // main Parent semphore init
     sem_t sp;
     sem_init(&sp,1,1);
-    sema.push_back(sp);
     // global semphore init
     sem_t gb;
     sem_init(&gb,1,1);
@@ -65,7 +62,7 @@ void event_management(int nThread,vector<string> instru,string filename){
     Parent->nth=nThread;
     Parent->childThread=&childthinfo_vector;
     Parent->instructions=&translated_instru;
-    Parent->semaph=&sema;
+    Parent->semaph=&sp;
     Parent->loge=&thlog1;
     Parent->global_sem=&gb;
     Parent->tasks=&tasks;
@@ -98,20 +95,16 @@ void event_management(int nThread,vector<string> instru,string filename){
     pthread_create(&p,NULL,Parent_thread,Parent);
     //pthread_join(p,NULL);
     
-
-    int checking=1;
-    int parent_end=0;
     int terminated_thread=0;
-    while (checking){
+    while (terminated_thread<nThread+1){
         int st;
-        sem_getvalue(&(Parent->semaph->at(0)),&st);
-        if (st && !parent_end){
-            sem_wait(&(Parent->semaph->at(0)));
+        sem_getvalue((Parent->semaph),&st);
+        if (st && terminated_thread==0){
+            sem_wait((Parent->semaph));
             if(Parent->status=="End"){
                 terminated_thread++;
-                parent_end=1;
             }
-            sem_post(&(Parent->semaph->at(0)));
+            sem_post((Parent->semaph));
         }
         //getting the log cache
         sem_getvalue(&(gb_log),&st);
@@ -158,10 +151,6 @@ void event_management(int nThread,vector<string> instru,string filename){
                 }
             }
         }
-        
-        if (terminated_thread>=nThread+1){
-            checking=0;
-        }
     }
 
     if (!(global_log.empty())){
@@ -174,11 +163,8 @@ void event_management(int nThread,vector<string> instru,string filename){
     cout << "children ended" << endl;
     //childrenlog.push_back(thlog1);
        
-    for (unsigned i=0;i<sema.size();i++){
-        sem_destroy(&sema[i]);
-        if (i!=0){
-            sem_destroy(&childthinfo[i-1].semaph2);
-        }
+    for (unsigned i=0;i<childthinfo.size();i++){
+        sem_destroy(&childthinfo[i].semaph2);
     }
 
     summarywrite(&commcount,&tcout,lastime,filename);
@@ -197,9 +183,8 @@ int main(int argc,char* argv[]){
     //output file name
     string filename;
     if (argc==3){
-        string nid=argv[2];
         filename.append("prodcon.");
-        filename.append(nid);
+        filename.append(argv[2]);
         filename.append(".log");
     } else{
         filename = "prodcon.log";
