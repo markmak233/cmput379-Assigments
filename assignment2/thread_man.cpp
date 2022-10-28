@@ -107,14 +107,48 @@ vector<string> log_event_convert(vector<log_event> tlog2,int nThread){
     return s1;
 }
 
+vector<log_event> log_merge(vector<vector<log_event>> log_2dlist){
+    vector<log_event> allevent;
+    int totalsize=0;
+    vector<unsigned> pivot;
+    for(unsigned i=0;i<log_2dlist.size();i++){
+        totalsize=totalsize+log_2dlist[i].size();
+        pivot.push_back(0);
+    }
+    cout << "Merging " << totalsize << " record from " << log_2dlist.size()-1 << " + Parent Threads" << endl;
+    for (int i=0;i<totalsize;i++){
+        struct log_event local_small;
+        int current_pivot;
+        int empty=1;
+        for(unsigned j=0;j<log_2dlist.size();j++){
+            if (log_2dlist[j].size() > pivot[j]){
+                if (empty){
+                    local_small=log_2dlist.at(j).at(pivot[j]);
+                    current_pivot=j;
+                    pivot[j]++;
+                    empty=0;
+                } else if(local_small.currentTime>log_2dlist.at(j).at(pivot[j]).currentTime){
+                    local_small=log_2dlist.at(j).at(pivot[j]);
+                    pivot[current_pivot]--;
+                    current_pivot=j;
+                    pivot[j]++;
+                } else if (local_small.currentTime== log_2dlist[j][pivot[j]].currentTime && local_small.tid>log_2dlist[j][pivot[j]].tid){
+                    local_small=log_2dlist.at(j).at(pivot[j]);
+                    pivot[current_pivot]--;
+                    current_pivot=j;
+                    pivot[j]++;
+                }
+            }
+        }
+        allevent.push_back(local_small);
+    }
+    return allevent;
+}
+
 void writefiles(string filename,vector<string> outputss){
     // geting a list of string and save it into a file
     //https://www.tutorialspoint.com/how-to-append-text-to-a-text-file-in-cplusplus
     //https://www.codeproject.com/Questions/5299415/I-get-a-warning-when-I-try-to-use-a-for-loop-to-pr
-    cout << outputss.size() <<endl;
-    cout << "output" << endl;
-    cout << "file writing"<< endl;
-    cout << outputss.size() <<endl;
     for (unsigned ind=0;ind<outputss.size();ind++){
         if (ind==outputss.size()){
             break;
@@ -132,10 +166,14 @@ void writefiles(string filename,vector<string> outputss){
     return;
 }
 
-
 void *Parent_thread(void *data){
     // rocover from the data
     struct main_kid *data_cp = (struct main_kid*)data;
+    struct log_event temp_log;
+    struct timeval etime;
+
+    cout << "Starting Parent" << endl;
+
     sem_wait(&(data_cp->semaph->at(0)));
     int myid=data_cp->tid;
     data_cp->status="Running";
@@ -143,13 +181,21 @@ void *Parent_thread(void *data){
     
     
     for (unsigned i=0;i<data_cp->instructions->size();i++) {
+        ////https://www.tutorialspoint.com/how-to-get-time-in-milliseconds-using-cplusplus-on-linux
         // if sleeping requested
         if (data_cp->instructions->at(i).TS=="S"){
             // start signaling
             sem_wait(&(data_cp->semaph->at(myid)));
             data_cp->status="Sleep";
             data_cp->workingnum=data_cp->instructions->at(i).numb;
+            temp_log.Status=data_cp->status;
+            temp_log.tid=data_cp->tid;
+            temp_log.run_num=data_cp->workingnum;
             sem_post(&(data_cp->semaph->at(myid)));
+
+            gettimeofday(&etime,NULL);
+            temp_log.currentTime=((etime.tv_sec - data_cp->start_time.tv_sec) * 1000 + (etime.tv_usec-data_cp->start_time.tv_usec)/1000.0)/1000;
+            data_cp->loge->push_back(temp_log);
 
             // testing purpose showing
             Sleep(data_cp->instructions->at(i).numb);
@@ -167,22 +213,28 @@ void *Parent_thread(void *data){
             sem_wait(&(data_cp->semaph->at(myid)));
             data_cp->status="Work";
             data_cp->workingnum=data_cp->instructions->at(i).numb;
+            temp_log.Status=data_cp->status;
+            temp_log.run_num=data_cp->workingnum;
             sem_post(&(data_cp->semaph->at(myid)));
+
+            gettimeofday(&etime,NULL);
+            temp_log.currentTime=((etime.tv_sec - data_cp->start_time.tv_sec) * 1000 + (etime.tv_usec-data_cp->start_time.tv_usec)/1000.0)/1000;
+            data_cp->loge->push_back(temp_log);
 
             while (!work_assigned){
                 for (unsigned tx=0;tx<data_cp->childThread->size();tx++){
                     // checking if locking, if it is check back later
                     int st;
-                    sem_getvalue(&(data_cp->childThread->at(tx)->semaph2.at(0)),&st);
+                    sem_getvalue(&(data_cp->childThread->at(tx)->semaph2),&st);
                     if (st){
-                        sem_wait(&(data_cp->childThread->at(tx)->semaph2.at(0)));
+                        sem_wait(&(data_cp->childThread->at(tx)->semaph2));
                         
                         if (data_cp->childThread->at(tx)->status=="Ask" && data_cp->childThread->at(tx)->newWorknum==0){
                             data_cp->childThread->at(tx)->isnewWork =1;
                             data_cp->childThread->at(tx)->newWorknum = data_cp->instructions->at(i).numb;
                             work_assigned =1;
                         }
-                        sem_post(&(data_cp->childThread->at(tx)->semaph2.at(0)));
+                        sem_post(&(data_cp->childThread->at(tx)->semaph2));
                         if (work_assigned){
                             tx=data_cp->childThread->size()-1;
                             
@@ -200,33 +252,38 @@ void *Parent_thread(void *data){
 
     // call all the function ok to terminate
     for(unsigned i=0;i<data_cp->childThread->size();i++){
-        cout << "waiting" << endl;
-        sem_wait(&(data_cp->childThread->at(i)->semaph2.at(0)));
+        sem_wait(&(data_cp->childThread->at(i)->semaph2));
         data_cp->childThread->at(i)->nomorework=1;
-        sem_post(&(data_cp->childThread->at(i)->semaph2.at(0)));
-        cout << i << " is now allow to terminate"<<  endl;
+        sem_post(&(data_cp->childThread->at(i)->semaph2));
     }
 
     sem_wait(&(data_cp->semaph->at(myid)));
     data_cp->status="End";
+    temp_log.Status=data_cp->status;
+    temp_log.tid=data_cp->tid;
+    temp_log.run_num=0;
+    gettimeofday(&etime,NULL);
+    temp_log.currentTime=((etime.tv_sec - data_cp->start_time.tv_sec) * 1000 + (etime.tv_usec-data_cp->start_time.tv_usec)/1000.0)/1000;
+    data_cp->loge->push_back(temp_log);
     sem_post(&(data_cp->semaph->at(myid)));
-    cout << "bye" << endl;
-    //pthread_exit(NULL);
+
+    cout << "Ending Parent" << endl;
+    pthread_exit(NULL);
     return data;
 }
 
 void *Children_run_thread(void *data2){
+    ////https://www.tutorialspoint.com/how-to-get-time-in-milliseconds-using-cplusplus-on-linux
     // rocover from the data
-    cout << "children process started" << endl;
     struct children_thread *data2_cp = (struct children_thread*)data2;
-    sem_wait(&(data2_cp->semaph2.at(0)));
+    sem_wait(&(data2_cp->semaph2));
     //int myid=data2_cp->tid;
     data2_cp->status="Ask";
     struct log_event templog1;
     struct  timeval etime;
     templog1.Status=data2_cp->status;
     templog1.tid=data2_cp->tid;
-    sem_post(&(data2_cp->semaph2.at(0)));
+    sem_post(&(data2_cp->semaph2));
     // gete time
     gettimeofday(&etime,NULL);
     templog1.currentTime= ((etime.tv_sec - data2_cp->start_time.tv_sec) * 1000 + (etime.tv_usec-data2_cp->start_time.tv_usec)/1000.0)/1000;
@@ -236,31 +293,35 @@ void *Children_run_thread(void *data2){
     while (end_thread==0){
         // checking if all the task has been handout,and it is ok to terminate
         int sm;
-        sem_getvalue(&(data2_cp->semaph2.at(0)),&sm);
+        sem_getvalue(&(data2_cp->semaph2),&sm);
         // finded a work given
         if (sm){
-            sem_wait(&(data2_cp->semaph2.at(0)));
+            sem_wait(&(data2_cp->semaph2));
             int worknum=data2_cp->newWorknum;
 
             if (worknum!=0){
+                // data receive logging device
                 data2_cp->status="Receive";
                 templog1.Status=data2_cp->status;
-                sem_post(&(data2_cp->semaph2.at(0)));
+                sem_post(&(data2_cp->semaph2));
                 gettimeofday(&etime,NULL);
                 templog1.run_num=worknum;
 
                 templog1.currentTime= ((etime.tv_sec - data2_cp->start_time.tv_sec) * 1000 + (etime.tv_usec-data2_cp->start_time.tv_usec)/1000.0)/1000;
                 data2_cp->loge->push_back(templog1);
 
+                // work on something
                 Trans(worknum);
 
-                sem_wait(&(data2_cp->semaph2.at(0)));
+                // complete logging
+                sem_wait(&(data2_cp->semaph2));
                 data2_cp->status="Complete";
                 templog1.Status=data2_cp->status;
                 gettimeofday(&etime,NULL);
                 templog1.currentTime= ((etime.tv_sec - data2_cp->start_time.tv_sec) * 1000 + (etime.tv_usec-data2_cp->start_time.tv_usec)/1000.0)/1000;
                 data2_cp->loge->push_back(templog1);
 
+                // ask logging
                 data2_cp->status="Ask";
                 data2_cp->isnewWork=0;
                 data2_cp->newWorknum=0;
@@ -270,24 +331,31 @@ void *Children_run_thread(void *data2){
                 data2_cp->loge->push_back(templog1);
 
             }
-            sem_post(&(data2_cp->semaph2.at(0)));
+            sem_post(&(data2_cp->semaph2));
 
             // changeing from Comlete to Ask will be host's logging work
         }
 
         int sm2;
-        sem_getvalue(&(data2_cp->semaph2.at(0)),&sm2);
+        sem_getvalue(&(data2_cp->semaph2),&sm2);
         if (sm2){
-            sem_wait(&(data2_cp->semaph2.at(0)));
+            sem_wait(&(data2_cp->semaph2));
             if (data2_cp->nomorework==1 && data2_cp->newWorknum==0){
                 end_thread=1;
             }
-            sem_post(&(data2_cp->semaph2.at(0)));
+            sem_post(&(data2_cp->semaph2));
         }
     }
-    sem_wait(&(data2_cp->semaph2.at(0)));
+    sem_wait(&(data2_cp->semaph2));
     data2_cp->status="End";
-    sem_post(&(data2_cp->semaph2.at(0)));
-    //pthread_exit(NULL);
+    // The code here are for no reason,just for delay the end to make sure all record in the vector<log_event>,the output will remove the following end record
+    data2_cp->isnewWork=0;
+    data2_cp->newWorknum=0;
+    templog1.Status=data2_cp->status;
+    templog1.run_num=0;
+    templog1.currentTime= ((etime.tv_sec - data2_cp->start_time.tv_sec) * 1000 + (etime.tv_usec-data2_cp->start_time.tv_usec)/1000.0)/1000;
+    data2_cp->loge->push_back(templog1);
+    sem_post(&(data2_cp->semaph2));
+    pthread_exit(NULL);
     return data2;
 }

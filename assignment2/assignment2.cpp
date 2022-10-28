@@ -3,21 +3,16 @@
 
 using namespace std;\
 
-vector<string> event_management(int nThread,vector<string> instru,string filename){
+void event_management(int nThread,vector<string> instru,string filename){
     // this function many logging the event of each device
     vector<inst_kind> translated_instru;
     translated_instru=translate_txt_to_struct(instru);
-    //cout << "result" << endl;
-    // result output
-    for (unsigned i=0;i<translated_instru.size();i++){
-        cout << instru[i] <<" "<< translated_instru[i].TS << " " << translated_instru[i].numb << endl;
-    }
-    //cout << "data displed" << endl;
+
     //start a vector that contain the share memory information
     // where this log devices also able to access
     vector<children_thread> childthinfo;
     vector<children_thread*> childthinfo_vector;
-    vector<vector<log_event>> childrenlog;
+    std::vector<std::vector<log_event>> childrenlog;
     vector<sem_t> sema;
     vector<int> ted_thread;
     // main Parent semphore init
@@ -32,10 +27,7 @@ vector<string> event_management(int nThread,vector<string> instru,string filenam
         // setup semaphore
         sem_t temp3;
         sem_init(&temp3,1,1);
-        vector<sem_t> mysem;
-        mysem.push_back(temp3);
-        temp.semaph2=mysem;
-        cout <<"sem size "<< temp.semaph2.size() << endl;
+        temp.semaph2=temp3;
         vector<log_event> temp4;
         //push into list
         childrenlog.push_back(temp4);
@@ -49,6 +41,7 @@ vector<string> event_management(int nThread,vector<string> instru,string filenam
 
     }
 
+    vector<log_event> thlog1;
     // creating Parent infomation
     struct main_kid* Parent,Parent2;
     Parent=&Parent2;
@@ -56,178 +49,87 @@ vector<string> event_management(int nThread,vector<string> instru,string filenam
     Parent->childThread=&childthinfo_vector;
     Parent->instructions=&translated_instru;
     Parent->semaph=&sema;
-
-    vector<log_event> thlog1;
-    // https://stackoverflow.com/questions/997946/how-to-get-current-time-and-date-in-c
+    Parent->loge=&thlog1;
     
-    struct  timeval stime;
+    // //https://www.tutorialspoint.com/how-to-get-time-in-milliseconds-using-cplusplus-on-linux
+    
+    struct timeval stime;
     gettimeofday(&stime,NULL);
 
+    Parent->start_time=stime;
     //int free_queue=nThread;
-    int parent_end=0;
-    int terminated_thread=0;
+
+    cout << "starting children" << endl;
     //preation done from here
 
     // start children tread    
     vector<pthread_t> bkpt;
-    cout << "size "<<childthinfo.size() << endl;
     for(unsigned i=0;i<childthinfo.size();i++){
         // start second children sephnore
         // start pthread
         pthread_t cp;
-        cout <<i << " cthread"<< childthinfo[i].semaph2.size() << endl;
         childthinfo[i].start_time=stime;
         pthread_create(&cp,NULL,Children_run_thread,childthinfo_vector[i]);
         bkpt.push_back(cp);
     }
 
     // start parent thread
-    cout << "start Parent thread" << endl;
     //creating main parent thread
     pthread_t p;
     pthread_create(&p,NULL,Parent_thread,Parent);
-    
+    pthread_join(p,NULL);
     
     int checking=1;
+    int terminated_thread=0;
     while (checking){
-       
-        // data the associate with parent
-        int st;
-        sem_getvalue(&(Parent->semaph->at(0)),&st);
-        if (st){
-            sem_wait(&(Parent->semaph->at(0)));
-            if(Parent->status=="End" && !parent_end){
-                terminated_thread++;
-                parent_end=1;
-            } else if (Parent->status!=Parent->last_saved_status){
-                //cout << "status change to " << Parent->status << endl;
-                //cout << "working on" << Parent->workingnum << endl;
-                if (Parent->status!="Running" && Parent->status!="init"){
-                    struct log_event temp_log;
-                    temp_log.Status=Parent->status;
-                    temp_log.tid=Parent->tid;
-                    temp_log.run_num=Parent->workingnum;
-
-                    //https://stackoverflow.com/questions/997946/how-to-get-current-time-and-date-in-c
-                    struct  timeval etime;
-                    gettimeofday(&etime,NULL);
-                    temp_log.currentTime = ((etime.tv_sec - stime.tv_sec) * 1000 + (etime.tv_usec-stime.tv_usec)/1000.0)/1000;
-
-                    thlog1.push_back(temp_log);
-                }
-                Parent->last_saved_status=Parent->status;
-                
-            }
-            sem_post(&(Parent->semaph->at(0)));
-        }
-
-        // data that associate with children
-        // for (unsigned i=0;i<childthinfo.size();i++){
-        //     int st;
-        //     sem_getvalue(&(childthinfo[i].semaph2[0]),&st);
-        //     if (st){
-        //         sem_wait(&(childthinfo[i].semaph2[0]));
-        //         if (childthinfo[i].status!=childthinfo[i].last_saved_status && childthinfo[i].status!="End"){   
-        //             struct log_event temp_log;
-        //             temp_log.Status=childthinfo[i].status;
-        //             temp_log.tid=childthinfo[i].tid;
-        //             //run num does not exist
-        //             if (childthinfo[i].status!="Ask"){
-        //                 temp_log.run_num=childthinfo[i].newWorknum;
-        //             }else{
-        //                 temp_log.run_num=0;
-        //             }
-                    
-        //             struct  timeval etime;
-        //             gettimeofday(&etime,NULL);
-        //             double durtime = ((etime.tv_sec - stime.tv_sec) * 1000 + (etime.tv_usec-stime.tv_usec)/1000.0)/1000;
-
-        //             temp_log.currentTime=durtime;
-        //             thlog1.push_back(temp_log);
-        //             childthinfo[i].last_saved_status=childthinfo[i].status;
-        //             // additional information for the 
-        //             if(childthinfo[i].status=="Complete"){
-        //                 // clear out the instruction
-        //                 childthinfo[i].newWorknum=0;
-        //                 childthinfo[i].isnewWork=0;
-
-        //                 childthinfo[i].status="Ask";
-        //                 struct log_event temp_log3;
-        //                 temp_log3.Status=childthinfo[i].status;
-        //                 temp_log3.tid=childthinfo[i].tid;
-        //                 temp_log3.currentTime=durtime;
-        //                 temp_log3.run_num=0;
-        //                 thlog1.push_back(temp_log3);
-        //                 childthinfo[i].last_saved_status=childthinfo[i].status;
-                        
-        //             }
-        //             childthinfo[i].last_saved_status=childthinfo[i].status;
-                    
-        //         }
-                
-        //         sem_post(&(childthinfo[i].semaph2[0]));
-
-        //     }
-        // }
-        
-        
-        
-
-
         //checking if thread ended,if all thread ended stop logging
         // adding untill the parent end start checking
-        if (terminated_thread>0){
-            for(unsigned i=0;i<childthinfo.size();i++){
-                if (!binary_search(ted_thread.begin(),ted_thread.end(),i)){
-                    // check if busy,if it is ,check back later
-                    int st;
-                    sem_getvalue(&(childthinfo[i].semaph2[0]),&st);
-                    if (st ){
-                        sem_wait(&(childthinfo[i].semaph2[0]));
-                        if (childthinfo_vector[i]->nomorework && childthinfo_vector[i]->status=="End"){
-                            terminated_thread++;
-                            ted_thread.push_back(i);
-                            cout <<"ID="<<i+1 <<"Thread termed"<< terminated_thread << endl;
-                        }
-                        sem_post(&(childthinfo[i].semaph2[0]));
+        for(unsigned i=0;i<childthinfo.size();i++){
+            if (!binary_search(ted_thread.begin(),ted_thread.end(),i)){
+                // check if busy,if it is ,check back later
+                int st;
+                sem_getvalue(&(childthinfo[i].semaph2),&st);
+                if (st ){
+                    sem_wait(&(childthinfo[i].semaph2));
+                    if (childthinfo_vector[i]->nomorework && childthinfo_vector[i]->status=="End"){
+                        terminated_thread++;
+                        ted_thread.push_back(i);
                     }
+                    sem_post(&(childthinfo[i].semaph2));
+                    //pthread_join(bkpt[i],0);
                 }
             }
         }
         
-        if (terminated_thread>=nThread+1){
+        
+        if (terminated_thread>=nThread){
             checking=0;
+        }
+    }
+    cout << "children ended" << endl;
+    childrenlog.push_back(thlog1);
+       
+    for (unsigned i=0;i<sema.size();i++){
+        sem_destroy(&sema[i]);
+        if (i!=0){
+            sem_destroy(&childthinfo[i-1].semaph2);
         }
     }
 
     // process with the log
     vector<string> op1;
-
-    op1=log_event_convert(thlog1,nThread);
-    
+    vector<log_event> all_log=log_merge(childrenlog);
+    op1=log_event_convert(all_log,nThread);
+    cout << "writing file"<< endl;
     writefiles(filename,op1);
 
-    
-    for (unsigned i=0;i<sema.size();i++){
-        sem_destroy(&sema[i]);
-        if (i!=0){
-            sem_destroy(&childthinfo[i-1].semaph2[0]);
-        }
-    }
-
-    for (unsigned i=0;i<childrenlog.size();i++){
-        vector<string> op2;
-        op2=log_event_convert(childrenlog[i],nThread);
-        writefiles(filename,op2);
-    }
-
-    //https://www.tutorialspoint.com/how-to-get-time-in-milliseconds-using-cplusplus-on-linux
-    struct  timeval etime;
-    gettimeofday(&etime,NULL);
-    double intl =  ((etime.tv_sec - stime.tv_sec) * 1000 + (etime.tv_usec-stime.tv_usec)/1000.0)/1000;
-    cout << "total run_time " << intl << endl;   
-
-    return op1;
+    // debug for each thread output only
+    // for (unsigned i=0;i<childrenlog.size();i++){
+    //     vector<string> op2;
+    //     op2=log_event_convert(childrenlog[i],nThread);
+    //     writefiles(filename,op2);
+    // }
+    return;
     
 }
 
@@ -245,9 +147,9 @@ int main(int argc,char* argv[]){
         string nid=argv[2];
         filename.append("prodcon.");
         filename.append(nid);
-        filename.append(".txt");
+        filename.append(".log");
     } else{
-        filename = "prodcon.txt";
+        filename = "prodcon.log";
     }
     // inputting instructions
     vector<string> instruct;
@@ -261,15 +163,8 @@ int main(int argc,char* argv[]){
         }
     }
     //cout <<" start running to looging device" << endl;
-    vector<string>outputss;
-
-    outputss=event_management(nThread,instruct,filename);
-
-    cout << outputss[outputss.size()-2] << endl;
-    cout << "writting" << endl;
-    // write file to dedicated destinaction.
-    //writefiles(filename,outputss);
-    cout << "entireprograme done" <<endl;
+    event_management(nThread,instruct,filename);
+    cout << "Goodbye" <<endl;
     return 1;
 }
 
