@@ -41,8 +41,7 @@ void rapidwrite(struct log_event data,string filename,int* qsnow3,map <string,in
     char temp[100];
     if (data.Status=="Complete"){
     *qsnow3=*qsnow3+1;
-    }
-    if(data.Status=="Receive" ){
+    }else if(data.Status=="Receive" ){
     *qsnow3=*qsnow3-1;
     }
     data.queue=*qsnow3;
@@ -57,7 +56,6 @@ void rapidwrite(struct log_event data,string filename,int* qsnow3,map <string,in
     while (tempstr.size()<(35*sizeof(char))){
         tempstr.append(" ");
     }
-
     if (data.run_num==0){
         tempstr.append("     //");
     }else{
@@ -132,28 +130,21 @@ void summarywrite(map <string,int>* commcount,vector<int>*tcount,double lengthti
     sprintf(temp4,"Trabsactions per second: %3.3f \t    //\n",tps);
     s1.push_back(temp4);
     s1.push_back("----------------------------------\n");
-    writefiles(filename,s1);
-}
 
-void writefiles(string filename,vector<string> outputss){
     // geting a list of string and save it into a file
     //https://www.tutorialspoint.com/how-to-append-text-to-a-text-file-in-cplusplus
     //https://www.codeproject.com/Questions/5299415/I-get-a-warning-when-I-try-to-use-a-for-loop-to-pr
-    for (unsigned ind=0;ind<outputss.size();ind++){
-        if (ind==outputss.size()){
-            break;
-        }
+    for (unsigned ind=0;ind<s1.size();ind++){
         ofstream fout;
         ifstream fin;
         fin.open(filename);
         fout.open(filename,ios_base::app);
         if (fout.is_open()){
-            fout << outputss[ind];
+            fout << s1[ind];
         }
         fin.close();
         fout.close();
     }
-    return;
 }
 
 void *Parent_thread(void *data){
@@ -181,7 +172,6 @@ void *Parent_thread(void *data){
 
             gettimeofday(&etime,NULL);
             temp_log.currentTime=((etime.tv_sec - data_cp->start_time.tv_sec) * 1000 + (etime.tv_usec-data_cp->start_time.tv_usec)/1000.0)/1000;
-            //data_cp->loge->push_back(temp_log);
 
             sem_wait((data_cp->global_sem_log2));
             data_cp->gblog2->push(temp_log);
@@ -336,7 +326,6 @@ void *Children_run_thread(void *data2){
                 data2_cp->status="Complete";
                 templog1.Status=data2_cp->status;
                 gettimeofday(&etime,NULL);
-                templog1.queue=0;
                 templog1.currentTime= ((etime.tv_sec - data2_cp->start_time.tv_sec) * 1000 + (etime.tv_usec-data2_cp->start_time.tv_usec)/1000.0)/1000;
                 //data2_cp->loge->push_back(templog1);
 

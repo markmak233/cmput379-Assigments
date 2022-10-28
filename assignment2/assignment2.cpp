@@ -41,11 +41,13 @@ void event_management(int nThread,vector<string> instru,string filename){
         sem_t temp3;
         sem_init(&temp3,1,1);
         temp.semaph2=temp3;
-        vector<log_event> temp4;
+
         temp.global_sem=&gb;
         temp.tasks=&tasks;
+
         temp.global_sem_log1=&gb_log;
         temp.gblog1=&global_log;
+        
         temp.qsnow=&qs;
         tcout.push_back(0);
         childthinfo.push_back(temp);
@@ -180,14 +182,6 @@ void event_management(int nThread,vector<string> instru,string filename){
     }
 
     summarywrite(&commcount,&tcout,lastime,filename);
-    // process with the log
-    // vector<string> op1;
-    // vector<log_event> all_log=log_merge(childrenlog);
-    // op1=log_event_convert(all_log,nThread);
-    // op1.push_back("\n\n\n\n\n\n");
-    // cout << "writing file"<< endl;
-    // writefiles(filename,op1);
-
     return;
     
 }
