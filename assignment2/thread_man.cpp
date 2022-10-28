@@ -335,7 +335,7 @@ void *Children_run_thread(void *data2){
                 data2_cp->newWorknum=0;
                 templog1.Status=data2_cp->status;
                 templog1.run_num=0;
-                templog1.currentTime= ((etime.tv_sec - data2_cp->start_time.tv_sec) * 1000 + (etime.tv_usec-data2_cp->start_time.tv_usec)/1000.0)/1000;
+                //templog1.currentTime= ((etime.tv_sec - data2_cp->start_time.tv_sec) * 1000 + (etime.tv_usec-data2_cp->start_time.tv_usec)/1000.0)/1000;
 
                 sem_wait((data2_cp->global_sem_log1));
                 data2_cp->gblog1->push(templog1);
