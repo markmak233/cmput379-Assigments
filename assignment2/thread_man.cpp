@@ -40,6 +40,7 @@ vector<string> log_event_convert(vector<log_event> tlog2,int nThread){
     map <string,int> commcount;
     vector <int> tcout;
     // free queue counting 
+        s1.push_back("----------------------------------\n");
     for (int i=0;i<nThread+1;i++){
         tcout.push_back(0);
     }
@@ -154,6 +155,44 @@ vector<log_event> log_merge(vector<vector<log_event>> log_2dlist){
     return allevent;
 }
 
+void rapidwrite(struct log_event data,string filename){
+    // string part
+    string tempstr;
+    char temp[100];
+    if (data.Status=="Work" || data.Status=="Receive" ){
+        sprintf(temp,"%2.3f ID=%3d Q=%3d ",data.currentTime,data.tid,data.queue);
+    } else {
+        sprintf(temp,"%2.3f ID=%3d       ",data.currentTime,data.tid);
+    }
+    tempstr.append(temp);
+
+    tempstr.append(data.Status);
+    while (tempstr.size()<(35*sizeof(char))){
+        tempstr.append(" ");
+    }
+
+    if (data.run_num==0){
+        tempstr.append("     //");
+    }else{
+        char temp2[50];
+        sprintf(temp2,"%2d   //",data.run_num);
+        tempstr.append(temp2);
+    }
+    tempstr.append("\n");
+    // couning part for summary
+
+    ofstream fout;
+    ifstream fin;
+    fin.open(filename);
+    fout.open(filename,ios_base::app);
+    if (fout.is_open()){
+        fout << tempstr;
+    }
+    fin.close();
+    fout.close();
+
+}
+
 void writefiles(string filename,vector<string> outputss){
     // geting a list of string and save it into a file
     //https://www.tutorialspoint.com/how-to-append-text-to-a-text-file-in-cplusplus
@@ -180,6 +219,7 @@ void *Parent_thread(void *data){
     struct main_kid *data_cp = (struct main_kid*)data;
     struct log_event temp_log;
     struct timeval etime;
+    int qscache=0;
 
     cout << "Starting Parent" << endl;
 
@@ -207,6 +247,11 @@ void *Parent_thread(void *data){
             temp_log.currentTime=((etime.tv_sec - data_cp->start_time.tv_sec) * 1000 + (etime.tv_usec-data_cp->start_time.tv_usec)/1000.0)/1000;
             data_cp->loge->push_back(temp_log);
 
+            sem_wait((data_cp->global_sem_log2));
+            data_cp->gblog2->push(temp_log);
+            sem_post((data_cp->global_sem_log2));
+
+
             // testing purpose showing
             Sleep(data_cp->instructions->at(i).numb);
 
@@ -220,6 +265,10 @@ void *Parent_thread(void *data){
         else if (data_cp->instructions->at(i).TS=="T"){
             int work_assigned=0;
             //check needed;
+            sem_wait((data_cp->global_sem));
+            temp_log.queue=*data_cp->qsnow2;
+            sem_post((data_cp->global_sem));
+
             sem_wait(&(data_cp->semaph->at(myid)));
             data_cp->status="Work";
             data_cp->workingnum=data_cp->instructions->at(i).numb;
@@ -231,15 +280,20 @@ void *Parent_thread(void *data){
             temp_log.currentTime=((etime.tv_sec - data_cp->start_time.tv_sec) * 1000 + (etime.tv_usec-data_cp->start_time.tv_usec)/1000.0)/1000;
             data_cp->loge->push_back(temp_log);
 
+            sem_wait((data_cp->global_sem_log2));
+            data_cp->gblog2->push(temp_log);
+            sem_post((data_cp->global_sem_log2));
+
             while (!work_assigned){
                 // checking if locking, if it is check back later
                 int st;
                 sem_getvalue((data_cp->global_sem),&st);
                 if (st){
                     sem_wait((data_cp->global_sem));
-                    if (data_cp->tasks->size()<data_cp->nth*2){
+                    if (data_cp->tasks->size() <= data_cp->nth*2){
                         data_cp->tasks->push(data_cp->instructions->at(i).numb);
                         work_assigned=1;
+                        cout << data_cp->tasks->size() << endl;
                     }
                     sem_post((data_cp->global_sem));
                 } 
@@ -268,6 +322,11 @@ void *Parent_thread(void *data){
     data_cp->loge->push_back(temp_log);
     sem_post(&(data_cp->semaph->at(myid)));
 
+    sem_wait((data_cp->global_sem_log2));
+    data_cp->gblog2->push(temp_log);
+    sem_post((data_cp->global_sem_log2));
+
+
     cout << "Ending Parent" << endl;
     pthread_exit(NULL);
     return data;
@@ -284,11 +343,16 @@ void *Children_run_thread(void *data2){
     struct  timeval etime;
     templog1.Status=data2_cp->status;
     templog1.tid=data2_cp->tid;
+    
     sem_post(&(data2_cp->semaph2));
     // gete time
     gettimeofday(&etime,NULL);
     templog1.currentTime= ((etime.tv_sec - data2_cp->start_time.tv_sec) * 1000 + (etime.tv_usec-data2_cp->start_time.tv_usec)/1000.0)/1000;
     data2_cp->loge->push_back(templog1);
+
+    sem_wait((data2_cp->global_sem_log1));
+    data2_cp->gblog1->push(templog1);
+    sem_post((data2_cp->global_sem_log1));
 
     int end_thread=0;
     while (end_thread==0){
@@ -301,6 +365,7 @@ void *Children_run_thread(void *data2){
                 data2_cp->newWorknum=data2_cp->tasks->front();
                 data2_cp->tasks->pop();
                 data2_cp->emptyqueue=0;
+                templog1.queue=*data2_cp->qsnow;
             } else {
                 cout << myid << " " << "empty queue" << endl;
                 data2_cp->emptyqueue=1;
@@ -328,6 +393,10 @@ void *Children_run_thread(void *data2){
                 templog1.currentTime= ((etime.tv_sec - data2_cp->start_time.tv_sec) * 1000 + (etime.tv_usec-data2_cp->start_time.tv_usec)/1000.0)/1000;
                 data2_cp->loge->push_back(templog1);
 
+                sem_wait((data2_cp->global_sem_log1));
+                data2_cp->gblog1->push(templog1);
+                sem_post((data2_cp->global_sem_log1));
+
                 // work on something
                 Trans(worknum);
 
@@ -336,8 +405,13 @@ void *Children_run_thread(void *data2){
                 data2_cp->status="Complete";
                 templog1.Status=data2_cp->status;
                 gettimeofday(&etime,NULL);
+                templog1.queue=0;
                 templog1.currentTime= ((etime.tv_sec - data2_cp->start_time.tv_sec) * 1000 + (etime.tv_usec-data2_cp->start_time.tv_usec)/1000.0)/1000;
                 data2_cp->loge->push_back(templog1);
+
+                sem_wait((data2_cp->global_sem_log1));
+                data2_cp->gblog1->push(templog1);
+                sem_post((data2_cp->global_sem_log1));
 
                 // ask logging
                 data2_cp->status="Ask";
@@ -347,6 +421,10 @@ void *Children_run_thread(void *data2){
                 templog1.run_num=0;
                 templog1.currentTime= ((etime.tv_sec - data2_cp->start_time.tv_sec) * 1000 + (etime.tv_usec-data2_cp->start_time.tv_usec)/1000.0)/1000;
                 data2_cp->loge->push_back(templog1);
+
+                sem_wait((data2_cp->global_sem_log1));
+                data2_cp->gblog1->push(templog1);
+                sem_post((data2_cp->global_sem_log1));
 
             }
             sem_post(&(data2_cp->semaph2));

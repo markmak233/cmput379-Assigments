@@ -22,6 +22,9 @@
 
 
 
+
+
+
 struct inst_kind{
     std::string TS;
     int numb; 
@@ -42,16 +45,20 @@ struct children_thread{
     int newWorknum=0;
     int nomorework=0;
     int emptyqueue=0;
+    int* qsnow;
     sem_t semaph2;
     sem_t *global_sem;
+    sem_t *global_sem_log1;
     std::vector<log_event>*loge;
     std::queue<int>* tasks;
+    std::queue<log_event>* gblog1;
     struct timeval start_time;
 };
 
 struct main_kid{
     int tid=0;
     int nth;
+    int* qsnow2;
     std::string status="init";
     int workingnum=0;
     std::vector<children_thread*> *childThread;
@@ -59,7 +66,9 @@ struct main_kid{
     std::vector<log_event> *loge;
     std::vector<sem_t>* semaph;
     std::queue<int>*tasks;
+    std::queue<log_event>* gblog2;
     sem_t *global_sem;
+    sem_t *global_sem_log2;
     struct timeval start_time;
     
 };
@@ -69,6 +78,7 @@ struct main_kid{
 std::vector<inst_kind> translate_txt_to_struct(std::vector<std::string> instru);
 std::vector<std::string> log_event_convert(std::vector<log_event> tlog2,int nThread);
 std::vector<log_event> log_merge(std::vector<std::vector<log_event>>);
+void rapidwrite(struct log_event data,std::string filename);
 void writefiles(std::string filename,std::vector<std::string> outputss);
 void *Parent_thread(void *data);
 void *Children_run_thread(void *data2);
