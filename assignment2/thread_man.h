@@ -19,12 +19,6 @@
 # include <semaphore.h>
 #include<sys/timeb.h>
 
-
-
-
-
-
-
 struct inst_kind{
     std::string TS;
     int numb; 
@@ -45,7 +39,6 @@ struct children_thread{
     int newWorknum=0;
     int nomorework=0;
     int emptyqueue=0;
-    int* qsnow;
     sem_t semaph2;
     sem_t *global_sem;
     sem_t *global_sem_log1;
@@ -57,7 +50,6 @@ struct children_thread{
 struct main_kid{
     int tid=0;
     int nth;
-    int* qsnow2;
     std::string status="Running";
     int workingnum=0;
     std::vector<children_thread> *childThread;
@@ -71,13 +63,8 @@ struct main_kid{
     
 };
 
-
-
 std::vector<inst_kind> translate_txt_to_struct(std::vector<std::string> instru);
-std::vector<std::string> log_event_convert(std::vector<log_event> tlog2,int nThread);
-std::vector<log_event> log_merge(std::vector<std::vector<log_event>>);
 void rapidwrite(struct log_event data,std::string filename,int* qsnow3,std::map <std::string,int>* commcount,std::vector<int>*tcount);
 void summarywrite(std::map <std::string,int>* commcount,std::vector<int>*tcount, double lengthtime,std::string filename);
-void writefiles(std::string filename,std::vector<std::string> outputss);
 void *Parent_thread(void *data);
 void *Children_run_thread(void *data2);

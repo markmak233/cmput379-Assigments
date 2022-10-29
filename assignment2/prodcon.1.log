@@ -1,0 +1,98 @@
+
+0.000 ID=  1       Ask                  // Thread  1 asks for work 
+0.000 ID=  2       Ask                  // Thread  2 asks for work 
+0.000 ID=  3       Ask                  // Thread  3 asks for work 
+0.000 ID=  0 Q=  3 Work             4   // Parent receives work with n= 4 
+0.000 ID=  0 Q=  3 Work             2   // Parent receives work with n= 2 
+0.000 ID=  2 Q=  2 Receive          2   // Thread  2 takes work, n= 2 
+0.000 ID=  3 Q=  1 Receive          4   // Thread  3 takes work, n= 4 
+0.000 ID=  0 Q=  1 Work             1   // Parent receives work with n= 1 
+0.000 ID=  0 Q=  1 Work             1   // Parent receives work with n= 1 
+0.000 ID=  0       Sleep            9   // Parent sleeps, n= 9 
+0.000 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.001 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.001 ID=  1       Ask                  // Thread  1 asks for work 
+0.001 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.001 ID=  2       Complete         2   // Thread  2 completes task, n= 2 
+0.001 ID=  2       Ask                  // Thread  2 asks for work 
+0.001 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.001 ID=  1       Ask                  // Thread  1 asks for work 
+0.003 ID=  3       Complete         4   // Thread  3 completes task, n= 4 
+0.003 ID=  3       Ask                  // Thread  3 asks for work 
+0.090 ID=  0 Q=  3 Work             5   // Parent receives work with n= 5 
+0.090 ID=  0       Sleep            1   // Parent sleeps, n= 1 
+0.090 ID=  1 Q=  2 Receive          5   // Thread  1 takes work, n= 5 
+0.093 ID=  1       Complete         5   // Thread  1 completes task, n= 5 
+0.093 ID=  1       Ask                  // Thread  1 asks for work 
+0.100 ID=  0 Q=  3 Work             1   // Parent receives work with n= 1 
+0.100 ID=  2 Q=  2 Receive          1   // Thread  2 takes work, n= 1 
+0.100 ID=  0 Q=  2 Work             1   // Parent receives work with n= 1 
+0.100 ID=  0 Q=  2 Work             1   // Parent receives work with n= 1 
+0.100 ID=  0       End                  // End of input for producer
+0.100 ID=  1 Q=  1 Receive          1   // Thread  1 takes work, n= 1 
+0.101 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.101 ID=  1       Ask                  // Thread  1 asks for work 
+0.101 ID=  1 Q=  1 Receive          1   // Thread  1 takes work, n= 1 
+0.101 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.101 ID=  2       Ask                  // Thread  2 asks for work 
+0.102 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+Summary:                                //
+    Ask            10                   // 
+    Complete        8                   // 
+    Receive         8                   // 
+    Sleep           2                   // 
+    Work            8                   // 
+    Thread   1 	  5 				    //
+    Thread   2 	  2 				    //
+    Thread   3 	  1 				    //
+Trabsactions per second: inf 	    //
+----------------------------------
+
+0.000 ID=  1       Ask                  // Thread  1 asks for work 
+0.000 ID=  2       Ask                  // Thread  2 asks for work 
+0.000 ID=  3       Ask                  // Thread  3 asks for work 
+0.000 ID=  0 Q=  3 Work             4   // Parent receives work with n= 4 
+0.000 ID=  3 Q=  2 Receive          4   // Thread  3 takes work, n= 4 
+0.000 ID=  0 Q=  2 Work             2   // Parent receives work with n= 2 
+0.000 ID=  0 Q=  2 Work             1   // Parent receives work with n= 1 
+0.000 ID=  1 Q=  1 Receive          2   // Thread  1 takes work, n= 2 
+0.000 ID=  0 Q=  1 Work             1   // Parent receives work with n= 1 
+0.000 ID=  0       Sleep            9   // Parent sleeps, n= 9 
+0.000 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.001 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.001 ID=  2       Ask                  // Thread  2 asks for work 
+0.001 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.001 ID=  1       Complete         2   // Thread  1 completes task, n= 2 
+0.001 ID=  1       Ask                  // Thread  1 asks for work 
+0.001 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.001 ID=  2       Ask                  // Thread  2 asks for work 
+0.003 ID=  3       Complete         4   // Thread  3 completes task, n= 4 
+0.003 ID=  3       Ask                  // Thread  3 asks for work 
+0.090 ID=  0 Q=  3 Work             5   // Parent receives work with n= 5 
+0.090 ID=  0       Sleep            1   // Parent sleeps, n= 1 
+0.090 ID=  1 Q=  2 Receive          5   // Thread  1 takes work, n= 5 
+0.094 ID=  1       Complete         5   // Thread  1 completes task, n= 5 
+0.094 ID=  1       Ask                  // Thread  1 asks for work 
+0.100 ID=  0 Q=  3 Work             1   // Parent receives work with n= 1 
+0.100 ID=  0 Q=  3 Work             1   // Parent receives work with n= 1 
+0.100 ID=  0 Q=  3 Work             1   // Parent receives work with n= 1 
+0.100 ID=  0       End                  // End of input for producer
+0.100 ID=  3 Q=  2 Receive          1   // Thread  3 takes work, n= 1 
+0.101 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.101 ID=  3       Ask                  // Thread  3 asks for work 
+0.101 ID=  3 Q=  2 Receive          1   // Thread  3 takes work, n= 1 
+0.102 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.102 ID=  3       Ask                  // Thread  3 asks for work 
+0.102 ID=  3 Q=  2 Receive          1   // Thread  3 takes work, n= 1 
+0.102 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+Summary:                                //
+    Ask            10                   // 
+    Complete        8                   // 
+    Receive         8                   // 
+    Sleep           2                   // 
+    Work            8                   // 
+    Thread   1 	  2 				    //
+    Thread   2 	  2 				    //
+    Thread   3 	  4 				    //
+Trabsactions per second: inf 	    //
+----------------------------------
