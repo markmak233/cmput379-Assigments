@@ -7,7 +7,9 @@ void event_management(int nThread,vector<string> instru,string filename){
     // this function many logging the event of each device
     vector<inst_kind> translated_instru;
     translated_instru=translate_txt_to_struct(instru);
-
+    if (translated_instru.size()==0){
+        return;
+    }
     // start a vector that contain the share memory information
     // where this log devices also able to access
     vector<children_thread> childthinfo;
@@ -23,7 +25,7 @@ void event_management(int nThread,vector<string> instru,string filename){
     sem_init(&gb,1,1);
     sem_init(&gb_log,1,1);
     int qs=nThread;
-    double lastime=0;
+    vector<double> lastime;
     tcout.push_back(0);
 
     // children info setup and semphore init
@@ -102,8 +104,11 @@ void event_management(int nThread,vector<string> instru,string filename){
                 // translate and write it into files.
                 while (!(global_log_cache.empty()))
                 {
+                    if (global_log_cache.front().currentTime>0){
+                        lastime.push_back(global_log_cache.front().currentTime);
+                    }
                     rapidwrite(global_log_cache.front(),filename,&qs,&commcount,&tcout);
-                    lastime=global_log_cache.front().currentTime;
+
                     global_log_cache.pop();
                 }
                 
@@ -134,15 +139,27 @@ void event_management(int nThread,vector<string> instru,string filename){
         }
     }
     // incase left with empty record,read again
-    if (!(global_log.empty())){
-        rapidwrite(global_log.front(),filename,&qs,&commcount,&tcout);
-        lastime=global_log_cache.front().currentTime;
+    while (!(global_log.empty())){
+        global_log_cache.push(global_log.front());
+        global_log.pop();
+    }
+    while(!(global_log_cache.empty())){
+        rapidwrite(global_log_cache.front(),filename,&qs,&commcount,&tcout);
+        if (global_log_cache.front().currentTime>0){
+            lastime.push_back(global_log_cache.front().currentTime);
+        }
         global_log_cache.pop();
     }
+    // https://stackoverflow.com/questions/9874802/how-can-i-get-the-maximum-or-minimum-value-in-a-vector
+    // avoid garbage value
+    const double en_time =*max_element(lastime.begin(),lastime.end());
+    summarywrite(commcount,tcout,en_time,filename);
     for (unsigned i=0;i<childthinfo.size();i++){
         sem_destroy(&childthinfo[i].semaph2);
     }
-    summarywrite(&commcount,&tcout,lastime,filename);
+    commcount.clear();
+    tcout.clear();
+    childthinfo.clear();
     return;
     
 }

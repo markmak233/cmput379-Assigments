@@ -105,30 +105,30 @@ void rapidwrite(struct log_event data,string filename,int* qsnow3,map <string,in
 
 }
 
-void summarywrite(map <string,int>* commcount,vector<int>*tcount,double lengthtime,string filename){
+void summarywrite(map <string,int> commcount,vector<int>tcount,double lengthtime,string filename){
     // pritning summary
     vector<string> s1;
-    s1.push_back("Summary:                                //\n");
+    s1.push_back("Summary:   \n");
     map<string, int>::iterator it;
-    for (it = commcount->begin(); it != commcount->end(); it++){
+    for (it = commcount.begin(); it != commcount.end(); it++){
         string temp3 ="    "+it->first;
         while (temp3.size()<(18*sizeof(char))){
             temp3.append(" ");
         }
         char temp4[100];
-        sprintf(temp4,"%3d                   // \n",it->second);
+        sprintf(temp4,"%3d                    \n",it->second);
         temp3.append(temp4);
         s1.push_back(temp3);
     }
-    for (unsigned i=1;i<tcount->size();i++){
+    for (unsigned i=1;i<tcount.size();i++){
         char temp3[100];
-        sprintf(temp3,"    Thread %3d \t%3d \t\t\t\t    //\n",i,tcount->at(i));
+        sprintf(temp3,"    Thread %3d \t%3d \n",i,tcount.at(i));
         s1.push_back(temp3);
     }
 
-    double tps=commcount->at("Receive")/lengthtime;
+
     char temp4[100];
-    sprintf(temp4,"Trabsactions per second: %3.3f \t    //\n",tps);
+    sprintf(temp4,"Trabsactions per second: %3.3f \n",(commcount.at("Work"))/lengthtime);
     s1.push_back(temp4);
     s1.push_back("----------------------------------\n");
 

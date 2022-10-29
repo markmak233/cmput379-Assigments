@@ -65,6 +65,6 @@ struct main_kid{
 
 std::vector<inst_kind> translate_txt_to_struct(std::vector<std::string> instru);
 void rapidwrite(struct log_event data,std::string filename,int* qsnow3,std::map <std::string,int>* commcount,std::vector<int>*tcount);
-void summarywrite(std::map <std::string,int>* commcount,std::vector<int>*tcount, double lengthtime,std::string filename);
+void summarywrite(std::map <std::string,int> commcount,std::vector<int>tcount, double lengthtime,std::string filename);
 void *Parent_thread(void *data);
 void *Children_run_thread(void *data2);
