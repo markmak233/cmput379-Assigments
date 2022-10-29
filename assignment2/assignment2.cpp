@@ -168,7 +168,7 @@ void event_management(int nThread,vector<string> instru,string filename){
 int main(int argc,char* argv[]){
     // process the input
     if (argc<2 || argc>3){
-        cout << "unexpected arguments inputed";
+        cout << "unexpected arguments inputed" << endl;
         return 1;
     }
     // number of thread
