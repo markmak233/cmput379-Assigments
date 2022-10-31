@@ -1,0 +1,2330 @@
+0.000 ID=  0       Sleep            1   // Parent sleeps, n= 1 
+0.010 ID=  0       Sleep            2   // Parent sleeps, n= 2 
+0.030 ID=  0       Sleep            3   // Parent sleeps, n= 3 
+0.061 ID=  0       Sleep            1   // Parent sleeps, n= 1 
+0.071 ID=  0       Sleep            2   // Parent sleeps, n= 2 
+0.091 ID=  0       Sleep            3   // Parent sleeps, n= 3 
+0.121 ID=  0       Sleep            1   // Parent sleeps, n= 1 
+0.131 ID=  0       Sleep            2   // Parent sleeps, n= 2 
+0.151 ID=  0       Sleep            3   // Parent sleeps, n= 3 
+0.181 ID=  0       Sleep            1   // Parent sleeps, n= 1 
+0.192 ID=  0       Sleep            3   // Parent sleeps, n= 3 
+0.222 ID=  0       Sleep            1   // Parent sleeps, n= 1 
+0.232 ID=  0       Sleep            2   // Parent sleeps, n= 2 
+0.252 ID=  0       Sleep            3   // Parent sleeps, n= 3 
+0.282 ID=  0       End                  // End of input for producer
+0.000 ID=  1       Ask                  // Thread  1 asks for work 
+0.000 ID=  0       Sleep            1   // Parent sleeps, n= 1 
+0.010 ID=  0       Sleep            2   // Parent sleeps, n= 2 
+0.030 ID=  0       Sleep            3   // Parent sleeps, n= 3 
+0.060 ID=  0       Sleep            1   // Parent sleeps, n= 1 
+0.071 ID=  0       Sleep            2   // Parent sleeps, n= 2 
+0.091 ID=  0       Sleep            3   // Parent sleeps, n= 3 
+0.121 ID=  0       Sleep            1   // Parent sleeps, n= 1 
+0.131 ID=  0       Sleep            2   // Parent sleeps, n= 2 
+0.151 ID=  0       Sleep            3   // Parent sleeps, n= 3 
+0.181 ID=  0       Sleep            1   // Parent sleeps, n= 1 
+0.191 ID=  0       Sleep            3   // Parent sleeps, n= 3 
+0.222 ID=  0       Sleep            1   // Parent sleeps, n= 1 
+0.232 ID=  0       Sleep            2   // Parent sleeps, n= 2 
+0.252 ID=  0       Sleep            3   // Parent sleeps, n= 3 
+0.282 ID=  0       End                  // End of input for producer
+0.000 ID=  2       Ask                  // Thread  2 asks for work 
+0.000 ID=  1       Ask                  // Thread  1 asks for work 
+0.000 ID=  0       Sleep            1   // Parent sleeps, n= 1 
+0.000 ID=  3       Ask                  // Thread  3 asks for work 
+0.010 ID=  0       Sleep            2   // Parent sleeps, n= 2 
+0.030 ID=  0       Sleep            3   // Parent sleeps, n= 3 
+0.061 ID=  0       Sleep            1   // Parent sleeps, n= 1 
+0.071 ID=  0       Sleep            2   // Parent sleeps, n= 2 
+0.091 ID=  0       Sleep            3   // Parent sleeps, n= 3 
+0.121 ID=  0       Sleep            1   // Parent sleeps, n= 1 
+0.131 ID=  0       Sleep            2   // Parent sleeps, n= 2 
+0.151 ID=  0       Sleep            3   // Parent sleeps, n= 3 
+0.181 ID=  0       Sleep            1   // Parent sleeps, n= 1 
+0.191 ID=  0       Sleep            3   // Parent sleeps, n= 3 
+0.221 ID=  0       Sleep            1   // Parent sleeps, n= 1 
+0.231 ID=  0       Sleep            2   // Parent sleeps, n= 2 
+0.252 ID=  0       Sleep            3   // Parent sleeps, n= 3 
+0.282 ID=  0       End                  // End of input for producer
+0.000 ID=  2       Ask                  // Thread  2 asks for work 
+0.000 ID=  1       Ask                  // Thread  1 asks for work 
+0.000 ID=  3       Ask                  // Thread  3 asks for work 
+0.000 ID=  0       Sleep            1   // Parent sleeps, n= 1 
+0.010 ID=  0       Sleep            2   // Parent sleeps, n= 2 
+0.030 ID=  0       Sleep            3   // Parent sleeps, n= 3 
+0.060 ID=  0       Sleep            1   // Parent sleeps, n= 1 
+0.071 ID=  0       Sleep            2   // Parent sleeps, n= 2 
+0.091 ID=  0       Sleep            3   // Parent sleeps, n= 3 
+0.121 ID=  0       Sleep            1   // Parent sleeps, n= 1 
+0.131 ID=  0       Sleep            2   // Parent sleeps, n= 2 
+0.151 ID=  0       Sleep            3   // Parent sleeps, n= 3 
+0.181 ID=  0       Sleep            1   // Parent sleeps, n= 1 
+0.191 ID=  0       Sleep            3   // Parent sleeps, n= 3 
+0.221 ID=  0       Sleep            1   // Parent sleeps, n= 1 
+0.231 ID=  0       Sleep            2   // Parent sleeps, n= 2 
+0.251 ID=  0       Sleep            3   // Parent sleeps, n= 3 
+0.282 ID=  0       End                  // End of input for producer
+0.000 ID=  1       Ask                  // Thread  1 asks for work 
+0.000 ID=  3       Ask                  // Thread  3 asks for work 
+0.000 ID=  2       Ask                  // Thread  2 asks for work 
+0.000 ID=  0       Sleep            1   // Parent sleeps, n= 1 
+0.010 ID=  0       Sleep            2   // Parent sleeps, n= 2 
+0.030 ID=  0       Sleep            3   // Parent sleeps, n= 3 
+0.061 ID=  0       Sleep            1   // Parent sleeps, n= 1 
+0.071 ID=  0       Sleep            2   // Parent sleeps, n= 2 
+0.091 ID=  0       Sleep            3   // Parent sleeps, n= 3 
+0.121 ID=  0       Sleep            1   // Parent sleeps, n= 1 
+0.131 ID=  0       Sleep            2   // Parent sleeps, n= 2 
+0.151 ID=  0       Sleep            3   // Parent sleeps, n= 3 
+0.181 ID=  0       Sleep            1   // Parent sleeps, n= 1 
+0.191 ID=  0       Sleep            3   // Parent sleeps, n= 3 
+0.221 ID=  0       Sleep            1   // Parent sleeps, n= 1 
+0.231 ID=  0       Sleep            2   // Parent sleeps, n= 2 
+0.252 ID=  0       Sleep            3   // Parent sleeps, n= 3 
+0.282 ID=  0       End                  // End of input for producer
+0.000 ID=  1       Ask                  // Thread  1 asks for work 
+0.000 ID=  3       Ask                  // Thread  3 asks for work 
+0.000 ID=  2       Ask                  // Thread  2 asks for work 
+0.000 ID=  0       Sleep            1   // Parent sleeps, n= 1 
+0.010 ID=  0       Sleep            2   // Parent sleeps, n= 2 
+0.030 ID=  0       Sleep            3   // Parent sleeps, n= 3 
+0.061 ID=  0       Sleep            1   // Parent sleeps, n= 1 
+0.071 ID=  0       Sleep            2   // Parent sleeps, n= 2 
+0.091 ID=  0       Sleep            3   // Parent sleeps, n= 3 
+0.121 ID=  0       Sleep            1   // Parent sleeps, n= 1 
+0.132 ID=  0       Sleep            2   // Parent sleeps, n= 2 
+0.152 ID=  0       Sleep            3   // Parent sleeps, n= 3 
+0.182 ID=  0       Sleep            1   // Parent sleeps, n= 1 
+0.192 ID=  0       Sleep            3   // Parent sleeps, n= 3 
+0.222 ID=  0       Sleep            1   // Parent sleeps, n= 1 
+0.232 ID=  0       Sleep            2   // Parent sleeps, n= 2 
+0.252 ID=  0       Sleep            3   // Parent sleeps, n= 3 
+0.282 ID=  0       End                  // End of input for producer
+0.000 ID=  1       Ask                  // Thread  1 asks for work 
+0.000 ID=  2       Ask                  // Thread  2 asks for work 
+0.000 ID=  3       Ask                  // Thread  3 asks for work 
+0.000 ID=  0       Sleep            1   // Parent sleeps, n= 1 
+0.010 ID=  0       Sleep            2   // Parent sleeps, n= 2 
+0.030 ID=  0       Sleep            3   // Parent sleeps, n= 3 
+0.060 ID=  0       Sleep            1   // Parent sleeps, n= 1 
+0.071 ID=  0       Sleep            2   // Parent sleeps, n= 2 
+0.091 ID=  0       Sleep            3   // Parent sleeps, n= 3 
+0.121 ID=  0       Sleep            1   // Parent sleeps, n= 1 
+0.131 ID=  0       Sleep            2   // Parent sleeps, n= 2 
+0.151 ID=  0       Sleep            3   // Parent sleeps, n= 3 
+0.181 ID=  0       Sleep            1   // Parent sleeps, n= 1 
+0.191 ID=  0       Sleep            3   // Parent sleeps, n= 3 
+0.221 ID=  0       Sleep            1   // Parent sleeps, n= 1 
+0.232 ID=  0       Sleep            2   // Parent sleeps, n= 2 
+0.252 ID=  0       Sleep            3   // Parent sleeps, n= 3 
+0.282 ID=  0       End                  // End of input for producer
+0.000 ID=  1       Ask                  // Thread  1 asks for work 
+0.000 ID=  2       Ask                  // Thread  2 asks for work 
+0.000 ID=  3       Ask                  // Thread  3 asks for work 
+0.000 ID=  0 Q=  3 Work             4   // Parent receives work with n= 4 
+0.000 ID=  1 Q=  2 Receive          4   // Thread  1 takes work, n= 4 
+0.000 ID=  0 Q=  2 Work             2   // Parent receives work with n= 2 
+0.000 ID=  0 Q=  2 Work             1   // Parent receives work with n= 1 
+0.000 ID=  2 Q=  1 Receive          2   // Thread  2 takes work, n= 2 
+0.000 ID=  0 Q=  1 Work             1   // Parent receives work with n= 1 
+0.000 ID=  0       Sleep            9   // Parent sleeps, n= 9 
+0.000 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.001 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.001 ID=  3       Ask                  // Thread  3 asks for work 
+0.001 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.001 ID=  2       Complete         2   // Thread  2 completes task, n= 2 
+0.001 ID=  2       Ask                  // Thread  2 asks for work 
+0.002 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.002 ID=  3       Ask                  // Thread  3 asks for work 
+0.003 ID=  1       Complete         4   // Thread  1 completes task, n= 4 
+0.003 ID=  1       Ask                  // Thread  1 asks for work 
+0.090 ID=  0 Q=  3 Work             5   // Parent receives work with n= 5 
+0.090 ID=  0       Sleep            1   // Parent sleeps, n= 1 
+0.090 ID=  2 Q=  2 Receive          5   // Thread  2 takes work, n= 5 
+0.093 ID=  2       Complete         5   // Thread  2 completes task, n= 5 
+0.093 ID=  2       Ask                  // Thread  2 asks for work 
+0.100 ID=  0 Q=  3 Work             1   // Parent receives work with n= 1 
+0.100 ID=  0 Q=  3 Work             1   // Parent receives work with n= 1 
+0.100 ID=  0 Q=  3 Work             1   // Parent receives work with n= 1 
+0.100 ID=  3 Q=  2 Receive          1   // Thread  3 takes work, n= 1 
+0.100 ID=  0       End                  // End of input for producer
+0.100 ID=  2 Q=  1 Receive          1   // Thread  2 takes work, n= 1 
+0.100 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.101 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.101 ID=  2       Ask                  // Thread  2 asks for work 
+0.101 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.101 ID=  3       Ask                  // Thread  3 asks for work 
+0.101 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.101 ID=  1       Ask                  // Thread  1 asks for work 
+Summary:   
+    Ask            11                    
+    Complete        8                    
+    Receive         8                    
+    Sleep           2                    
+    Work            8                    
+    Thread   1 	  2 
+    Thread   2 	  3 
+    Thread   3 	  3 
+Trabsactions per second: 79.120 
+----------------------------------
+0.000 ID=  1       Ask                  // Thread  1 asks for work 
+0.000 ID=  3       Ask                  // Thread  3 asks for work 
+0.000 ID=  2       Ask                  // Thread  2 asks for work 
+0.000 ID=  0 Q=  3 Work             4   // Parent receives work with n= 4 
+0.000 ID=  1 Q=  2 Receive          4   // Thread  1 takes work, n= 4 
+0.000 ID=  0 Q=  2 Work             2   // Parent receives work with n= 2 
+0.000 ID=  0 Q=  2 Work             1   // Parent receives work with n= 1 
+0.000 ID=  2 Q=  1 Receive          2   // Thread  2 takes work, n= 2 
+0.000 ID=  0 Q=  1 Work             1   // Parent receives work with n= 1 
+0.000 ID=  0       Sleep            9   // Parent sleeps, n= 9 
+0.000 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.001 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.001 ID=  3       Ask                  // Thread  3 asks for work 
+0.001 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.001 ID=  2       Complete         2   // Thread  2 completes task, n= 2 
+0.001 ID=  2       Ask                  // Thread  2 asks for work 
+0.001 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.001 ID=  3       Ask                  // Thread  3 asks for work 
+0.003 ID=  1       Complete         4   // Thread  1 completes task, n= 4 
+0.003 ID=  1       Ask                  // Thread  1 asks for work 
+0.090 ID=  0 Q=  3 Work             5   // Parent receives work with n= 5 
+0.090 ID=  0       Sleep            1   // Parent sleeps, n= 1 
+0.090 ID=  3 Q=  2 Receive          5   // Thread  3 takes work, n= 5 
+0.093 ID=  3       Complete         5   // Thread  3 completes task, n= 5 
+0.093 ID=  3       Ask                  // Thread  3 asks for work 
+0.100 ID=  0 Q=  3 Work             1   // Parent receives work with n= 1 
+0.100 ID=  0 Q=  3 Work             1   // Parent receives work with n= 1 
+0.100 ID=  0 Q=  3 Work             1   // Parent receives work with n= 1 
+0.100 ID=  0       End                  // End of input for producer
+0.100 ID=  3 Q=  2 Receive          1   // Thread  3 takes work, n= 1 
+0.100 ID=  1 Q=  1 Receive          1   // Thread  1 takes work, n= 1 
+0.101 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.101 ID=  3       Ask                  // Thread  3 asks for work 
+0.101 ID=  3 Q=  1 Receive          1   // Thread  3 takes work, n= 1 
+0.101 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.101 ID=  1       Ask                  // Thread  1 asks for work 
+0.102 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.102 ID=  3       Ask                  // Thread  3 asks for work 
+Summary:   
+    Ask            11                    
+    Complete        8                    
+    Receive         8                    
+    Sleep           2                    
+    Work            8                    
+    Thread   1 	  2 
+    Thread   2 	  1 
+    Thread   3 	  5 
+Trabsactions per second: 78.777 
+----------------------------------
+0.000 ID=  2       Ask                  // Thread  2 asks for work 
+0.000 ID=  1       Ask                  // Thread  1 asks for work 
+0.000 ID=  3       Ask                  // Thread  3 asks for work 
+0.000 ID=  0 Q=  3 Work             4   // Parent receives work with n= 4 
+0.000 ID=  2 Q=  2 Receive          4   // Thread  2 takes work, n= 4 
+0.000 ID=  0 Q=  2 Work             2   // Parent receives work with n= 2 
+0.000 ID=  0 Q=  2 Work             1   // Parent receives work with n= 1 
+0.000 ID=  3 Q=  1 Receive          2   // Thread  3 takes work, n= 2 
+0.000 ID=  0 Q=  1 Work             1   // Parent receives work with n= 1 
+0.000 ID=  0       Sleep            9   // Parent sleeps, n= 9 
+0.000 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.001 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.001 ID=  1       Ask                  // Thread  1 asks for work 
+0.001 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.001 ID=  3       Complete         2   // Thread  3 completes task, n= 2 
+0.001 ID=  3       Ask                  // Thread  3 asks for work 
+0.002 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.002 ID=  1       Ask                  // Thread  1 asks for work 
+0.003 ID=  2       Complete         4   // Thread  2 completes task, n= 4 
+0.003 ID=  2       Ask                  // Thread  2 asks for work 
+0.090 ID=  0 Q=  3 Work             5   // Parent receives work with n= 5 
+0.090 ID=  0       Sleep            1   // Parent sleeps, n= 1 
+0.090 ID=  1 Q=  2 Receive          5   // Thread  1 takes work, n= 5 
+0.093 ID=  1       Complete         5   // Thread  1 completes task, n= 5 
+0.093 ID=  1       Ask                  // Thread  1 asks for work 
+0.100 ID=  0 Q=  3 Work             1   // Parent receives work with n= 1 
+0.100 ID=  0 Q=  3 Work             1   // Parent receives work with n= 1 
+0.100 ID=  0 Q=  3 Work             1   // Parent receives work with n= 1 
+0.100 ID=  1 Q=  2 Receive          1   // Thread  1 takes work, n= 1 
+0.100 ID=  0       End                  // End of input for producer
+0.100 ID=  3 Q=  1 Receive          1   // Thread  3 takes work, n= 1 
+0.100 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.101 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.101 ID=  1       Ask                  // Thread  1 asks for work 
+0.101 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.101 ID=  2       Ask                  // Thread  2 asks for work 
+0.101 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.101 ID=  3       Ask                  // Thread  3 asks for work 
+Summary:   
+    Ask            11                    
+    Complete        8                    
+    Receive         8                    
+    Sleep           2                    
+    Work            8                    
+    Thread   1 	  4 
+    Thread   2 	  2 
+    Thread   3 	  2 
+Trabsactions per second: 79.192 
+----------------------------------
+0.000 ID=  1       Ask                  // Thread  1 asks for work 
+0.000 ID=  3       Ask                  // Thread  3 asks for work 
+0.000 ID=  2       Ask                  // Thread  2 asks for work 
+0.000 ID=  0       Sleep            1   // Parent sleeps, n= 1 
+0.010 ID=  0       Sleep            2   // Parent sleeps, n= 2 
+0.030 ID=  0 Q=  3 Work             3   // Parent receives work with n= 3 
+0.030 ID=  3 Q=  2 Receive          3   // Thread  3 takes work, n= 3 
+0.030 ID=  0       Sleep            1   // Parent sleeps, n= 1 
+0.032 ID=  3       Complete         3   // Thread  3 completes task, n= 3 
+0.032 ID=  3       Ask                  // Thread  3 asks for work 
+0.040 ID=  0 Q=  3 Work             2   // Parent receives work with n= 2 
+0.040 ID=  0       Sleep            3   // Parent sleeps, n= 3 
+0.040 ID=  1 Q=  2 Receive          2   // Thread  1 takes work, n= 2 
+0.042 ID=  1       Complete         2   // Thread  1 completes task, n= 2 
+0.042 ID=  1       Ask                  // Thread  1 asks for work 
+0.071 ID=  0       Sleep            1   // Parent sleeps, n= 1 
+0.081 ID=  0 Q=  3 Work             2   // Parent receives work with n= 2 
+0.081 ID=  0       Sleep            3   // Parent sleeps, n= 3 
+0.081 ID=  1 Q=  2 Receive          2   // Thread  1 takes work, n= 2 
+0.082 ID=  1       Complete         2   // Thread  1 completes task, n= 2 
+0.082 ID=  1       Ask                  // Thread  1 asks for work 
+0.111 ID=  0 Q=  3 Work             1   // Parent receives work with n= 1 
+0.111 ID=  1 Q=  2 Receive          1   // Thread  1 takes work, n= 1 
+0.111 ID=  0       Sleep            3   // Parent sleeps, n= 3 
+0.112 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.112 ID=  1       Ask                  // Thread  1 asks for work 
+0.141 ID=  0       Sleep            1   // Parent sleeps, n= 1 
+0.151 ID=  0 Q=  3 Work             2   // Parent receives work with n= 2 
+0.151 ID=  0       Sleep            3   // Parent sleeps, n= 3 
+0.151 ID=  2 Q=  2 Receive          2   // Thread  2 takes work, n= 2 
+0.152 ID=  2       Complete         2   // Thread  2 completes task, n= 2 
+0.152 ID=  2       Ask                  // Thread  2 asks for work 
+0.181 ID=  0       End                  // End of input for producer
+Summary:   
+    Ask             8                    
+    Complete        5                    
+    Receive         5                    
+    Sleep           9                    
+    Work            5                    
+    Thread   1 	  3 
+    Thread   2 	  1 
+    Thread   3 	  1 
+Trabsactions per second: 27.597 
+----------------------------------
+0.000 ID=  1       Ask                  // Thread  1 asks for work 
+0.000 ID=  2       Ask                  // Thread  2 asks for work 
+0.000 ID=  3       Ask                  // Thread  3 asks for work 
+0.000 ID=  0 Q=  3 Work             1   // Parent receives work with n= 1 
+0.000 ID=  2 Q=  2 Receive          1   // Thread  2 takes work, n= 1 
+0.000 ID=  0 Q=  2 Work             1   // Parent receives work with n= 1 
+0.000 ID=  0 Q=  2 Work             1   // Parent receives work with n= 1 
+0.000 ID=  0 Q=  2 Work             1   // Parent receives work with n= 1 
+0.000 ID=  0 Q=  2 Work             1   // Parent receives work with n= 1 
+0.000 ID=  0 Q=  2 Work             1   // Parent receives work with n= 1 
+0.000 ID=  0 Q=  2 Work             1   // Parent receives work with n= 1 
+0.000 ID=  0 Q=  2 Work             1   // Parent receives work with n= 1 
+0.000 ID=  0 Q=  2 Work             1   // Parent receives work with n= 1 
+0.000 ID=  3 Q=  1 Receive          1   // Thread  3 takes work, n= 1 
+0.000 ID=  0 Q=  1 Work             1   // Parent receives work with n= 1 
+0.000 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.001 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.001 ID=  3       Ask                  // Thread  3 asks for work 
+0.001 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.001 ID=  2       Ask                  // Thread  2 asks for work 
+0.001 ID=  2 Q=  1 Receive          1   // Thread  2 takes work, n= 1 
+0.001 ID=  0 Q=  1 Work             1   // Parent receives work with n= 1 
+0.001 ID=  0 Q=  1 Work             1   // Parent receives work with n= 1 
+0.001 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.001 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.001 ID=  1       Ask                  // Thread  1 asks for work 
+0.001 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.001 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.001 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.001 ID=  3       Ask                  // Thread  3 asks for work 
+0.001 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.001 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.001 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.001 ID=  2       Ask                  // Thread  2 asks for work 
+0.001 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.001 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.001 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.001 ID=  1       Ask                  // Thread  1 asks for work 
+0.001 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.001 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.002 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.002 ID=  3       Ask                  // Thread  3 asks for work 
+0.002 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.002 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.002 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.002 ID=  1       Ask                  // Thread  1 asks for work 
+0.002 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.002 ID=  2       Ask                  // Thread  2 asks for work 
+0.002 ID=  1 Q=  1 Receive          1   // Thread  1 takes work, n= 1 
+0.002 ID=  0 Q=  1 Work             1   // Parent receives work with n= 1 
+0.002 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.002 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.003 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.003 ID=  3       Ask                  // Thread  3 asks for work 
+0.003 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.003 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.003 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.003 ID=  1       Ask                  // Thread  1 asks for work 
+0.003 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.003 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.003 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.003 ID=  2       Ask                  // Thread  2 asks for work 
+0.003 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.003 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.003 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.003 ID=  3       Ask                  // Thread  3 asks for work 
+0.003 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.003 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.003 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.003 ID=  1       Ask                  // Thread  1 asks for work 
+0.003 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.003 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.003 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.003 ID=  2       Ask                  // Thread  2 asks for work 
+0.003 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.003 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.004 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.004 ID=  3       Ask                  // Thread  3 asks for work 
+0.004 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.004 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.004 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.004 ID=  1       Ask                  // Thread  1 asks for work 
+0.004 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.004 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.004 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.004 ID=  2       Ask                  // Thread  2 asks for work 
+0.004 ID=  0 Q=  1 Work             1   // Parent receives work with n= 1 
+0.004 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.004 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.004 ID=  3       Ask                  // Thread  3 asks for work 
+0.004 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.004 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.004 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.004 ID=  1       Ask                  // Thread  1 asks for work 
+0.004 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.004 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.005 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.005 ID=  2       Ask                  // Thread  2 asks for work 
+0.005 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.005 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.005 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.005 ID=  3       Ask                  // Thread  3 asks for work 
+0.005 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.005 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.005 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.005 ID=  1       Ask                  // Thread  1 asks for work 
+0.005 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.005 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.005 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.005 ID=  2       Ask                  // Thread  2 asks for work 
+0.005 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.005 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.006 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.006 ID=  3       Ask                  // Thread  3 asks for work 
+0.006 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.006 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.006 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.006 ID=  1       Ask                  // Thread  1 asks for work 
+0.006 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.006 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.006 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.006 ID=  2       Ask                  // Thread  2 asks for work 
+0.006 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.006 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.006 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.006 ID=  3       Ask                  // Thread  3 asks for work 
+0.006 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.006 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.006 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.006 ID=  1       Ask                  // Thread  1 asks for work 
+0.006 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.006 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.006 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.006 ID=  2       Ask                  // Thread  2 asks for work 
+0.006 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.006 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.007 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.007 ID=  3       Ask                  // Thread  3 asks for work 
+0.007 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.007 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.007 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.007 ID=  1       Ask                  // Thread  1 asks for work 
+0.007 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.007 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.007 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.007 ID=  2       Ask                  // Thread  2 asks for work 
+0.007 ID=  0 Q=  1 Work             1   // Parent receives work with n= 1 
+0.007 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.007 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.007 ID=  3       Ask                  // Thread  3 asks for work 
+0.007 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.007 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.007 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.007 ID=  1       Ask                  // Thread  1 asks for work 
+0.007 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.007 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.008 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.008 ID=  2       Ask                  // Thread  2 asks for work 
+0.008 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.008 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.008 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.008 ID=  3       Ask                  // Thread  3 asks for work 
+0.008 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.008 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.008 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.008 ID=  1       Ask                  // Thread  1 asks for work 
+0.008 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.008 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.008 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.008 ID=  2       Ask                  // Thread  2 asks for work 
+0.008 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.008 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.009 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.009 ID=  3       Ask                  // Thread  3 asks for work 
+0.009 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.009 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.009 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.009 ID=  1       Ask                  // Thread  1 asks for work 
+0.009 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.009 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.009 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.009 ID=  2       Ask                  // Thread  2 asks for work 
+0.009 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.009 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.009 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.009 ID=  3       Ask                  // Thread  3 asks for work 
+0.009 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.009 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.009 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.009 ID=  1       Ask                  // Thread  1 asks for work 
+0.009 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.009 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.010 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.010 ID=  2       Ask                  // Thread  2 asks for work 
+0.010 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.010 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.010 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.010 ID=  3       Ask                  // Thread  3 asks for work 
+0.010 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.010 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.010 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.010 ID=  1       Ask                  // Thread  1 asks for work 
+0.010 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.010 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.010 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.010 ID=  2       Ask                  // Thread  2 asks for work 
+0.010 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.010 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.010 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.010 ID=  3       Ask                  // Thread  3 asks for work 
+0.010 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.010 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.010 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.010 ID=  1       Ask                  // Thread  1 asks for work 
+0.010 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.010 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.011 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.011 ID=  2       Ask                  // Thread  2 asks for work 
+0.011 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.011 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.011 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.011 ID=  3       Ask                  // Thread  3 asks for work 
+0.011 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.011 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.011 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.011 ID=  1       Ask                  // Thread  1 asks for work 
+0.011 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.011 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.012 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.012 ID=  3       Ask                  // Thread  3 asks for work 
+0.012 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.012 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.012 ID=  2       Ask                  // Thread  2 asks for work 
+0.012 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.012 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.012 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.012 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.012 ID=  1       Ask                  // Thread  1 asks for work 
+0.012 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.012 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.012 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.012 ID=  3       Ask                  // Thread  3 asks for work 
+0.012 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.012 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.012 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.012 ID=  2       Ask                  // Thread  2 asks for work 
+0.012 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.012 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.013 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.013 ID=  3       Ask                  // Thread  3 asks for work 
+0.013 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.013 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.013 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.013 ID=  2       Ask                  // Thread  2 asks for work 
+0.013 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.013 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.013 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.013 ID=  3       Ask                  // Thread  3 asks for work 
+0.013 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.014 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.014 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.014 ID=  2       Ask                  // Thread  2 asks for work 
+0.014 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.014 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.014 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.014 ID=  1       Ask                  // Thread  1 asks for work 
+0.014 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.014 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.014 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.014 ID=  3       Ask                  // Thread  3 asks for work 
+0.014 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.014 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.014 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.014 ID=  2       Ask                  // Thread  2 asks for work 
+0.014 ID=  0 Q=  1 Work             1   // Parent receives work with n= 1 
+0.014 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.015 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.015 ID=  3       Ask                  // Thread  3 asks for work 
+0.015 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.015 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.015 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.015 ID=  1       Ask                  // Thread  1 asks for work 
+0.015 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.015 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.015 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.015 ID=  2       Ask                  // Thread  2 asks for work 
+0.015 ID=  0 Q=  1 Work             1   // Parent receives work with n= 1 
+0.015 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.016 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.016 ID=  3       Ask                  // Thread  3 asks for work 
+0.016 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.016 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.016 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.016 ID=  1       Ask                  // Thread  1 asks for work 
+0.016 ID=  0 Q=  1 Work             1   // Parent receives work with n= 1 
+0.016 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.016 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.016 ID=  2       Ask                  // Thread  2 asks for work 
+0.016 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.016 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.016 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.016 ID=  3       Ask                  // Thread  3 asks for work 
+0.016 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.016 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.016 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.016 ID=  1       Ask                  // Thread  1 asks for work 
+0.016 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.016 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.017 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.017 ID=  2       Ask                  // Thread  2 asks for work 
+0.017 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.017 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.017 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.017 ID=  1       Ask                  // Thread  1 asks for work 
+0.017 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.017 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.017 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.017 ID=  3       Ask                  // Thread  3 asks for work 
+0.017 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.017 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.017 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.017 ID=  2       Ask                  // Thread  2 asks for work 
+0.017 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.017 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.017 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.017 ID=  1       Ask                  // Thread  1 asks for work 
+0.017 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.017 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.018 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.018 ID=  3       Ask                  // Thread  3 asks for work 
+0.018 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.018 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.018 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.018 ID=  2       Ask                  // Thread  2 asks for work 
+0.018 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.018 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.018 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.018 ID=  1       Ask                  // Thread  1 asks for work 
+0.018 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.018 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.018 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.018 ID=  3       Ask                  // Thread  3 asks for work 
+0.018 ID=  0 Q=  1 Work             1   // Parent receives work with n= 1 
+0.018 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.019 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.019 ID=  2       Ask                  // Thread  2 asks for work 
+0.019 ID=  0 Q=  1 Work             1   // Parent receives work with n= 1 
+0.019 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.019 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.019 ID=  1       Ask                  // Thread  1 asks for work 
+0.019 ID=  0 Q=  1 Work             1   // Parent receives work with n= 1 
+0.019 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.019 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.019 ID=  3       Ask                  // Thread  3 asks for work 
+0.019 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.019 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.019 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.019 ID=  2       Ask                  // Thread  2 asks for work 
+0.019 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.019 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.020 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.020 ID=  3       Ask                  // Thread  3 asks for work 
+0.020 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.020 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.020 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.020 ID=  1       Ask                  // Thread  1 asks for work 
+0.020 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.020 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.020 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.020 ID=  2       Ask                  // Thread  2 asks for work 
+0.020 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.020 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.020 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.020 ID=  1       Ask                  // Thread  1 asks for work 
+0.020 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.020 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.020 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.020 ID=  3       Ask                  // Thread  3 asks for work 
+0.020 ID=  0 Q=  1 Work             1   // Parent receives work with n= 1 
+0.020 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.021 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.021 ID=  2       Ask                  // Thread  2 asks for work 
+0.021 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.021 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.021 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.021 ID=  1       Ask                  // Thread  1 asks for work 
+0.021 ID=  0 Q=  1 Work             1   // Parent receives work with n= 1 
+0.021 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.021 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.021 ID=  3       Ask                  // Thread  3 asks for work 
+0.021 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.021 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.021 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.021 ID=  2       Ask                  // Thread  2 asks for work 
+0.021 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.021 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.021 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.021 ID=  1       Ask                  // Thread  1 asks for work 
+0.021 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.021 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.021 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.021 ID=  3       Ask                  // Thread  3 asks for work 
+0.021 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.021 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.022 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.022 ID=  2       Ask                  // Thread  2 asks for work 
+0.022 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.022 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.022 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.022 ID=  1       Ask                  // Thread  1 asks for work 
+0.022 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.022 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.022 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.022 ID=  3       Ask                  // Thread  3 asks for work 
+0.022 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.022 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.023 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.023 ID=  2       Ask                  // Thread  2 asks for work 
+0.023 ID=  0 Q=  1 Work             1   // Parent receives work with n= 1 
+0.023 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.023 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.023 ID=  1       Ask                  // Thread  1 asks for work 
+0.023 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.023 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.023 ID=  3       Ask                  // Thread  3 asks for work 
+0.023 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.023 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.023 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.023 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.023 ID=  2       Ask                  // Thread  2 asks for work 
+0.023 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.023 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.023 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.023 ID=  1       Ask                  // Thread  1 asks for work 
+0.023 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.023 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.023 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.023 ID=  3       Ask                  // Thread  3 asks for work 
+0.023 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.023 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.024 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.024 ID=  2       Ask                  // Thread  2 asks for work 
+0.024 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.024 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.024 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.024 ID=  3       Ask                  // Thread  3 asks for work 
+0.024 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.024 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.024 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.024 ID=  1       Ask                  // Thread  1 asks for work 
+0.024 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.024 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.024 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.024 ID=  2       Ask                  // Thread  2 asks for work 
+0.024 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.024 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.025 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.025 ID=  3       Ask                  // Thread  3 asks for work 
+0.025 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.025 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.025 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.025 ID=  1       Ask                  // Thread  1 asks for work 
+0.025 ID=  0 Q=  1 Work             1   // Parent receives work with n= 1 
+0.025 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.025 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.025 ID=  2       Ask                  // Thread  2 asks for work 
+0.025 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.025 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.025 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.025 ID=  3       Ask                  // Thread  3 asks for work 
+0.025 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.025 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.025 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.025 ID=  1       Ask                  // Thread  1 asks for work 
+0.025 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.025 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.026 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.026 ID=  2       Ask                  // Thread  2 asks for work 
+0.026 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.026 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.026 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.026 ID=  3       Ask                  // Thread  3 asks for work 
+0.026 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.026 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.026 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.026 ID=  1       Ask                  // Thread  1 asks for work 
+0.026 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.026 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.026 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.026 ID=  2       Ask                  // Thread  2 asks for work 
+0.026 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.026 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.026 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.026 ID=  3       Ask                  // Thread  3 asks for work 
+0.026 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.026 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.027 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.027 ID=  1       Ask                  // Thread  1 asks for work 
+0.027 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.027 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.027 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.027 ID=  2       Ask                  // Thread  2 asks for work 
+0.027 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.027 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.027 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.027 ID=  3       Ask                  // Thread  3 asks for work 
+0.027 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.027 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.027 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.027 ID=  2       Ask                  // Thread  2 asks for work 
+0.027 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.028 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.028 ID=  1       Ask                  // Thread  1 asks for work 
+0.028 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.028 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.028 ID=  3       Ask                  // Thread  3 asks for work 
+0.028 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.028 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.028 ID=  2       Ask                  // Thread  2 asks for work 
+0.028 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.028 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.028 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.028 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.028 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.028 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.028 ID=  3       Ask                  // Thread  3 asks for work 
+0.028 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.028 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.029 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.029 ID=  2       Ask                  // Thread  2 asks for work 
+0.029 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.029 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.029 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.029 ID=  1       Ask                  // Thread  1 asks for work 
+0.029 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.029 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.029 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.029 ID=  3       Ask                  // Thread  3 asks for work 
+0.029 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.029 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.029 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.029 ID=  2       Ask                  // Thread  2 asks for work 
+0.029 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.029 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.030 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.030 ID=  3       Ask                  // Thread  3 asks for work 
+0.030 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.030 ID=  2       Ask                  // Thread  2 asks for work 
+0.030 ID=  2 Q=  1 Receive          1   // Thread  2 takes work, n= 1 
+0.030 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.030 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.030 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.030 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.030 ID=  1       Ask                  // Thread  1 asks for work 
+0.030 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.030 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.031 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.031 ID=  3       Ask                  // Thread  3 asks for work 
+0.031 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.031 ID=  2       Ask                  // Thread  2 asks for work 
+0.031 ID=  3 Q=  1 Receive          1   // Thread  3 takes work, n= 1 
+0.031 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.031 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.031 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.031 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.031 ID=  1       Ask                  // Thread  1 asks for work 
+0.031 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.031 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.031 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.031 ID=  2       Ask                  // Thread  2 asks for work 
+0.031 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.031 ID=  3       Ask                  // Thread  3 asks for work 
+0.031 ID=  3 Q=  1 Receive          1   // Thread  3 takes work, n= 1 
+0.031 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.031 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.031 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.032 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.032 ID=  3       Ask                  // Thread  3 asks for work 
+0.032 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.032 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.032 ID=  2       Ask                  // Thread  2 asks for work 
+0.032 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.032 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.032 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.032 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.032 ID=  1       Ask                  // Thread  1 asks for work 
+0.032 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.032 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.033 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.033 ID=  3       Ask                  // Thread  3 asks for work 
+0.033 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.033 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.033 ID=  2       Ask                  // Thread  2 asks for work 
+0.033 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.033 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.033 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.033 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.033 ID=  1       Ask                  // Thread  1 asks for work 
+0.033 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.033 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.033 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.033 ID=  3       Ask                  // Thread  3 asks for work 
+0.033 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.033 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.033 ID=  2       Ask                  // Thread  2 asks for work 
+0.033 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.033 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.033 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.034 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.034 ID=  1       Ask                  // Thread  1 asks for work 
+0.034 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.034 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.034 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.034 ID=  3       Ask                  // Thread  3 asks for work 
+0.034 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.034 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.034 ID=  2       Ask                  // Thread  2 asks for work 
+0.034 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.034 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.034 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.034 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.034 ID=  1       Ask                  // Thread  1 asks for work 
+0.034 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.034 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.034 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.034 ID=  3       Ask                  // Thread  3 asks for work 
+0.034 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.034 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.034 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.034 ID=  2       Ask                  // Thread  2 asks for work 
+0.034 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.034 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.035 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.035 ID=  3       Ask                  // Thread  3 asks for work 
+0.035 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.035 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.035 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.035 ID=  2       Ask                  // Thread  2 asks for work 
+0.035 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.035 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.035 ID=  1       Ask                  // Thread  1 asks for work 
+0.035 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.035 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.035 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.036 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.036 ID=  3       Ask                  // Thread  3 asks for work 
+0.036 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.036 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.036 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.036 ID=  2       Ask                  // Thread  2 asks for work 
+0.036 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.036 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.036 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.036 ID=  1       Ask                  // Thread  1 asks for work 
+0.036 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.036 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.036 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.036 ID=  3       Ask                  // Thread  3 asks for work 
+0.036 ID=  0 Q=  1 Work             1   // Parent receives work with n= 1 
+0.036 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.037 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.037 ID=  2       Ask                  // Thread  2 asks for work 
+0.037 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.037 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.037 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.037 ID=  1       Ask                  // Thread  1 asks for work 
+0.037 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.037 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.037 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.037 ID=  3       Ask                  // Thread  3 asks for work 
+0.037 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.037 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.037 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.037 ID=  2       Ask                  // Thread  2 asks for work 
+0.037 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.037 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.037 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.037 ID=  1       Ask                  // Thread  1 asks for work 
+0.037 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.037 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.038 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.038 ID=  3       Ask                  // Thread  3 asks for work 
+0.038 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.038 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.038 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.038 ID=  2       Ask                  // Thread  2 asks for work 
+0.038 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.038 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.038 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.038 ID=  1       Ask                  // Thread  1 asks for work 
+0.038 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.038 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.039 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.039 ID=  1       Ask                  // Thread  1 asks for work 
+0.039 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.039 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.039 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.039 ID=  3       Ask                  // Thread  3 asks for work 
+0.039 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.039 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.039 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.039 ID=  2       Ask                  // Thread  2 asks for work 
+0.039 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.039 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.039 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.039 ID=  1       Ask                  // Thread  1 asks for work 
+0.039 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.039 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.040 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.040 ID=  1       Ask                  // Thread  1 asks for work 
+0.040 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.040 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.040 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.040 ID=  3       Ask                  // Thread  3 asks for work 
+0.040 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.040 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.040 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.040 ID=  2       Ask                  // Thread  2 asks for work 
+0.040 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.040 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.040 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.040 ID=  1       Ask                  // Thread  1 asks for work 
+0.040 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.040 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.041 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.041 ID=  1       Ask                  // Thread  1 asks for work 
+0.041 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.041 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.041 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.041 ID=  3       Ask                  // Thread  3 asks for work 
+0.041 ID=  0 Q=  1 Work             1   // Parent receives work with n= 1 
+0.041 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.041 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.041 ID=  2       Ask                  // Thread  2 asks for work 
+0.041 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.041 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.042 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.042 ID=  1       Ask                  // Thread  1 asks for work 
+0.042 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.042 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.042 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.042 ID=  1       Ask                  // Thread  1 asks for work 
+0.042 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.042 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.043 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.043 ID=  1       Ask                  // Thread  1 asks for work 
+0.043 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.044 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.044 ID=  1       Ask                  // Thread  1 asks for work 
+0.044 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.044 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.044 ID=  2       Ask                  // Thread  2 asks for work 
+0.044 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.044 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.044 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.044 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.044 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.044 ID=  1       Ask                  // Thread  1 asks for work 
+0.044 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.044 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.044 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.044 ID=  3       Ask                  // Thread  3 asks for work 
+0.044 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.044 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.044 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.044 ID=  2       Ask                  // Thread  2 asks for work 
+0.044 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.044 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.045 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.045 ID=  1       Ask                  // Thread  1 asks for work 
+0.045 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.045 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.045 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.045 ID=  2       Ask                  // Thread  2 asks for work 
+0.045 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.045 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.045 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.045 ID=  1       Ask                  // Thread  1 asks for work 
+0.045 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.045 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.046 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.046 ID=  2       Ask                  // Thread  2 asks for work 
+0.046 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.046 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.046 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.046 ID=  3       Ask                  // Thread  3 asks for work 
+0.046 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.046 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.046 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.046 ID=  1       Ask                  // Thread  1 asks for work 
+0.046 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.046 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.046 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.046 ID=  2       Ask                  // Thread  2 asks for work 
+0.046 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.046 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.046 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.046 ID=  3       Ask                  // Thread  3 asks for work 
+0.046 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.046 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.047 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.047 ID=  1       Ask                  // Thread  1 asks for work 
+0.047 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.047 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.047 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.047 ID=  2       Ask                  // Thread  2 asks for work 
+0.047 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.047 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.047 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.047 ID=  3       Ask                  // Thread  3 asks for work 
+0.047 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.047 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.047 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.047 ID=  1       Ask                  // Thread  1 asks for work 
+0.047 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.047 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.047 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.047 ID=  2       Ask                  // Thread  2 asks for work 
+0.047 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.047 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.048 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.048 ID=  3       Ask                  // Thread  3 asks for work 
+0.048 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.048 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.048 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.048 ID=  1       Ask                  // Thread  1 asks for work 
+0.048 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.048 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.048 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.048 ID=  2       Ask                  // Thread  2 asks for work 
+0.048 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.048 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.048 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.048 ID=  3       Ask                  // Thread  3 asks for work 
+0.048 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.048 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.049 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.049 ID=  2       Ask                  // Thread  2 asks for work 
+0.049 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.049 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.049 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.049 ID=  3       Ask                  // Thread  3 asks for work 
+0.049 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.049 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.049 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.049 ID=  2       Ask                  // Thread  2 asks for work 
+0.049 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.049 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.049 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.049 ID=  3       Ask                  // Thread  3 asks for work 
+0.049 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.049 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.049 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.049 ID=  1       Ask                  // Thread  1 asks for work 
+0.049 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.049 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.050 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.050 ID=  2       Ask                  // Thread  2 asks for work 
+0.050 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.050 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.050 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.050 ID=  3       Ask                  // Thread  3 asks for work 
+0.050 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.050 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.050 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.050 ID=  2       Ask                  // Thread  2 asks for work 
+0.050 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.050 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.051 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.051 ID=  3       Ask                  // Thread  3 asks for work 
+0.051 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.051 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.051 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.051 ID=  2       Ask                  // Thread  2 asks for work 
+0.051 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.051 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.051 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.051 ID=  1       Ask                  // Thread  1 asks for work 
+0.051 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.051 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.051 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.051 ID=  3       Ask                  // Thread  3 asks for work 
+0.051 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.051 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.052 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.052 ID=  2       Ask                  // Thread  2 asks for work 
+0.052 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.052 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.052 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.052 ID=  3       Ask                  // Thread  3 asks for work 
+0.052 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.052 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.052 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.052 ID=  1       Ask                  // Thread  1 asks for work 
+0.052 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.052 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.052 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.052 ID=  2       Ask                  // Thread  2 asks for work 
+0.052 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.052 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.053 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.053 ID=  1       Ask                  // Thread  1 asks for work 
+0.053 ID=  0 Q=  1 Work             1   // Parent receives work with n= 1 
+0.053 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.053 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.053 ID=  3       Ask                  // Thread  3 asks for work 
+0.053 ID=  0 Q=  1 Work             1   // Parent receives work with n= 1 
+0.053 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.053 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.053 ID=  2       Ask                  // Thread  2 asks for work 
+0.053 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.053 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.053 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.053 ID=  3       Ask                  // Thread  3 asks for work 
+0.053 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.053 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.053 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.053 ID=  2       Ask                  // Thread  2 asks for work 
+0.053 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.053 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.054 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.054 ID=  1       Ask                  // Thread  1 asks for work 
+0.054 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.054 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.054 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.054 ID=  2       Ask                  // Thread  2 asks for work 
+0.054 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.054 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.055 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.055 ID=  2       Ask                  // Thread  2 asks for work 
+0.055 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.055 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.055 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.055 ID=  3       Ask                  // Thread  3 asks for work 
+0.055 ID=  0 Q=  1 Work             1   // Parent receives work with n= 1 
+0.055 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.055 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.055 ID=  1       Ask                  // Thread  1 asks for work 
+0.055 ID=  0 Q=  1 Work             1   // Parent receives work with n= 1 
+0.055 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.055 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.055 ID=  2       Ask                  // Thread  2 asks for work 
+0.055 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.055 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.056 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.056 ID=  3       Ask                  // Thread  3 asks for work 
+0.056 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.056 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.056 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.056 ID=  1       Ask                  // Thread  1 asks for work 
+0.056 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.056 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.056 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.056 ID=  2       Ask                  // Thread  2 asks for work 
+0.056 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.056 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.057 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.057 ID=  3       Ask                  // Thread  3 asks for work 
+0.057 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.057 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.057 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.057 ID=  2       Ask                  // Thread  2 asks for work 
+0.057 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.057 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.057 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.057 ID=  1       Ask                  // Thread  1 asks for work 
+0.057 ID=  0 Q=  1 Work             1   // Parent receives work with n= 1 
+0.057 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.058 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.058 ID=  2       Ask                  // Thread  2 asks for work 
+0.058 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.058 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.059 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.059 ID=  1       Ask                  // Thread  1 asks for work 
+0.059 ID=  0 Q=  1 Work             1   // Parent receives work with n= 1 
+0.059 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.059 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.059 ID=  3       Ask                  // Thread  3 asks for work 
+0.059 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.059 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.059 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.059 ID=  1       Ask                  // Thread  1 asks for work 
+0.059 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.059 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.060 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.060 ID=  3       Ask                  // Thread  3 asks for work 
+0.060 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.060 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.060 ID=  1       Ask                  // Thread  1 asks for work 
+0.060 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.060 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.060 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.060 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.060 ID=  2       Ask                  // Thread  2 asks for work 
+0.060 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.060 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.060 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.060 ID=  1       Ask                  // Thread  1 asks for work 
+0.060 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.061 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.061 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.061 ID=  3       Ask                  // Thread  3 asks for work 
+0.061 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.061 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.061 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.061 ID=  2       Ask                  // Thread  2 asks for work 
+0.061 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.061 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.061 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.061 ID=  1       Ask                  // Thread  1 asks for work 
+0.061 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.061 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.062 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.062 ID=  3       Ask                  // Thread  3 asks for work 
+0.062 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.062 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.062 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.062 ID=  1       Ask                  // Thread  1 asks for work 
+0.062 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.062 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.062 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.062 ID=  2       Ask                  // Thread  2 asks for work 
+0.062 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.062 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.062 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.062 ID=  1       Ask                  // Thread  1 asks for work 
+0.062 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.062 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.063 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.063 ID=  3       Ask                  // Thread  3 asks for work 
+0.063 ID=  0 Q=  1 Work             1   // Parent receives work with n= 1 
+0.063 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.063 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.063 ID=  2       Ask                  // Thread  2 asks for work 
+0.063 ID=  0 Q=  1 Work             1   // Parent receives work with n= 1 
+0.063 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.063 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.063 ID=  1       Ask                  // Thread  1 asks for work 
+0.063 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.063 ID=  3       Ask                  // Thread  3 asks for work 
+0.063 ID=  3 Q=  1 Receive          1   // Thread  3 takes work, n= 1 
+0.063 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.063 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.063 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.063 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.063 ID=  2       Ask                  // Thread  2 asks for work 
+0.063 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.063 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.064 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.064 ID=  3       Ask                  // Thread  3 asks for work 
+0.064 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.064 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.064 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.064 ID=  1       Ask                  // Thread  1 asks for work 
+0.064 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.064 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.064 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.064 ID=  2       Ask                  // Thread  2 asks for work 
+0.064 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.064 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.064 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.064 ID=  3       Ask                  // Thread  3 asks for work 
+0.064 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.064 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.064 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.064 ID=  1       Ask                  // Thread  1 asks for work 
+0.064 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.064 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.065 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.065 ID=  2       Ask                  // Thread  2 asks for work 
+0.065 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.065 ID=  3       Ask                  // Thread  3 asks for work 
+0.065 ID=  3 Q=  1 Receive          1   // Thread  3 takes work, n= 1 
+0.065 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.065 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.065 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.065 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.065 ID=  1       Ask                  // Thread  1 asks for work 
+0.065 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.065 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.066 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.066 ID=  3       Ask                  // Thread  3 asks for work 
+0.066 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.066 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.066 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.066 ID=  2       Ask                  // Thread  2 asks for work 
+0.066 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.066 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.066 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.066 ID=  1       Ask                  // Thread  1 asks for work 
+0.066 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.066 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.066 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.066 ID=  3       Ask                  // Thread  3 asks for work 
+0.066 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.066 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.066 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.066 ID=  2       Ask                  // Thread  2 asks for work 
+0.066 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.066 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.066 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.066 ID=  1       Ask                  // Thread  1 asks for work 
+0.066 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.066 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.067 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.067 ID=  3       Ask                  // Thread  3 asks for work 
+0.067 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.067 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.067 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.067 ID=  2       Ask                  // Thread  2 asks for work 
+0.067 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.067 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.067 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.067 ID=  1       Ask                  // Thread  1 asks for work 
+0.067 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.067 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.067 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.067 ID=  3       Ask                  // Thread  3 asks for work 
+0.067 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.067 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.067 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.067 ID=  2       Ask                  // Thread  2 asks for work 
+0.067 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.067 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.068 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.068 ID=  1       Ask                  // Thread  1 asks for work 
+0.068 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.068 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.068 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.068 ID=  2       Ask                  // Thread  2 asks for work 
+0.068 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.068 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.068 ID=  3       Ask                  // Thread  3 asks for work 
+0.068 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.068 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.068 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.068 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.068 ID=  1       Ask                  // Thread  1 asks for work 
+0.068 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.068 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.069 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.069 ID=  2       Ask                  // Thread  2 asks for work 
+0.069 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.069 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.069 ID=  3       Ask                  // Thread  3 asks for work 
+0.069 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.069 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.069 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.069 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.069 ID=  1       Ask                  // Thread  1 asks for work 
+0.069 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.069 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.069 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.069 ID=  2       Ask                  // Thread  2 asks for work 
+0.069 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.069 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.069 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.069 ID=  3       Ask                  // Thread  3 asks for work 
+0.069 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.069 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.069 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.069 ID=  1       Ask                  // Thread  1 asks for work 
+0.069 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.069 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.070 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.070 ID=  2       Ask                  // Thread  2 asks for work 
+0.070 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.070 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.070 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.070 ID=  3       Ask                  // Thread  3 asks for work 
+0.070 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.070 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.070 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.070 ID=  1       Ask                  // Thread  1 asks for work 
+0.070 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.070 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.070 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.070 ID=  2       Ask                  // Thread  2 asks for work 
+0.070 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.070 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.070 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.070 ID=  3       Ask                  // Thread  3 asks for work 
+0.070 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.070 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.071 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.071 ID=  1       Ask                  // Thread  1 asks for work 
+0.071 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.071 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.071 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.071 ID=  2       Ask                  // Thread  2 asks for work 
+0.071 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.071 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.071 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.071 ID=  3       Ask                  // Thread  3 asks for work 
+0.071 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.071 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.071 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.071 ID=  1       Ask                  // Thread  1 asks for work 
+0.071 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.071 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.072 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.072 ID=  2       Ask                  // Thread  2 asks for work 
+0.072 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.072 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.072 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.072 ID=  3       Ask                  // Thread  3 asks for work 
+0.072 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.072 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.072 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.072 ID=  1       Ask                  // Thread  1 asks for work 
+0.072 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.072 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.072 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.072 ID=  2       Ask                  // Thread  2 asks for work 
+0.072 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.072 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.072 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.072 ID=  3       Ask                  // Thread  3 asks for work 
+0.072 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.072 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.073 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.073 ID=  2       Ask                  // Thread  2 asks for work 
+0.073 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.073 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.073 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.073 ID=  3       Ask                  // Thread  3 asks for work 
+0.073 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.073 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.073 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.073 ID=  1       Ask                  // Thread  1 asks for work 
+0.073 ID=  0 Q=  1 Work             1   // Parent receives work with n= 1 
+0.073 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.073 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.073 ID=  2       Ask                  // Thread  2 asks for work 
+0.073 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.073 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.073 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.073 ID=  3       Ask                  // Thread  3 asks for work 
+0.073 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.073 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.074 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.074 ID=  2       Ask                  // Thread  2 asks for work 
+0.074 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.074 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.074 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.074 ID=  3       Ask                  // Thread  3 asks for work 
+0.074 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.074 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.074 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.074 ID=  1       Ask                  // Thread  1 asks for work 
+0.074 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.074 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.075 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.075 ID=  2       Ask                  // Thread  2 asks for work 
+0.075 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.075 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.075 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.075 ID=  3       Ask                  // Thread  3 asks for work 
+0.075 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.075 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.075 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.075 ID=  2       Ask                  // Thread  2 asks for work 
+0.075 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.075 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.075 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.075 ID=  1       Ask                  // Thread  1 asks for work 
+0.075 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.075 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.075 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.075 ID=  3       Ask                  // Thread  3 asks for work 
+0.075 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.075 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.076 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.076 ID=  2       Ask                  // Thread  2 asks for work 
+0.076 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.076 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.076 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.076 ID=  1       Ask                  // Thread  1 asks for work 
+0.076 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.076 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.076 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.076 ID=  3       Ask                  // Thread  3 asks for work 
+0.076 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.076 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.076 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.076 ID=  2       Ask                  // Thread  2 asks for work 
+0.076 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.076 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.077 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.077 ID=  1       Ask                  // Thread  1 asks for work 
+0.077 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.077 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.077 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.077 ID=  3       Ask                  // Thread  3 asks for work 
+0.077 ID=  0 Q=  1 Work             1   // Parent receives work with n= 1 
+0.077 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.077 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.077 ID=  2       Ask                  // Thread  2 asks for work 
+0.077 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.077 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.077 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.077 ID=  3       Ask                  // Thread  3 asks for work 
+0.077 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.077 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.077 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.077 ID=  1       Ask                  // Thread  1 asks for work 
+0.077 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.077 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.078 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.078 ID=  2       Ask                  // Thread  2 asks for work 
+0.078 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.078 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.078 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.078 ID=  3       Ask                  // Thread  3 asks for work 
+0.078 ID=  0 Q=  1 Work             1   // Parent receives work with n= 1 
+0.078 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.078 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.078 ID=  1       Ask                  // Thread  1 asks for work 
+0.078 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.078 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.078 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.078 ID=  2       Ask                  // Thread  2 asks for work 
+0.078 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.078 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.079 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.079 ID=  3       Ask                  // Thread  3 asks for work 
+0.079 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.079 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.079 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.079 ID=  1       Ask                  // Thread  1 asks for work 
+0.079 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.079 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.079 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.079 ID=  2       Ask                  // Thread  2 asks for work 
+0.079 ID=  0 Q=  1 Work             1   // Parent receives work with n= 1 
+0.079 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.079 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.079 ID=  3       Ask                  // Thread  3 asks for work 
+0.079 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.079 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.079 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.079 ID=  1       Ask                  // Thread  1 asks for work 
+0.079 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.079 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.080 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.080 ID=  2       Ask                  // Thread  2 asks for work 
+0.080 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.080 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.080 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.080 ID=  1       Ask                  // Thread  1 asks for work 
+0.080 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.080 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.080 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.080 ID=  3       Ask                  // Thread  3 asks for work 
+0.080 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.080 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.080 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.080 ID=  2       Ask                  // Thread  2 asks for work 
+0.080 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.080 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.080 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.080 ID=  1       Ask                  // Thread  1 asks for work 
+0.080 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.080 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.081 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.081 ID=  3       Ask                  // Thread  3 asks for work 
+0.081 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.081 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.081 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.081 ID=  2       Ask                  // Thread  2 asks for work 
+0.081 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.081 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.081 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.081 ID=  1       Ask                  // Thread  1 asks for work 
+0.081 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.081 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.081 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.081 ID=  3       Ask                  // Thread  3 asks for work 
+0.081 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.081 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.082 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.082 ID=  2       Ask                  // Thread  2 asks for work 
+0.082 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.082 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.082 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.082 ID=  1       Ask                  // Thread  1 asks for work 
+0.082 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.082 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.082 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.082 ID=  3       Ask                  // Thread  3 asks for work 
+0.082 ID=  0 Q=  1 Work             1   // Parent receives work with n= 1 
+0.082 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.082 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.082 ID=  2       Ask                  // Thread  2 asks for work 
+0.082 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.082 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.082 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.082 ID=  1       Ask                  // Thread  1 asks for work 
+0.082 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.082 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.082 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.082 ID=  3       Ask                  // Thread  3 asks for work 
+0.082 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.082 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.083 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.083 ID=  2       Ask                  // Thread  2 asks for work 
+0.083 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.083 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.083 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.083 ID=  1       Ask                  // Thread  1 asks for work 
+0.083 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.083 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.083 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.083 ID=  3       Ask                  // Thread  3 asks for work 
+0.083 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.083 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.083 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.083 ID=  2       Ask                  // Thread  2 asks for work 
+0.083 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.083 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.083 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.083 ID=  1       Ask                  // Thread  1 asks for work 
+0.083 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.083 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.084 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.084 ID=  3       Ask                  // Thread  3 asks for work 
+0.084 ID=  0 Q=  1 Work             1   // Parent receives work with n= 1 
+0.084 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.084 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.084 ID=  2       Ask                  // Thread  2 asks for work 
+0.084 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.084 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.084 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.084 ID=  1       Ask                  // Thread  1 asks for work 
+0.084 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.084 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.084 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.084 ID=  3       Ask                  // Thread  3 asks for work 
+0.084 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.084 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.085 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.085 ID=  1       Ask                  // Thread  1 asks for work 
+0.085 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.085 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.085 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.085 ID=  2       Ask                  // Thread  2 asks for work 
+0.085 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.085 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.085 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.085 ID=  3       Ask                  // Thread  3 asks for work 
+0.085 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.085 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.085 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.085 ID=  1       Ask                  // Thread  1 asks for work 
+0.085 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.085 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.085 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.085 ID=  2       Ask                  // Thread  2 asks for work 
+0.085 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.085 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.086 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.086 ID=  3       Ask                  // Thread  3 asks for work 
+0.086 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.086 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.086 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.086 ID=  1       Ask                  // Thread  1 asks for work 
+0.086 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.086 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.086 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.086 ID=  2       Ask                  // Thread  2 asks for work 
+0.086 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.086 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.086 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.086 ID=  3       Ask                  // Thread  3 asks for work 
+0.086 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.086 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.087 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.087 ID=  1       Ask                  // Thread  1 asks for work 
+0.087 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.087 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.087 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.087 ID=  2       Ask                  // Thread  2 asks for work 
+0.087 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.087 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.087 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.087 ID=  3       Ask                  // Thread  3 asks for work 
+0.087 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.087 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.087 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.087 ID=  1       Ask                  // Thread  1 asks for work 
+0.087 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.087 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.087 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.087 ID=  2       Ask                  // Thread  2 asks for work 
+0.087 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.087 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.087 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.087 ID=  3       Ask                  // Thread  3 asks for work 
+0.087 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.087 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.088 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.088 ID=  1       Ask                  // Thread  1 asks for work 
+0.088 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.088 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.088 ID=  0 Q=  1 Work             1   // Parent receives work with n= 1 
+0.088 ID=  2       Ask                  // Thread  2 asks for work 
+0.088 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.088 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.088 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.088 ID=  3       Ask                  // Thread  3 asks for work 
+0.088 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.088 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.088 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.088 ID=  1       Ask                  // Thread  1 asks for work 
+0.088 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.088 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.088 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.088 ID=  2       Ask                  // Thread  2 asks for work 
+0.088 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.088 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.089 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.089 ID=  3       Ask                  // Thread  3 asks for work 
+0.089 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.089 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.089 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.089 ID=  2       Ask                  // Thread  2 asks for work 
+0.089 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.089 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.089 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.089 ID=  3       Ask                  // Thread  3 asks for work 
+0.089 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.089 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.090 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.090 ID=  1       Ask                  // Thread  1 asks for work 
+0.090 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.090 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.090 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.090 ID=  2       Ask                  // Thread  2 asks for work 
+0.090 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.090 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.090 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.090 ID=  3       Ask                  // Thread  3 asks for work 
+0.090 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.090 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.090 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.090 ID=  2       Ask                  // Thread  2 asks for work 
+0.090 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.090 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.090 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.090 ID=  1       Ask                  // Thread  1 asks for work 
+0.090 ID=  0 Q=  1 Work             1   // Parent receives work with n= 1 
+0.090 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.090 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.090 ID=  3       Ask                  // Thread  3 asks for work 
+0.090 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.090 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.091 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.091 ID=  2       Ask                  // Thread  2 asks for work 
+0.091 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.091 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.091 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.091 ID=  3       Ask                  // Thread  3 asks for work 
+0.091 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.091 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.091 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.091 ID=  1       Ask                  // Thread  1 asks for work 
+0.091 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.091 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.091 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.091 ID=  2       Ask                  // Thread  2 asks for work 
+0.091 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.091 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.092 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.092 ID=  3       Ask                  // Thread  3 asks for work 
+0.092 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.092 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.092 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.092 ID=  1       Ask                  // Thread  1 asks for work 
+0.092 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.092 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.092 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.092 ID=  2       Ask                  // Thread  2 asks for work 
+0.092 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.092 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.092 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.092 ID=  3       Ask                  // Thread  3 asks for work 
+0.092 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.092 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.093 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.093 ID=  2       Ask                  // Thread  2 asks for work 
+0.093 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.093 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.093 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.093 ID=  1       Ask                  // Thread  1 asks for work 
+0.093 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.093 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.093 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.093 ID=  3       Ask                  // Thread  3 asks for work 
+0.093 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.093 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.093 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.093 ID=  2       Ask                  // Thread  2 asks for work 
+0.093 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.093 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.093 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.093 ID=  1       Ask                  // Thread  1 asks for work 
+0.093 ID=  0 Q=  1 Work             1   // Parent receives work with n= 1 
+0.093 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.094 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.094 ID=  3       Ask                  // Thread  3 asks for work 
+0.094 ID=  0 Q=  1 Work             1   // Parent receives work with n= 1 
+0.094 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.094 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.094 ID=  2       Ask                  // Thread  2 asks for work 
+0.094 ID=  0 Q=  1 Work             1   // Parent receives work with n= 1 
+0.094 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.094 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.094 ID=  1       Ask                  // Thread  1 asks for work 
+0.094 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.094 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.094 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.094 ID=  3       Ask                  // Thread  3 asks for work 
+0.094 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.094 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.094 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.094 ID=  2       Ask                  // Thread  2 asks for work 
+0.094 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.094 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.095 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.095 ID=  1       Ask                  // Thread  1 asks for work 
+0.095 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.095 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.095 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.095 ID=  3       Ask                  // Thread  3 asks for work 
+0.095 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.095 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.095 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.095 ID=  2       Ask                  // Thread  2 asks for work 
+0.095 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.095 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.095 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.095 ID=  1       Ask                  // Thread  1 asks for work 
+0.095 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.095 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.096 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.096 ID=  3       Ask                  // Thread  3 asks for work 
+0.096 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.096 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.096 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.096 ID=  2       Ask                  // Thread  2 asks for work 
+0.096 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.096 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.096 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.096 ID=  1       Ask                  // Thread  1 asks for work 
+0.096 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.096 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.097 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.097 ID=  3       Ask                  // Thread  3 asks for work 
+0.097 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.097 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.097 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.097 ID=  1       Ask                  // Thread  1 asks for work 
+0.097 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.097 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.097 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.097 ID=  2       Ask                  // Thread  2 asks for work 
+0.097 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.097 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.097 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.097 ID=  3       Ask                  // Thread  3 asks for work 
+0.097 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.097 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.098 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.098 ID=  1       Ask                  // Thread  1 asks for work 
+0.098 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.098 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.098 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.098 ID=  2       Ask                  // Thread  2 asks for work 
+0.098 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.098 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.098 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.098 ID=  3       Ask                  // Thread  3 asks for work 
+0.098 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.098 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.098 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.098 ID=  1       Ask                  // Thread  1 asks for work 
+0.098 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.098 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.098 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.098 ID=  2       Ask                  // Thread  2 asks for work 
+0.098 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.098 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.099 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.099 ID=  1       Ask                  // Thread  1 asks for work 
+0.099 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.099 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.099 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.099 ID=  3       Ask                  // Thread  3 asks for work 
+0.099 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.099 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.099 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.099 ID=  2       Ask                  // Thread  2 asks for work 
+0.099 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.099 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.099 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.099 ID=  1       Ask                  // Thread  1 asks for work 
+0.099 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.099 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.099 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.099 ID=  3       Ask                  // Thread  3 asks for work 
+0.099 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.099 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.099 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.099 ID=  2       Ask                  // Thread  2 asks for work 
+0.099 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.099 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.100 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.100 ID=  1       Ask                  // Thread  1 asks for work 
+0.100 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.100 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.100 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.100 ID=  3       Ask                  // Thread  3 asks for work 
+0.100 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.100 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.100 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.100 ID=  2       Ask                  // Thread  2 asks for work 
+0.100 ID=  0 Q=  1 Work             1   // Parent receives work with n= 1 
+0.100 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.101 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.101 ID=  1       Ask                  // Thread  1 asks for work 
+0.101 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.101 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.101 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.101 ID=  3       Ask                  // Thread  3 asks for work 
+0.101 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.101 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.101 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.101 ID=  2       Ask                  // Thread  2 asks for work 
+0.101 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.101 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.101 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.101 ID=  1       Ask                  // Thread  1 asks for work 
+0.101 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.101 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.101 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.101 ID=  3       Ask                  // Thread  3 asks for work 
+0.101 ID=  0 Q=  1 Work             1   // Parent receives work with n= 1 
+0.101 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.101 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.101 ID=  2       Ask                  // Thread  2 asks for work 
+0.101 ID=  0 Q=  1 Work             1   // Parent receives work with n= 1 
+0.101 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.102 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.102 ID=  1       Ask                  // Thread  1 asks for work 
+0.102 ID=  0 Q=  1 Work             1   // Parent receives work with n= 1 
+0.102 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.102 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.102 ID=  3       Ask                  // Thread  3 asks for work 
+0.102 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.102 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.102 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.102 ID=  2       Ask                  // Thread  2 asks for work 
+0.102 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.102 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.102 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.102 ID=  1       Ask                  // Thread  1 asks for work 
+0.102 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.102 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.103 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.103 ID=  3       Ask                  // Thread  3 asks for work 
+0.103 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.103 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.103 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.103 ID=  2       Ask                  // Thread  2 asks for work 
+0.103 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.103 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.103 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.103 ID=  1       Ask                  // Thread  1 asks for work 
+0.103 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.103 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.103 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.103 ID=  3       Ask                  // Thread  3 asks for work 
+0.103 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.103 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.103 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.103 ID=  2       Ask                  // Thread  2 asks for work 
+0.103 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.103 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.104 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.104 ID=  1       Ask                  // Thread  1 asks for work 
+0.104 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.104 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.104 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.104 ID=  3       Ask                  // Thread  3 asks for work 
+0.104 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.104 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.104 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.104 ID=  2       Ask                  // Thread  2 asks for work 
+0.104 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.104 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.104 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.104 ID=  1       Ask                  // Thread  1 asks for work 
+0.104 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.104 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.104 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.104 ID=  3       Ask                  // Thread  3 asks for work 
+0.104 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.104 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.105 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.105 ID=  2       Ask                  // Thread  2 asks for work 
+0.105 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.105 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.105 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.105 ID=  1       Ask                  // Thread  1 asks for work 
+0.105 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.105 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.105 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.105 ID=  3       Ask                  // Thread  3 asks for work 
+0.105 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.105 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.105 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.105 ID=  2       Ask                  // Thread  2 asks for work 
+0.105 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.105 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.105 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.105 ID=  1       Ask                  // Thread  1 asks for work 
+0.105 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.105 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.106 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.106 ID=  3       Ask                  // Thread  3 asks for work 
+0.106 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.106 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.106 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.106 ID=  2       Ask                  // Thread  2 asks for work 
+0.106 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.106 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.106 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.106 ID=  1       Ask                  // Thread  1 asks for work 
+0.106 ID=  0 Q=  1 Work             1   // Parent receives work with n= 1 
+0.106 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.106 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.106 ID=  3       Ask                  // Thread  3 asks for work 
+0.106 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.106 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.107 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.107 ID=  2       Ask                  // Thread  2 asks for work 
+0.107 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.107 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.107 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.107 ID=  1       Ask                  // Thread  1 asks for work 
+0.107 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.107 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.107 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.107 ID=  3       Ask                  // Thread  3 asks for work 
+0.107 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.107 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.107 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.107 ID=  1       Ask                  // Thread  1 asks for work 
+0.107 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.107 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.107 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.107 ID=  2       Ask                  // Thread  2 asks for work 
+0.107 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.107 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.107 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.107 ID=  3       Ask                  // Thread  3 asks for work 
+0.107 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.107 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.108 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.108 ID=  2       Ask                  // Thread  2 asks for work 
+0.108 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.108 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.108 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.108 ID=  1       Ask                  // Thread  1 asks for work 
+0.108 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.108 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.108 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.108 ID=  3       Ask                  // Thread  3 asks for work 
+0.108 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.108 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.109 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.109 ID=  2       Ask                  // Thread  2 asks for work 
+0.109 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.109 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.109 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.109 ID=  1       Ask                  // Thread  1 asks for work 
+0.109 ID=  0 Q=  1 Work             1   // Parent receives work with n= 1 
+0.109 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.109 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.109 ID=  3       Ask                  // Thread  3 asks for work 
+0.109 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.109 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.109 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.109 ID=  2       Ask                  // Thread  2 asks for work 
+0.109 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.109 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.109 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.109 ID=  1       Ask                  // Thread  1 asks for work 
+0.109 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.109 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.109 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.109 ID=  3       Ask                  // Thread  3 asks for work 
+0.109 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.109 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.110 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.110 ID=  2       Ask                  // Thread  2 asks for work 
+0.110 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.110 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.110 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.110 ID=  1       Ask                  // Thread  1 asks for work 
+0.110 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.110 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.110 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.110 ID=  3       Ask                  // Thread  3 asks for work 
+0.110 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.110 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.110 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.110 ID=  2       Ask                  // Thread  2 asks for work 
+0.110 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.110 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.111 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.111 ID=  1       Ask                  // Thread  1 asks for work 
+0.111 ID=  0 Q=  1 Work             1   // Parent receives work with n= 1 
+0.111 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.111 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.111 ID=  3       Ask                  // Thread  3 asks for work 
+0.111 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.111 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.111 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.111 ID=  2       Ask                  // Thread  2 asks for work 
+0.111 ID=  0 Q=  1 Work             1   // Parent receives work with n= 1 
+0.111 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.111 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.111 ID=  1       Ask                  // Thread  1 asks for work 
+0.111 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.111 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.111 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.111 ID=  3       Ask                  // Thread  3 asks for work 
+0.111 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.111 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.112 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.112 ID=  2       Ask                  // Thread  2 asks for work 
+0.112 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.112 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.112 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.112 ID=  1       Ask                  // Thread  1 asks for work 
+0.112 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.112 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.112 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.112 ID=  3       Ask                  // Thread  3 asks for work 
+0.112 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.112 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.112 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.112 ID=  2       Ask                  // Thread  2 asks for work 
+0.112 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.112 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.113 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.113 ID=  1       Ask                  // Thread  1 asks for work 
+0.113 ID=  0 Q=  1 Work             1   // Parent receives work with n= 1 
+0.113 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.113 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.113 ID=  3       Ask                  // Thread  3 asks for work 
+0.113 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.113 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.113 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.113 ID=  2       Ask                  // Thread  2 asks for work 
+0.113 ID=  0 Q=  1 Work             1   // Parent receives work with n= 1 
+0.113 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.113 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.113 ID=  1       Ask                  // Thread  1 asks for work 
+0.113 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.113 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.113 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.113 ID=  3       Ask                  // Thread  3 asks for work 
+0.113 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.113 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.114 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.114 ID=  2       Ask                  // Thread  2 asks for work 
+0.114 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.114 ID=  0 Q=  0 Work             1   // Parent receives work with n= 1 
+0.114 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.114 ID=  1       Ask                  // Thread  1 asks for work 
+0.114 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.114 ID=  0       End                  // End of input for producer
+0.114 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.114 ID=  3       Ask                  // Thread  3 asks for work 
+0.114 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.114 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.114 ID=  2       Ask                  // Thread  2 asks for work 
+0.114 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.115 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.115 ID=  1       Ask                  // Thread  1 asks for work 
+0.115 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.115 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.115 ID=  3       Ask                  // Thread  3 asks for work 
+0.115 ID=  3 Q=  0 Receive          1   // Thread  3 takes work, n= 1 
+0.115 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.115 ID=  2       Ask                  // Thread  2 asks for work 
+0.115 ID=  2 Q=  0 Receive          1   // Thread  2 takes work, n= 1 
+0.115 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.115 ID=  1       Ask                  // Thread  1 asks for work 
+0.115 ID=  1 Q=  0 Receive          1   // Thread  1 takes work, n= 1 
+0.115 ID=  3       Complete         1   // Thread  3 completes task, n= 1 
+0.115 ID=  3       Ask                  // Thread  3 asks for work 
+0.116 ID=  2       Complete         1   // Thread  2 completes task, n= 1 
+0.116 ID=  2       Ask                  // Thread  2 asks for work 
+0.116 ID=  1       Complete         1   // Thread  1 completes task, n= 1 
+0.116 ID=  1       Ask                  // Thread  1 asks for work 
+Summary:   
+    Ask           504                    
+    Complete      501                    
+    Receive       501                    
+    Work          501                    
+    Thread   1 	163 
+    Thread   2 	171 
+    Thread   3 	167 
+Trabsactions per second: 4328.780 
+----------------------------------

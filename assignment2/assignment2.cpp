@@ -172,7 +172,10 @@ int main(int argc,char* argv[]){
         return 1;
     }
     // number of thread
-    int nThread = atoi(argv[1]);
+    int nThread = 0;
+    try{
+    nThread = atoi(argv[1]);
+    } catch (const exception &e){};
     //output file name
     string filename;
     if (argc==3){

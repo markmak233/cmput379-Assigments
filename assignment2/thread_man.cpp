@@ -130,7 +130,6 @@ void summarywrite(map <string,int> commcount,vector<int>tcount,double lengthtime
     char temp4[100];
     sprintf(temp4,"Trabsactions per second: %3.3f \n",(commcount.at("Work"))/lengthtime);
     s1.push_back(temp4);
-    s1.push_back("----------------------------------\n");
 
     //writing file
     // geting a list of string and save it into a file
