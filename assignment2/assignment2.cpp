@@ -1,7 +1,7 @@
 # include "assignment2.h"
 # include "thread_man.h"
 
-using namespace std;\
+using namespace std;
 
 void event_management(int nThread,vector<string> instru,string filename){
     // this function many logging the event of each device
