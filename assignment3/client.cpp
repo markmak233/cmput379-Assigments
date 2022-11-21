@@ -7,15 +7,22 @@ void init_machine(){
 }
 
 void task_sender(){
-    
+
 }
 
 int main(int argc,char* argv[]){
-    if (argc!=2){
+    if (argc!=3){
         cout << "client port ipaddress"<< endl;
         return 1;
     }
     
+    int portn=atoi(argv[1]);
+    if (portn>64000 || portn<5000){
+        cout << "out of range" << endl;
+        return 1
+    }
+
+
     vector<string> us1;
     int running=1;
     while (running){
