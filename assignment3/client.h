@@ -9,4 +9,7 @@
 #include <errno.h>
 #include <arpa/inet.h> 
 
+#include<string>
+#include<vector>
+
 #include "tands.h"
