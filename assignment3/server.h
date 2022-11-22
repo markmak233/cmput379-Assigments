@@ -31,10 +31,10 @@
 #include "tands.h"
 
 struct log_data{
-    int currenttime;
+    double currenttime;
     int task_id;
     std::string task_type;
-    std::string task_num;
+    int task_num;
     std::string orgin;
 };
 
@@ -43,9 +43,11 @@ struct sharing_data2{
     std::queue<log_data>* v_op1;
     sem_t * v_semph1;// communicate with sharing data1
     std::map<std::string,int>* ogct;
+    int terminate=0;
 };
 
 void init_machine(std::vector<std::string> us1, char* portn);
 void *childhandling(void *data);
 void *file_writer(void *data2);
+void writefile(std::string filename,std::string a1);
 int main(int argc,char* argv[]);

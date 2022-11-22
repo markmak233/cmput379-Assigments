@@ -1,5 +1,6 @@
 #include "client.h"
 #include "tands.h"
+#include "tands.cpp"
 
 using namespace std;
 
@@ -123,7 +124,7 @@ int task_sender(struct sharing_data data_cp){
             templog.current_time=((etime.tv_sec ) * 1000 + (etime.tv_usec)/1000.0)/1000;
             data_cp.v_op1->push(templog);
 
-            //Sleep(runnum);
+            Sleep(runnum);
         } else {
             //https://www.geeksforgeeks.org/socket-programming-cc/
             int sockfd =0,client_fd;
@@ -158,6 +159,7 @@ int task_sender(struct sharing_data data_cp){
             while (trial==0){
             // try to connect if bussy it will try again
                 if ((client_fd = connect(sockfd, (struct sockaddr*)&serv_addr,sizeof(serv_addr)))< 0) {
+                    Sleep(1);
                     continue;
                 }else {
                     send(sockfd, mestemplate.data(), mestemplate.size(), 0);
