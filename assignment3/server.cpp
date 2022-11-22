@@ -36,7 +36,15 @@ void init_machine(char* portn){
     //https://www.geeksforgeeks.org/socket-programming-cc/
     int server_fd,new_socket,valread;
     struct sockaddr_in address;
-    int opt=1;
+
+    //timeout settings;
+    fd_set fd;
+    timeval tv;
+    tv.tv_sec = 30;
+    tv.tv_usec = 0;
+
+
+
     int addrlen = sizeof(address);
     char buffer[1024]={0};
    
@@ -46,35 +54,40 @@ void init_machine(char* portn){
         //exit(EXIT_FAILURE);
     }
 
-    // Forcefully attaching socket to the port 8080
-    if (setsockopt(server_fd, SOL_SOCKET,SO_REUSEADDR | SO_REUSEPORT, &opt,sizeof(opt))) {
-        perror("setsockopt");
-        //exit(EXIT_FAILURE);
-    }
     address.sin_family = AF_INET;
     address.sin_addr.s_addr = INADDR_ANY;
-    address.sin_port = htons(5002); //hardcodeed change later
+    address.sin_port = htons(5003); //hardcodeed change later //////////////////////////////////////////
+
+    // https://stackoverflow.com/questions/2876024/linux-is-there-a-read-or-recv-from-socket-with-timeout
+    // timeout in 30 second
+    setsockopt(server_fd,SOL_SOCKET,SO_RCVTIMEO,(const char*)&tv,sizeof(tv));
 
     // Forcefully attaching socket to the port 8080
     if (bind(server_fd, (struct sockaddr*)&address,sizeof(address))< 0) {
         perror("bind failed");
-        //exit(EXIT_FAILURE);
+        exit(EXIT_FAILURE);
     }
-    if (listen(server_fd, 30) < 0) {
+    if (listen(server_fd, 3) < 0) {
         perror("listen");
         exit(EXIT_FAILURE);
     }
 
+    int Work_done=0;
+
     while (waittime_notexpire){
+        //timeout settings
+        
         if ((new_socket = accept(server_fd, (struct sockaddr*)&address,(socklen_t*)&addrlen))< 0) {
             perror("accept");
-            //exit(EXIT_FAILURE);
+            waittime_notexpire=0;
             continue;
         }
         valread = read(new_socket, buffer, 1024);
         cout << buffer << endl;
         
-        string message = "Hello from server";
+        Work_done++;
+        string message = "Done;";
+        message.append(to_string(Work_done));
         send(new_socket, message.data(), message.size(), 0);
         printf("Hello message sent\n");
 
@@ -82,11 +95,12 @@ void init_machine(char* portn){
         close(new_socket);
         // closing the listening socket
        
-        
+        cout << "new loop" << endl;
     }
 
     shutdown(server_fd, SHUT_RDWR);
-    cout << "wait time is now expire" << endl;
+    cout << "wait time for 30 second is now expire" << endl;
+
 }
 void *childhandling(void *data){
     pthread_exit(NULL);

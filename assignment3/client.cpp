@@ -4,9 +4,6 @@
 using namespace std;
 
 void init_machine(vector<string> us1, char* portn, char* ipaddress){
-    for (unsigned int ind=0;ind<us1.size();ind++){
-        cout << us1[ind] << endl;
-    }
 
     struct sharing_data children_data;
     vector<log_data> log_d;
@@ -26,6 +23,15 @@ void init_machine(vector<string> us1, char* portn, char* ipaddress){
 
 void *task_sender(void *data){
     struct sharing_data *data_cp = (struct sharing_data*)data;
+    //setup send format
+    int mypid=getpid();
+    size_t namelen;
+    char hostname[100];
+    string mestemplate;
+    mestemplate=gethostname(hostname,namelen);
+    mestemplate.append(";");
+    mestemplate.append(to_string(mypid));
+    mestemplate.append(";");
     for (unsigned int i=0;i<data_cp->uop1.size();i++){
         stringstream ss2;
         string strline,typeline;
@@ -34,6 +40,7 @@ void *task_sender(void *data){
         typeline=strline[0];
         
         cout << "Working on "<< i << endl;
+
 
         if (typeline !=  "T" && typeline!= "S"){
             continue;
@@ -51,36 +58,45 @@ void *task_sender(void *data){
 
             //Sleep(runnum);
         } else {
-            cout << "running T" << endl;
             //https://www.geeksforgeeks.org/socket-programming-cc/
             int sockfd =0,valread,client_fd;
             
             struct sockaddr_in serv_addr;
-            string message ="hello from client"; 
+            string message =mestemplate; 
+            string temp = strline;
+            temp.erase(0,1);
+            message.append(temp);
+
             char buffer[1024]={0};
             if ((sockfd = socket(AF_INET,SOCK_STREAM,0)) < 0){
                 cout << "Socket creadtion uncessful" << endl;
             } 
             serv_addr.sin_family = AF_INET;
-            serv_addr.sin_port = htons(5002); // tempory hardcode
+            serv_addr.sin_port = htons(5003); // tempory hardcode ////////////////////////////////
 
             // // Convert IPv4 and IPv6 addresses from text to binary
             if (inet_pton(AF_INET, "127.0.0.1", &serv_addr.sin_addr)<= 0) {
                 printf("\nInvalid address/ Address not supported \n");
             }
 
+            int trial=0;
+            while (trial==0)
             // try to connect if bussy it will try again
             if ((client_fd = connect(sockfd, (struct sockaddr*)&serv_addr,sizeof(serv_addr)))< 0) {
-                printf("\nConnection Failed \n");
-                //return -1;
+                continue;
+            }else {
+                send(sockfd, message.data(), message.size(), 0);
+                printf("Hello message sent\n");
+                valread = read(sockfd, buffer, 1024);
+                printf("%s\n", buffer);
+                valread=0;
+                close(client_fd);
+                trial=100;
+                trial=1;
             }
-            send(sockfd, message.data(), message.size(), 0);
-            printf("Hello message sent\n");
-            valread = read(sockfd, buffer, 1024);
-            printf("%s\n", buffer);
-            valread=0;
-            close(client_fd);
+
         }
+        
 
     }
     pthread_exit(NULL);
