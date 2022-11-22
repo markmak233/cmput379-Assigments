@@ -5,37 +5,97 @@ using namespace std;
 
 void init_machine(vector<string> us1, char* portn, char* ipaddress){
 
+    char hostname[100];
+    size_t namelen;
+    int mypid=getpid();
+    gethostname(hostname,namelen);
+    string filename=(hostname);
+    filename.append(".");
+    filename.append(to_string(mypid));
+
     struct sharing_data children_data;
-    vector<log_data> log_d;
-    sem_t semph1;
-    sem_init(&semph1,1,1);
-    children_data.v_semph1=&semph1;
+    queue<log_data> log_d;
+    vector<string> log_s;
     children_data.v_op1=&log_d;
     children_data.uop1=us1;
     children_data.portn=portn;
     children_data.ip=ipaddress;
+    children_data.filename=filename;
         
+    string l1 ="Using port ";
+    l1.append(portn);
+    l1.append("\n");
+    string l2 = "Using server address ";
+    l2.append(ipaddress);
+    l2.append("\n");
+    string l3="Host ";
+    l3.append(filename);
+    l3.append("\n");
 
-    pthread_t p;
-    pthread_create(&p,NULL,task_sender,&children_data);
-    pthread_join(p,NULL);
+    writefile(filename,l1);
+    writefile(filename,l2);
+    writefile(filename,l3);
+    int sentnum=task_sender(children_data);
+
+    string l4 = "Sent ";
+    l4.append(to_string(sentnum));
+    l4.append(" transactions\n");
+    writefile(filename,l4);
+
+    l1.clear();
+    l2.clear();
+    l3.clear();
+    l4.clear();
+
+    log_s.clear();
+    filename.clear();
 }
 
-void *task_sender(void *data){
-    struct sharing_data *data_cp = (struct sharing_data*)data;
+void translate(string filename,struct log_data d1){
+    char temp[70];
+    if (d1.task_type!="S"){
+        int num=stoi(d1.task_num);
+        sprintf(temp,"%.2f: %s (%s %3d)\n",d1.current_time,d1.log_type.data(),
+                                        d1.task_type.data(),num);
+        string a1=temp;
+        writefile(filename,a1);
+    } else {
+        sprintf(temp,"Sleep %s units\n",d1.task_num.data());
+        string a1=temp;
+        writefile(filename,a1);
+    }
+    d1.log_type.clear();
+    d1.task_num.clear();
+    d1.task_type.clear();
+    return;
+}
+
+void writefile(string filename,string a1){
+    ofstream fout;
+    ifstream fin;
+    fin.open(filename);
+    fout.open(filename,ios_base::app);
+    if (fout.is_open()){
+        fout << a1;
+    }
+    fin.close();
+    fout.close();
+    a1.clear();
+    return;
+}
+
+int task_sender(struct sharing_data data_cp){
+    //current timing
+    struct timeval etime;
+    int sentnum=0;
     //setup send format
-    int mypid=getpid();
-    size_t namelen;
-    char hostname[100];
     string mestemplate;
-    mestemplate=gethostname(hostname,namelen);
+    mestemplate.append(data_cp.filename);
     mestemplate.append(";");
-    mestemplate.append(to_string(mypid));
-    mestemplate.append(";");
-    for (unsigned int i=0;i<data_cp->uop1.size();i++){
+    for (unsigned int i=0;i<data_cp.uop1.size();i++){
         stringstream ss2;
         string strline,typeline;
-        ss2 << data_cp->uop1.at(i);
+        ss2 << data_cp.uop1.at(i);
         ss2 >> strline;
         typeline=strline[0];
         
@@ -56,6 +116,15 @@ void *task_sender(void *data){
                 runnum=1;
             }
 
+            // logging
+            struct log_data templog;
+            templog.task_type="S";
+            templog.task_num=temp;
+            templog.log_type="Sleep";
+            gettimeofday(&etime,NULL);
+            templog.current_time=((etime.tv_sec ) * 1000 + (etime.tv_usec)/1000.0)/1000;
+            data_cp.v_op1->push(templog);
+
             //Sleep(runnum);
         } else {
             //https://www.geeksforgeeks.org/socket-programming-cc/
@@ -66,6 +135,16 @@ void *task_sender(void *data){
             string temp = strline;
             temp.erase(0,1);
             message.append(temp);
+            message.append(";");
+
+            // logging
+            struct log_data templog;
+            templog.task_type="T";
+            templog.task_num=temp;
+            templog.log_type="Send";
+            gettimeofday(&etime,NULL);
+            templog.current_time=((etime.tv_sec ) * 1000 + (etime.tv_usec)/1000.0)/1000;
+            data_cp.v_op1->push(templog);
 
             char buffer[1024]={0};
             if ((sockfd = socket(AF_INET,SOCK_STREAM,0)) < 0){
@@ -80,27 +159,39 @@ void *task_sender(void *data){
             }
 
             int trial=0;
-            while (trial==0)
+            while (trial==0){
             // try to connect if bussy it will try again
-            if ((client_fd = connect(sockfd, (struct sockaddr*)&serv_addr,sizeof(serv_addr)))< 0) {
-                continue;
-            }else {
-                send(sockfd, message.data(), message.size(), 0);
-                printf("Hello message sent\n");
-                valread = read(sockfd, buffer, 1024);
-                printf("%s\n", buffer);
-                valread=0;
-                close(client_fd);
-                trial=100;
-                trial=1;
+                if ((client_fd = connect(sockfd, (struct sockaddr*)&serv_addr,sizeof(serv_addr)))< 0) {
+                    continue;
+                }else {
+                    send(sockfd, message.data(), message.size(), 0);
+                    printf("Hello message sent\n");
+                    valread = read(sockfd, buffer, 1024);
+                    printf("%s\n", buffer);
+                    valread=0;
+                    close(client_fd);
+                    trial=100;
+                    trial=1;
+                    string runnum=buffer;
+                    // logging
+                    struct log_data templog;
+                    templog.task_type="D";
+                    templog.task_num=runnum;
+                    templog.log_type="Recv";
+                    gettimeofday(&etime,NULL);
+                    templog.current_time=((etime.tv_sec ) * 1000 + (etime.tv_usec)/1000.0)/1000;
+                    data_cp.v_op1->push(templog);
+                }
             }
-
-        }
-        
-
+            cout << "one work done" << endl;
+            while (!data_cp.v_op1->empty()){
+                translate(data_cp.filename,data_cp.v_op1->front());
+                data_cp.v_op1->pop();
+            }
+            sentnum++;
+        }   
     }
-    pthread_exit(NULL);
-    return data;
+    return sentnum;
 }
 
 int main(int argc,char* argv[]){
@@ -127,8 +218,6 @@ int main(int argc,char* argv[]){
             running=0;
         }
     }
-
-
     init_machine(us1,argv[1],argv[2]);
     return 1;
 }

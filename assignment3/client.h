@@ -12,6 +12,7 @@
 #include<string>
 #include <string.h>
 #include<vector>
+#include<queue>
 # include <cstring>
 # include <sys/time.h>
 
@@ -27,19 +28,23 @@
 
 
 struct log_data{
+    double current_time;
     std::string task_type;
-    int task_num;
+    std::string task_num;
     std::string log_type;
 };
 
 struct sharing_data{
-    std::vector<log_data>* v_op1;
+    std::queue<log_data>* v_op1;
     std::vector<std::string> uop1;
-    sem_t * v_semph1;
+    std::string filename;
     char *portn;
     char *ip;
+    int term=0;
 };
 
 void init_machine(std::vector<std::string> us1, char* portn, char* ipaddress);
-void *task_sender(void *data);
+void translate(std::string filename,struct log_data d1);
+void writefile(std::string filename,std::string a1);
+int task_sender(struct sharing_data data_cp);
 int main(int argc,char* argv[]);

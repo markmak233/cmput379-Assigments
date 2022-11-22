@@ -86,8 +86,7 @@ void init_machine(char* portn){
         cout << buffer << endl;
         
         Work_done++;
-        string message = "Done;";
-        message.append(to_string(Work_done));
+        string message =to_string(Work_done);
         send(new_socket, message.data(), message.size(), 0);
         printf("Hello message sent\n");
 

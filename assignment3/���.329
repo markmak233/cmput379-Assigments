@@ -1,0 +1,22 @@
+Using port 5222
+Using server address 127.0.0.1
+Host ¿ç©.329
+1669102774.20: Send (T   4)
+1669102774.21: Recv (D   1)
+1669102774.23: Send (T   2)
+1669102774.23: Recv (D   2)
+1669102774.24: Send (T   1)
+1669102774.24: Recv (D   3)
+1669102774.24: Send (T   1)
+1669102774.24: Recv (D   4)
+Sleep 9 units
+1669102774.25: Send (T   5)
+1669102774.25: Recv (D   5)
+Sleep 1 units
+1669102774.26: Send (T   1)
+1669102774.26: Recv (D   6)
+1669102774.26: Send (T   1)
+1669102774.26: Recv (D   7)
+1669102774.26: Send (T   1)
+1669102774.27: Recv (D   8)
+Sent 8 transactions

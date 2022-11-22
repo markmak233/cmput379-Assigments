@@ -1,0 +1,21 @@
+Using port 5222
+Using server address 127.0.0.1
+Host Àýã©s.251
+0.00: Send (T   4)
+0.00: Recv (D   1)
+0.00: Send (T   2)
+0.00: Recv (D   2)
+0.00: Send (T   1)
+0.00: Recv (D   3)
+0.00: Send (T   1)
+0.00: Recv (D   4)
+Sleep 9 units
+0.00: Send (T   5)
+0.00: Recv (D   5)
+Sleep 1 units
+0.00: Send (T   1)
+0.00: Recv (D   6)
+0.00: Send (T   1)
+0.00: Recv (D   7)
+0.00: Send (T   1)
+0.00: Recv (D   8)
