@@ -25,7 +25,6 @@
 # include <semaphore.h>
 
 
-#include "tands.h"
 
 struct log_data{
     std::string task_type;

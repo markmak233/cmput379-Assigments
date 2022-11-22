@@ -35,18 +35,19 @@ struct log_data{
     std::string orgin;
     int task_id;
 };
-
+// for file writer
 struct sharing_data1{
     std::vector<log_data>* v_op1;
     sem_t * v_semph1;
-    char *portn;
+    int portn;
 };
-
+// for children
 struct sharing_data2{
     std::vector<log_data>* v_op1;
     std::queue<int> *Work;
-    sem_t * v_semph1;
-    char *portn;
+    sem_t * v_semph1;// communicate with sharing data1
+    sem_t * v_semph2;// communicate with the host
+    int portn;
 };
 
 void init_machine(std::vector<std::string> us1, char* portn);
