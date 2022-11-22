@@ -89,9 +89,7 @@ int task_sender(struct sharing_data data_cp){
     struct timeval etime;
     int sentnum=0;
     //setup send format
-    string mestemplate;
-    mestemplate.append(data_cp.filename);
-    mestemplate.append(";");
+    string mestemplate=data_cp.filename;
     for (unsigned int i=0;i<data_cp.uop1.size();i++){
         stringstream ss2;
         string strline,typeline;
@@ -128,30 +126,28 @@ int task_sender(struct sharing_data data_cp){
             //Sleep(runnum);
         } else {
             //https://www.geeksforgeeks.org/socket-programming-cc/
-            int sockfd =0,valread,client_fd;
+            int sockfd =0,client_fd;
             
             struct sockaddr_in serv_addr;
-            string message =mestemplate; 
-            string temp = strline;
-            temp.erase(0,1);
-            message.append(temp);
-            message.append(";");
+            string message = data_cp.uop1.at(i);
+            message.erase(0,1);
 
             // logging
             struct log_data templog;
             templog.task_type="T";
-            templog.task_num=temp;
+            templog.task_num=message;
             templog.log_type="Send";
             gettimeofday(&etime,NULL);
             templog.current_time=((etime.tv_sec ) * 1000 + (etime.tv_usec)/1000.0)/1000;
             data_cp.v_op1->push(templog);
 
             char buffer[1024]={0};
+            char buffer2[1024]={0};
             if ((sockfd = socket(AF_INET,SOCK_STREAM,0)) < 0){
                 cout << "Socket creadtion uncessful" << endl;
             } 
             serv_addr.sin_family = AF_INET;
-            serv_addr.sin_port = htons(5003); // tempory hardcode ////////////////////////////////
+            serv_addr.sin_port = htons(atoi(data_cp.portn)); // tempory hardcode ////////////////////////////////
 
             // // Convert IPv4 and IPv6 addresses from text to binary
             if (inet_pton(AF_INET, "127.0.0.1", &serv_addr.sin_addr)<= 0) {
@@ -164,15 +160,25 @@ int task_sender(struct sharing_data data_cp){
                 if ((client_fd = connect(sockfd, (struct sockaddr*)&serv_addr,sizeof(serv_addr)))< 0) {
                     continue;
                 }else {
+                    send(sockfd, mestemplate.data(), mestemplate.size(), 0);
+                    
+                    // useless receiving.reduce wait time
+                    if (read(sockfd, buffer2, 1024)<0){
+                        perror("read");
+                    }
+
                     send(sockfd, message.data(), message.size(), 0);
-                    printf("Hello message sent\n");
-                    valread = read(sockfd, buffer, 1024);
-                    printf("%s\n", buffer);
-                    valread=0;
+                    
+                    printf("both message sent\n");
+                    if( read(sockfd, buffer, 1024) <0){
+                        perror("read");
+                    }
+                    cout << buffer << "Recevived"<< endl;
                     close(client_fd);
-                    trial=100;
+
                     trial=1;
                     string runnum=buffer;
+
                     // logging
                     struct log_data templog;
                     templog.task_type="D";

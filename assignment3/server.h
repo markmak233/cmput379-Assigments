@@ -16,6 +16,7 @@
 # include <sys/time.h>
 # include <sys/select.h>
 # include <queue>
+# include <map>
 
 # include <iostream>
 # include <ostream>
@@ -30,25 +31,18 @@
 #include "tands.h"
 
 struct log_data{
-    std::string task_type;
-    int task_num;
-    std::string log_type;
-    std::string orgin;
+    int currenttime;
     int task_id;
+    std::string task_type;
+    std::string task_num;
+    std::string orgin;
 };
-// for file writer
-struct sharing_data1{
-    std::vector<log_data>* v_op1;
-    sem_t * v_semph1;
-    int portn;
-};
+
 // for children
 struct sharing_data2{
-    std::vector<log_data>* v_op1;
-    std::queue<int> *Work;
+    std::queue<log_data>* v_op1;
     sem_t * v_semph1;// communicate with sharing data1
-    sem_t * v_semph2;// communicate with the host
-    int portn;
+    std::map<std::string,int>* ogct;
 };
 
 void init_machine(std::vector<std::string> us1, char* portn);
