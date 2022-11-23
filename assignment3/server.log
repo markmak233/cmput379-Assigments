@@ -1,64 +1,129 @@
-using port 5201
-1669170239.48: #  1 (T100) from Legion5i-pro.309 
-1669170239.53: #  1 (Done) from Legion5i-pro.309 
-1669170239.53: #  2 (T  1) from Legion5i-pro.308 
-1669170239.53: #  2 (Done) from Legion5i-pro.308 
-1669170239.56: #  3 (T 20) from Legion5i-pro.308 
-1669170239.57: #  3 (Done) from Legion5i-pro.308 
-1669170239.57: #  4 (T  1) from Legion5i-pro.309 
-1669170239.57: #  4 (Done) from Legion5i-pro.309 
-1669170239.59: #  5 (T500) from Legion5i-pro.308 
-1669170239.81: #  5 (Done) from Legion5i-pro.308 
-1669170239.81: #  6 (T  2) from Legion5i-pro.309 
-1669170239.81: #  6 (Done) from Legion5i-pro.309 
-1669170239.83: #  7 (T  1) from Legion5i-pro.308 
-1669170239.83: #  7 (Done) from Legion5i-pro.308 
-1669170239.83: #  8 (T  3) from Legion5i-pro.309 
-1669170239.83: #  8 (Done) from Legion5i-pro.309 
-1669170239.85: #  9 (T  1) from Legion5i-pro.308 
-1669170239.85: #  9 (Done) from Legion5i-pro.308 
-1669170239.86: # 10 (T  4) from Legion5i-pro.309 
-1669170239.86: # 10 (Done) from Legion5i-pro.309 
-1669170239.87: # 11 (T  1) from Legion5i-pro.308 
-1669170239.87: # 11 (Done) from Legion5i-pro.308 
-1669170239.89: # 12 (T 10) from Legion5i-pro.308 
-1669170239.90: # 12 (Done) from Legion5i-pro.308 
-1669170239.91: # 13 (T 10) from Legion5i-pro.308 
-1669170239.92: # 13 (Done) from Legion5i-pro.308 
-1669170240.43: # 14 (T 60) from Legion5i-pro.308 
-1669170240.45: # 14 (Done) from Legion5i-pro.308 
-1669170240.49: # 15 (T  1) from Legion5i-pro.308 
-1669170240.49: # 15 (Done) from Legion5i-pro.308 
-1669170240.52: # 16 (T  1) from Legion5i-pro.308 
-1669170240.52: # 16 (Done) from Legion5i-pro.308 
-1669170240.63: # 17 (T  5) from Legion5i-pro.309 
-1669170240.63: # 17 (Done) from Legion5i-pro.309 
-1669170240.66: # 18 (T  6) from Legion5i-pro.309 
-1669170240.66: # 18 (Done) from Legion5i-pro.309 
-1669170240.68: # 19 (T  7) from Legion5i-pro.309 
-1669170240.69: # 19 (Done) from Legion5i-pro.309 
-1669170240.71: # 20 (T  8) from Legion5i-pro.309 
-1669170240.71: # 20 (Done) from Legion5i-pro.309 
-1669170240.73: # 21 (T  9) from Legion5i-pro.309 
-1669170240.73: # 21 (Done) from Legion5i-pro.309 
-1669170240.75: # 22 (T  1) from Legion5i-pro.308 
-1669170240.75: # 22 (Done) from Legion5i-pro.308 
-1669170240.76: # 23 (T  1) from Legion5i-pro.309 
-1669170240.76: # 23 (Done) from Legion5i-pro.309 
-1669170240.78: # 24 (T  1) from Legion5i-pro.309 
-1669170240.78: # 24 (Done) from Legion5i-pro.309 
-1669170240.79: # 25 (T 50) from Legion5i-pro.308 
-1669170240.81: # 25 (Done) from Legion5i-pro.308 
-1669170240.81: # 26 (T  1) from Legion5i-pro.309 
-1669170240.81: # 26 (Done) from Legion5i-pro.309 
-1669170240.83: # 27 (T  1) from Legion5i-pro.309 
-1669170240.83: # 27 (Done) from Legion5i-pro.309 
-1669170240.84: # 28 (T  1) from Legion5i-pro.308 
-1669170240.84: # 28 (Done) from Legion5i-pro.308 
-1669170240.85: # 29 (T  1) from Legion5i-pro.309 
-1669170240.85: # 29 (Done) from Legion5i-pro.309 
+using port 6504
+bind failed program terminatedusing port 6504
+bind failed program terminatedusing port 6504
+bind failed program terminatedusing port 6504
+bind failed program terminatedusing port 6504
+bind failed program terminatedusing port 6504
+1669184161.50: #  1 (T100) from Legion5i-pro.783 
+1669184161.56: #  1 (Done) from Legion5i-pro.783 
+1669184161.56: #  2 (T  1) from Legion5i-pro.782 
+1669184161.56: #  2 (Done) from Legion5i-pro.782 
+1669184161.58: #  3 (T  1) from Legion5i-pro.783 
+1669184161.58: #  3 (Done) from Legion5i-pro.783 
+1669184161.58: #  4 (T 20) from Legion5i-pro.782 
+1669184161.59: #  4 (Done) from Legion5i-pro.782 
+1669184161.60: #  5 (T  2) from Legion5i-pro.783 
+1669184161.60: #  5 (Done) from Legion5i-pro.783 
+1669184161.61: #  6 (T500) from Legion5i-pro.782 
+1669184161.81: #  6 (Done) from Legion5i-pro.782 
+1669184161.81: #  7 (T  3) from Legion5i-pro.783 
+1669184161.81: #  7 (Done) from Legion5i-pro.783 
+1669184161.83: #  8 (T  1) from Legion5i-pro.782 
+1669184161.83: #  8 (Done) from Legion5i-pro.782 
+1669184161.83: #  9 (T  4) from Legion5i-pro.783 
+1669184161.83: #  9 (Done) from Legion5i-pro.783 
+1669184161.85: # 10 (T  1) from Legion5i-pro.782 
+1669184161.85: # 10 (Done) from Legion5i-pro.782 
+1669184161.87: # 11 (T  1) from Legion5i-pro.782 
+1669184161.87: # 11 (Done) from Legion5i-pro.782 
+1669184161.89: # 12 (T 10) from Legion5i-pro.782 
+1669184161.89: # 12 (Done) from Legion5i-pro.782 
+1669184161.91: # 13 (T 10) from Legion5i-pro.782 
+1669184161.92: # 13 (Done) from Legion5i-pro.782 
+1669184162.45: # 14 (T 60) from Legion5i-pro.782 
+1669184162.49: # 14 (Done) from Legion5i-pro.782 
+1669184162.52: # 15 (T  1) from Legion5i-pro.782 
+1669184162.52: # 15 (Done) from Legion5i-pro.782 
+1669184162.55: # 16 (T  1) from Legion5i-pro.782 
+1669184162.55: # 16 (Done) from Legion5i-pro.782 
+1669184162.60: # 17 (T  5) from Legion5i-pro.783 
+1669184162.60: # 17 (Done) from Legion5i-pro.783 
+1669184162.63: # 18 (T  6) from Legion5i-pro.783 
+1669184162.63: # 18 (Done) from Legion5i-pro.783 
+1669184162.65: # 19 (T  7) from Legion5i-pro.783 
+1669184162.65: # 19 (Done) from Legion5i-pro.783 
+1669184162.67: # 20 (T  8) from Legion5i-pro.783 
+1669184162.67: # 20 (Done) from Legion5i-pro.783 
+1669184162.69: # 21 (T  9) from Legion5i-pro.783 
+1669184162.70: # 21 (Done) from Legion5i-pro.783 
+1669184162.72: # 22 (T  1) from Legion5i-pro.783 
+1669184162.73: # 22 (Done) from Legion5i-pro.783 
+1669184162.75: # 23 (T  1) from Legion5i-pro.783 
+1669184162.75: # 23 (Done) from Legion5i-pro.783 
+1669184162.77: # 24 (T  1) from Legion5i-pro.782 
+1669184162.77: # 24 (Done) from Legion5i-pro.782 
+1669184162.77: # 25 (T  1) from Legion5i-pro.783 
+1669184162.77: # 25 (Done) from Legion5i-pro.783 
+1669184162.79: # 26 (T  1) from Legion5i-pro.783 
+1669184162.79: # 26 (Done) from Legion5i-pro.783 
+1669184162.81: # 27 (T 50) from Legion5i-pro.782 
+1669184162.83: # 27 (Done) from Legion5i-pro.782 
+1669184162.83: # 28 (T  1) from Legion5i-pro.783 
+1669184162.83: # 28 (Done) from Legion5i-pro.783 
+1669184162.85: # 29 (T  1) from Legion5i-pro.782 
+1669184162.85: # 29 (Done) from Legion5i-pro.782 
+1669184164.92: # 30 (T100) from Legion5i-pro.826 
+1669184164.96: # 30 (Done) from Legion5i-pro.826 
+1669184164.98: # 31 (T  1) from Legion5i-pro.826 
+1669184164.98: # 31 (Done) from Legion5i-pro.826 
+1669184165.00: # 32 (T  2) from Legion5i-pro.826 
+1669184165.01: # 32 (Done) from Legion5i-pro.826 
+1669184165.03: # 33 (T  3) from Legion5i-pro.826 
+1669184165.03: # 33 (Done) from Legion5i-pro.826 
+1669184165.05: # 34 (T  4) from Legion5i-pro.826 
+1669184165.05: # 34 (Done) from Legion5i-pro.826 
+1669184165.82: # 35 (T  5) from Legion5i-pro.826 
+1669184165.83: # 35 (Done) from Legion5i-pro.826 
+1669184165.86: # 36 (T  6) from Legion5i-pro.826 
+1669184165.86: # 36 (Done) from Legion5i-pro.826 
+1669184165.89: # 37 (T  7) from Legion5i-pro.826 
+1669184165.89: # 37 (Done) from Legion5i-pro.826 
+1669184165.92: # 38 (T  8) from Legion5i-pro.826 
+1669184165.93: # 38 (Done) from Legion5i-pro.826 
+1669184165.95: # 39 (T  9) from Legion5i-pro.826 
+1669184165.96: # 39 (Done) from Legion5i-pro.826 
+1669184165.99: # 40 (T  1) from Legion5i-pro.826 
+1669184165.99: # 40 (Done) from Legion5i-pro.826 
+1669184166.01: # 41 (T  1) from Legion5i-pro.826 
+1669184166.01: # 41 (Done) from Legion5i-pro.826 
+1669184166.03: # 42 (T  1) from Legion5i-pro.826 
+1669184166.03: # 42 (Done) from Legion5i-pro.826 
+1669184166.05: # 43 (T  1) from Legion5i-pro.826 
+1669184166.05: # 43 (Done) from Legion5i-pro.826 
+1669184166.07: # 44 (T  1) from Legion5i-pro.826 
+1669184166.07: # 44 (Done) from Legion5i-pro.826 
+1669184166.82: # 45 (T  1) from Legion5i-pro.827 
+1669184166.82: # 45 (Done) from Legion5i-pro.827 
+1669184166.86: # 46 (T 20) from Legion5i-pro.827 
+1669184166.87: # 46 (Done) from Legion5i-pro.827 
+1669184166.90: # 47 (T500) from Legion5i-pro.827 
+1669184167.11: # 47 (Done) from Legion5i-pro.827 
+1669184167.13: # 48 (T  1) from Legion5i-pro.827 
+1669184167.13: # 48 (Done) from Legion5i-pro.827 
+1669184167.15: # 49 (T  1) from Legion5i-pro.827 
+1669184167.15: # 49 (Done) from Legion5i-pro.827 
+1669184167.16: # 50 (T  1) from Legion5i-pro.827 
+1669184167.17: # 50 (Done) from Legion5i-pro.827 
+1669184167.18: # 51 (T 10) from Legion5i-pro.827 
+1669184167.19: # 51 (Done) from Legion5i-pro.827 
+1669184167.20: # 52 (T 10) from Legion5i-pro.827 
+1669184167.21: # 52 (Done) from Legion5i-pro.827 
+1669184167.72: # 53 (T 60) from Legion5i-pro.827 
+1669184167.75: # 53 (Done) from Legion5i-pro.827 
+1669184167.82: # 54 (T  1) from Legion5i-pro.827 
+1669184167.82: # 54 (Done) from Legion5i-pro.827 
+1669184167.86: # 55 (T  1) from Legion5i-pro.827 
+1669184167.86: # 55 (Done) from Legion5i-pro.827 
+1669184168.09: # 56 (T  1) from Legion5i-pro.827 
+1669184168.09: # 56 (Done) from Legion5i-pro.827 
+1669184168.13: # 57 (T 50) from Legion5i-pro.827 
+1669184168.15: # 57 (Done) from Legion5i-pro.827 
+1669184168.18: # 58 (T  1) from Legion5i-pro.827 
+1669184168.18: # 58 (Done) from Legion5i-pro.827 
 
 SUMMARY
-  14 transactions from Legion5i-pro.308 
-  15 transactions from Legion5i-pro.309 
-21.1 transactions/sec  (29/1.37)
+  14 transactions from Legion5i-pro.782 
+  15 transactions from Legion5i-pro.783 
+  15 transactions from Legion5i-pro.826 
+  14 transactions from Legion5i-pro.827 
+8.7 transactions/sec  (58/6.67)

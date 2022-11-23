@@ -6,6 +6,7 @@ using namespace std;
 
 void init_machine(vector<string> us1, char* portn, char* ipaddress){
 
+    //set up filename and hostname
     char hostname[100];
     size_t namelen=100;
     int mypid=getpid();
@@ -14,6 +15,7 @@ void init_machine(vector<string> us1, char* portn, char* ipaddress){
     filename.append(".");
     filename.append(to_string(mypid));
 
+    // setup sender info
     struct sharing_data children_data;
     queue<log_data> log_d;
     vector<string> log_s;
@@ -22,7 +24,8 @@ void init_machine(vector<string> us1, char* portn, char* ipaddress){
     children_data.portn=portn;
     children_data.ip=ipaddress;
     children_data.filename=filename;
-        
+    
+    //write the headline
     string l1 ="Using port ";
     l1.append(portn);
     l1.append("\n");
@@ -32,17 +35,19 @@ void init_machine(vector<string> us1, char* portn, char* ipaddress){
     string l3="Host ";
     l3.append(filename);
     l3.append("\n");
-
     writefile(filename,l1);
     writefile(filename,l2);
     writefile(filename,l3);
+
     int sentnum=task_sender(children_data);
 
+    // write summary message
     string l4 = "Sent ";
     l4.append(to_string(sentnum));
     l4.append(" transactions\n");
     writefile(filename,l4);
 
+    //clear or the string
     l1.clear();
     l2.clear();
     l3.clear();
@@ -53,6 +58,7 @@ void init_machine(vector<string> us1, char* portn, char* ipaddress){
 }
 
 void translate(string filename,struct log_data d1){
+    // translate the infomation to a line of string
     char temp[70];
     if (d1.task_type!="S"){
         int num=stoi(d1.task_num);
@@ -72,6 +78,7 @@ void translate(string filename,struct log_data d1){
 }
 
 void writefile(string filename,string a1){
+    // write a string append to a file
     ofstream fout;
     ifstream fin;
     fin.open(filename);
@@ -91,6 +98,7 @@ int task_sender(struct sharing_data data_cp){
     int sentnum=0;
     //setup send format
     string mestemplate=data_cp.filename;
+    //runthrough each line
     for (unsigned int i=0;i<data_cp.uop1.size();i++){
         stringstream ss2;
         string strline,typeline;
@@ -98,10 +106,8 @@ int task_sender(struct sharing_data data_cp){
         ss2 >> strline;
         typeline=strline[0];
         
-        cout << "Working on "<< i << endl;
-
-
         if (typeline !=  "T" && typeline!= "S"){
+            // if either T or S run nextone
             continue;
         } else if (typeline == "S"){
             // string conversion
@@ -124,6 +130,7 @@ int task_sender(struct sharing_data data_cp){
             templog.current_time=((etime.tv_sec ) * 1000 + (etime.tv_usec)/1000.0)/1000;
             data_cp.v_op1->push(templog);
 
+            // sleep for units
             Sleep(runnum);
         } else {
             //https://www.geeksforgeeks.org/socket-programming-cc/
@@ -148,20 +155,21 @@ int task_sender(struct sharing_data data_cp){
                 cout << "Socket creadtion uncessful" << endl;
             } 
             serv_addr.sin_family = AF_INET;
-            serv_addr.sin_port = htons(atoi(data_cp.portn)); // tempory hardcode ////////////////////////////////
+            serv_addr.sin_port = htons(atoi(data_cp.portn)); 
 
             // // Convert IPv4 and IPv6 addresses from text to binary
-            if (inet_pton(AF_INET, "127.0.0.1", &serv_addr.sin_addr)<= 0) {
+            if (inet_pton(AF_INET, data_cp.ip, &serv_addr.sin_addr)<= 0) {
                 printf("\nInvalid address/ Address not supported \n");
             }
 
             int trial=0;
             while (trial==0){
-            // try to connect if bussy it will try again
+                // try to connect if bussy it will try again
                 if ((client_fd = connect(sockfd, (struct sockaddr*)&serv_addr,sizeof(serv_addr)))< 0) {
                     Sleep(1);
                     continue;
                 }else {
+                    // sent client information
                     send(sockfd, mestemplate.data(), mestemplate.size(), 0);
                     
                     // useless receiving.reduce wait time
@@ -169,13 +177,13 @@ int task_sender(struct sharing_data data_cp){
                         perror("read");
                     }
 
+                    // send working number
                     send(sockfd, message.data(), message.size(), 0);
                     
-                    printf("both message sent\n");
+                    // waiting for workdone
                     if( read(sockfd, buffer, 1024) <0){
                         perror("read");
                     }
-                    cout << buffer << "Recevived"<< endl;
                     close(client_fd);
 
                     trial=1;
@@ -191,7 +199,7 @@ int task_sender(struct sharing_data data_cp){
                     data_cp.v_op1->push(templog);
                 }
             }
-            cout << "one work done" << endl;
+            //write all the file into log
             while (!data_cp.v_op1->empty()){
                 translate(data_cp.filename,data_cp.v_op1->front());
                 data_cp.v_op1->pop();
@@ -214,7 +222,7 @@ int main(int argc,char* argv[]){
         return 1;
     }
 
-
+    // conver input to string vector
     vector<string> us1;
     int running=1;
     while (running){
