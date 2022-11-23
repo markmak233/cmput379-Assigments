@@ -3,3 +3,6 @@
 *.o
 assignment2/prodcon
 assignment2/prodcon.4.log
+*.log
+assignment3/server
+assignment3/client
