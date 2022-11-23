@@ -7,7 +7,7 @@ using namespace std;
 void init_machine(vector<string> us1, char* portn, char* ipaddress){
 
     char hostname[100];
-    size_t namelen;
+    size_t namelen=100;
     int mypid=getpid();
     gethostname(hostname,namelen);
     string filename=(hostname);
