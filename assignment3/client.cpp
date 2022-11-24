@@ -94,6 +94,7 @@ void writefile(string filename,string a1){
 
 int task_sender(struct sharing_data data_cp){
     //current timing
+    struct timeval rtime;
     struct timeval etime;
     int sentnum=0;
     //setup send format
@@ -166,7 +167,10 @@ int task_sender(struct sharing_data data_cp){
             while (trial==0){
                 // try to connect if bussy it will try again
                 if ((client_fd = connect(sockfd, (struct sockaddr*)&serv_addr,sizeof(serv_addr)))< 0) {
-                    Sleep(1);
+                    gettimeofday(&rtime,NULL);
+                    if (rtime.tv_usec==0){
+                        perror("connect");
+                    }
                     continue;
                 }else {
                     // sent client information

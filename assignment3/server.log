@@ -127,3 +127,36 @@ SUMMARY
   15 transactions from Legion5i-pro.826 
   14 transactions from Legion5i-pro.827 
 8.7 transactions/sec  (58/6.67)
+using port 6504
+1669249987.80: #  1 (T  1) from Legion5i-pro.124 
+1669249987.80: #  1 (Done) from Legion5i-pro.124 
+1669249987.82: #  2 (T 20) from Legion5i-pro.124 
+1669249987.83: #  2 (Done) from Legion5i-pro.124 
+1669249987.85: #  3 (T500) from Legion5i-pro.124 
+1669249988.06: #  3 (Done) from Legion5i-pro.124 
+1669249988.08: #  4 (T  1) from Legion5i-pro.124 
+1669249988.08: #  4 (Done) from Legion5i-pro.124 
+1669249988.10: #  5 (T  1) from Legion5i-pro.124 
+1669249988.10: #  5 (Done) from Legion5i-pro.124 
+1669249988.12: #  6 (T  1) from Legion5i-pro.124 
+1669249988.12: #  6 (Done) from Legion5i-pro.124 
+1669249988.14: #  7 (T 10) from Legion5i-pro.124 
+1669249988.14: #  7 (Done) from Legion5i-pro.124 
+1669249988.16: #  8 (T 10) from Legion5i-pro.124 
+1669249988.16: #  8 (Done) from Legion5i-pro.124 
+1669249988.69: #  9 (T 60) from Legion5i-pro.124 
+1669249988.72: #  9 (Done) from Legion5i-pro.124 
+1669249988.75: # 10 (T  1) from Legion5i-pro.124 
+1669249988.75: # 10 (Done) from Legion5i-pro.124 
+1669249988.78: # 11 (T  1) from Legion5i-pro.124 
+1669249988.78: # 11 (Done) from Legion5i-pro.124 
+1669249989.00: # 12 (T  1) from Legion5i-pro.124 
+1669249989.00: # 12 (Done) from Legion5i-pro.124 
+1669249989.04: # 13 (T 50) from Legion5i-pro.124 
+1669249989.06: # 13 (Done) from Legion5i-pro.124 
+1669249989.10: # 14 (T  1) from Legion5i-pro.124 
+1669249989.10: # 14 (Done) from Legion5i-pro.124 
+
+SUMMARY
+  14 transactions from Legion5i-pro.124 
+10.8 transactions/sec  (14/1.30)

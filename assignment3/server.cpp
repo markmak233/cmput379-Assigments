@@ -6,6 +6,7 @@ void init_machine(char* portn){
     queue<log_data> lg1;
     //timecounting
     struct timeval stime;
+    struct timeval rtime;
     struct timeval etime;
     // count for each orgin
     map<string,int> orgincout;
@@ -55,7 +56,7 @@ void init_machine(char* portn){
     }
 
     address.sin_family = AF_INET;
-    address.sin_addr.s_addr = INADDR_ANY;
+    address.sin_addr.s_addr = htonl(INADDR_ANY);
     address.sin_port = htons(atoi(portn)); 
 
     // https://stackoverflow.com/questions/2876024/linux-is-there-a-read-or-recv-from-socket-with-timeout
@@ -90,6 +91,10 @@ void init_machine(char* portn){
         // waiting fof new socket connect
         if ((new_socket = accept(server_fd, (struct sockaddr*)&address,(socklen_t*)&addrlen))< 0) {
             // end condition
+            if (rtime.tv_usec==0){
+                gettimeofday(&rtime,NULL);
+                perror("connect");
+            }
             waittime_notexpire=0;
             continue;
         }
@@ -147,9 +152,6 @@ void init_machine(char* portn){
     // waiting writer to end.and avoid memory leak
     // https://stackoverflow.com/questions/17642433/why-pthread-causes-a-memory-leak
     while (pthread_detach(p)!=0);
-
-    cout << "socket idled 30 seconds,the server is now shutdown.Port "<< portn << " may not aviable immediality,please try other port for rerun."<< endl;
-
     // print summary information
     string l2 = "\nSUMMARY\n";
     int total=0;
