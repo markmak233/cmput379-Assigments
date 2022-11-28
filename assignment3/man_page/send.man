@@ -1,0 +1,552 @@
+%!PS-Adobe-3.0
+%%Creator: groff version 1.22.4
+%%CreationDate: Fri Nov 25 07:36:37 2022
+%%DocumentNeededResources: font Times-Roman
+%%+ font Times-Bold
+%%+ font Times-Italic
+%%+ font Courier
+%%DocumentSuppliedResources: procset grops 1.22 4
+%%Pages: 4
+%%PageOrder: Ascend
+%%DocumentMedia: Default 595 842 0 () ()
+%%Orientation: Portrait
+%%EndComments
+%%BeginDefaults
+%%PageMedia: Default
+%%EndDefaults
+%%BeginProlog
+%%BeginResource: procset grops 1.22 4
+%!PS-Adobe-3.0 Resource-ProcSet
+/setpacking where{
+pop
+currentpacking
+true setpacking
+}if
+/grops 120 dict dup begin
+/SC 32 def
+/A/show load def
+/B{0 SC 3 -1 roll widthshow}bind def
+/C{0 exch ashow}bind def
+/D{0 exch 0 SC 5 2 roll awidthshow}bind def
+/E{0 rmoveto show}bind def
+/F{0 rmoveto 0 SC 3 -1 roll widthshow}bind def
+/G{0 rmoveto 0 exch ashow}bind def
+/H{0 rmoveto 0 exch 0 SC 5 2 roll awidthshow}bind def
+/I{0 exch rmoveto show}bind def
+/J{0 exch rmoveto 0 SC 3 -1 roll widthshow}bind def
+/K{0 exch rmoveto 0 exch ashow}bind def
+/L{0 exch rmoveto 0 exch 0 SC 5 2 roll awidthshow}bind def
+/M{rmoveto show}bind def
+/N{rmoveto 0 SC 3 -1 roll widthshow}bind def
+/O{rmoveto 0 exch ashow}bind def
+/P{rmoveto 0 exch 0 SC 5 2 roll awidthshow}bind def
+/Q{moveto show}bind def
+/R{moveto 0 SC 3 -1 roll widthshow}bind def
+/S{moveto 0 exch ashow}bind def
+/T{moveto 0 exch 0 SC 5 2 roll awidthshow}bind def
+/SF{
+findfont exch
+[exch dup 0 exch 0 exch neg 0 0]makefont
+dup setfont
+[exch/setfont cvx]cvx bind def
+}bind def
+/MF{
+findfont
+[5 2 roll
+0 3 1 roll
+neg 0 0]makefont
+dup setfont
+[exch/setfont cvx]cvx bind def
+}bind def
+/level0 0 def
+/RES 0 def
+/PL 0 def
+/LS 0 def
+/MANUAL{
+statusdict begin/manualfeed true store end
+}bind def
+/PLG{
+gsave newpath clippath pathbbox grestore
+exch pop add exch pop
+}bind def
+/BP{
+/level0 save def
+1 setlinecap
+1 setlinejoin
+DEFS/BPhook known{DEFS begin BPhook end}if
+72 RES div dup scale
+LS{
+90 rotate
+}{
+0 PL translate
+}ifelse
+1 -1 scale
+}bind def
+/EP{
+level0 restore
+showpage
+}def
+/DA{
+newpath arcn stroke
+}bind def
+/SN{
+transform
+.25 sub exch .25 sub exch
+round .25 add exch round .25 add exch
+itransform
+}bind def
+/DL{
+SN
+moveto
+SN
+lineto stroke
+}bind def
+/DC{
+newpath 0 360 arc closepath
+}bind def
+/TM matrix def
+/DE{
+TM currentmatrix pop
+translate scale newpath 0 0 .5 0 360 arc closepath
+TM setmatrix
+}bind def
+/RC/rcurveto load def
+/RL/rlineto load def
+/ST/stroke load def
+/MT/moveto load def
+/CL/closepath load def
+/Fr{
+setrgbcolor fill
+}bind def
+/setcmykcolor where{
+pop
+/Fk{
+setcmykcolor fill
+}bind def
+}if
+/Fg{
+setgray fill
+}bind def
+/FL/fill load def
+/LW/setlinewidth load def
+/Cr/setrgbcolor load def
+/setcmykcolor where{
+pop
+/Ck/setcmykcolor load def
+}if
+/Cg/setgray load def
+/RE{
+findfont
+dup maxlength 1 index/FontName known not{1 add}if dict begin
+{
+1 index/FID ne
+2 index/UniqueID ne
+and
+{def}{pop pop}ifelse
+}forall
+/Encoding exch def
+dup/FontName exch def
+currentdict end definefont pop
+}bind def
+/DEFS 0 def
+/EBEGIN{
+moveto
+DEFS begin
+}bind def
+/EEND/end load def
+/CNT 0 def
+/level1 0 def
+/PBEGIN{
+/level1 save def
+translate
+div 3 1 roll div exch scale
+neg exch neg exch translate
+0 setgray
+0 setlinecap
+1 setlinewidth
+0 setlinejoin
+10 setmiterlimit
+[]0 setdash
+/setstrokeadjust where{
+pop
+false setstrokeadjust
+}if
+/setoverprint where{
+pop
+false setoverprint
+}if
+newpath
+/CNT countdictstack def
+userdict begin
+/showpage{}def
+/setpagedevice{}def
+mark
+}bind def
+/PEND{
+cleartomark
+countdictstack CNT sub{end}repeat
+level1 restore
+}bind def
+end def
+/setpacking where{
+pop
+setpacking
+}if
+%%EndResource
+%%EndProlog
+%%BeginSetup
+%%BeginFeature: *PageSize Default
+<< /PageSize [ 595 842 ] /ImagingBBox null >> setpagedevice
+%%EndFeature
+%%IncludeResource: font Times-Roman
+%%IncludeResource: font Times-Bold
+%%IncludeResource: font Times-Italic
+%%IncludeResource: font Courier
+grops begin/DEFS 1 dict def DEFS begin/u{.001 mul}bind def end/RES 72
+def/PL 841.89 def/LS false def/ENC0[/asciicircum/asciitilde/Scaron
+/Zcaron/scaron/zcaron/Ydieresis/trademark/quotesingle/Euro/.notdef
+/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+/.notdef/.notdef/.notdef/space/exclam/quotedbl/numbersign/dollar/percent
+/ampersand/quoteright/parenleft/parenright/asterisk/plus/comma/hyphen
+/period/slash/zero/one/two/three/four/five/six/seven/eight/nine/colon
+/semicolon/less/equal/greater/question/at/A/B/C/D/E/F/G/H/I/J/K/L/M/N/O
+/P/Q/R/S/T/U/V/W/X/Y/Z/bracketleft/backslash/bracketright/circumflex
+/underscore/quoteleft/a/b/c/d/e/f/g/h/i/j/k/l/m/n/o/p/q/r/s/t/u/v/w/x/y
+/z/braceleft/bar/braceright/tilde/.notdef/quotesinglbase/guillemotleft
+/guillemotright/bullet/florin/fraction/perthousand/dagger/daggerdbl
+/endash/emdash/ff/fi/fl/ffi/ffl/dotlessi/dotlessj/grave/hungarumlaut
+/dotaccent/breve/caron/ring/ogonek/quotedblleft/quotedblright/oe/lslash
+/quotedblbase/OE/Lslash/.notdef/exclamdown/cent/sterling/currency/yen
+/brokenbar/section/dieresis/copyright/ordfeminine/guilsinglleft
+/logicalnot/minus/registered/macron/degree/plusminus/twosuperior
+/threesuperior/acute/mu/paragraph/periodcentered/cedilla/onesuperior
+/ordmasculine/guilsinglright/onequarter/onehalf/threequarters
+/questiondown/Agrave/Aacute/Acircumflex/Atilde/Adieresis/Aring/AE
+/Ccedilla/Egrave/Eacute/Ecircumflex/Edieresis/Igrave/Iacute/Icircumflex
+/Idieresis/Eth/Ntilde/Ograve/Oacute/Ocircumflex/Otilde/Odieresis
+/multiply/Oslash/Ugrave/Uacute/Ucircumflex/Udieresis/Yacute/Thorn
+/germandbls/agrave/aacute/acircumflex/atilde/adieresis/aring/ae/ccedilla
+/egrave/eacute/ecircumflex/edieresis/igrave/iacute/icircumflex/idieresis
+/eth/ntilde/ograve/oacute/ocircumflex/otilde/odieresis/divide/oslash
+/ugrave/uacute/ucircumflex/udieresis/yacute/thorn/ydieresis]def
+/Courier@0 ENC0/Courier RE/Times-Italic@0 ENC0/Times-Italic RE
+/Times-Bold@0 ENC0/Times-Bold RE/Times-Roman@0 ENC0/Times-Roman RE
+%%EndSetup
+%%Page: 1 1
+%%BeginPageSetup
+BP
+%%EndPageSetup
+/F0 10/Times-Roman@0 SF 135.68(SEND\(2\) Linux)72 48 R(Programmer')2.5 E
+2.5(sM)-.55 G 135.68(anual SEND\(2\))-2.5 F/F1 10.95/Times-Bold@0 SF
+-.219(NA)72 84 S(ME).219 E F0
+(send, sendto, sendmsg \255 send a message on a sock)108 96 Q(et)-.1 E
+F1(SYNOPSIS)72 112.8 Q/F2 10/Times-Bold@0 SF(#include <sys/types.h>)108
+124.8 Q(#include <sys/sock)108 136.8 Q(et.h>)-.1 E(ssize_t send\(int)108
+153.6 Q/F3 10/Times-Italic@0 SF(soc)2.84 E(kfd)-.2 E F2 2.5(,c).77 G
+(onst v)-2.5 E(oid *)-.1 E F3 -.2(bu)C(f).2 E F2 2.5(,s)1.96 G(ize_t)
+-2.5 E F3(len)2.59 E F2 2.5(,i).24 G(nt)-2.5 E F3<8d61>4.41 E(gs)-.1 E
+F2(\);).27 E(ssize_t sendto\(int)108 170.4 Q F3(soc)2.84 E(kfd)-.2 E F2
+2.5(,c).77 G(onst v)-2.5 E(oid *)-.1 E F3 -.2(bu)C(f).2 E F2 2.5(,s)1.96
+G(ize_t)-2.5 E F3(len)2.59 E F2 2.5(,i).24 G(nt)-2.5 E F3<8d61>4.41 E
+(gs)-.1 E F2(,).27 E(const struct sockaddr *)145.5 182.4 Q F3(dest_addr)
+.35 E F2 2.5(,s).73 G(ocklen_t)-2.5 E F3(addrlen)2.83 E F2(\);).24 E
+(ssize_t sendmsg\(int)108 199.2 Q F3(soc)2.84 E(kfd)-.2 E F2 2.5(,c).77
+G(onst struct msghdr *)-2.5 E F3(msg).38 E F2 2.5(,i).22 G(nt)-2.5 E F3
+<8d61>4.41 E(gs)-.1 E F2(\);).27 E F1(DESCRIPTION)72 216 Q F0
+(The system calls)108 228 Q F2(send)2.5 E F0(\(\),)A F2(sendto)2.5 E F0
+(\(\), and)A F2(sendmsg)2.5 E F0
+(\(\) are used to transmit a message to another sock)A(et.)-.1 E(The)108
+244.8 Q F2(send)2.977 E F0 .477
+(\(\) call may be used only when the sock)B .476(et is in a)-.1 F F3
+(connected)3.176 E F0 .476(state \(so that the intended recipient is)
+3.746 F(kno)108 256.8 Q 2.59(wn\). The)-.25 F .09(only dif)2.59 F .09
+(ference between)-.25 F F2(send)2.59 E F0 .09(\(\) and)B F2(write)2.59 E
+F0 .091(\(2\) is the presence of)B F3<8d61>4.501 E(gs)-.1 E F0 5.091(.W)
+.27 G .091(ith a zero)-5.491 F F3<8d61>4.501 E(gs)-.1 E F0(ar)2.861 E
+(gu-)-.18 E(ment,)108 268.8 Q F2(send)2.5 E F0(\(\) is equi)A -.25(va)
+-.25 G(lent to).25 E F2(write)2.5 E F0 2.5(\(2\). Also,)B(the follo)2.5
+E(wing call)-.25 E(send\(sockfd, b)118 285.6 Q(uf, len, \215ags\);)-.2 E
+(is equi)108 302.4 Q -.25(va)-.25 G(lent to).25 E(sendto\(sockfd, b)118
+319.2 Q(uf, len, \215ags, NULL, 0\);)-.2 E(The ar)108 336 Q(gument)-.18
+E F3(soc)2.84 E(kfd)-.2 E F0
+(is the \214le descriptor of the sending sock)3.27 E(et.)-.1 E(If)108
+352.8 Q F2(sendto)3.812 E F0 1.312(\(\) is used on a connection-mode \()
+B F2(SOCK_STREAM)A F0(,)A F2(SOCK_SEQP)3.812 E -.55(AC)-.74 G(KET).55 E
+F0 3.812(\)s)C(ock)-3.812 E 1.311(et, the ar)-.1 F(gu-)-.18 E(ments)108
+364.8 Q F3(dest_addr)4.066 E F0(and)4.446 E F3(addrlen)4.047 E F0 1.217
+(are ignored \(and the error)3.957 F F2(EISCONN)3.717 E F0 1.217
+(may be returned when the)3.717 F 3.717(ya)-.15 G 1.217(re not)-3.717 F
+.372(NULL and 0\), and the error)108 376.8 R F2(ENO)2.872 E(TCONN)-.4 E
+F0 .372(is returned when the sock)2.872 F .372(et w)-.1 F .372
+(as not actually connected.)-.1 F(Other)5.371 E(-)-.2 E .637
+(wise, the address of the tar)108 388.8 R .637(get is gi)-.18 F -.15(ve)
+-.25 G 3.138(nb).15 G(y)-3.138 E F3(dest_addr)3.488 E F0(with)3.868 E F3
+(addrlen)3.468 E F0 .638(specifying its size.)3.378 F -.15(Fo)5.638 G(r)
+.15 E F2(sendmsg)3.138 E F0 .638(\(\), the)B(address of the tar)108
+400.8 Q(get is gi)-.18 E -.15(ve)-.25 G 2.5(nb).15 G(y)-2.5 E F3(msg)
+2.88 E(.msg_name)-.15 E F0 2.5(,w).18 G(ith)-2.5 E F3(msg)2.88 E
+(.msg_namelen)-.15 E F0(specifying its size.)2.74 E -.15(Fo)108 417.6 S
+(r).15 E F2(send)3.317 E F0 .817(\(\) and)B F2(sendto)3.316 E F0 .816
+(\(\), the message is found in)B F3 -.2(bu)3.316 G(f).2 E F0 .816
+(and has length)5.276 F F3(len)3.406 E F0 5.816(.F).24 G(or)-5.966 E F2
+(sendmsg)3.316 E F0 .816(\(\), the message is)B 1.272
+(pointed to by the elements of the array)108 429.6 R F3(msg)4.152 E
+(.msg_io)-.15 E(v)-.1 E F0 6.272(.T).32 G(he)-6.272 E F2(sendmsg)3.772 E
+F0 1.272(\(\) call also allo)B 1.272(ws sending ancillary)-.25 F
+(data \(also kno)108 441.6 Q(wn as control information\).)-.25 E .479(I\
+f the message is too long to pass atomically through the underlying pro\
+tocol, the error)108 458.4 R F2(EMSGSIZE)2.978 E F0 .478(is re-)2.978 F
+(turned, and the message is not transmitted.)108 470.4 Q .544
+(No indication of f)108 487.2 R .544(ailure to deli)-.1 F -.15(ve)-.25 G
+3.044(ri).15 G 3.044(si)-3.044 G .544(mplicit in a)-3.044 F F2(send)
+3.044 E F0 3.045(\(\). Locally)B .545
+(detected errors are indicated by a return)3.045 F -.25(va)108 499.2 S
+(lue of \2551.).25 E .305
+(When the message does not \214t into the send b)108 516 R(uf)-.2 E .304
+(fer of the sock)-.25 F(et,)-.1 E F2(send)2.804 E F0 .304
+(\(\) normally blocks, unless the sock)B(et)-.1 E .671
+(has been placed in nonblocking I/O mode.)108 528 R .671
+(In nonblocking mode it w)5.671 F .671(ould f)-.1 F .671
+(ail with the error)-.1 F F2(EA)3.172 E(GAIN)-.55 E F0(or)3.172 E F2(EW)
+108 540 Q(OULDBLOCK)-.1 E F0 .763(in this case.)3.263 F(The)5.763 E F2
+(select)3.263 E F0 .763
+(\(2\) call may be used to determine when it is possible to send)B
+(more data.)108 552 Q F2(The \215ags ar)87 568.8 Q(gument)-.1 E F0(The)
+108 580.8 Q F3<8d61>4.41 E(gs)-.1 E F0(ar)2.77 E
+(gument is the bitwise OR of zero or more of the follo)-.18 E
+(wing \215ags.)-.25 E F2(MSG_CONFIRM)108 597.6 Q F0
+(\(since Linux 2.3.15\))2.5 E -.7(Te)144 609.6 S .412
+(ll the link layer that forw).7 F .413
+(ard progress happened: you got a successful reply from the other side.)
+-.1 F 1.013(If the link layer doesn')144 621.6 R 3.513(tg)-.18 G 1.013
+(et this it will re)-3.513 F 1.013
+(gularly reprobe the neighbor \(e.g., via a unicast ARP\).)-.15 F -1.11
+(Va)144 633.6 S 1.357(lid only on)1.11 F F2(SOCK_DGRAM)3.857 E F0(and)
+3.857 E F2(SOCK_RA)3.857 E(W)-1.3 E F0(sock)3.857 E 1.358
+(ets and currently implemented only for)-.1 F(IPv4 and IPv6.)144 645.6 Q
+(See)5 E F2(ar)2.5 E(p)-.1 E F0(\(7\) for details.)A F2(MSG_DONTR)108
+662.4 Q(OUTE)-.3 E F0(Don')144 674.4 Q 3.622(tu)-.18 G 1.122(se a g)
+-3.622 F(ate)-.05 E -.1(wa)-.25 G 3.622(yt).1 G 3.622(os)-3.622 G 1.122
+(end out the pack)-3.622 F 1.122
+(et, send to hosts only on directly connected netw)-.1 F(orks.)-.1 E
+(This is usually used only by diagnostic or routing programs.)144 686.4
+Q .001(This is de\214ned only for protocol f)5.001 F(am-)-.1 E
+(ilies that route; pack)144 698.4 Q(et sock)-.1 E(ets don')-.1 E(t.)-.18
+E 184.28(Linux 2020-11-01)72 768 R(1)205.67 E 0 Cg EP
+%%Page: 2 2
+%%BeginPageSetup
+BP
+%%EndPageSetup
+/F0 10/Times-Roman@0 SF 135.68(SEND\(2\) Linux)72 48 R(Programmer')2.5 E
+2.5(sM)-.55 G 135.68(anual SEND\(2\))-2.5 F/F1 10/Times-Bold@0 SF
+(MSG_DONTW)108 84 Q(AIT)-1.2 E F0(\(since Linux 2.2\))2.5 E .413
+(Enables nonblocking operation; if the operation w)144 96 R .413
+(ould block,)-.1 F F1(EA)2.913 E(GAIN)-.55 E F0(or)2.912 E F1(EW)2.912 E
+(OULDBLOCK)-.1 E F0(is)2.912 E 4.281(returned. This)144 108 R(pro)4.281
+E 1.781(vides similar beha)-.15 F 1.782(vior to setting the)-.2 F F1
+(O_NONBLOCK)4.282 E F0 1.782(\215ag \(via the)4.282 F F1(fcntl)4.282 E
+F0(\(2\))A F1(F_SETFL)144 120 Q F0 3.217(operation\), b)5.717 F 3.217
+(ut dif)-.2 F 3.217(fers in that)-.25 F F1(MSG_DONTW)5.716 E(AIT)-1.2 E
+F0 3.216(is a per)5.716 F 3.216(-call option, whereas)-.2 F F1
+(O_NONBLOCK)144 132 Q F0 1.897
+(is a setting on the open \214le description \(see)4.397 F F1(open)4.397
+E F0 1.897(\(2\)\), which will af)B 1.898(fect all)-.25 F .658(threads \
+in the calling process and as well as other processes that hold \214le \
+descriptors referring to)144 144 R(the same open \214le description.)144
+156 Q F1(MSG_EOR)108 172.8 Q F0(\(since Linux 2.2\))2.5 E -.7(Te)144
+184.8 S(rminates a record \(when this notion is supported, as for sock)
+.7 E(ets of type)-.1 E F1(SOCK_SEQP)2.5 E -.55(AC)-.74 G(KET).55 E F0
+(\).)A F1(MSG_MORE)108 201.6 Q F0(\(since Linux 2.4.4\))2.5 E .498
+(The caller has more data to send.)144 213.6 R .498
+(This \215ag is used with TCP sock)5.498 F .498
+(ets to obtain the same ef)-.1 F .498(fect as)-.25 F(the)144 225.6 Q F1
+(TCP_CORK)3.021 E F0(sock)3.021 E .521(et option \(see)-.1 F F1(tcp)
+3.021 E F0 .521(\(7\)\), with the dif)B .52
+(ference that this \215ag can be set on a per)-.25 F(-)-.2 E
+(call basis.)144 237.6 Q .236
+(Since Linux 2.6, this \215ag is also supported for UDP sock)144 254.4 R
+.237(ets, and informs the k)-.1 F .237(ernel to package all)-.1 F .507(\
+of the data sent in calls with this \215ag set into a single datagram w\
+hich is transmitted only when a)144 266.4 R 1.391
+(call is performed that does not specify this \215ag.)144 278.4 R 1.391
+(\(See also the)6.391 F F1(UDP_CORK)3.892 E F0(sock)3.892 E 1.392
+(et option de-)-.1 F(scribed in)144 290.4 Q F1(udp)2.5 E F0(\(7\).\))A
+F1(MSG_NOSIGN)108 307.2 Q(AL)-.2 E F0(\(since Linux 2.2\))2.5 E(Don')144
+319.2 Q 3.314(tg)-.18 G .814(enerate a)-3.314 F F1(SIGPIPE)3.314 E F0
+.813(signal if the peer on a stream-oriented sock)3.314 F .813
+(et has closed the connec-)-.1 F 2.572(tion. The)144 331.2 R F1(EPIPE)
+2.572 E F0 .072(error is still returned.)2.572 F .073(This pro)5.073 F
+.073(vides similar beha)-.15 F .073(vior to using)-.2 F F1(sigaction)
+2.573 E F0 .073(\(2\) to ig-)B(nore)144 343.2 Q F1(SIGPIPE)3.493 E F0
+3.493(,b)C .993(ut, whereas)-3.693 F F1(MSG_NOSIGN)3.493 E(AL)-.2 E F0
+.993(is a per)3.493 F .992(-call feature, ignoring)-.2 F F1(SIGPIPE)
+3.492 E F0 .992(sets a)3.492 F(process attrib)144 355.2 Q(ute that af)
+-.2 E(fects all threads in the process.)-.25 E F1(MSG_OOB)108 372 Q F0
+(Sends)144 384 Q/F2 10/Times-Italic@0 SF(out-of-band)3.507 E F0 .777
+(data on sock)4.047 F .778(ets that support this notion \(e.g., of type)
+-.1 F F1(SOCK_STREAM)3.278 E F0 .778(\); the)B
+(underlying protocol must also support)144 396 Q F2(out-of-band)2.73 E
+F0(data.)3.27 E F1(sendmsg\(\))87 412.8 Q F0(The de\214nition of the)108
+424.8 Q F2(msghdr)2.88 E F0(structure emplo)3.23 E(yed by)-.1 E F1
+(sendmsg)2.5 E F0(\(\) is as follo)A(ws:)-.25 E/F3 10/Courier@0 SF
+(struct msghdr {)128 441.6 Q 48(void *msg_name;)152 453.6 R
+(/* Optional address */)42 E 24(socklen_t msg_namelen;)152 465.6 R
+(/* Size of address */)24 E(struct iovec *msg_iov;)152 477.6 Q
+(/* Scatter/gather array */)48 E 42(size_t msg_iovlen;)152 489.6 R
+(/* # elements in msg_iov */)30 E 48(void *msg_control;)152 501.6 R
+(/* Ancillary data, see below */)24 E 42(size_t msg_controllen;)152
+513.6 R(/* Ancillary data buffer len */)6 E 60(int msg_flags;)152 525.6
+R(/* Flags \(unused\) */)36 E(};)128 537.6 Q F0(The)108 554.4 Q F2
+(msg_name)4.441 E F0 1.561(\214eld is used on an unconnected sock)4.241
+F 1.561(et to specify the tar)-.1 F 1.56(get address for a datagram.)
+-.18 F(It)6.56 E .984(points to a b)108 566.4 R(uf)-.2 E .984
+(fer containing the address; the)-.25 F F2(msg_namelen)3.864 E F0 .985
+(\214eld should be set to the size of the address.)3.724 F -.15(Fo)108
+578.4 S 2.5(rac).15 G(onnected sock)-2.5 E
+(et, these \214elds should be speci\214ed as NULL and 0, respecti)-.1 E
+-.15(ve)-.25 G(ly).15 E(.)-.65 E(The)108 595.2 Q F2(msg_io)2.88 E(v)-.1
+E F0(and)2.82 E F2(msg_io)2.88 E(vlen)-.1 E F0(\214elds specify scatter)
+2.74 E(-g)-.2 E(ather locations, as for)-.05 E F1(write)2.5 E(v)-.15 E
+F0(\(2\).)A -1.1(Yo)108 612 S 3.846(um)1.1 G 1.346
+(ay send control information \(ancillary data\) using the)-3.846 F F2
+(msg_contr)4.226 E(ol)-.45 E F0(and)4.356 E F2(msg_contr)4.225 E(ollen)
+-.45 E F0(members.)4.085 E 3.31(The maximum control b)108 624 R(uf)-.2 E
+3.31(fer length the k)-.25 F 3.31(ernel can process is limited per sock)
+-.1 F 3.31(et by the v)-.1 F 3.31(alue in)-.25 F F2(/pr)109.15 636 Q
+(oc/sys/net/cor)-.45 E(e/optmem_max)-.37 E F0 2.654(;s).53 G(ee)-2.654 E
+F1(sock)2.654 E(et)-.1 E F0 2.654(\(7\). F)B .154
+(or further information on the use of ancillary data in v)-.15 F(ari-)
+-.25 E(ous sock)108 648 Q(et domains, see)-.1 E F1(unix)2.5 E F0
+(\(7\) and)A F1(ip)2.5 E F0(\(7\).)A(The)108 664.8 Q F2(msg_\215a)2.88 E
+(gs)-.1 E F0(\214eld is ignored.)2.77 E/F4 10.95/Times-Bold@0 SF
+(RETURN V)72 681.6 Q(ALUE)-1.478 E F0 .253
+(On success, these calls return the number of bytes sent.)108 693.6 R
+.253(On error)5.253 F 2.753<2cad>-.4 G 2.753(1i)-2.753 G 2.753(sr)-2.753
+G .253(eturned, and)-2.753 F F2(errno)2.943 E F0 .254(is set appropri-)
+2.934 F(ately)108 705.6 Q(.)-.65 E 184.28(Linux 2020-11-01)72 768 R(2)
+205.67 E 0 Cg EP
+%%Page: 3 3
+%%BeginPageSetup
+BP
+%%EndPageSetup
+/F0 10/Times-Roman@0 SF 135.68(SEND\(2\) Linux)72 48 R(Programmer')2.5 E
+2.5(sM)-.55 G 135.68(anual SEND\(2\))-2.5 F/F1 10.95/Times-Bold@0 SF
+(ERR)72 84 Q(ORS)-.329 E F0 .591
+(These are some standard errors generated by the sock)108 96 R .591
+(et layer)-.1 F 5.591(.A)-.55 G .59
+(dditional errors may be generated and re-)-5.591 F
+(turned from the underlying protocol modules; see their respecti)108 108
+Q .3 -.15(ve m)-.25 H(anual pages.).15 E/F2 10/Times-Bold@0 SF(EA)108
+124.8 Q(CCES)-.55 E F0(\(F)144 136.8 Q .589(or UNIX domain sock)-.15 F
+.589(ets, which are identi\214ed by pathname\) Write permission is deni\
+ed on the)-.1 F 1.244(destination sock)144 148.8 R 1.244(et \214le, or \
+search permission is denied for one of the directories the path pre\214\
+x.)-.1 F(\(See)144 160.8 Q F2(path_r)2.5 E(esolution)-.18 E F0(\(7\).\))
+A(\(F)144 177.6 Q .045(or UDP sock)-.15 F .046(ets\) An attempt w)-.1 F
+.046(as made to send to a netw)-.1 F .046
+(ork/broadcast address as though it w)-.1 F .046(as a)-.1 F
+(unicast address.)144 189.6 Q F2(EA)108 206.4 Q(GAIN)-.55 E F0(or)2.5 E
+F2(EW)2.5 E(OULDBLOCK)-.1 E F0 1.109(The sock)144 218.4 R 1.109
+(et is mark)-.1 F 1.108(ed nonblocking and the requested operation w)-.1
+F 1.108(ould block.)-.1 F 1.108(POSIX.1-2001 al-)6.108 F(lo)144 230.4 Q
+.171(ws either error to be returned for this case, and does not require\
+ these constants to ha)-.25 F .472 -.15(ve t)-.2 H .172(he same).15 F
+-.25(va)144 242.4 S
+(lue, so a portable application should check for both possibilities.).25
+E F2(EA)108 259.2 Q(GAIN)-.55 E F0 1.865
+(\(Internet domain datagram sock)144 271.2 R 1.865(ets\) The sock)-.1 F
+1.865(et referred to by)-.1 F/F3 10/Times-Italic@0 SF(soc)4.704 E(kfd)
+-.2 E F0 1.864(had not pre)5.134 F 1.864(viously been)-.25 F .704(bound\
+ to an address and, upon attempting to bind it to an ephemeral port, it\
+ w)144 283.2 R .705(as determined that)-.1 F 3.127
+(all port numbers in the ephemeral port range are currently in use.)144
+295.2 R 3.126(See the discussion of)8.126 F F3(/pr)145.15 307.2 Q
+(oc/sys/net/ipv4/ip_local_port_r)-.45 E(ang)-.15 E(e)-.1 E F0(in)2.68 E
+F2(ip)2.5 E F0(\(7\).)A F2(EALREAD)108 324 Q(Y)-.4 E F0(Another F)144
+336 Q(ast Open is in progress.)-.15 E F2(EB)108 352.8 Q(ADF)-.3 E F3
+(soc)144.34 364.8 Q(kfd)-.2 E F0(is not a v)3.27 E
+(alid open \214le descriptor)-.25 E(.)-.55 E F2(ECONNRESET)108 381.6 Q
+F0(Connection reset by peer)144 393.6 Q(.)-.55 E F2(EDEST)108 410.4 Q
+(ADDRREQ)-.9 E F0(The sock)144 422.4 Q
+(et is not connection-mode, and no peer address is set.)-.1 E F2(EF)108
+439.2 Q -.5(AU)-.9 G -.92(LT).5 G F0(An in)144 451.2 Q -.25(va)-.4 G
+(lid user space address w).25 E(as speci\214ed for an ar)-.1 E(gument.)
+-.18 E F2(EINTR)108 468 Q F0 2.5(As)144 480 S(ignal occurred before an)
+-2.5 E 2.5(yd)-.15 G(ata w)-2.5 E(as transmitted; see)-.1 E F2(signal)
+2.5 E F0(\(7\).)A F2(EINV)108 496.8 Q(AL)-1.35 E F0(In)144 508.8 Q -.25
+(va)-.4 G(lid ar).25 E(gument passed.)-.18 E F2(EISCONN)108 525.6 Q F0
+1.404(The connection-mode sock)144 537.6 R 1.404(et w)-.1 F 1.404
+(as connected already b)-.1 F 1.404(ut a recipient w)-.2 F 1.404
+(as speci\214ed.)-.1 F(\(No)6.405 E 3.905(we)-.25 G(ither)-3.905 E
+(this error is returned, or the recipient speci\214cation is ignored.\))
+144 549.6 Q F2(EMSGSIZE)108 566.4 Q F0 .859(The sock)144 578.4 R .859
+(et type requires that message be sent atomically)-.1 F 3.359(,a)-.65 G
+.859(nd the size of the message to be sent)-3.359 F
+(made this impossible.)144 590.4 Q F2(ENOB)108 607.2 Q(UFS)-.1 E F0 .636
+(The output queue for a netw)144 619.2 R .637(ork interf)-.1 F .637
+(ace w)-.1 F .637(as full.)-.1 F .637
+(This generally indicates that the interf)5.637 F .637(ace has)-.1 F
+1.286(stopped sending, b)144 631.2 R 1.286
+(ut may be caused by transient congestion.)-.2 F(\(Normally)6.286 E
+3.786(,t)-.65 G 1.285(his does not occur in)-3.786 F 2.5(Linux. P)144
+643.2 R(ack)-.15 E(ets are just silently dropped when a de)-.1 E
+(vice queue o)-.25 E -.15(ve)-.15 G(r\215o).15 E(ws.\))-.25 E F2(ENOMEM)
+108 660 Q F0(No memory a)144 672 Q -.25(va)-.2 G(ilable.).25 E F2(ENO)
+108 688.8 Q(TCONN)-.4 E F0(The sock)144 700.8 Q
+(et is not connected, and no tar)-.1 E(get has been gi)-.18 E -.15(ve)
+-.25 G(n.).15 E 184.28(Linux 2020-11-01)72 768 R(3)205.67 E 0 Cg EP
+%%Page: 4 4
+%%BeginPageSetup
+BP
+%%EndPageSetup
+/F0 10/Times-Roman@0 SF 135.68(SEND\(2\) Linux)72 48 R(Programmer')2.5 E
+2.5(sM)-.55 G 135.68(anual SEND\(2\))-2.5 F/F1 10/Times-Bold@0 SF(ENO)
+108 84 Q(TSOCK)-.4 E F0(The \214le descriptor)144 96 Q/F2 10
+/Times-Italic@0 SF(soc)2.84 E(kfd)-.2 E F0(does not refer to a sock)3.27
+E(et.)-.1 E F1(EOPNO)108 112.8 Q(TSUPP)-.4 E F0(Some bit in the)144
+124.8 Q F2<8d61>4.41 E(gs)-.1 E F0(ar)2.77 E
+(gument is inappropriate for the sock)-.18 E(et type.)-.1 E F1(EPIPE)108
+141.6 Q F0 .671(The local end has been shut do)144 141.6 R .672
+(wn on a connection oriented sock)-.25 F 3.172(et. In)-.1 F .672
+(this case, the process will)3.172 F(also recei)144 153.6 Q .3 -.15
+(ve a)-.25 H F1(SIGPIPE)2.65 E F0(unless)2.5 E F1(MSG_NOSIGN)2.5 E(AL)
+-.2 E F0(is set.)2.5 E/F3 10.95/Times-Bold@0 SF(CONFORMING T)72 170.4 Q
+(O)-.197 E F0(4.4BSD, SVr4, POSIX.1-2001.)108 182.4 Q(These interf)5 E
+(aces \214rst appeared in 4.2BSD.)-.1 E .613
+(POSIX.1-2001 describes only the)108 199.2 R F1(MSG_OOB)3.113 E F0(and)
+3.113 E F1(MSG_EOR)3.113 E F0 3.113(\215ags. POSIX.1-2008)3.113 F .612
+(adds a speci\214cation)3.112 F(of)108 211.2 Q F1(MSG_NOSIGN)2.5 E(AL)
+-.2 E F0 5(.T)C(he)-5 E F1(MSG_CONFIRM)2.5 E F0(\215ag is a Linux e)2.5
+E(xtension.)-.15 E F3(NO)72 228 Q(TES)-.438 E F0 3.199
+(According to POSIX.1-2001, the)108 240 R F2(msg_contr)6.079 E(ollen)
+-.45 E F0 3.199(\214eld of the)5.939 F F2(msghdr)6.079 E F0 3.2
+(structure should be typed as)6.429 F F2(soc)108.34 252 Q(klen_t)-.2 E
+F0 2.5(,a).68 G(nd the)-2.5 E F2(msg_io)2.88 E(vlen)-.1 E F0
+(\214eld should be typed as)2.74 E F2(int)2.51 E F0 2.5(,b).68 G
+(ut glibc currently types both as)-2.7 E F2(size_t)2.84 E F0(.).68 E
+(See)108 268.8 Q F1(sendmmsg)2.988 E F0 .488(\(2\) for information abou\
+t a Linux-speci\214c system call that can be used to transmit multiple)B
+(datagrams in a single call.)108 280.8 Q F3 -.11(BU)72 297.6 S(GS).11 E
+F0(Linux may return)108 309.6 Q F1(EPIPE)2.5 E F0(instead of)2.5 E F1
+(ENO)2.5 E(TCONN)-.4 E F0(.)A F3(EXAMPLES)72 326.4 Q F0(An e)108 338.4 Q
+(xample of the use of)-.15 E F1(sendto)2.5 E F0(\(\) is sho)A(wn in)-.25
+E F1(getaddrinf)2.5 E(o)-.25 E F0(\(3\).)A F3(SEE ALSO)72 355.2 Q F1
+(fcntl)108 367.2 Q F0(\(2\),)A F1(getsock)3.835 E(opt)-.15 E F0(\(2\),)A
+F1 -.18(re)3.835 G(cv).18 E F0(\(2\),)A F1(select)3.835 E F0(\(2\),)A F1
+(send\214le)3.835 E F0(\(2\),)A F1(sendmmsg)3.835 E F0(\(2\),)A F1
+(shutdo)3.835 E(wn)-.1 E F0(\(2\),)A F1(sock)3.835 E(et)-.1 E F0(\(2\),)
+A F1(write)3.835 E F0(\(2\),)A F1(cmsg)108 379.2 Q F0(\(3\),)A F1(ip)2.5
+E F0(\(7\),)A F1(ipv6)2.5 E F0(\(7\),)A F1(sock)2.5 E(et)-.1 E F0
+(\(7\),)A F1(tcp)2.5 E F0(\(7\),)A F1(udp)2.5 E F0(\(7\),)A F1(unix)2.5
+E F0(\(7\))A F3(COLOPHON)72 396 Q F0 .341
+(This page is part of release 5.10 of the Linux)108 408 R F2(man-pa)
+3.221 E -.1(ge)-.1 G(s).1 E F0 2.84(project. A)3.11 F .34
+(description of the project, information)2.84 F 11.103
+(about reporting b)108 420 R 11.103(ugs, and the latest v)-.2 F 11.103
+(ersion of this page, can be found at)-.15 F(https://www)108 432 Q(.k)
+-.65 E(ernel.or)-.1 E(g/doc/man\255pages/.)-.18 E 184.28
+(Linux 2020-11-01)72 768 R(4)205.67 E 0 Cg EP
+%%Trailer
+end
+%%EOF

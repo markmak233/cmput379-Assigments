@@ -1,0 +1,48 @@
+.TH ./client "" "2022-11-27" "Assigment 3" "running instructions"
+.SH NAME
+.TP
+ /client - a client the send tasks to the server 
+
+.SH SYNOPSIS
+.TP
+ /client [port] [ip_address] < [file1] [file2] .... 
+
+.SH DESCRIPTION
+.TP
+ The programme that read number of file ,and send the task to the server
+.TP
+ A new log hostname.pid.log will be created to show what client did.
+.TP
+ [port] should be a integer in the range between 5000-64000,if a port busy,try another one
+.TP
+ [ip_address]
+ follows instruction in ip(8),in this file is using ipv4 address.
+.TP
+ [file]
+ a file that consist instructions.
+
+.SS EXAMPLE FOR [FILE]
+  T1 (task instructuin)
+  T1
+  S1 (sleep instruction)
+  T2
+  ....
+
+.SH AUTHOR
+.TP
+Written by Marco Mai
+
+.SH SEEALSO
+.TP
+server.man ip(8)
+
+.SH CREDIT TO
+.TP
+https://blog.csdn.net/youyudexiaowangzi/article/details/97137413 (webpage is non-english)
+.TP
+https://liw.fi/manpages/
+.TP
+https://unix.stackexchange.com/questions/347032/makefile-looping-files-with-pattern
+.TP
+https://unix.stackexchange.com/questions/407126/exporting-man-pages-to-postscript
+

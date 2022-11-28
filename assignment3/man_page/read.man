@@ -1,0 +1,407 @@
+%!PS-Adobe-3.0
+%%Creator: groff version 1.22.4
+%%CreationDate: Fri Nov 25 07:36:08 2022
+%%DocumentNeededResources: font Times-Roman
+%%+ font Times-Bold
+%%+ font Times-Italic
+%%DocumentSuppliedResources: procset grops 1.22 4
+%%Pages: 2
+%%PageOrder: Ascend
+%%DocumentMedia: Default 595 842 0 () ()
+%%Orientation: Portrait
+%%EndComments
+%%BeginDefaults
+%%PageMedia: Default
+%%EndDefaults
+%%BeginProlog
+%%BeginResource: procset grops 1.22 4
+%!PS-Adobe-3.0 Resource-ProcSet
+/setpacking where{
+pop
+currentpacking
+true setpacking
+}if
+/grops 120 dict dup begin
+/SC 32 def
+/A/show load def
+/B{0 SC 3 -1 roll widthshow}bind def
+/C{0 exch ashow}bind def
+/D{0 exch 0 SC 5 2 roll awidthshow}bind def
+/E{0 rmoveto show}bind def
+/F{0 rmoveto 0 SC 3 -1 roll widthshow}bind def
+/G{0 rmoveto 0 exch ashow}bind def
+/H{0 rmoveto 0 exch 0 SC 5 2 roll awidthshow}bind def
+/I{0 exch rmoveto show}bind def
+/J{0 exch rmoveto 0 SC 3 -1 roll widthshow}bind def
+/K{0 exch rmoveto 0 exch ashow}bind def
+/L{0 exch rmoveto 0 exch 0 SC 5 2 roll awidthshow}bind def
+/M{rmoveto show}bind def
+/N{rmoveto 0 SC 3 -1 roll widthshow}bind def
+/O{rmoveto 0 exch ashow}bind def
+/P{rmoveto 0 exch 0 SC 5 2 roll awidthshow}bind def
+/Q{moveto show}bind def
+/R{moveto 0 SC 3 -1 roll widthshow}bind def
+/S{moveto 0 exch ashow}bind def
+/T{moveto 0 exch 0 SC 5 2 roll awidthshow}bind def
+/SF{
+findfont exch
+[exch dup 0 exch 0 exch neg 0 0]makefont
+dup setfont
+[exch/setfont cvx]cvx bind def
+}bind def
+/MF{
+findfont
+[5 2 roll
+0 3 1 roll
+neg 0 0]makefont
+dup setfont
+[exch/setfont cvx]cvx bind def
+}bind def
+/level0 0 def
+/RES 0 def
+/PL 0 def
+/LS 0 def
+/MANUAL{
+statusdict begin/manualfeed true store end
+}bind def
+/PLG{
+gsave newpath clippath pathbbox grestore
+exch pop add exch pop
+}bind def
+/BP{
+/level0 save def
+1 setlinecap
+1 setlinejoin
+DEFS/BPhook known{DEFS begin BPhook end}if
+72 RES div dup scale
+LS{
+90 rotate
+}{
+0 PL translate
+}ifelse
+1 -1 scale
+}bind def
+/EP{
+level0 restore
+showpage
+}def
+/DA{
+newpath arcn stroke
+}bind def
+/SN{
+transform
+.25 sub exch .25 sub exch
+round .25 add exch round .25 add exch
+itransform
+}bind def
+/DL{
+SN
+moveto
+SN
+lineto stroke
+}bind def
+/DC{
+newpath 0 360 arc closepath
+}bind def
+/TM matrix def
+/DE{
+TM currentmatrix pop
+translate scale newpath 0 0 .5 0 360 arc closepath
+TM setmatrix
+}bind def
+/RC/rcurveto load def
+/RL/rlineto load def
+/ST/stroke load def
+/MT/moveto load def
+/CL/closepath load def
+/Fr{
+setrgbcolor fill
+}bind def
+/setcmykcolor where{
+pop
+/Fk{
+setcmykcolor fill
+}bind def
+}if
+/Fg{
+setgray fill
+}bind def
+/FL/fill load def
+/LW/setlinewidth load def
+/Cr/setrgbcolor load def
+/setcmykcolor where{
+pop
+/Ck/setcmykcolor load def
+}if
+/Cg/setgray load def
+/RE{
+findfont
+dup maxlength 1 index/FontName known not{1 add}if dict begin
+{
+1 index/FID ne
+2 index/UniqueID ne
+and
+{def}{pop pop}ifelse
+}forall
+/Encoding exch def
+dup/FontName exch def
+currentdict end definefont pop
+}bind def
+/DEFS 0 def
+/EBEGIN{
+moveto
+DEFS begin
+}bind def
+/EEND/end load def
+/CNT 0 def
+/level1 0 def
+/PBEGIN{
+/level1 save def
+translate
+div 3 1 roll div exch scale
+neg exch neg exch translate
+0 setgray
+0 setlinecap
+1 setlinewidth
+0 setlinejoin
+10 setmiterlimit
+[]0 setdash
+/setstrokeadjust where{
+pop
+false setstrokeadjust
+}if
+/setoverprint where{
+pop
+false setoverprint
+}if
+newpath
+/CNT countdictstack def
+userdict begin
+/showpage{}def
+/setpagedevice{}def
+mark
+}bind def
+/PEND{
+cleartomark
+countdictstack CNT sub{end}repeat
+level1 restore
+}bind def
+end def
+/setpacking where{
+pop
+setpacking
+}if
+%%EndResource
+%%EndProlog
+%%BeginSetup
+%%BeginFeature: *PageSize Default
+<< /PageSize [ 595 842 ] /ImagingBBox null >> setpagedevice
+%%EndFeature
+%%IncludeResource: font Times-Roman
+%%IncludeResource: font Times-Bold
+%%IncludeResource: font Times-Italic
+grops begin/DEFS 1 dict def DEFS begin/u{.001 mul}bind def end/RES 72
+def/PL 841.89 def/LS false def/ENC0[/asciicircum/asciitilde/Scaron
+/Zcaron/scaron/zcaron/Ydieresis/trademark/quotesingle/Euro/.notdef
+/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+/.notdef/.notdef/.notdef/space/exclam/quotedbl/numbersign/dollar/percent
+/ampersand/quoteright/parenleft/parenright/asterisk/plus/comma/hyphen
+/period/slash/zero/one/two/three/four/five/six/seven/eight/nine/colon
+/semicolon/less/equal/greater/question/at/A/B/C/D/E/F/G/H/I/J/K/L/M/N/O
+/P/Q/R/S/T/U/V/W/X/Y/Z/bracketleft/backslash/bracketright/circumflex
+/underscore/quoteleft/a/b/c/d/e/f/g/h/i/j/k/l/m/n/o/p/q/r/s/t/u/v/w/x/y
+/z/braceleft/bar/braceright/tilde/.notdef/quotesinglbase/guillemotleft
+/guillemotright/bullet/florin/fraction/perthousand/dagger/daggerdbl
+/endash/emdash/ff/fi/fl/ffi/ffl/dotlessi/dotlessj/grave/hungarumlaut
+/dotaccent/breve/caron/ring/ogonek/quotedblleft/quotedblright/oe/lslash
+/quotedblbase/OE/Lslash/.notdef/exclamdown/cent/sterling/currency/yen
+/brokenbar/section/dieresis/copyright/ordfeminine/guilsinglleft
+/logicalnot/minus/registered/macron/degree/plusminus/twosuperior
+/threesuperior/acute/mu/paragraph/periodcentered/cedilla/onesuperior
+/ordmasculine/guilsinglright/onequarter/onehalf/threequarters
+/questiondown/Agrave/Aacute/Acircumflex/Atilde/Adieresis/Aring/AE
+/Ccedilla/Egrave/Eacute/Ecircumflex/Edieresis/Igrave/Iacute/Icircumflex
+/Idieresis/Eth/Ntilde/Ograve/Oacute/Ocircumflex/Otilde/Odieresis
+/multiply/Oslash/Ugrave/Uacute/Ucircumflex/Udieresis/Yacute/Thorn
+/germandbls/agrave/aacute/acircumflex/atilde/adieresis/aring/ae/ccedilla
+/egrave/eacute/ecircumflex/edieresis/igrave/iacute/icircumflex/idieresis
+/eth/ntilde/ograve/oacute/ocircumflex/otilde/odieresis/divide/oslash
+/ugrave/uacute/ucircumflex/udieresis/yacute/thorn/ydieresis]def
+/Times-Italic@0 ENC0/Times-Italic RE/Times-Bold@0 ENC0/Times-Bold RE
+/Times-Roman@0 ENC0/Times-Roman RE
+%%EndSetup
+%%Page: 1 1
+%%BeginPageSetup
+BP
+%%EndPageSetup
+/F0 10/Times-Roman@0 SF 134.57(READ\(2\) Linux)72 48 R(Programmer')2.5 E
+2.5(sM)-.55 G 134.57(anual READ\(2\))-2.5 F/F1 10.95/Times-Bold@0 SF
+-.219(NA)72 84 S(ME).219 E F0(read \255 read from a \214le descriptor)
+108 96 Q F1(SYNOPSIS)72 112.8 Q/F2 10/Times-Bold@0 SF
+(#include <unistd.h>)108 124.8 Q(ssize_t r)108 141.6 Q(ead\(int)-.18 E
+/F3 10/Times-Italic@0 SF(fd)4.47 E F2 2.5(,v).77 G(oid *)-2.6 E F3 -.2
+(bu)C(f).2 E F2 2.5(,s)1.96 G(ize_t)-2.5 E F3(count)2.7 E F2(\);).68 E
+F1(DESCRIPTION)72 158.4 Q F2 -.18(re)108 170.4 S(ad).18 E F0
+(\(\) attempts to read up to)A F3(count)2.7 E F0
+(bytes from \214le descriptor)3.18 E F3(fd)4.47 E F0(into the b)3.27 E
+(uf)-.2 E(fer starting at)-.25 E F3 -.2(bu)2.5 G(f).2 E F0(.)1.96 E .915
+(On \214les that support seeking, the read operation commences at the \
+\214le of)108 187.2 R .914(fset, and the \214le of)-.25 F .914
+(fset is incre-)-.25 F .886(mented by the number of bytes read.)108
+199.2 R .886(If the \214le of)5.886 F .887
+(fset is at or past the end of \214le, no bytes are read, and)-.25 F F2
+-.18(re)108 211.2 S(ad).18 E F0(\(\) returns zero.)A(If)108 228 Q F3
+(count)3.637 E F0 .937(is zero,)4.117 F F2 -.18(re)3.437 G(ad).18 E F0
+(\(\))A F3(may)3.817 E F0 .937(detect the errors described belo)3.757 F
+4.737 -.65(w. I)-.25 H 3.437(nt).65 G .937(he absence of an)-3.437 F
+3.437(ye)-.15 G .936(rrors, or if)-3.437 F F2 -.18(re)3.436 G(ad).18 E
+F0(\(\))A(does not check for errors, a)108 240 Q F2 -.18(re)2.5 G(ad).18
+E F0(\(\) with a)A F3(count)2.7 E F0
+(of 0 returns zero and has no other ef)3.18 E(fects.)-.25 E 1.37
+(According to POSIX.1, if)108 256.8 R F3(count)4.071 E F0 1.371
+(is greater than)4.551 F F2(SSIZE_MAX)3.871 E F0 3.871(,t)C 1.371
+(he result is implementation-de\214ned; see)-3.871 F(NO)108 268.8 Q
+(TES for the upper limit on Linux.)-.4 E F1(RETURN V)72 285.6 Q(ALUE)
+-1.478 E F0 1.147(On success, the number of bytes read is returned \(ze\
+ro indicates end of \214le\), and the \214le position is ad-)108 297.6 R
+-.25(va)108 309.6 S .392(nced by this number).25 F 5.392(.I)-.55 G 2.892
+(ti)-5.392 G 2.892(sn)-2.892 G .393(ot an error if this number is small\
+er than the number of bytes requested; this)-2.892 F 1.309
+(may happen for e)108 321.6 R 1.309(xample because fe)-.15 F 1.309
+(wer bytes are actually a)-.25 F -.25(va)-.2 G 1.309(ilable right no).25
+F 3.808(w\()-.25 G 1.308(maybe because we were)-3.808 F .536(close to e\
+nd-of-\214le, or because we are reading from a pipe, or from a terminal\
+\), or because)108 333.6 R F2 -.18(re)3.037 G(ad).18 E F0 .537(\(\) w)B
+.537(as in-)-.1 F(terrupted by a signal.)108 345.6 Q(See also NO)5 E
+(TES.)-.4 E .755(On error)108 362.4 R 3.255<2cad>-.4 G 3.255(1i)-3.255 G
+3.255(sr)-3.255 G .754(eturned, and)-3.255 F F3(errno)3.444 E F0 .754
+(is set appropriately)3.434 F 5.754(.I)-.65 G 3.254(nt)-5.754 G .754
+(his case, it is left unspeci\214ed whether the \214le)-3.254 F
+(position \(if an)108 374.4 Q(y\) changes.)-.15 E F1(ERR)72 391.2 Q(ORS)
+-.329 E F2(EA)108 403.2 Q(GAIN)-.55 E F0 2.2(The \214le descriptor)144
+415.2 R F3(fd)6.67 E F0 2.2(refers to a \214le other than a sock)5.47 F
+2.2(et and has been mark)-.1 F 2.2(ed nonblocking)-.1 F(\()144 427.2 Q
+F2(O_NONBLOCK)A F0 1.157(\), and the read w)B 1.157(ould block.)-.1 F
+(See)6.157 E F2(open)3.657 E F0 1.157(\(2\) for further details on the)B
+F2(O_NON-)3.656 E(BLOCK)144 439.2 Q F0(\215ag.)2.5 E F2(EA)108 456 Q
+(GAIN)-.55 E F0(or)2.5 E F2(EW)2.5 E(OULDBLOCK)-.1 E F0 .033
+(The \214le descriptor)144 468 R F3(fd)4.503 E F0 .033(refers to a sock)
+3.303 F .034(et and has been mark)-.1 F .034(ed nonblocking \()-.1 F F2
+(O_NONBLOCK)A F0 .034(\), and)B .298(the read w)144 480 R .298
+(ould block.)-.1 F .298(POSIX.1-2001 allo)5.298 F .297
+(ws either error to be returned for this case, and does not)-.25 F 1.296
+(require these constants to ha)144 492 R 1.596 -.15(ve t)-.2 H 1.297
+(he same v).15 F 1.297
+(alue, so a portable application should check for both)-.25 F
+(possibilities.)144 504 Q F2(EB)108 520.8 Q(ADF)-.3 E F3(fd)145.97 532.8
+Q F0(is not a v)3.27 E
+(alid \214le descriptor or is not open for reading.)-.25 E F2(EF)108
+549.6 Q -.5(AU)-.9 G -.92(LT).5 G F3 -.2(bu)144 561.6 S(f).2 E F0
+(is outside your accessible address space.)4.46 E F2(EINTR)108 578.4 Q
+F0(The call w)144 590.4 Q(as interrupted by a signal before an)-.1 E 2.5
+(yd)-.15 G(ata w)-2.5 E(as read; see)-.1 E F2(signal)2.5 E F0(\(7\).)A
+F2(EINV)108 607.2 Q(AL)-1.35 E F3(fd)145.97 619.2 Q F0 .406(is attached\
+ to an object which is unsuitable for reading; or the \214le w)3.676 F
+.405(as opened with the)-.1 F F2(O_DI-)2.905 E(RECT)144 631.2 Q F0 .047
+(\215ag, and either the address speci\214ed in)2.547 F F3 -.2(bu)2.547 G
+(f).2 E F0 2.547(,t)1.96 G .047(he v)-2.547 F .047(alue speci\214ed in)
+-.25 F F3(count)2.747 E F0 2.547(,o).68 G 2.548(rt)-2.547 G .048
+(he \214le of)-2.548 F .048(fset is)-.25 F(not suitably aligned.)144
+643.2 Q F2(EINV)108 660 Q(AL)-1.35 E F3(fd)145.97 672 Q F0 -.1(wa)3.667
+G 2.897(sc).1 G .397(reated via a call to)-2.897 F F2(timerfd_cr)2.897 E
+(eate)-.18 E F0 .396(\(2\) and the wrong size b)B(uf)-.2 E .396(fer w)
+-.25 F .396(as gi)-.1 F -.15(ve)-.25 G 2.896(nt).15 G(o)-2.896 E F2 -.18
+(re)2.896 G(ad).18 E F0 .396(\(\); see)B F2(timerfd_cr)144 684 Q(eate)
+-.18 E F0(\(2\) for further information.)A F2(EIO)108 700.8 Q F0 .51
+(I/O error)144 700.8 R 5.51(.T)-.55 G .51(his will happen for e)-5.51 F
+.511(xample when the process is in a background process group, tries)
+-.15 F .393(to read from its controlling terminal, and either it is ign\
+oring or blocking)144 712.8 R F2(SIGTTIN)2.893 E F0 .393(or its process)
+2.893 F .096(group is orphaned.)144 724.8 R .097
+(It may also occur when there is a lo)5.096 F(w-le)-.25 E -.15(ve)-.25 G
+2.597(lI).15 G .097(/O error while reading from a disk)-2.597 F 184.28
+(Linux 2018-02-02)72 768 R(1)205.67 E 0 Cg EP
+%%Page: 2 2
+%%BeginPageSetup
+BP
+%%EndPageSetup
+/F0 10/Times-Roman@0 SF 134.57(READ\(2\) Linux)72 48 R(Programmer')2.5 E
+2.5(sM)-.55 G 134.57(anual READ\(2\))-2.5 F .6(or tape.)144 84 R 3.1(Af)
+5.6 G .6(urther possible cause of)-3.1 F/F1 10/Times-Bold@0 SF(EIO)3.099
+E F0 .599(on netw)3.099 F(ork)-.1 E .599
+(ed \214lesystems is when an advisory lock had)-.1 F .508(been tak)144
+96 R .509(en out on the \214le descriptor and this lock has been lost.)
+-.1 F .509(See the)5.509 F/F2 10/Times-Italic@0 SF .509(Lost loc)3.589 F
+(ks)-.2 E F0 .509(section of)3.279 F F1(fc-)3.009 E(ntl)144 108 Q F0
+(\(2\) for further details.)A F1(EISDIR)108 124.8 Q F2(fd)145.97 136.8 Q
+F0(refers to a directory)3.27 E(.)-.65 E(Other errors may occur)108
+153.6 Q 2.5(,d)-.4 G(epending on the object connected to)-2.5 E F2(fd)
+4.47 E F0(.).77 E/F3 10.95/Times-Bold@0 SF(CONFORMING T)72 170.4 Q(O)
+-.197 E F0(SVr4, 4.3BSD, POSIX.1-2001.)108 182.4 Q F3(NO)72 199.2 Q(TES)
+-.438 E F0(The types)108 211.2 Q F2(size_t)2.84 E F0(and)3.18 E F2
+(ssize_t)2.84 E F0(are, respecti)3.18 E -.15(ve)-.25 G(ly).15 E 2.5(,u)
+-.65 G(nsigned and signed inte)-2.5 E
+(ger data types speci\214ed by POSIX.1.)-.15 E .512(On Linux,)108 228 R
+F1 -.18(re)3.012 G(ad).18 E F0 .511
+(\(\) \(and similar system calls\) will transfer at most 0x7f)B -.25
+(fff)-.25 G .511(000 \(2,147,479,552\) bytes, return-).25 F
+(ing the number of bytes actually transferred.)108 240 Q
+(\(This is true on both 32-bit and 64-bit systems.\))5 E 1.028(On NFS \
+\214lesystems, reading small amounts of data will update the timestamp \
+only the \214rst time, subse-)108 256.8 R 1.317
+(quent calls may not do so.)108 268.8 R 1.316
+(This is caused by client side attrib)6.317 F 1.316
+(ute caching, because most if not all NFS)-.2 F .961(clients lea)108
+280.8 R -.15(ve)-.2 G F2(st_atime)3.951 E F0 .961
+(\(last \214le access time\) updates to the serv)3.641 F(er)-.15 E 3.461
+(,a)-.4 G .961(nd client side reads satis\214ed from the)-3.461 F
+(client')108 292.8 Q 2.608(sc)-.55 G .107(ache will not cause)-2.608 F
+F2(st_atime)2.947 E F0 .107(updates on the serv)2.787 F .107
+(er as there are no serv)-.15 F(er)-.15 E .107(-side reads.)-.2 F .107
+(UNIX seman-)5.107 F .604
+(tics can be obtained by disabling client-side attrib)108 304.8 R .605
+(ute caching, b)-.2 F .605
+(ut in most situations this will substantially)-.2 F(increase serv)108
+316.8 Q(er load and decrease performance.)-.15 E F3 -.11(BU)72 333.6 S
+(GS).11 E F0 2.001(According to POSIX.1-2008/SUSv4 Section XSI 2.9.7 \(\
+"Thread Interactions with Re)108 345.6 R 2.001(gular File Opera-)-.15 F
+(tions"\):)108 357.6 Q 1.31(All of the follo)128 374.4 R 1.311
+(wing functions shall be atomic with respect to each other in the ef)
+-.25 F 1.311(fects speci\214ed in)-.25 F(POSIX.1-2008 when the)128 386.4
+Q 2.5(yo)-.15 G(perate on re)-2.5 E
+(gular \214les or symbolic links: ...)-.15 E .063
+(Among the APIs subsequently listed are)108 403.2 R F1 -.18(re)2.563 G
+(ad).18 E F0 .063(\(\) and)B F1 -.18(re)2.563 G(adv).18 E F0 2.563
+(\(2\). And)B .063(among the ef)2.563 F .063
+(fects that should be atomic)-.25 F .864
+(across threads \(and processes\) are updates of the \214le of)108 415.2
+R 3.364(fset. Ho)-.25 F(we)-.25 E -.15(ve)-.25 G 1.665 -.4(r, o).15 H
+3.365(nL).4 G .865(inux before v)-3.365 F .865(ersion 3.14, this)-.15 F
+-.1(wa)108 427.2 S 3.564(sn).1 G 1.064(ot the case: if tw)-3.564 F 3.564
+(op)-.1 G 1.064(rocesses that share an open \214le description \(see)
+-3.564 F F1(open)3.564 E F0 1.064(\(2\)\) perform a)B F1 -.18(re)3.563 G
+(ad).18 E F0 1.063(\(\) \(or)B F1 -.18(re)108 439.2 S(adv).18 E F0 .882
+(\(2\)\) at the same time, then the I/O operations were not atomic with\
+ respect updating the \214le of)B(fset,)-.25 E .24
+(with the result that the reads in the tw)108 451.2 R 2.74(op)-.1 G .24
+(rocesses might \(incorrectly\) o)-2.74 F -.15(ve)-.15 G .24
+(rlap in the blocks of data that the).15 F(y)-.15 E 2.5(obtained. This)
+108 463.2 R(problem w)2.5 E(as \214x)-.1 E(ed in Linux 3.14.)-.15 E F3
+(SEE ALSO)72 480 Q F1(close)108 492 Q F0(\(2\),)A F1(fcntl)5.558 E F0
+(\(2\),)A F1(ioctl)5.559 E F0(\(2\),)A F1(lseek)5.559 E F0(\(2\),)A F1
+(open)5.559 E F0(\(2\),)A F1(pr)5.559 E(ead)-.18 E F0(\(2\),)A F1 -.18
+(re)5.559 G(addir).18 E F0(\(2\),)A F1 -.18(re)5.559 G(adlink).18 E F0
+(\(2\),)A F1 -.18(re)5.559 G(adv).18 E F0(\(2\),)A F1(select)5.559 E F0
+(\(2\),)A F1(write)108 504 Q F0(\(2\),)A F1(fr)2.5 E(ead)-.18 E F0
+(\(3\))A F3(COLOPHON)72 520.8 Q F0 .341
+(This page is part of release 5.10 of the Linux)108 532.8 R F2(man-pa)
+3.221 E -.1(ge)-.1 G(s).1 E F0 2.84(project. A)3.11 F .34
+(description of the project, information)2.84 F 11.103
+(about reporting b)108 544.8 R 11.103(ugs, and the latest v)-.2 F 11.103
+(ersion of this page, can be found at)-.15 F(https://www)108 556.8 Q(.k)
+-.65 E(ernel.or)-.1 E(g/doc/man\255pages/.)-.18 E 184.28
+(Linux 2018-02-02)72 768 R(2)205.67 E 0 Cg EP
+%%Trailer
+end
+%%EOF

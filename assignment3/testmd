@@ -1,0 +1,61 @@
+.TH test "three corner" "middle bottom" "left bottom" "middle top"
+.SH section
+.TP
+this is a paragraph
+.PP
+this is a new paragraph
+this is not a new line
+.SH DESCRIPTION
+. this line will not display
+.TP
+.B \.B
+means a bold font
+.TP
+\fB\\fB...\\fR\fR
+the content in [\\fB \\fR] will show font as bold too .
+.TP
+.B \.TH
+title heading, append 5 param,
+.RS
+param 1 and 2 as a,b: a(b) will display at left top, right top, right bottom
+.RE
+.RS
+param 3 as c: c will display at middle bottom
+.RE
+.RS
+param 4 as d: d will diaplay at left bottom
+.RE
+.RS
+param 5 as e: e will display at middle top
+ 
+used once at the beginning of the man page
+.RE
+.TP
+.B \.SH
+section head such as the section DESCRIPTION,
+.SS subheading
+.TP
+.B \.SS
+subheading such as above
+.TP
+.B \.TP or \.PP
+if the paragraph start with \.TP, and the tags' length >= 7, the next content will display at next line
+.TP
+.B \.TP
+if the paragraph start with \.TP, and the tags' length < 7, the next content will append the tags
+.PP
+.B \.PP or \.TP
+if the paragraph start with \.PP, even if the tags' length >= 7, the next content will append at the tags
+.PP
+this is a new linw with PP
+.TP
+.I \.I
+means a italics font, \fB\-I\fR=\fIitalics\fR. \\fI...\\fR show as \fI...\fR
+.TP
+.SB \.SB
+.SB means small text,then bold
+.HP
+.B \.HP
+begin a hanging indent
+.HP
+a new lin with HP

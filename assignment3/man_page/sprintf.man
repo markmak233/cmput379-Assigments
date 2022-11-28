@@ -1,0 +1,985 @@
+%!PS-Adobe-3.0
+%%Creator: groff version 1.22.4
+%%CreationDate: Fri Nov 25 07:36:58 2022
+%%DocumentNeededResources: font Times-Roman
+%%+ font Times-Bold
+%%+ font Times-Italic
+%%+ font Courier
+%%+ font Symbol
+%%DocumentSuppliedResources: procset grops 1.22 4
+%%Pages: 7
+%%PageOrder: Ascend
+%%DocumentMedia: Default 595 842 0 () ()
+%%Orientation: Portrait
+%%EndComments
+%%BeginDefaults
+%%PageMedia: Default
+%%EndDefaults
+%%BeginProlog
+%%BeginResource: procset grops 1.22 4
+%!PS-Adobe-3.0 Resource-ProcSet
+/setpacking where{
+pop
+currentpacking
+true setpacking
+}if
+/grops 120 dict dup begin
+/SC 32 def
+/A/show load def
+/B{0 SC 3 -1 roll widthshow}bind def
+/C{0 exch ashow}bind def
+/D{0 exch 0 SC 5 2 roll awidthshow}bind def
+/E{0 rmoveto show}bind def
+/F{0 rmoveto 0 SC 3 -1 roll widthshow}bind def
+/G{0 rmoveto 0 exch ashow}bind def
+/H{0 rmoveto 0 exch 0 SC 5 2 roll awidthshow}bind def
+/I{0 exch rmoveto show}bind def
+/J{0 exch rmoveto 0 SC 3 -1 roll widthshow}bind def
+/K{0 exch rmoveto 0 exch ashow}bind def
+/L{0 exch rmoveto 0 exch 0 SC 5 2 roll awidthshow}bind def
+/M{rmoveto show}bind def
+/N{rmoveto 0 SC 3 -1 roll widthshow}bind def
+/O{rmoveto 0 exch ashow}bind def
+/P{rmoveto 0 exch 0 SC 5 2 roll awidthshow}bind def
+/Q{moveto show}bind def
+/R{moveto 0 SC 3 -1 roll widthshow}bind def
+/S{moveto 0 exch ashow}bind def
+/T{moveto 0 exch 0 SC 5 2 roll awidthshow}bind def
+/SF{
+findfont exch
+[exch dup 0 exch 0 exch neg 0 0]makefont
+dup setfont
+[exch/setfont cvx]cvx bind def
+}bind def
+/MF{
+findfont
+[5 2 roll
+0 3 1 roll
+neg 0 0]makefont
+dup setfont
+[exch/setfont cvx]cvx bind def
+}bind def
+/level0 0 def
+/RES 0 def
+/PL 0 def
+/LS 0 def
+/MANUAL{
+statusdict begin/manualfeed true store end
+}bind def
+/PLG{
+gsave newpath clippath pathbbox grestore
+exch pop add exch pop
+}bind def
+/BP{
+/level0 save def
+1 setlinecap
+1 setlinejoin
+DEFS/BPhook known{DEFS begin BPhook end}if
+72 RES div dup scale
+LS{
+90 rotate
+}{
+0 PL translate
+}ifelse
+1 -1 scale
+}bind def
+/EP{
+level0 restore
+showpage
+}def
+/DA{
+newpath arcn stroke
+}bind def
+/SN{
+transform
+.25 sub exch .25 sub exch
+round .25 add exch round .25 add exch
+itransform
+}bind def
+/DL{
+SN
+moveto
+SN
+lineto stroke
+}bind def
+/DC{
+newpath 0 360 arc closepath
+}bind def
+/TM matrix def
+/DE{
+TM currentmatrix pop
+translate scale newpath 0 0 .5 0 360 arc closepath
+TM setmatrix
+}bind def
+/RC/rcurveto load def
+/RL/rlineto load def
+/ST/stroke load def
+/MT/moveto load def
+/CL/closepath load def
+/Fr{
+setrgbcolor fill
+}bind def
+/setcmykcolor where{
+pop
+/Fk{
+setcmykcolor fill
+}bind def
+}if
+/Fg{
+setgray fill
+}bind def
+/FL/fill load def
+/LW/setlinewidth load def
+/Cr/setrgbcolor load def
+/setcmykcolor where{
+pop
+/Ck/setcmykcolor load def
+}if
+/Cg/setgray load def
+/RE{
+findfont
+dup maxlength 1 index/FontName known not{1 add}if dict begin
+{
+1 index/FID ne
+2 index/UniqueID ne
+and
+{def}{pop pop}ifelse
+}forall
+/Encoding exch def
+dup/FontName exch def
+currentdict end definefont pop
+}bind def
+/DEFS 0 def
+/EBEGIN{
+moveto
+DEFS begin
+}bind def
+/EEND/end load def
+/CNT 0 def
+/level1 0 def
+/PBEGIN{
+/level1 save def
+translate
+div 3 1 roll div exch scale
+neg exch neg exch translate
+0 setgray
+0 setlinecap
+1 setlinewidth
+0 setlinejoin
+10 setmiterlimit
+[]0 setdash
+/setstrokeadjust where{
+pop
+false setstrokeadjust
+}if
+/setoverprint where{
+pop
+false setoverprint
+}if
+newpath
+/CNT countdictstack def
+userdict begin
+/showpage{}def
+/setpagedevice{}def
+mark
+}bind def
+/PEND{
+cleartomark
+countdictstack CNT sub{end}repeat
+level1 restore
+}bind def
+end def
+/setpacking where{
+pop
+setpacking
+}if
+%%EndResource
+%%EndProlog
+%%BeginSetup
+%%BeginFeature: *PageSize Default
+<< /PageSize [ 595 842 ] /ImagingBBox null >> setpagedevice
+%%EndFeature
+%%IncludeResource: font Times-Roman
+%%IncludeResource: font Times-Bold
+%%IncludeResource: font Times-Italic
+%%IncludeResource: font Courier
+%%IncludeResource: font Symbol
+grops begin/DEFS 1 dict def DEFS begin/u{.001 mul}bind def end/RES 72
+def/PL 841.89 def/LS false def/ENC0[/asciicircum/asciitilde/Scaron
+/Zcaron/scaron/zcaron/Ydieresis/trademark/quotesingle/Euro/.notdef
+/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+/.notdef/.notdef/.notdef/space/exclam/quotedbl/numbersign/dollar/percent
+/ampersand/quoteright/parenleft/parenright/asterisk/plus/comma/hyphen
+/period/slash/zero/one/two/three/four/five/six/seven/eight/nine/colon
+/semicolon/less/equal/greater/question/at/A/B/C/D/E/F/G/H/I/J/K/L/M/N/O
+/P/Q/R/S/T/U/V/W/X/Y/Z/bracketleft/backslash/bracketright/circumflex
+/underscore/quoteleft/a/b/c/d/e/f/g/h/i/j/k/l/m/n/o/p/q/r/s/t/u/v/w/x/y
+/z/braceleft/bar/braceright/tilde/.notdef/quotesinglbase/guillemotleft
+/guillemotright/bullet/florin/fraction/perthousand/dagger/daggerdbl
+/endash/emdash/ff/fi/fl/ffi/ffl/dotlessi/dotlessj/grave/hungarumlaut
+/dotaccent/breve/caron/ring/ogonek/quotedblleft/quotedblright/oe/lslash
+/quotedblbase/OE/Lslash/.notdef/exclamdown/cent/sterling/currency/yen
+/brokenbar/section/dieresis/copyright/ordfeminine/guilsinglleft
+/logicalnot/minus/registered/macron/degree/plusminus/twosuperior
+/threesuperior/acute/mu/paragraph/periodcentered/cedilla/onesuperior
+/ordmasculine/guilsinglright/onequarter/onehalf/threequarters
+/questiondown/Agrave/Aacute/Acircumflex/Atilde/Adieresis/Aring/AE
+/Ccedilla/Egrave/Eacute/Ecircumflex/Edieresis/Igrave/Iacute/Icircumflex
+/Idieresis/Eth/Ntilde/Ograve/Oacute/Ocircumflex/Otilde/Odieresis
+/multiply/Oslash/Ugrave/Uacute/Ucircumflex/Udieresis/Yacute/Thorn
+/germandbls/agrave/aacute/acircumflex/atilde/adieresis/aring/ae/ccedilla
+/egrave/eacute/ecircumflex/edieresis/igrave/iacute/icircumflex/idieresis
+/eth/ntilde/ograve/oacute/ocircumflex/otilde/odieresis/divide/oslash
+/ugrave/uacute/ucircumflex/udieresis/yacute/thorn/ydieresis]def
+/Courier@0 ENC0/Courier RE/Times-Italic@0 ENC0/Times-Italic RE
+/Times-Bold@0 ENC0/Times-Bold RE/Times-Roman@0 ENC0/Times-Roman RE
+%%EndSetup
+%%Page: 1 1
+%%BeginPageSetup
+BP
+%%EndPageSetup
+/F0 10/Times-Roman@0 SF 127.34(PRINTF\(3\) Linux)72 48 R(Programmer')2.5
+E 2.5(sM)-.55 G 127.34(anual PRINTF\(3\))-2.5 F/F1 10.95/Times-Bold@0 SF
+-.219(NA)72 84 S(ME).219 E F0 1.667(printf, fprintf, dprintf, sprintf, \
+snprintf, vprintf, vfprintf, vdprintf, vsprintf, vsnprintf \255 formatt\
+ed output)108 96 R(con)108 108 Q -.15(ve)-.4 G(rsion).15 E F1(SYNOPSIS)
+72 124.8 Q/F2 10/Times-Bold@0 SF(#include <stdio.h>)108 136.8 Q
+(int printf\(const char *)108 153.6 Q/F3 10/Times-Italic@0 SF(format)
+1.97 E F2 2.5(,.).68 G(..\);)-2.5 E(int fprintf\(FILE *)108 165.6 Q F3
+(str).34 E(eam)-.37 E F2 2.5(,c).32 G(onst char *)-2.5 E F3(format)1.97
+E F2 2.5(,.).68 G(..\);)-2.5 E(int dprintf\(int)108 177.6 Q F3(fd)4.47 E
+F2 2.5(,c).77 G(onst char *)-2.5 E F3(format)1.97 E F2 2.5(,.).68 G
+(..\);)-2.5 E(int sprintf\(char *)108 189.6 Q F3(str).34 E F2 2.5(,c).73
+G(onst char *)-2.5 E F3(format)1.97 E F2 2.5(,.).68 G(..\);)-2.5 E
+(int snprintf\(char *)108 201.6 Q F3(str).34 E F2 2.5(,s).73 G(ize_t)
+-2.5 E F3(size)2.84 E F2 2.5(,c).18 G(onst char *)-2.5 E F3(format)1.97
+E F2 2.5(,.).68 G(..\);)-2.5 E(#include <stdar)108 225.6 Q -.15(g.)-.1 G
+(h>).15 E(int vprintf\(const char *)108 242.4 Q F3(format)1.97 E F2 2.5
+(,v).68 G(a_list)-2.6 E F3(ap)2.83 E F2(\);).19 E(int vfprintf\(FILE *)
+108 254.4 Q F3(str).34 E(eam)-.37 E F2 2.5(,c).32 G(onst char *)-2.5 E
+F3(format)1.97 E F2 2.5(,v).68 G(a_list)-2.6 E F3(ap)2.83 E F2(\);).19 E
+(int vdprintf\(int)108 266.4 Q F3(fd)4.47 E F2 2.5(,c).77 G(onst char *)
+-2.5 E F3(format)1.97 E F2 2.5(,v).68 G(a_list)-2.6 E F3(ap)2.83 E F2
+(\);).19 E(int vsprintf\(char *)108 278.4 Q F3(str).34 E F2 2.5(,c).73 G
+(onst char *)-2.5 E F3(format)1.97 E F2 2.5(,v).68 G(a_list)-2.6 E F3
+(ap)2.83 E F2(\);).19 E(int vsnprintf\(char *)108 290.4 Q F3(str).34 E
+F2 2.5(,s).73 G(ize_t)-2.5 E F3(size)2.84 E F2 2.5(,c).18 G(onst char *)
+-2.5 E F3(format)1.97 E F2 2.5(,v).68 G(a_list)-2.6 E F3(ap)2.83 E F2
+(\);).19 E F0(Feature T)88 307.2 Q
+(est Macro Requirements for glibc \(see)-.7 E F2(featur)2.5 E
+(e_test_macr)-.18 E(os)-.18 E F0(\(7\)\):)A F2(snprintf)108 324 Q F0
+(\(\),)A F2(vsnprintf)2.5 E F0(\(\):)A
+(_XOPEN_SOURCE >= 500 || _ISOC99_SOURCE ||)128 336 Q(|| /* Glibc v)138
+348 Q(ersions <= 2.19: */ _BSD_SOURCE)-.15 E F2(dprintf)108 364.8 Q F0
+(\(\),)A F2(vdprintf)2.5 E F0(\(\):)A(Since glibc 2.10:)128 376.8 Q
+(_POSIX_C_SOURCE >= 200809L)148 388.8 Q(Before glibc 2.10:)128 400.8 Q
+(_GNU_SOURCE)148 412.8 Q F1(DESCRIPTION)72 429.6 Q F0 .686
+(The functions in the)108 441.6 R F2(printf)3.186 E F0 .686(\(\) f)B
+.686(amily produce output according to a)-.1 F F3(format)5.156 E F0 .687
+(as described belo)3.866 F 4.487 -.65(w. T)-.25 H .687(he func-).65 F
+(tions)108 453.6 Q F2(printf)4.101 E F0 1.601(\(\) and)B F2(vprintf)
+4.101 E F0 1.601(\(\) write output to)B F3(stdout)4.441 E F0 4.101(,t)
+.68 G 1.601(he standard output stream;)-4.101 F F2(fprintf)4.1 E F0 1.6
+(\(\) and)B F2(vfprintf)4.1 E F0(\(\))A .304(write output to the gi)108
+465.6 R -.15(ve)-.25 G 2.804(no).15 G(utput)-2.804 E F3(str)3.145 E(eam)
+-.37 E F0(;).32 E F2(sprintf)2.805 E F0(\(\),)A F2(snprintf)2.805 E F0
+(\(\),)A F2(vsprintf)2.805 E F0 .305(\(\), and)B F2(vsnprintf)2.805 E F0
+.305(\(\) write to the char)B(-)-.2 E(acter string)108 477.6 Q F3(str)
+2.84 E F0(.).73 E .41(The function)108 494.4 R F2(dprintf)2.91 E F0 .41
+(\(\) is the same as)B F2(fprintf)2.91 E F0 .41(\(\) e)B .409
+(xcept that it outputs to a \214le descriptor)-.15 F(,)-.4 E F3(fd)4.879
+E F0 2.909(,i).77 G .409(nstead of to a)-2.909 F F3(stdio)108.34 506.4 Q
+F0(stream.)2.68 E .175(The functions)108 523.2 R F2(snprintf)2.675 E F0
+.175(\(\) and)B F2(vsnprintf)2.675 E F0 .175(\(\) write at most)B F3
+(size)3.015 E F0 .176
+(bytes \(including the terminating null byte \(\010\\0\010\)\))2.855 F
+(to)108 535.2 Q F3(str)2.84 E F0(.).73 E 2.329(The functions)108 552 R
+F2(vprintf)4.829 E F0(\(\),)A F2(vfprintf)4.828 E F0(\(\),)A F2
+(vdprintf)4.828 E F0(\(\),)A F2(vsprintf)4.828 E F0(\(\),)A F2
+(vsnprintf)4.828 E F0 2.328(\(\) are equi)B -.25(va)-.25 G 2.328
+(lent to the functions).25 F F2(printf)108 564 Q F0(\(\),)A F2(fprintf)
+3.479 E F0(\(\),)A F2(dprintf)3.479 E F0(\(\),)A F2(sprintf)3.479 E F0
+(\(\),)A F2(snprintf)3.479 E F0 .979(\(\), respecti)B -.15(ve)-.25 G(ly)
+.15 E 3.479(,e)-.65 G .979(xcept that the)-3.629 F 3.479(ya)-.15 G .98
+(re called with a)-3.479 F F3(va_list)3.77 E F0 .795(instead of a v)108
+576 R .795(ariable number of ar)-.25 F 3.295(guments. These)-.18 F .795
+(functions do not call the)3.295 F F3(va_end)3.585 E F0 3.295
+(macro. Because)4.065 F(the)3.295 E(y)-.15 E(in)108 588 Q -.2(vo)-.4 G
+.2 -.1(ke t).2 H(he).1 E F3(va_ar)2.79 E(g)-.37 E F0(macro, the v)2.72 E
+(alue of)-.25 E F3(ap)2.83 E F0(is unde\214ned after the call.)2.69 E
+(See)5 E F2(stdar)2.5 E(g)-.1 E F0(\(3\).)A .779
+(All of these functions write the output under the control of a)108
+604.8 R F3(format)5.25 E F0 .78(string that speci\214es ho)3.96 F 3.28
+(ws)-.25 G(ubsequent)-3.28 E(ar)108 616.8 Q .004(guments \(or ar)-.18 F
+.004(guments accessed via the v)-.18 F .004(ariable-length ar)-.25 F
+.004(gument f)-.18 F .004(acilities of)-.1 F F2(stdar)2.504 E(g)-.1 E F0
+.004(\(3\)\) are con)B -.15(ve)-.4 G .003(rted for).15 F(output.)108
+628.8 Q .094(C99 and POSIX.1-2001 specify that the results are unde\214\
+ned if a call to)108 645.6 R F2(sprintf)2.594 E F0(\(\),)A F2(snprintf)
+2.594 E F0(\(\),)A F2(vsprintf)2.594 E F0 .094(\(\), or)B F2(vsnprintf)
+108 657.6 Q F0 .649(\(\) w)B .649(ould cause cop)-.1 F .648(ying to tak)
+-.1 F 3.148(ep)-.1 G .648(lace between objects that o)-3.148 F -.15(ve)
+-.15 G .648(rlap \(e.g., if the tar).15 F .648(get string array)-.18 F
+(and one of the supplied input ar)108 669.6 Q
+(guments refer to the same b)-.18 E(uf)-.2 E 2.5(fer\). See)-.25 F(NO)
+2.5 E(TES.)-.4 E F2 -.25(Fo)87 686.4 S(rmat of the f).25 E(ormat string)
+-.25 E F0 1.185(The format string is a character string, be)108 698.4 R
+1.185(ginning and ending in its initial shift state, if an)-.15 F 4.985
+-.65(y. T)-.15 H 1.185(he format).65 F .348
+(string is composed of zero or more directi)108 710.4 R -.15(ve)-.25 G
+.347(s: ordinary characters \(not).15 F F2(%)2.847 E F0 .347
+(\), which are copied unchanged to)B .286(the output stream; and con)108
+722.4 R -.15(ve)-.4 G .286(rsion speci\214cations, each of which result\
+s in fetching zero or more subsequent).15 F 186.51(GNU 2020-11-01)72 768
+R(1)205.67 E 0 Cg EP
+%%Page: 2 2
+%%BeginPageSetup
+BP
+%%EndPageSetup
+/F0 10/Times-Roman@0 SF 127.34(PRINTF\(3\) Linux)72 48 R(Programmer')2.5
+E 2.5(sM)-.55 G 127.34(anual PRINTF\(3\))-2.5 F(ar)108 84 Q 3.735
+(guments. Each)-.18 F(con)3.735 E -.15(ve)-.4 G 1.234
+(rsion speci\214cation is introduced by the character).15 F/F1 10
+/Times-Bold@0 SF(%)3.734 E F0 3.734(,a)C 1.234(nd ends with a)-3.734 F
+/F2 10/Times-Italic@0 SF(con)3.934 E(ver)-.4 E(sion)-.1 E(speci\214er)
+108 96 Q F0 5.268(.I).73 G 2.768(nb)-5.268 G .269
+(etween there may be \(in this order\) zero or more)-2.768 F F2<8d61>
+4.679 E(gs)-.1 E F0 2.769(,a).27 G 2.769(no)-2.769 G .269
+(ptional minimum)-2.769 F F2 .269(\214eld width)4.679 F F0 2.769(,a).28
+G(n)-2.769 E(optional)108 108 Q F2(pr)3.75 E(ecision)-.37 E F0
+(and an optional)2.74 E F2(length modi\214er)2.59 E F0(.).73 E .565
+(The ar)108 124.8 R .565
+(guments must correspond properly \(after type promotion\) with the con)
+-.18 F -.15(ve)-.4 G .564(rsion speci\214er).15 F 5.564(.B)-.55 G 3.064
+(yd)-5.564 G(ef)-3.064 E(ault,)-.1 E .738(the ar)108 136.8 R .739
+(guments are used in the order gi)-.18 F -.15(ve)-.25 G .739
+(n, where each \010*\010 \(see).15 F F2 -.45(Fi)3.239 G .739(eld width)
+.45 F F0(and)3.519 E F2(Pr)3.739 E(ecision)-.37 E F0(belo)3.479 E .739
+(w\) and each)-.25 F(con)108 148.8 Q -.15(ve)-.4 G 1.61
+(rsion speci\214er asks for the ne).15 F 1.61(xt ar)-.15 F 1.61
+(gument \(and it is an error if insuf)-.18 F 1.61(\214ciently man)-.25 F
+4.11(ya)-.15 G -.18(rg)-4.11 G 1.61(uments are).18 F(gi)108 160.8 Q -.15
+(ve)-.25 G 3.532(n\). One).15 F 1.033(can also specify e)3.533 F 1.033
+(xplicitly which ar)-.15 F 1.033(gument is tak)-.18 F 1.033
+(en, at each place where an ar)-.1 F 1.033(gument is re-)-.18 F .452(qu\
+ired, by writing "%m$" instead of \010%\010 and "*m$" instead of \010*\
+\010, where the decimal inte)108 172.8 R(ger)-.15 E F2(m)2.952 E F0 .452
+(denotes the)2.952 F(position in the ar)108 184.8 Q
+(gument list of the desired ar)-.18 E(gument, inde)-.18 E -.15(xe)-.15 G
+2.5(ds).15 G(tarting from 1.)-2.5 E(Thus,)5 E/F3 10/Courier@0 SF
+(printf\("%*d", width, num\);)128 201.6 Q F0(and)108 218.4 Q F3
+(printf\("%2$*1$d", width, num\);)128 235.2 Q F0 .369(are equi)108 252 R
+-.25(va)-.25 G 2.869(lent. The).25 F .369(second style allo)2.869 F .369
+(ws repeated references to the same ar)-.25 F 2.87(gument. The)-.18 F
+.37(C99 standard does)2.87 F .932(not include the style using \010$\010\
+, which comes from the Single UNIX Speci\214cation.)108 264 R .931
+(If the style using \010$\010 is)5.931 F .697
+(used, it must be used throughout for all con)108 276 R -.15(ve)-.4 G
+.697(rsions taking an ar).15 F .697
+(gument and all width and precision ar)-.18 F(gu-)-.18 E 1.141(ments, b)
+108 288 R 1.141(ut it may be mix)-.2 F 1.141
+(ed with "%%" formats, which do not consume an ar)-.15 F 3.64
+(gument. There)-.18 F 1.14(may be no)3.64 F -.05(ga)108 300 S .265
+(ps in the numbers of ar).05 F .265
+(guments speci\214ed using \010$\010; for e)-.18 F .265(xample, if ar)
+-.15 F .265(guments 1 and 3 are speci\214ed, ar)-.18 F(gu-)-.18 E
+(ment 2 must also be speci\214ed some)108 312 Q
+(where in the format string.)-.25 E -.15(Fo)108 328.8 S 2.613(rs).15 G
+.113(ome numeric con)-2.613 F -.15(ve)-.4 G .113(rsions a radix charact\
+er \("decimal point"\) or thousands' grouping character is used.).15 F
+1.818(The actual character used depends on the)108 340.8 R F1
+(LC_NUMERIC)4.318 E F0 1.818(part of the locale.)4.318 F(\(See)6.818 E
+F1(setlocale)4.318 E F0 4.318(\(3\).\) The)B
+(POSIX locale uses \010.\010 as radix character)108 352.8 Q 2.5(,a)-.4 G
+(nd does not ha)-2.5 E .3 -.15(ve a g)-.2 H(rouping character).15 E 5
+(.T)-.55 G(hus,)-5 E F3(printf\("%\010.2f", 1234567.89\);)128 369.6 Q F0
+.037(results in "1234567.89" in the POSIX locale, in "1234567,89" in th\
+e nl_NL locale, and in "1.234.567,89" in)108 386.4 R(the da_DK locale.)
+108 398.4 Q F1(Flag characters)87 415.2 Q F0(The character % is follo)
+108 427.2 Q(wed by zero or more of the follo)-.25 E(wing \215ags:)-.25 E
+F1(#)108 444 Q F0 .398(The v)144 444 R .398(alue should be con)-.25 F
+-.15(ve)-.4 G .398(rted to an "alternate form".).15 F -.15(Fo)5.398 G(r)
+.15 E F1(o)2.898 E F0(con)2.898 E -.15(ve)-.4 G .398
+(rsions, the \214rst character of the).15 F .191
+(output string is made zero \(by pre\214xing a 0 if it w)144 456 R .19
+(as not zero already\).)-.1 F -.15(Fo)5.19 G(r).15 E F1(x)2.69 E F0(and)
+2.69 E F1(X)2.69 E F0(con)2.69 E -.15(ve)-.4 G .19(rsions, a).15 F .105
+(nonzero result has the string "0x" \(or "0X" for)144 468 R F1(X)2.605 E
+F0(con)2.605 E -.15(ve)-.4 G .106(rsions\) prepended to it.).15 F -.15
+(Fo)5.106 G(r).15 E F1(a)2.606 E F0(,)A F1(A)2.606 E F0(,)A F1(e)2.606 E
+F0(,)A F1(E)2.606 E F0(,)A F1(f)2.606 E F0(,)A F1(F)2.606 E F0(,)A F1(g)
+144 480 Q F0 3.656(,a)C(nd)-3.656 E F1(G)3.656 E F0(con)3.656 E -.15(ve)
+-.4 G 1.156(rsions, the result will al).15 F -.1(wa)-.1 G 1.156
+(ys contain a decimal point, e).1 F -.15(ve)-.25 G 3.656(ni).15 G 3.656
+(fn)-3.656 G 3.656(od)-3.656 G 1.155(igits follo)-3.656 F 3.655(wi)-.25
+G(t)-3.655 E(\(normally)144 492 Q 2.89(,ad)-.65 G .39
+(ecimal point appears in the results of those con)-2.89 F -.15(ve)-.4 G
+.391(rsions only if a digit follo).15 F 2.891(ws\). F)-.25 F(or)-.15 E
+F1(g)144 504 Q F0(and)3.4 E F1(G)3.4 E F0(con)3.4 E -.15(ve)-.4 G .9
+(rsions, trailing zeros are not remo).15 F -.15(ve)-.15 G 3.399(df).15 G
+.899(rom the result as the)-3.399 F 3.399(yw)-.15 G .899
+(ould otherwise be.)-3.499 F -.15(Fo)144 516 S 2.5(ro).15 G(ther con)
+-2.5 E -.15(ve)-.4 G(rsions, the result is unde\214ned.).15 E F1(0)108
+532.8 Q F0 .654(The v)144 532.8 R .654(alue should be zero padded.)-.25
+F -.15(Fo)5.654 G(r).15 E F1(d)3.154 E F0(,)A F1(i)3.154 E F0(,)A F1(o)
+3.154 E F0(,)A F1(u)3.154 E F0(,)A F1(x)3.154 E F0(,)A F1(X)3.154 E F0
+(,)A F1(a)3.154 E F0(,)A F1(A)3.154 E F0(,)A F1(e)3.154 E F0(,)A F1(E)
+3.155 E F0(,)A F1(f)3.155 E F0(,)A F1(F)3.155 E F0(,)A F1(g)3.155 E F0
+3.155(,a)C(nd)-3.155 E F1(G)3.155 E F0(con)3.155 E -.15(ve)-.4 G .655
+(rsions, the).15 F(con)144 544.8 Q -.15(ve)-.4 G .691(rted v).15 F .691
+(alue is padded on the left with zeros rather than blanks.)-.25 F .69
+(If the)5.69 F F1(0)3.19 E F0(and)3.19 E F1<ad>3.19 E F0 .69
+(\215ags both ap-)3.19 F(pear)144 556.8 Q 2.879(,t)-.4 G(he)-2.879 E F1
+(0)2.879 E F0 .379(\215ag is ignored.)2.879 F .379(If a precision is gi)
+5.379 F -.15(ve)-.25 G 2.879(nw).15 G .379(ith a numeric con)-2.879 F
+-.15(ve)-.4 G .379(rsion \().15 F F1(d)A F0(,)A F1(i)2.879 E F0(,)A F1
+(o)2.879 E F0(,)A F1(u)2.879 E F0(,)A F1(x)2.879 E F0 2.879(,a)C(nd)
+-2.879 E F1(X)2.88 E F0(\),)A(the)144 568.8 Q F1(0)2.5 E F0
+(\215ag is ignored.)2.5 E -.15(Fo)5 G 2.5(ro).15 G(ther con)-2.5 E -.15
+(ve)-.4 G(rsions, the beha).15 E(vior is unde\214ned.)-.2 E F1<ad>108
+585.6 Q F0 .145(The con)144 585.6 R -.15(ve)-.4 G .145(rted v).15 F .145
+(alue is to be left adjusted on the \214eld boundary)-.25 F 5.145(.\()
+-.65 G .145(The def)-5.145 F .145(ault is right justi\214cation.\))-.1 F
+.011(The con)144 597.6 R -.15(ve)-.4 G .011(rted v).15 F .011(alue is p\
+added on the right with blanks, rather than on the left with blanks or \
+zeros.)-.25 F(A)144 609.6 Q F1<ad>2.5 E F0 -.15(ove)2.5 G(rrides a).15 E
+F1(0)2.5 E F0(if both are gi)2.5 E -.15(ve)-.25 G(n.).15 E F1 2.5<0808>
+108 626.4 S F0 .528(\(a space\) A blank should be left before a positi)
+144 626.4 R .828 -.15(ve n)-.25 H .528
+(umber \(or empty string\) produced by a signed).15 F(con)144 638.4 Q
+-.15(ve)-.4 G(rsion.).15 E F1(+)108 655.2 Q F0 2.5(As)144 655.2 S
+(ign \(+ or \255\) should al)-2.5 E -.1(wa)-.1 G
+(ys be placed before a number produced by a signed con).1 E -.15(ve)-.4
+G 2.5(rsion. By).15 F(de-)2.5 E -.1(fa)144 667.2 S
+(ult, a sign is used only for ne).1 E -.05(ga)-.15 G(ti).05 E .3 -.15
+(ve n)-.25 H 2.5(umbers. A).15 F F1(+)2.5 E F0 -.15(ove)2.5 G
+(rrides a space if both are used.).15 E 1.002(The \214v)108 684 R 3.502
+<658d>-.15 G 1.002(ag characters abo)-3.502 F 1.302 -.15(ve a)-.15 H
+1.002(re de\214ned in the C99 standard.).15 F 1.002
+(The Single UNIX Speci\214cation speci\214es)6.002 F
+(one further \215ag character)108 696 Q(.)-.55 E F1<08>108 712.8 Q F0
+-.15(Fo)144 712.8 S 3.212(rd).15 G .712(ecimal con)-3.212 F -.15(ve)-.4
+G .712(rsion \().15 F F1(i)A F0(,)A F1(d)3.212 E F0(,)A F1(u)3.213 E F0
+(,)A F1(f)3.213 E F0(,)A F1(F)3.213 E F0(,)A F1(g)3.213 E F0(,)A F1(G)
+3.213 E F0 3.213(\)t)C .713
+(he output is to be grouped with thousands' grouping)-3.213 F .575
+(characters if the locale information indicates an)144 724.8 R 4.375
+-.65(y. \()-.15 H(See).65 E F1(setlocale)3.075 E F0 3.074(\(3\).\) Note)
+B .574(that man)3.074 F 3.074(yv)-.15 G .574(ersions of)-3.224 F 186.51
+(GNU 2020-11-01)72 768 R(2)205.67 E 0 Cg EP
+%%Page: 3 3
+%%BeginPageSetup
+BP
+%%EndPageSetup
+/F0 10/Times-Roman@0 SF 127.34(PRINTF\(3\) Linux)72 48 R(Programmer')2.5
+E 2.5(sM)-.55 G 127.34(anual PRINTF\(3\))-2.5 F/F1 10/Times-Bold@0 SF
+(gcc)144 84 Q F0 .244(\(1\) cannot parse this option and will issue a w)
+B 2.744(arning. \(SUSv2)-.1 F .245(did not include)2.745 F/F2 10
+/Times-Italic@0 SF(%\010F)2.745 E F0 2.745(,b)C .245(ut SUSv3)-2.945 F
+(added it.\))144 96 Q(glibc 2.2 adds one further \215ag character)108
+112.8 Q(.)-.55 E F1(I)108 129.6 Q F0 -.15(Fo)144 129.6 S 2.624(rd).15 G
+.124(ecimal inte)-2.624 F .123(ger con)-.15 F -.15(ve)-.4 G .123
+(rsion \().15 F F1(i)A F0(,)A F1(d)2.623 E F0(,)A F1(u)2.623 E F0 2.623
+(\)t)C .123(he output uses the locale')-2.623 F 2.623(sa)-.55 G
+(lternati)-2.623 E .423 -.15(ve o)-.25 H .123(utput digits, if an).15 F
+-.65(y.)-.15 G -.15(Fo)144 141.6 S 2.5(re).15 G
+(xample, since glibc 2.2.3 this will gi)-2.65 E .3 -.15(ve A)-.25 H
+(rabic-Indic digits in the Persian \("f).15 E(a_IR"\) locale.)-.1 E F1
+(Field width)87 158.4 Q F0 1.029(An optional decimal digit string \(wit\
+h nonzero \214rst digit\) specifying a minimum \214eld width.)108 170.4
+R 1.029(If the con-)6.029 F -.15(ve)108 182.4 S .443(rted v).15 F .443
+(alue has fe)-.25 F .442(wer characters than the \214eld width, it will\
+ be padded with spaces on the left \(or right, if)-.25 F .434
+(the left-adjustment \215ag has been gi)108 194.4 R -.15(ve)-.25 G 2.934
+(n\). Instead).15 F .434
+(of a decimal digit string one may write "*" or "*m$" \(for)2.934 F .67
+(some decimal inte)108 206.4 R(ger)-.15 E F2(m)3.17 E F0 3.17(\)t)C 3.17
+(os)-3.17 G .67(pecify that the \214eld width is gi)-3.17 F -.15(ve)-.25
+G 3.169(ni).15 G 3.169(nt)-3.169 G .669(he ne)-3.169 F .669(xt ar)-.15 F
+.669(gument, or in the)-.18 F F2(m)3.169 E F0 .669(-th ar)B(gu-)-.18 E
+.928(ment, respecti)108 218.4 R -.15(ve)-.25 G(ly).15 E 3.428(,w)-.65 G
+.928(hich must be of type)-3.428 F F2(int)3.438 E F0 5.928(.A).68 G(ne)
+-2.5 E -.05(ga)-.15 G(ti).05 E 1.228 -.15(ve \214)-.25 H .928
+(eld width is tak).15 F .928(en as a \010\255\010 \215ag follo)-.1 F
+.928(wed by a)-.25 F(positi)108 230.4 Q .541 -.15(ve \214)-.25 H .241
+(eld width.).15 F .241(In no case does a none)5.241 F .241(xistent or s\
+mall \214eld width cause truncation of a \214eld; if the re-)-.15 F
+(sult of a con)108 242.4 Q -.15(ve)-.4 G
+(rsion is wider than the \214eld width, the \214eld is e).15 E
+(xpanded to contain the con)-.15 E -.15(ve)-.4 G(rsion result.).15 E F1
+(Pr)87 259.2 Q(ecision)-.18 E F0 .019
+(An optional precision, in the form of a period \(\010.\010\))108 271.2
+R(follo)5.019 E .02(wed by an optional decimal digit string.)-.25 F .02
+(Instead of a)5.02 F .451(decimal digit string one may write "*" or "*m\
+$" \(for some decimal inte)108 283.2 R(ger)-.15 E F2(m)2.95 E F0 2.95
+(\)t)C 2.95(os)-2.95 G .45(pecify that the precision)-2.95 F .125(is gi)
+108 295.2 R -.15(ve)-.25 G 2.625(ni).15 G 2.625(nt)-2.625 G .125(he ne)
+-2.625 F .125(xt ar)-.15 F .125(gument, or in the)-.18 F F2(m)2.625 E F0
+.125(-th ar)B .125(gument, respecti)-.18 F -.15(ve)-.25 G(ly).15 E 2.625
+(,w)-.65 G .125(hich must be of type)-2.625 F F2(int)2.635 E F0 5.125
+(.I).68 G 2.625(ft)-5.125 G .125(he preci-)-2.625 F .844(sion is gi)108
+307.2 R -.15(ve)-.25 G 3.344(na).15 G 3.344(sj)-3.344 G .844
+(ust \010.\010, the precision is tak)-3.344 F .843(en to be zero.)-.1 F
+3.343(An)5.843 G -2.25 -.15(eg a)-3.343 H(ti).15 E 1.143 -.15(ve p)-.25
+H .843(recision is tak).15 F .843(en as if the precision)-.1 F .51
+(were omitted.)108 319.2 R .51(This gi)5.51 F -.15(ve)-.25 G 3.01(st).15
+G .51(he minimum number of digits to appear for)-3.01 F F1(d)3.01 E F0
+(,)A F1(i)3.01 E F0(,)A F1(o)3.01 E F0(,)A F1(u)3.01 E F0(,)A F1(x)3.01
+E F0 3.01(,a)C(nd)-3.01 E F1(X)3.01 E F0(con)3.01 E -.15(ve)-.4 G .51
+(rsions, the).15 F .188
+(number of digits to appear after the radix character for)108 331.2 R F1
+(a)2.688 E F0(,)A F1(A)2.687 E F0(,)A F1(e)2.687 E F0(,)A F1(E)2.687 E
+F0(,)A F1(f)2.687 E F0 2.687(,a)C(nd)-2.687 E F1(F)2.687 E F0(con)2.687
+E -.15(ve)-.4 G .187(rsions, the maximum num-).15 F .05
+(ber of signi\214cant digits for)108 343.2 R F1(g)2.55 E F0(and)2.55 E
+F1(G)2.55 E F0(con)2.55 E -.15(ve)-.4 G .05
+(rsions, or the maximum number of characters to be printed from a).15 F
+(string for)108 355.2 Q F1(s)2.5 E F0(and)2.5 E F1(S)2.5 E F0(con)2.5 E
+-.15(ve)-.4 G(rsions.).15 E F1(Length modi\214er)87 372 Q F0
+(Here, "inte)108 384 Q(ger con)-.15 E -.15(ve)-.4 G(rsion" stands for)
+.15 E F1(d)2.5 E F0(,)A F1(i)2.5 E F0(,)A F1(o)2.5 E F0(,)A F1(u)2.5 E
+F0(,)A F1(x)2.5 E F0 2.5(,o)C(r)-2.5 E F1(X)2.5 E F0(con)2.5 E -.15(ve)
+-.4 G(rsion.).15 E F1(hh)108 400.8 Q F0 2.838(Af)144 400.8 S(ollo)-2.838
+E .338(wing inte)-.25 F .338(ger con)-.15 F -.15(ve)-.4 G .338
+(rsion corresponds to a).15 F F2 .337(signed c)3.177 F(har)-.15 E F0(or)
+3.567 E F2 .337(unsigned c)2.917 F(har)-.15 E F0(ar)3.567 E .337
+(gument, or a fol-)-.18 F(lo)144 412.8 Q(wing)-.25 E F1(n)2.5 E F0(con)
+2.5 E -.15(ve)-.4 G(rsion corresponds to a pointer to a).15 E F2
+(signed c)2.84 E(har)-.15 E F0(ar)3.23 E(gument.)-.18 E F1(h)108 429.6 Q
+F0 2.843(Af)144 429.6 S(ollo)-2.843 E .343(wing inte)-.25 F .343
+(ger con)-.15 F -.15(ve)-.4 G .343(rsion corresponds to a).15 F F2
+(short)3.184 E F0(or)3.524 E F2 .344(unsigned short)2.924 F F0(ar)3.524
+E .344(gument, or a follo)-.18 F(wing)-.25 E F1(n)144 441.6 Q F0(con)2.5
+E -.15(ve)-.4 G(rsion corresponds to a pointer to a).15 E F2(short)2.84
+E F0(ar)3.18 E(gument.)-.18 E F1(l)108 458.4 Q F0 .122(\(ell\) A follo)
+144 458.4 R .122(wing inte)-.25 F .122(ger con)-.15 F -.15(ve)-.4 G .122
+(rsion corresponds to a).15 F F2(long)2.712 E F0(or)2.842 E F2 .122
+(unsigned long)2.702 F F0(ar)2.842 E .122(gument, or a follo)-.18 F(w-)
+-.25 E(ing)144 470.4 Q F1(n)3.25 E F0(con)3.25 E -.15(ve)-.4 G .75
+(rsion corresponds to a pointer to a).15 F F2(long)3.341 E F0(ar)3.471 E
+.751(gument, or a follo)-.18 F(wing)-.25 E F1(c)3.251 E F0(con)3.251 E
+-.15(ve)-.4 G .751(rsion corre-).15 F .002(sponds to a)144 482.4 R F2
+(wint_t)2.842 E F0(ar)3.182 E .002(gument, or a follo)-.18 F(wing)-.25 E
+F1(s)2.502 E F0(con)2.502 E -.15(ve)-.4 G .002
+(rsion corresponds to a pointer to).15 F F2(wc)2.841 E(har_t)-.15 E F0
+(ar)3.181 E(gu-)-.18 E(ment.)144 494.4 Q F1(ll)108 511.2 Q F0 3.326
+(\(ell-ell\). A)144 511.2 R(follo)3.326 E .826(wing inte)-.25 F .826
+(ger con)-.15 F -.15(ve)-.4 G .826(rsion corresponds to a).15 F F2 .827
+(long long)3.416 F F0(or)3.547 E F2 .827(unsigned long long)3.407 F F0
+(ar)3.547 E(gu-)-.18 E(ment, or a follo)144 523.2 Q(wing)-.25 E F1(n)2.5
+E F0(con)2.5 E -.15(ve)-.4 G(rsion corresponds to a pointer to a).15 E
+F2(long long)2.59 E F0(ar)2.72 E(gument.)-.18 E F1(q)108 540 Q F0 2.5
+(As)144 540 S(ynon)-2.5 E(ym for)-.15 E F1(ll)2.5 E F0 5(.T)C
+(his is a nonstandard e)-5 E(xtension, deri)-.15 E -.15(ve)-.25 G 2.5
+(df).15 G(rom BSD; a)-2.5 E -.2(vo)-.2 G(id its use in ne).2 E 2.5(wc)
+-.25 G(ode.)-2.5 E F1(L)108 556.8 Q F0 2.973(Af)144 556.8 S(ollo)-2.973
+E(wing)-.25 E F1(a)2.973 E F0(,)A F1(A)2.973 E F0(,)A F1(e)2.973 E F0(,)
+A F1(E)2.973 E F0(,)A F1(f)2.973 E F0(,)A F1(F)2.973 E F0(,)A F1(g)2.973
+E F0 2.973(,o)C(r)-2.973 E F1(G)2.973 E F0(con)2.973 E -.15(ve)-.4 G
+.472(rsion corresponds to a).15 F F2 .472(long double)3.062 F F0(ar)
+3.152 E 2.972(gument. \(C99)-.18 F(al-)2.972 E(lo)144 568.8 Q(ws %LF)
+-.25 E 2.5(,b)-.8 G(ut SUSv2 does not.\))-2.7 E F1(j)108 585.6 Q F0
+2.874(Af)144 585.6 S(ollo)-2.874 E .374(wing inte)-.25 F .374(ger con)
+-.15 F -.15(ve)-.4 G .374(rsion corresponds to an).15 F F2(intmax_t)
+2.885 E F0(or)3.555 E F2(uintmax_t)2.955 E F0(ar)3.555 E .375
+(gument, or a follo)-.18 F(wing)-.25 E F1(n)144 597.6 Q F0(con)2.5 E
+-.15(ve)-.4 G(rsion corresponds to a pointer to an).15 E F2(intmax_t)
+2.51 E F0(ar)3.18 E(gument.)-.18 E F1(z)108 614.4 Q F0 2.934(Af)144
+614.4 S(ollo)-2.934 E .434(wing inte)-.25 F .434(ger con)-.15 F -.15(ve)
+-.4 G .434(rsion corresponds to a).15 F F2(size_t)3.273 E F0(or)3.613 E
+F2(ssize_t)3.273 E F0(ar)3.613 E .433(gument, or a follo)-.18 F(wing)
+-.25 E F1(n)2.933 E F0(con-)2.933 E -.15(ve)144 626.4 S
+(rsion corresponds to a pointer to a).15 E F2(size_t)2.84 E F0(ar)3.18 E
+(gument.)-.18 E F1(Z)108 643.2 Q F0 2.5(An)144 643.2 S(onstandard synon)
+-2.5 E(ym for)-.15 E F1(z)2.5 E F0(that predates the appearance of)2.5 E
+F1(z)2.5 E F0 5(.D)C 2.5(on)-5 G(ot use in ne)-2.5 E 2.5(wc)-.25 G(ode.)
+-2.5 E F1(t)108 660 Q F0 3.391(Af)144 660 S(ollo)-3.391 E .891
+(wing inte)-.25 F .891(ger con)-.15 F -.15(ve)-.4 G .891
+(rsion corresponds to a).15 F F2(ptr)4.642 E(dif)-.37 E(f_t)-.18 E F0
+(ar)4.072 E .892(gument, or a follo)-.18 F(wing)-.25 E F1(n)3.392 E F0
+(con)3.392 E -.15(ve)-.4 G(rsion).15 E(corresponds to a pointer to a)144
+672 Q F2(ptr)3.75 E(dif)-.37 E(f_t)-.18 E F0(ar)3.18 E(gument.)-.18 E
+.965(SUSv3 speci\214es all of the abo)108 688.8 R -.15(ve)-.15 G 3.465
+(,e).15 G .965(xcept for those modi\214ers e)-3.615 F .964
+(xplicitly noted as being nonstandard e)-.15 F(xten-)-.15 E 2.68
+(sions. SUSv2)108 700.8 R .181(speci\214ed only the length modi\214ers)
+2.68 F F1(h)2.681 E F0(\(in)2.681 E F1(hd)2.681 E F0(,)A F1(hi)2.681 E
+F0(,)A F1(ho)2.681 E F0(,)A F1(hx)2.681 E F0(,)A F1(hX)2.681 E F0(,)A F1
+(hn)2.681 E F0 2.681(\)a)C(nd)-2.681 E F1(l)2.681 E F0(\(in)2.681 E F1
+(ld)2.681 E F0(,)A F1(li)2.681 E F0(,)A F1(lo)2.681 E F0(,)A F1(lx)2.681
+E F0(,)A F1(lX)2.681 E F0(,)A F1(ln)2.681 E F0(,)A F1(lc)108 712.8 Q F0
+(,)A F1(ls)2.5 E F0 2.5(\)a)C(nd)-2.5 E F1(L)2.5 E F0(\(in)2.5 E F1(Le)
+2.5 E F0(,)A F1(LE)2.5 E F0(,)A F1(Lf)2.5 E F0(,)A F1(Lg)2.5 E F0(,)A F1
+(LG)2.5 E F0(\).)A 1.053(As a nonstandard e)108 729.6 R 1.053
+(xtension, the GNU implementations treats)-.15 F F1(ll)3.553 E F0(and)
+3.553 E F1(L)3.553 E F0 1.053(as synon)3.553 F 1.053
+(yms, so that one can, for)-.15 F 186.51(GNU 2020-11-01)72 768 R(3)
+205.67 E 0 Cg EP
+%%Page: 4 4
+%%BeginPageSetup
+BP
+%%EndPageSetup
+/F0 10/Times-Roman@0 SF 127.34(PRINTF\(3\) Linux)72 48 R(Programmer')2.5
+E 2.5(sM)-.55 G 127.34(anual PRINTF\(3\))-2.5 F -.15(ex)108 84 S .507
+(ample, write).15 F/F1 10/Times-Bold@0 SF(llg)3.007 E F0 .507
+(\(as a synon)3.007 F .507(ym for the standards-compliant)-.15 F F1(Lg)
+3.007 E F0 3.007(\)a)C(nd)-3.007 E F1(Ld)3.007 E F0 .507(\(as a synon)
+3.007 F .507(ym for the standards)-.15 F(compliant)108 96 Q F1(lld)2.5 E
+F0 2.5(\). Such)B(usage is nonportable.)2.5 E F1(Con)87 112.8 Q -.1(ve)
+-.4 G(rsion speci\214ers).1 E F0 3.221(Ac)108 124.8 S .721
+(haracter that speci\214es the type of con)-3.221 F -.15(ve)-.4 G .721
+(rsion to be applied.).15 F .72(The con)5.72 F -.15(ve)-.4 G .72
+(rsion speci\214ers and their mean-).15 F(ings are:)108 136.8 Q F1(d)108
+153.6 Q F0(,)A F1(i)2.5 E F0(The)144 153.6 Q/F2 10/Times-Italic@0 SF
+(int)3.421 E F0(ar)4.091 E .911(gument is con)-.18 F -.15(ve)-.4 G .911
+(rted to signed decimal notation.).15 F .912(The precision, if an)5.911
+F 2.212 -.65(y, g)-.15 H -2.15 -.25(iv e).65 H 3.412(st).25 G .912
+(he mini-)-3.412 F .705
+(mum number of digits that must appear; if the con)144 165.6 R -.15(ve)
+-.4 G .704(rted v).15 F .704(alue requires fe)-.25 F .704
+(wer digits, it is padded)-.25 F .55(on the left with zeros.)144 177.6 R
+.55(The def)5.55 F .55(ault precision is 1.)-.1 F .551
+(When 0 is printed with an e)5.551 F .551(xplicit precision 0,)-.15 F
+(the output is empty)144 189.6 Q(.)-.65 E F1(o)108 206.4 Q F0(,)A F1(u)
+2.5 E F0(,)A F1(x)2.5 E F0(,)A F1(X)2.5 E F0(The)144 218.4 Q F2 .748
+(unsigned int)3.328 F F0(ar)3.927 E .747(gument is con)-.18 F -.15(ve)
+-.4 G .747(rted to unsigned octal \().15 F F1(o)A F0 .747
+(\), unsigned decimal \()B F1(u)A F0 .747(\), or unsigned)B(he)144 230.4
+Q 2.666(xadecimal \()-.15 F F1(x)A F0(and)5.166 E F1(X)5.166 E F0 5.166
+(\)n)C 5.166(otation. The)-5.166 F(letters)5.166 E F1(abcdef)5.166 E F0
+2.667(are used for)5.166 F F1(x)5.167 E F0(con)5.167 E -.15(ve)-.4 G
+2.667(rsions; the letters).15 F F1(ABCDEF)144 242.4 Q F0 .39
+(are used for)2.89 F F1(X)2.89 E F0(con)2.89 E -.15(ve)-.4 G 2.89
+(rsions. The).15 F .39(precision, if an)2.89 F 1.69 -.65(y, g)-.15 H
+-2.15 -.25(iv e).65 H 2.89(st).25 G .39(he minimum number of digits)
+-2.89 F .794(that must appear; if the con)144 254.4 R -.15(ve)-.4 G .795
+(rted v).15 F .795(alue requires fe)-.25 F .795
+(wer digits, it is padded on the left with zeros.)-.25 F(The def)144
+266.4 Q(ault precision is 1.)-.1 E(When 0 is printed with an e)5 E
+(xplicit precision 0, the output is empty)-.15 E(.)-.65 E F1(e)108 283.2
+Q F0(,)A F1(E)2.5 E F0(The)144 283.2 Q F2(double)3.341 E F0(ar)3.171 E
+.491(gument is rounded and con)-.18 F -.15(ve)-.4 G .491
+(rted in the style [\255]d).15 F F1(.)A F0(ddd)A F1(e)A/F3 10/Symbol SF
+<b1>A F0 .49(dd where there is one digit)B .647
+(\(which is nonzero if the ar)144 295.2 R .647
+(gument is nonzero\) before the decimal-point character and the number)
+-.18 F .053(of digits after it is equal to the precision; if the precis\
+ion is missing, it is tak)144 307.2 R .053(en as 6; if the precision)-.1
+F .849(is zero, no decimal-point character appears.)144 319.2 R(An)5.849
+E F1(E)3.349 E F0(con)3.349 E -.15(ve)-.4 G .849(rsion uses the letter)
+.15 F F1(E)3.35 E F0 .85(\(rather than)3.35 F F1(e)3.35 E F0 3.35(\)t)C
+(o)-3.35 E .484(introduce the e)144 331.2 R 2.984(xponent. The)-.15 F
+-.15(ex)2.984 G .484(ponent al).15 F -.1(wa)-.1 G .484
+(ys contains at least tw).1 F 2.984(od)-.1 G .484(igits; if the v)-2.984
+F .483(alue is zero, the)-.25 F -.15(ex)144 343.2 S(ponent is 00.).15 E
+F1(f)108 360 Q F0(,)A F1(F)2.5 E F0(The)144 360 Q F2(double)3.172 E F0
+(ar)3.002 E .322(gument is rounded and con)-.18 F -.15(ve)-.4 G .322
+(rted to decimal notation in the style [\255]ddd).15 F F1(.)A F0 .323
+(ddd, where)B .201(the number of digits after the decimal-point charact\
+er is equal to the precision speci\214cation.)144 372 R .201(If the)
+5.201 F .497(precision is missing, it is tak)144 384 R .498
+(en as 6; if the precision is e)-.1 F .498
+(xplicitly zero, no decimal-point character)-.15 F 2.5(appears. If)144
+396 R 2.5(ad)2.5 G
+(ecimal point appears, at least one digit appears before it.)-2.5 E .328
+(\(SUSv2 does not kno)144 412.8 R 2.828(wa)-.25 G(bout)-2.828 E F1(F)
+2.828 E F0 .328
+(and says that character string representations for in\214nity and NaN)
+2.828 F .31(may be made a)144 424.8 R -.25(va)-.2 G 2.81(ilable. SUSv3)
+.25 F .311(adds a speci\214cation for)2.81 F F1(F)2.811 E F0 5.311(.T)C
+.311(he C99 standard speci\214es "[\255]inf" or)-5.311 F .442
+("[\255]in\214nity" for in\214nity)144 436.8 R 2.942(,a)-.65 G .442
+(nd a string starting with "nan" for NaN, in the case of)-2.942 F F1(f)
+2.941 E F0(con)2.941 E -.15(ve)-.4 G .441(rsion, and).15 F
+("[\255]INF" or "[\255]INFINITY" or "N)144 448.8 Q(AN" in the case of)
+-.35 E F1(F)2.5 E F0(con)2.5 E -.15(ve)-.4 G(rsion.\)).15 E F1(g)108
+465.6 Q F0(,)A F1(G)2.5 E F0(The)144 465.6 Q F2(double)4.062 E F0(ar)
+3.892 E 1.212(gument is con)-.18 F -.15(ve)-.4 G 1.212(rted in style).15
+F F1(f)3.712 E F0(or)3.712 E F1(e)3.712 E F0(\(or)3.712 E F1(F)3.712 E
+F0(or)3.712 E F1(E)3.712 E F0(for)3.712 E F1(G)3.713 E F0(con)3.713 E
+-.15(ve)-.4 G 3.713(rsions\). The).15 F(precision)3.713 E .28
+(speci\214es the number of signi\214cant digits.)144 477.6 R .28
+(If the precision is missing, 6 digits are gi)5.28 F -.15(ve)-.25 G .28
+(n; if the pre-).15 F .422(cision is zero, it is treated as 1.)144 489.6
+R(Style)5.422 E F1(e)2.922 E F0 .422(is used if the e)2.922 F .423
+(xponent from its con)-.15 F -.15(ve)-.4 G .423
+(rsion is less than \2554).15 F .153
+(or greater than or equal to the precision.)144 501.6 R -.35(Tr)5.152 G
+.152(ailing zeros are remo).35 F -.15(ve)-.15 G 2.652(df).15 G .152
+(rom the fractional part of the)-2.652 F
+(result; a decimal point appears only if it is follo)144 513.6 Q
+(wed by at least one digit.)-.25 E F1(a)108 530.4 Q F0(,)A F1(A)2.5 E F0
+.653(\(C99; not in SUSv2, b)144 530.4 R .653(ut added in SUSv3\) F)-.2 F
+(or)-.15 E F1(a)3.153 E F0(con)3.153 E -.15(ve)-.4 G .653(rsion, the).15
+F F2(double)3.503 E F0(ar)3.333 E .653(gument is con)-.18 F -.15(ve)-.4
+G .654(rted to).15 F(he)144 542.4 Q .519
+(xadecimal notation \(using the letters abcdef\) in the style [\255])
+-.15 F F1(0x)A F0(h)A F1(.)A F0(hhhh)A F1(p)A F3<b1>A F0 .518(d; for)B
+F1(A)3.018 E F0(con)3.018 E -.15(ve)-.4 G .518(rsion the).15 F(pre\214x)
+144 554.4 Q F1(0X)3.292 E F0 3.292(,t)C .792(he letters ABCDEF)-3.292 F
+3.292(,a)-.8 G .793(nd the e)-3.292 F .793(xponent separator)-.15 F F1
+(P)3.293 E F0 .793(is used.)3.293 F .793(There is one he)5.793 F
+(xadecimal)-.15 E .568(digit before the decimal point, and the number o\
+f digits after it is equal to the precision.)144 566.4 R .567(The de-)
+5.567 F -.1(fa)144 578.4 S .403(ult precision suf).1 F .403
+(\214ces for an e)-.25 F .403(xact representation of the v)-.15 F .403
+(alue if an e)-.25 F .403(xact representation in base 2)-.15 F -.15(ex)
+144 590.4 S .293(ists and otherwise is suf).15 F .293(\214ciently lar)
+-.25 F .293(ge to distinguish v)-.18 F .293(alues of type)-.25 F F2
+(double)3.142 E F0 5.292(.T).18 G .292(he digit before the)-5.292 F
+1.074(decimal point is unspeci\214ed for nonnormalized numbers, and non\
+zero b)144 602.4 R 1.074(ut otherwise unspeci\214ed)-.2 F .469
+(for normalized numbers.)144 614.4 R .469(The e)5.469 F .469(xponent al)
+-.15 F -.1(wa)-.1 G .469(ys contains at least one digit; if the v).1 F
+.468(alue is zero, the)-.25 F -.15(ex)144 626.4 S(ponent is 0.).15 E F1
+(c)108 643.2 Q F0 1.119(If no)144 643.2 R F1(l)3.619 E F0 1.119
+(modi\214er is present, the)3.619 F F2(int)3.629 E F0(ar)4.299 E 1.119
+(gument is con)-.18 F -.15(ve)-.4 G 1.12(rted to an).15 F F2 1.12
+(unsigned c)3.7 F(har)-.15 E F0 3.62(,a).73 G 1.12(nd the resulting)
+-3.62 F .461(character is written.)144 655.2 R .461(If an)5.461 F F1(l)
+2.961 E F0 .461(modi\214er is present, the)2.961 F F2(wint_t)3.301 E F0
+.46(\(wide character\) ar)3.64 F .46(gument is con)-.18 F -.15(ve)-.4 G
+(rted).15 E .777(to a multibyte sequence by a call to the)144 667.2 R F1
+(wcrtomb)3.278 E F0 .778(\(3\) function, with a con)B -.15(ve)-.4 G .778
+(rsion state starting in).15 F
+(the initial state, and the resulting multibyte string is written.)144
+679.2 Q F1(s)108 696 Q F0 1.131(If no)144 696 R F1(l)3.631 E F0 1.131
+(modi\214er is present: the)3.631 F F2 1.131(const c)3.831 F(har *)-.15
+E F0(ar)4.051 E 1.131(gument is e)-.18 F 1.13
+(xpected to be a pointer to an array of)-.15 F .254
+(character type \(pointer to a string\).)144 708 R .254
+(Characters from the array are written up to \(b)5.254 F .255
+(ut not including\))-.2 F 3.852(at)144 720 S 1.351(erminating null byte\
+ \(\010\\0\010\); if a precision is speci\214ed, no more than the numbe\
+r speci\214ed are)-3.852 F 186.51(GNU 2020-11-01)72 768 R(4)205.67 E 0
+Cg EP
+%%Page: 5 5
+%%BeginPageSetup
+BP
+%%EndPageSetup
+/F0 10/Times-Roman@0 SF 127.34(PRINTF\(3\) Linux)72 48 R(Programmer')2.5
+E 2.5(sM)-.55 G 127.34(anual PRINTF\(3\))-2.5 F 2.824(written. If)144 84
+R 2.824(ap)2.824 G .324(recision is gi)-2.824 F -.15(ve)-.25 G .325(n, \
+no null byte need be present; if the precision is not speci\214ed, or i\
+s).15 F(greater than the size of the array)144 96 Q 2.5(,t)-.65 G
+(he array must contain a terminating null byte.)-2.5 E .4(If an)144
+112.8 R/F1 10/Times-Bold@0 SF(l)2.9 E F0 .4(modi\214er is present: the)
+2.9 F/F2 10/Times-Italic@0 SF .4(const wc)3.1 F(har_t *)-.15 E F0(ar)
+3.32 E .399(gument is e)-.18 F .399
+(xpected to be a pointer to an array of)-.15 F .586(wide characters.)144
+124.8 R -.4(Wi)5.586 G .586(de characters from the array are con).4 F
+-.15(ve)-.4 G .587(rted to multibyte characters \(each by a).15 F .43
+(call to the)144 136.8 R F1(wcrtomb)2.93 E F0 .43
+(\(3\) function, with a con)B -.15(ve)-.4 G .43
+(rsion state starting in the initial state before the \214rst).15 F
+1.235(wide character\), up to and including a terminating null wide cha\
+racter)144 148.8 R 6.236(.T)-.55 G 1.236(he resulting multibyte)-6.236 F
+.808(characters are written up to \(b)144 160.8 R .808
+(ut not including\) the terminating null byte.)-.2 F .808
+(If a precision is speci-)5.808 F .77
+(\214ed, no more bytes than the number speci\214ed are written, b)144
+172.8 R .77(ut no partial multibyte characters are)-.2 F 3.29
+(written. Note)144 184.8 R .79
+(that the precision determines the number of)3.29 F F2(bytes)3.559 E F0
+.789(written, not the number of)3.559 F F2(wide)3.629 E -.15(ch)144
+196.8 S(ar).15 E(acter)-.15 E(s)-.1 E F0(or)3.045 E F2(scr)3.115 E .275
+(een positions)-.37 F F0 5.275(.T).27 G .276
+(he array must contain a terminating null wide character)-5.275 F 2.776
+(,u)-.4 G .276(nless a)-2.776 F .684(precision is gi)144 208.8 R -.15
+(ve)-.25 G 3.184(na).15 G .684
+(nd it is so small that the number of bytes written e)-3.184 F .683
+(xceeds it before the end of)-.15 F(the array is reached.)144 220.8 Q F1
+(C)108 237.6 Q F0(\(Not in C99 or C11, b)144 237.6 Q
+(ut in SUSv2, SUSv3, and SUSv4.\))-.2 E(Synon)5 E(ym for)-.15 E F1(lc)
+2.5 E F0 5(.D)C(on')-5 E 2.5(tu)-.18 G(se.)-2.5 E F1(S)108 254.4 Q F0
+(\(Not in C99 or C11, b)144 254.4 Q(ut in SUSv2, SUSv3, and SUSv4.\))-.2
+E(Synon)5 E(ym for)-.15 E F1(ls)2.5 E F0 5(.D)C(on')-5 E 2.5(tu)-.18 G
+(se.)-2.5 E F1(p)108 271.2 Q F0(The)144 271.2 Q F2(void *)2.79 E F0
+(pointer ar)2.92 E(gument is printed in he)-.18 E(xadecimal \(as if by)
+-.15 E F1(%#x)2.5 E F0(or)2.5 E F1(%#lx)2.5 E F0(\).)A F1(n)108 288 Q F0
+.568(The number of characters written so f)144 288 R .569
+(ar is stored into the inte)-.1 F .569
+(ger pointed to by the corresponding)-.15 F(ar)144 300 Q 2.549
+(gument. That)-.18 F(ar)2.549 E .049(gument shall be an)-.18 F F2(int *)
+2.559 E F0 2.549(,o).42 G 2.549(rv)-2.549 G .048
+(ariant whose size matches the \(optionally\) supplied)-2.799 F(inte)144
+312 Q .612(ger length modi\214er)-.15 F 5.613(.N)-.55 G 3.113(oa)-5.613
+G -.18(rg)-3.113 G .613(ument is con).18 F -.15(ve)-.4 G 3.113
+(rted. \(This).15 F .613(speci\214er is not supported by the bionic)
+3.113 F 3.936(Cl)144 324 S(ibrary)-3.936 E 3.936(.\) The)-.65 F(beha)
+3.936 E 1.436(vior is unde\214ned if the con)-.2 F -.15(ve)-.4 G 1.436
+(rsion speci\214cation includes an).15 F 3.935<798d>-.15 G 1.435
+(ags, a \214eld)-3.935 F(width, or a precision.)144 336 Q F1(m)108 352.8
+Q F0 .285(\(Glibc e)144 352.8 R .285
+(xtension; supported by uClibc and musl.\))-.15 F .285(Print output of)
+5.285 F F2(str)3.126 E(err)-.37 E(or\(errno\))-.45 E F0 5.286(.N).06 G
+2.786(oa)-5.286 G -.18(rg)-2.786 G .286(ument is).18 F(required.)144
+364.8 Q F1(%)108 381.6 Q F0 2.5<4108>144 381.6 S(%\010 is written.)-2.5
+E(No ar)5 E(gument is con)-.18 E -.15(ve)-.4 G 2.5(rted. The).15 F
+(complete con)2.5 E -.15(ve)-.4 G(rsion speci\214cation is \010%%\010.)
+.15 E/F3 10.95/Times-Bold@0 SF(RETURN V)72 398.4 Q(ALUE)-1.478 E F0
+1.291(Upon successful return, these functions return the number of char\
+acters printed \(e)108 410.4 R 1.29(xcluding the null byte)-.15 F
+(used to end output to strings\).)108 422.4 Q .489(The functions)108
+439.2 R F1(snprintf)2.989 E F0 .489(\(\) and)B F1(vsnprintf)2.989 E F0
+.489(\(\) do not write more than)B F2(size)3.329 E F0 .49
+(bytes \(including the terminating null)3.17 F .669
+(byte \(\010\\0\010\)\).)108 451.2 R .669(If the output w)5.669 F .669
+(as truncated due to this limit, then the return v)-.1 F .669
+(alue is the number of characters)-.25 F(\(e)108 463.2 Q .27
+(xcluding the terminating null byte\) which w)-.15 F .27(ould ha)-.1 F
+.571 -.15(ve b)-.2 H .271
+(een written to the \214nal string if enough space had).15 F .47(been a)
+108 475.2 R -.25(va)-.2 G 2.97(ilable. Thus,).25 F 2.97(ar)2.97 G .47
+(eturn v)-2.97 F .47(alue of)-.25 F F2(size)3.31 E F0 .469
+(or more means that the output w)3.15 F .469(as truncated.)-.1 F .469
+(\(See also belo)5.469 F(w)-.25 E(under NO)108 487.2 Q(TES.\))-.4 E
+(If an output error is encountered, a ne)108 504 Q -.05(ga)-.15 G(ti).05
+E .3 -.15(ve v)-.25 H(alue is returned.)-.1 E F3 -1.04(AT)72 520.8 S
+(TRIB)1.04 E(UTES)-.11 E F0 -.15(Fo)108 532.8 S 2.5(ra).15 G 2.5(ne)-2.5
+G(xplanation of the terms used in this section, see)-2.65 E F1(attrib)
+2.5 E(utes)-.2 E F0(\(7\).)A .4 LW 379.26 542.1 108 542.1 DL F1 88.63
+(Interface Attrib)113 551.6 R 27.41(ute V)-.2 F(alue)-.92 E 379.26 556.1
+108 556.1 DL F0(Thread safety)243 565.6 Q(MT)15 E(-Safe locale)-.92 E F1
+(printf)113 565.6 Q F0(\(\),)A F1(fprintf)2.5 E F0(\(\),)A F1(sprintf)
+113 577.6 Q F0(\(\),)A F1(snprintf)2.5 E F0(\(\),)A F1(vprintf)113 589.6
+Q F0(\(\),)A F1(vfprintf)2.5 E F0(\(\),)A F1(vsprintf)113 601.6 Q F0
+(\(\),)A F1(vsnprintf)2.5 E F0(\(\))A 379.26 606.1 108 606.1 DL 379.26
+542.1 379.26 606.1 DL 108 542.1 108 606.1 DL 305.2 542.1 305.2 606.1 DL
+235.5 542.1 235.5 606.1 DL F3(CONFORMING T)72 630.4 Q(O)-.197 E F1
+(fprintf)108 642.4 Q F0(\(\),)A F1(printf)2.5 E F0(\(\),)A F1(sprintf)
+2.5 E F0(\(\),)A F1(vprintf)2.5 E F0(\(\),)A F1(vfprintf)2.5 E F0(\(\),)
+A F1(vsprintf)2.5 E F0(\(\): POSIX.1-2001, POSIX.1-2008, C89, C99.)A F1
+(snprintf)108 659.2 Q F0(\(\),)A F1(vsnprintf)2.5 E F0
+(\(\): POSIX.1-2001, POSIX.1-2008, C99.)A(The)108 676 Q F1(dprintf)4.06
+E F0 1.56(\(\) and)B F1(vdprintf)4.06 E F0 1.56
+(\(\) functions were originally GNU e)B 1.56
+(xtensions that were later standardized in)-.15 F(POSIX.1-2008.)108 688
+Q .266(Concerning the return v)108 704.8 R .266(alue of)-.25 F F1
+(snprintf)2.766 E F0 .265
+(\(\), SUSv2 and C99 contradict each other: when)B F1(snprintf)2.765 E
+F0 .265(\(\) is called)B(with)108 716.8 Q F2(size)4.523 E F0 1.683
+(=0 then SUSv2 stipulates an unspeci\214ed return v).18 F 1.684
+(alue less than 1, while C99 allo)-.25 F(ws)-.25 E F2(str)4.524 E F0
+1.684(to be)4.914 F .18(NULL in this case, and gi)108 728.8 R -.15(ve)
+-.25 G 2.68(st).15 G .18(he return v)-2.68 F .18(alue \(as al)-.25 F -.1
+(wa)-.1 G .179(ys\) as the number of characters that w).1 F .179
+(ould ha)-.1 F .479 -.15(ve b)-.2 H(een).15 E 186.51(GNU 2020-11-01)72
+768 R(5)205.67 E 0 Cg EP
+%%Page: 6 6
+%%BeginPageSetup
+BP
+%%EndPageSetup
+/F0 10/Times-Roman@0 SF 127.34(PRINTF\(3\) Linux)72 48 R(Programmer')2.5
+E 2.5(sM)-.55 G 127.34(anual PRINTF\(3\))-2.5 F .157
+(written in case the output string has been lar)108 84 R .158
+(ge enough.)-.18 F .158
+(POSIX.1-2001 and later align their speci\214cation of)5.158 F/F1 10
+/Times-Bold@0 SF(snprintf)108 96 Q F0(\(\) with C99.)A
+(glibc 2.1 adds length modi\214ers)108 112.8 Q F1(hh)2.5 E F0(,)A F1(j)
+2.5 E F0(,)A F1(t)2.5 E F0 2.5(,a)C(nd)-2.5 E F1(z)2.5 E F0(and con)2.5
+E -.15(ve)-.4 G(rsion characters).15 E F1(a)2.5 E F0(and)2.5 E F1(A)2.5
+E F0(.)A(glibc 2.2 adds the con)108 129.6 Q -.15(ve)-.4 G
+(rsion character).15 E F1(F)2.5 E F0
+(with C99 semantics, and the \215ag character)2.5 E F1(I)2.5 E F0(.)A/F2
+10.95/Times-Bold@0 SF(NO)72 146.4 Q(TES)-.438 E F0
+(Some programs imprudently rely on code such as the follo)108 158.4 Q
+(wing)-.25 E(sprintf\(b)118 175.2 Q(uf, "%s some further te)-.2 E
+(xt", b)-.15 E(uf\);)-.2 E .948(to append te)108 192 R .947(xt to)-.15 F
+/F3 10/Times-Italic@0 SF -.2(bu)3.447 G(f).2 E F0 5.947(.H)1.96 G -.25
+(ow)-5.947 G -2.15 -.25(ev e).25 H 1.747 -.4(r, t).25 H .947
+(he standards e).4 F .947
+(xplicitly note that the results are unde\214ned if source and)-.15 F
+.911(destination b)108 204 R(uf)-.2 E .911(fers o)-.25 F -.15(ve)-.15 G
+.912(rlap when calling).15 F F1(sprintf)3.412 E F0(\(\),)A F1(snprintf)
+3.412 E F0(\(\),)A F1(vsprintf)3.412 E F0 .912(\(\), and)B F1(vsnprintf)
+3.412 E F0 3.412(\(\). Depending)B(on)3.412 E .146(the v)108 216 R .146
+(ersion of)-.15 F F1(gcc)2.646 E F0 .146
+(\(1\) used, and the compiler options emplo)B .145
+(yed, calls such as the abo)-.1 F .445 -.15(ve w)-.15 H(ill).15 E F1
+(not)2.645 E F0 .145(produce the)2.645 F -.15(ex)108 228 S
+(pected results.).15 E .116(The glibc implementation of the functions)
+108 244.8 R F1(snprintf)2.617 E F0 .117(\(\) and)B F1(vsnprintf)2.617 E
+F0 .117(\(\) conforms to the C99 standard, that is,)B(beha)108 256.8 Q
+-.15(ve)-.2 G 2.973(sa).15 G 2.973(sd)-2.973 G .473(escribed abo)-2.973
+F -.15(ve)-.15 G 2.973(,s).15 G .473(ince glibc v)-2.973 F .472
+(ersion 2.1.)-.15 F .472(Until glibc 2.0.6, the)5.472 F 2.972(yw)-.15 G
+.472(ould return \2551 when the out-)-3.072 F(put w)108 268.8 Q
+(as truncated.)-.1 E F2 -.11(BU)72 285.6 S(GS).11 E F0(Because)108 297.6
+Q F1(sprintf)3.193 E F0 .693(\(\) and)B F1(vsprintf)3.193 E F0 .693(\(\
+\) assume an arbitrarily long string, callers must be careful not to o)B
+-.15(ve)-.15 G(r\215o).15 E(w)-.25 E .022
+(the actual space; this is often impossible to assure.)108 309.6 R .021
+(Note that the length of the strings produced is locale-de-)5.022 F
+(pendent and dif)108 321.6 Q(\214cult to predict.)-.25 E(Use)5 E F1
+(snprintf)2.5 E F0(\(\) and)A F1(vsnprintf)2.5 E F0(\(\) instead \(or)A
+F1(asprintf)2.5 E F0(\(3\) and)A F1 -.1(va)2.5 G(sprintf).1 E F0
+(\(3\)\).)A .493(Code such as)108 338.4 R F1(printf\()2.994 E F3(foo)
+1.97 E F1(\);).18 E F0 .494(often indicates a b)2.994 F .494(ug, since)
+-.2 F F3(foo)4.964 E F0 .494(may contain a % character)3.174 F 5.494(.I)
+-.55 G(f)-5.494 E F3(foo)4.964 E F0 .494(comes from)3.174 F .516
+(untrusted user input, it may contain)108 350.4 R F1(%n)3.016 E F0 3.016
+(,c)C .516(ausing the)-3.016 F F1(printf)3.016 E F0 .515
+(\(\) call to write to memory and creating a secu-)B(rity hole.)108
+362.4 Q F2(EXAMPLES)72 379.2 Q F0 1.6 -.8(To p)108 391.2 T(rint).8 E F3
+(Pi)3 E F0(to \214v)2.86 E 2.5(ed)-.15 G(ecimal places:)-2.5 E/F4 10
+/Courier@0 SF(#include <math.h>)128 408 Q(#include <stdio.h>)128 420 Q
+(fprintf\(stdout, "pi = %.5f\\n", 4 * atan\(1.0\)\);)128 432 Q F0 2.718
+-.8(To p)108 448.8 T 1.118(rint a date and time in the form "Sunday).8 F
+3.618(,J)-.65 G 1.119(uly 3, 10:02", where)-3.618 F F3(weekday)3.959 E
+F0(and)3.939 E F3(month)3.999 E F0 1.119(are pointers to)3.899 F
+(strings:)108 460.8 Q F4(#include <stdio.h>)128 477.6 Q
+(fprintf\(stdout, "%s, %s %d, %.2d:%.2d\\n",)128 489.6 Q
+(weekday, month, day, hour, min\);)176 501.6 Q F0(Man)108 518.4 Q 2.585
+(yc)-.15 G .085(ountries use the day-month-year order)-2.585 F 5.085(.H)
+-.55 G .085(ence, an internationalized v)-5.085 F .084
+(ersion must be able to print the)-.15 F(ar)108 530.4 Q
+(guments in an order speci\214ed by the format:)-.18 E F4
+(#include <stdio.h>)128 547.2 Q(fprintf\(stdout, format,)128 559.2 Q
+(weekday, month, day, hour, min\);)176 571.2 Q F0(where)108 588 Q F3
+(format)4.47 E F0(depends on locale, and may permute the ar)3.18 E 2.5
+(guments. W)-.18 F(ith the v)-.4 E(alue:)-.25 E F4
+("%1$s, %3$d. %2$s, %4$d:%5$.2d\\n")128 604.8 Q F0
+(one might obtain "Sonntag, 3. Juli, 10:02".)108 621.6 Q 1.6 -.8(To a)
+108 638.4 T(llocate a suf).8 E(\214ciently lar)-.25 E(ge string and pri\
+nt into it \(code correct for both glibc 2.0 and glibc 2.1\):)-.18 E F4
+(#include <stdio.h>)108 655.2 Q(#include <stdlib.h>)108 667.2 Q
+(#include <stdarg.h>)108 679.2 Q(char *)108 703.2 Q
+(make_message\(const char *fmt, ...\))108 715.2 Q({)108 727.2 Q F0
+186.51(GNU 2020-11-01)72 768 R(6)205.67 E 0 Cg EP
+%%Page: 7 7
+%%BeginPageSetup
+BP
+%%EndPageSetup
+/F0 10/Times-Roman@0 SF 127.34(PRINTF\(3\) Linux)72 48 R(Programmer')2.5
+E 2.5(sM)-.55 G 127.34(anual PRINTF\(3\))-2.5 F/F1 10/Courier@0 SF
+(int n = 0;)132 84 Q(size_t size = 0;)132 96 Q(char *p = NULL;)132 108 Q
+(va_list ap;)132 120 Q(/* Determine required size */)132 144 Q
+(va_start\(ap, fmt\);)132 168 Q 6(n=v)132 180 S
+(snprintf\(p, size, fmt, ap\);)-6 E(va_end\(ap\);)132 192 Q
+(if \(n < 0\))132 216 Q(return NULL;)156 228 Q
+(/* One extra byte for \010\\0\010 */)132 252 Q
+(size = \(size_t\) n + 1;)132 276 Q 6(p=m)132 288 S(alloc\(size\);)-6 E
+(if \(p == NULL\))132 300 Q(return NULL;)156 312 Q(va_start\(ap, fmt\);)
+132 336 Q 6(n=v)132 348 S(snprintf\(p, size, fmt, ap\);)-6 E
+(va_end\(ap\);)132 360 Q(if \(n < 0\) {)132 384 Q(free\(p\);)156 396 Q
+(return NULL;)156 408 Q(})132 420 Q(return p;)132 444 Q(})108 456 Q F0
+1.496(If truncation occurs in glibc v)108 472.8 R 1.497(ersions prior t\
+o 2.0.6, this is treated as an error instead of being handled)-.15 F
+(gracefully)108 484.8 Q(.)-.65 E/F2 10.95/Times-Bold@0 SF(SEE ALSO)72
+501.6 Q/F3 10/Times-Bold@0 SF(printf)108 513.6 Q F0(\(1\),)A F3
+(asprintf)2.5 E F0(\(3\),)A F3(puts)2.5 E F0(\(3\),)A F3(scanf)2.5 E F0
+(\(3\),)A F3(setlocale)2.5 E F0(\(3\),)A F3(strfr)2.5 E(omd)-.18 E F0
+(\(3\),)A F3(wcrtomb)2.5 E F0(\(3\),)A F3(wprintf)2.5 E F0(\(3\),)A F3
+(locale)2.5 E F0(\(5\))A F2(COLOPHON)72 530.4 Q F0 .341
+(This page is part of release 5.10 of the Linux)108 542.4 R/F4 10
+/Times-Italic@0 SF(man-pa)3.221 E -.1(ge)-.1 G(s).1 E F0 2.84
+(project. A)3.11 F .34(description of the project, information)2.84 F
+11.103(about reporting b)108 554.4 R 11.103(ugs, and the latest v)-.2 F
+11.103(ersion of this page, can be found at)-.15 F(https://www)108 566.4
+Q(.k)-.65 E(ernel.or)-.1 E(g/doc/man\255pages/.)-.18 E 186.51
+(GNU 2020-11-01)72 768 R(7)205.67 E 0 Cg EP
+%%Trailer
+end
+%%EOF

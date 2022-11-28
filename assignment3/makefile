@@ -18,9 +18,13 @@ client.o: client.cpp
 tands.o: tands.cpp
 	$(CC) $(CFLAGS) -c tands.cpp
 
+man:
+	for name in ./*.man; do man -t $${name} > $${name}.ps; done
+	for name in ./*.ps; do ps2pdf12 $${name}; done
+	
 
 submit:
-	tar -czvf assignment3.tar makefile *.cpp *.h readme.txt
+	tar -czvf assignment3.tar makefile *.cpp *.h *.man readme.txt
 
 clean:
 	rm -f *.o prodcon

@@ -199,13 +199,13 @@ int task_sender(struct sharing_data data_cp){
                     data_cp.v_op1->push(templog);
                 }
             }
-            //write all the file into log
-            while (!data_cp.v_op1->empty()){
-                translate(data_cp.filename,data_cp.v_op1->front());
-                data_cp.v_op1->pop();
-            }
             sentnum++;
         }   
+        //write all the file into log
+        while (!data_cp.v_op1->empty()){
+            translate(data_cp.filename,data_cp.v_op1->front());
+            data_cp.v_op1->pop();
+        }
     }
     return sentnum;
 }

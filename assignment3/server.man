@@ -1,0 +1,38 @@
+.TH ./Server "" "2022-11-27" "Assigment 3" "running instructions"
+
+.SH NAME
+.TP
+ /server - run the assigment server 
+
+.SH SYNOPSIS
+.TP
+ /server [port]
+
+
+.SH DESCRIPTION
+.TP
+ The programme initialize a server the using TCP connection to get Works to done.
+.TP
+ A new log server.log will be created to show what sherver did.
+.TP
+ if the server have no work for 30 seconds.it will shutdown
+.TP
+ [port] should be a integer in the range between 5000-64000,if a port busy,try another one
+
+.SH AUTHOR
+.TP
+Written by Marco Mai
+
+.SH SEEALSO
+.TP
+client.man 
+
+.SH CREDIT TO
+.TP
+https://blog.csdn.net/youyudexiaowangzi/article/details/97137413 (webpage is non-english)
+.TP
+https://liw.fi/manpages/
+.TP
+https://unix.stackexchange.com/questions/347032/makefile-looping-files-with-pattern
+.TP
+https://unix.stackexchange.com/questions/407126/exporting-man-pages-to-postscript
