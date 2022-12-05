@@ -7,7 +7,7 @@ all: link
 
 link: server.o client.o tands.o
 	$(CC) $(CFLAGS) -o $(TARGET1) server.o tands.o
-	$(CC) $(CFLAGS) -o $(TARGET2) client.o
+	$(CC) $(CFLAGS) -o $(TARGET2) client.o tands.o
 
 server.o: server.cpp
 	$(CC) $(CFLAGS) -c server.cpp
@@ -27,4 +27,4 @@ submit:
 	tar -czvf assignment3.tar makefile *.cpp *.h *.man readme.txt
 
 clean:
-	rm -f *.o prodcon
+	rm -f *.o ./server ./client *.ps

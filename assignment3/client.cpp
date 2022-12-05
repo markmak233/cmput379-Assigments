@@ -1,6 +1,5 @@
 #include "client.h"
 #include "tands.h"
-#include "tands.cpp"
 
 using namespace std;
 

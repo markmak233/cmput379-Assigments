@@ -1,228 +1,64 @@
-using port 6504
-bind failed program terminatedusing port 6504
-bind failed program terminatedusing port 6504
-bind failed program terminatedusing port 6504
-bind failed program terminatedusing port 6504
-bind failed program terminatedusing port 6504
-1669184161.50: #  1 (T100) from Legion5i-pro.783 
-1669184161.56: #  1 (Done) from Legion5i-pro.783 
-1669184161.56: #  2 (T  1) from Legion5i-pro.782 
-1669184161.56: #  2 (Done) from Legion5i-pro.782 
-1669184161.58: #  3 (T  1) from Legion5i-pro.783 
-1669184161.58: #  3 (Done) from Legion5i-pro.783 
-1669184161.58: #  4 (T 20) from Legion5i-pro.782 
-1669184161.59: #  4 (Done) from Legion5i-pro.782 
-1669184161.60: #  5 (T  2) from Legion5i-pro.783 
-1669184161.60: #  5 (Done) from Legion5i-pro.783 
-1669184161.61: #  6 (T500) from Legion5i-pro.782 
-1669184161.81: #  6 (Done) from Legion5i-pro.782 
-1669184161.81: #  7 (T  3) from Legion5i-pro.783 
-1669184161.81: #  7 (Done) from Legion5i-pro.783 
-1669184161.83: #  8 (T  1) from Legion5i-pro.782 
-1669184161.83: #  8 (Done) from Legion5i-pro.782 
-1669184161.83: #  9 (T  4) from Legion5i-pro.783 
-1669184161.83: #  9 (Done) from Legion5i-pro.783 
-1669184161.85: # 10 (T  1) from Legion5i-pro.782 
-1669184161.85: # 10 (Done) from Legion5i-pro.782 
-1669184161.87: # 11 (T  1) from Legion5i-pro.782 
-1669184161.87: # 11 (Done) from Legion5i-pro.782 
-1669184161.89: # 12 (T 10) from Legion5i-pro.782 
-1669184161.89: # 12 (Done) from Legion5i-pro.782 
-1669184161.91: # 13 (T 10) from Legion5i-pro.782 
-1669184161.92: # 13 (Done) from Legion5i-pro.782 
-1669184162.45: # 14 (T 60) from Legion5i-pro.782 
-1669184162.49: # 14 (Done) from Legion5i-pro.782 
-1669184162.52: # 15 (T  1) from Legion5i-pro.782 
-1669184162.52: # 15 (Done) from Legion5i-pro.782 
-1669184162.55: # 16 (T  1) from Legion5i-pro.782 
-1669184162.55: # 16 (Done) from Legion5i-pro.782 
-1669184162.60: # 17 (T  5) from Legion5i-pro.783 
-1669184162.60: # 17 (Done) from Legion5i-pro.783 
-1669184162.63: # 18 (T  6) from Legion5i-pro.783 
-1669184162.63: # 18 (Done) from Legion5i-pro.783 
-1669184162.65: # 19 (T  7) from Legion5i-pro.783 
-1669184162.65: # 19 (Done) from Legion5i-pro.783 
-1669184162.67: # 20 (T  8) from Legion5i-pro.783 
-1669184162.67: # 20 (Done) from Legion5i-pro.783 
-1669184162.69: # 21 (T  9) from Legion5i-pro.783 
-1669184162.70: # 21 (Done) from Legion5i-pro.783 
-1669184162.72: # 22 (T  1) from Legion5i-pro.783 
-1669184162.73: # 22 (Done) from Legion5i-pro.783 
-1669184162.75: # 23 (T  1) from Legion5i-pro.783 
-1669184162.75: # 23 (Done) from Legion5i-pro.783 
-1669184162.77: # 24 (T  1) from Legion5i-pro.782 
-1669184162.77: # 24 (Done) from Legion5i-pro.782 
-1669184162.77: # 25 (T  1) from Legion5i-pro.783 
-1669184162.77: # 25 (Done) from Legion5i-pro.783 
-1669184162.79: # 26 (T  1) from Legion5i-pro.783 
-1669184162.79: # 26 (Done) from Legion5i-pro.783 
-1669184162.81: # 27 (T 50) from Legion5i-pro.782 
-1669184162.83: # 27 (Done) from Legion5i-pro.782 
-1669184162.83: # 28 (T  1) from Legion5i-pro.783 
-1669184162.83: # 28 (Done) from Legion5i-pro.783 
-1669184162.85: # 29 (T  1) from Legion5i-pro.782 
-1669184162.85: # 29 (Done) from Legion5i-pro.782 
-1669184164.92: # 30 (T100) from Legion5i-pro.826 
-1669184164.96: # 30 (Done) from Legion5i-pro.826 
-1669184164.98: # 31 (T  1) from Legion5i-pro.826 
-1669184164.98: # 31 (Done) from Legion5i-pro.826 
-1669184165.00: # 32 (T  2) from Legion5i-pro.826 
-1669184165.01: # 32 (Done) from Legion5i-pro.826 
-1669184165.03: # 33 (T  3) from Legion5i-pro.826 
-1669184165.03: # 33 (Done) from Legion5i-pro.826 
-1669184165.05: # 34 (T  4) from Legion5i-pro.826 
-1669184165.05: # 34 (Done) from Legion5i-pro.826 
-1669184165.82: # 35 (T  5) from Legion5i-pro.826 
-1669184165.83: # 35 (Done) from Legion5i-pro.826 
-1669184165.86: # 36 (T  6) from Legion5i-pro.826 
-1669184165.86: # 36 (Done) from Legion5i-pro.826 
-1669184165.89: # 37 (T  7) from Legion5i-pro.826 
-1669184165.89: # 37 (Done) from Legion5i-pro.826 
-1669184165.92: # 38 (T  8) from Legion5i-pro.826 
-1669184165.93: # 38 (Done) from Legion5i-pro.826 
-1669184165.95: # 39 (T  9) from Legion5i-pro.826 
-1669184165.96: # 39 (Done) from Legion5i-pro.826 
-1669184165.99: # 40 (T  1) from Legion5i-pro.826 
-1669184165.99: # 40 (Done) from Legion5i-pro.826 
-1669184166.01: # 41 (T  1) from Legion5i-pro.826 
-1669184166.01: # 41 (Done) from Legion5i-pro.826 
-1669184166.03: # 42 (T  1) from Legion5i-pro.826 
-1669184166.03: # 42 (Done) from Legion5i-pro.826 
-1669184166.05: # 43 (T  1) from Legion5i-pro.826 
-1669184166.05: # 43 (Done) from Legion5i-pro.826 
-1669184166.07: # 44 (T  1) from Legion5i-pro.826 
-1669184166.07: # 44 (Done) from Legion5i-pro.826 
-1669184166.82: # 45 (T  1) from Legion5i-pro.827 
-1669184166.82: # 45 (Done) from Legion5i-pro.827 
-1669184166.86: # 46 (T 20) from Legion5i-pro.827 
-1669184166.87: # 46 (Done) from Legion5i-pro.827 
-1669184166.90: # 47 (T500) from Legion5i-pro.827 
-1669184167.11: # 47 (Done) from Legion5i-pro.827 
-1669184167.13: # 48 (T  1) from Legion5i-pro.827 
-1669184167.13: # 48 (Done) from Legion5i-pro.827 
-1669184167.15: # 49 (T  1) from Legion5i-pro.827 
-1669184167.15: # 49 (Done) from Legion5i-pro.827 
-1669184167.16: # 50 (T  1) from Legion5i-pro.827 
-1669184167.17: # 50 (Done) from Legion5i-pro.827 
-1669184167.18: # 51 (T 10) from Legion5i-pro.827 
-1669184167.19: # 51 (Done) from Legion5i-pro.827 
-1669184167.20: # 52 (T 10) from Legion5i-pro.827 
-1669184167.21: # 52 (Done) from Legion5i-pro.827 
-1669184167.72: # 53 (T 60) from Legion5i-pro.827 
-1669184167.75: # 53 (Done) from Legion5i-pro.827 
-1669184167.82: # 54 (T  1) from Legion5i-pro.827 
-1669184167.82: # 54 (Done) from Legion5i-pro.827 
-1669184167.86: # 55 (T  1) from Legion5i-pro.827 
-1669184167.86: # 55 (Done) from Legion5i-pro.827 
-1669184168.09: # 56 (T  1) from Legion5i-pro.827 
-1669184168.09: # 56 (Done) from Legion5i-pro.827 
-1669184168.13: # 57 (T 50) from Legion5i-pro.827 
-1669184168.15: # 57 (Done) from Legion5i-pro.827 
-1669184168.18: # 58 (T  1) from Legion5i-pro.827 
-1669184168.18: # 58 (Done) from Legion5i-pro.827 
+using port 12345
+1669606896.65: #  1 (T  1) from DESKTOP-CHANGER.523 
+1669606896.65: #  1 (Done) from DESKTOP-CHANGER.523 
+1669606896.65: #  2 (T100) from DESKTOP-CHANGER.522 
+1669606896.71: #  2 (Done) from DESKTOP-CHANGER.522 
+1669606896.71: #  3 (T 20) from DESKTOP-CHANGER.523 
+1669606896.73: #  3 (Done) from DESKTOP-CHANGER.523 
+1669606896.73: #  4 (T  1) from DESKTOP-CHANGER.522 
+1669606896.73: #  4 (Done) from DESKTOP-CHANGER.522 
+1669606896.73: #  5 (T500) from DESKTOP-CHANGER.523 
+1669606897.04: #  5 (Done) from DESKTOP-CHANGER.523 
+1669606897.04: #  6 (T  2) from DESKTOP-CHANGER.522 
+1669606897.04: #  6 (Done) from DESKTOP-CHANGER.522 
+1669606897.04: #  7 (T  1) from DESKTOP-CHANGER.523 
+1669606897.04: #  7 (Done) from DESKTOP-CHANGER.523 
+1669606897.04: #  8 (T  3) from DESKTOP-CHANGER.522 
+1669606897.04: #  8 (Done) from DESKTOP-CHANGER.522 
+1669606897.04: #  9 (T  1) from DESKTOP-CHANGER.523 
+1669606897.04: #  9 (Done) from DESKTOP-CHANGER.523 
+1669606897.05: # 10 (T  4) from DESKTOP-CHANGER.522 
+1669606897.05: # 10 (Done) from DESKTOP-CHANGER.522 
+1669606897.05: # 11 (T  1) from DESKTOP-CHANGER.523 
+1669606897.05: # 11 (Done) from DESKTOP-CHANGER.523 
+1669606897.05: # 12 (T 10) from DESKTOP-CHANGER.523 
+1669606897.06: # 12 (Done) from DESKTOP-CHANGER.523 
+1669606897.06: # 13 (T 10) from DESKTOP-CHANGER.523 
+1669606897.07: # 13 (Done) from DESKTOP-CHANGER.523 
+1669606897.57: # 14 (T 60) from DESKTOP-CHANGER.523 
+1669606897.61: # 14 (Done) from DESKTOP-CHANGER.523 
+1669606897.62: # 15 (T  1) from DESKTOP-CHANGER.523 
+1669606897.62: # 15 (Done) from DESKTOP-CHANGER.523 
+1669606897.62: # 16 (T  1) from DESKTOP-CHANGER.523 
+1669606897.62: # 16 (Done) from DESKTOP-CHANGER.523 
+1669606897.80: # 17 (T  5) from DESKTOP-CHANGER.522 
+1669606897.81: # 17 (Done) from DESKTOP-CHANGER.522 
+1669606897.81: # 18 (T  6) from DESKTOP-CHANGER.522 
+1669606897.81: # 18 (Done) from DESKTOP-CHANGER.522 
+1669606897.82: # 19 (T  7) from DESKTOP-CHANGER.522 
+1669606897.82: # 19 (Done) from DESKTOP-CHANGER.522 
+1669606897.83: # 20 (T  1) from DESKTOP-CHANGER.523 
+1669606897.83: # 20 (Done) from DESKTOP-CHANGER.523 
+1669606897.83: # 21 (T  8) from DESKTOP-CHANGER.522 
+1669606897.83: # 21 (Done) from DESKTOP-CHANGER.522 
+1669606897.83: # 22 (T  9) from DESKTOP-CHANGER.522 
+1669606897.84: # 22 (Done) from DESKTOP-CHANGER.522 
+1669606897.84: # 23 (T 50) from DESKTOP-CHANGER.523 
+1669606897.87: # 23 (Done) from DESKTOP-CHANGER.523 
+1669606897.87: # 24 (T  1) from DESKTOP-CHANGER.522 
+1669606897.87: # 24 (Done) from DESKTOP-CHANGER.522 
+1669606897.88: # 25 (T  1) from DESKTOP-CHANGER.522 
+1669606897.88: # 25 (Done) from DESKTOP-CHANGER.522 
+1669606897.88: # 26 (T  1) from DESKTOP-CHANGER.523 
+1669606897.88: # 26 (Done) from DESKTOP-CHANGER.523 
+1669606897.88: # 27 (T  1) from DESKTOP-CHANGER.522 
+1669606897.88: # 27 (Done) from DESKTOP-CHANGER.522 
+1669606897.89: # 28 (T  1) from DESKTOP-CHANGER.522 
+1669606897.89: # 28 (Done) from DESKTOP-CHANGER.522 
+1669606897.89: # 29 (T  1) from DESKTOP-CHANGER.522 
+1669606897.89: # 29 (Done) from DESKTOP-CHANGER.522 
 
 SUMMARY
-  14 transactions from Legion5i-pro.782 
-  15 transactions from Legion5i-pro.783 
-  15 transactions from Legion5i-pro.826 
-  14 transactions from Legion5i-pro.827 
-8.7 transactions/sec  (58/6.67)
-using port 5020
-1669245697.00: #  1 (T  1) from DESKTOP-CHANGER.1060 
-1669245697.01: #  1 (Done) from DESKTOP-CHANGER.1060 
-1669245697.01: #  2 (T100) from DESKTOP-CHANGER.1061 
-1669245697.07: #  2 (Done) from DESKTOP-CHANGER.1061 
-1669245697.07: #  3 (T 20) from DESKTOP-CHANGER.1060 
-1669245697.08: #  3 (Done) from DESKTOP-CHANGER.1060 
-1669245697.08: #  4 (T  1) from DESKTOP-CHANGER.1061 
-1669245697.08: #  4 (Done) from DESKTOP-CHANGER.1061 
-1669245697.09: #  5 (T500) from DESKTOP-CHANGER.1060 
-1669245697.43: #  5 (Done) from DESKTOP-CHANGER.1060 
-1669245697.43: #  6 (T  2) from DESKTOP-CHANGER.1061 
-1669245697.43: #  6 (Done) from DESKTOP-CHANGER.1061 
-1669245697.43: #  7 (T  1) from DESKTOP-CHANGER.1060 
-1669245697.43: #  7 (Done) from DESKTOP-CHANGER.1060 
-1669245697.43: #  8 (T  3) from DESKTOP-CHANGER.1061 
-1669245697.43: #  8 (Done) from DESKTOP-CHANGER.1061 
-1669245697.45: #  9 (T  1) from DESKTOP-CHANGER.1060 
-1669245697.45: #  9 (Done) from DESKTOP-CHANGER.1060 
-1669245697.46: # 10 (T  4) from DESKTOP-CHANGER.1061 
-1669245697.46: # 10 (Done) from DESKTOP-CHANGER.1061 
-1669245697.46: # 11 (T  1) from DESKTOP-CHANGER.1060 
-1669245697.46: # 11 (Done) from DESKTOP-CHANGER.1060 
-1669245697.47: # 12 (T 10) from DESKTOP-CHANGER.1060 
-1669245697.47: # 12 (Done) from DESKTOP-CHANGER.1060 
-1669245697.48: # 13 (T 10) from DESKTOP-CHANGER.1060 
-1669245697.48: # 13 (Done) from DESKTOP-CHANGER.1060 
-1669245697.99: # 14 (T 60) from DESKTOP-CHANGER.1060 
-1669245698.02: # 14 (Done) from DESKTOP-CHANGER.1060 
-1669245698.03: # 15 (T  1) from DESKTOP-CHANGER.1060 
-1669245698.03: # 15 (Done) from DESKTOP-CHANGER.1060 
-1669245698.03: # 16 (T  1) from DESKTOP-CHANGER.1060 
-1669245698.04: # 16 (Done) from DESKTOP-CHANGER.1060 
-1669245698.21: # 17 (T  5) from DESKTOP-CHANGER.1061 
-1669245698.22: # 17 (Done) from DESKTOP-CHANGER.1061 
-1669245698.22: # 18 (T  6) from DESKTOP-CHANGER.1061 
-1669245698.23: # 18 (Done) from DESKTOP-CHANGER.1061 
-1669245698.23: # 19 (T  7) from DESKTOP-CHANGER.1061 
-1669245698.23: # 19 (Done) from DESKTOP-CHANGER.1061 
-1669245698.24: # 20 (T  8) from DESKTOP-CHANGER.1061 
-1669245698.25: # 20 (Done) from DESKTOP-CHANGER.1061 
-1669245698.25: # 21 (T  1) from DESKTOP-CHANGER.1060 
-1669245698.25: # 21 (Done) from DESKTOP-CHANGER.1060 
-1669245698.25: # 22 (T  9) from DESKTOP-CHANGER.1061 
-1669245698.26: # 22 (Done) from DESKTOP-CHANGER.1061 
-1669245698.26: # 23 (T  1) from DESKTOP-CHANGER.1061 
-1669245698.26: # 23 (Done) from DESKTOP-CHANGER.1061 
-1669245698.27: # 24 (T  1) from DESKTOP-CHANGER.1061 
-1669245698.27: # 24 (Done) from DESKTOP-CHANGER.1061 
-1669245698.27: # 25 (T 50) from DESKTOP-CHANGER.1060 
-1669245698.30: # 25 (Done) from DESKTOP-CHANGER.1060 
-1669245698.30: # 26 (T  1) from DESKTOP-CHANGER.1061 
-1669245698.30: # 26 (Done) from DESKTOP-CHANGER.1061 
-1669245698.30: # 27 (T  1) from DESKTOP-CHANGER.1061 
-1669245698.30: # 27 (Done) from DESKTOP-CHANGER.1061 
-1669245698.31: # 28 (T  1) from DESKTOP-CHANGER.1060 
-1669245698.31: # 28 (Done) from DESKTOP-CHANGER.1060 
-1669245698.31: # 29 (T  1) from DESKTOP-CHANGER.1061 
-1669245698.31: # 29 (Done) from DESKTOP-CHANGER.1061 
-
-SUMMARY
-  14 transactions from DESKTOP-CHANGER.1060 
-  15 transactions from DESKTOP-CHANGER.1061 
-22.1 transactions/sec  (29/1.31)
-using port 5004
-1669606504.72: #  1 (T100) from DESKTOP-CHANGER.428 
-1669606504.79: #  1 (Done) from DESKTOP-CHANGER.428 
-1669606504.79: #  2 (T  1) from DESKTOP-CHANGER.428 
-1669606504.79: #  2 (Done) from DESKTOP-CHANGER.428 
-1669606504.79: #  3 (T  2) from DESKTOP-CHANGER.428 
-1669606504.80: #  3 (Done) from DESKTOP-CHANGER.428 
-1669606504.80: #  4 (T  3) from DESKTOP-CHANGER.428 
-1669606504.80: #  4 (Done) from DESKTOP-CHANGER.428 
-1669606504.80: #  5 (T  4) from DESKTOP-CHANGER.428 
-1669606504.81: #  5 (Done) from DESKTOP-CHANGER.428 
-1669606505.56: #  6 (T  5) from DESKTOP-CHANGER.428 
-1669606505.56: #  6 (Done) from DESKTOP-CHANGER.428 
-1669606505.57: #  7 (T  6) from DESKTOP-CHANGER.428 
-1669606505.57: #  7 (Done) from DESKTOP-CHANGER.428 
-1669606505.58: #  8 (T  7) from DESKTOP-CHANGER.428 
-1669606505.58: #  8 (Done) from DESKTOP-CHANGER.428 
-1669606505.59: #  9 (T  8) from DESKTOP-CHANGER.428 
-1669606505.59: #  9 (Done) from DESKTOP-CHANGER.428 
-1669606505.59: # 10 (T  9) from DESKTOP-CHANGER.428 
-1669606505.60: # 10 (Done) from DESKTOP-CHANGER.428 
-1669606505.60: # 11 (T  1) from DESKTOP-CHANGER.428 
-1669606505.60: # 11 (Done) from DESKTOP-CHANGER.428 
-1669606505.61: # 12 (T  1) from DESKTOP-CHANGER.428 
-1669606505.61: # 12 (Done) from DESKTOP-CHANGER.428 
-1669606505.61: # 13 (T  1) from DESKTOP-CHANGER.428 
-1669606505.61: # 13 (Done) from DESKTOP-CHANGER.428 
-1669606505.61: # 14 (T  1) from DESKTOP-CHANGER.428 
-1669606505.62: # 14 (Done) from DESKTOP-CHANGER.428 
-1669606505.62: # 15 (T  1) from DESKTOP-CHANGER.428 
-1669606505.62: # 15 (Done) from DESKTOP-CHANGER.428 
-
-SUMMARY
-  15 transactions from DESKTOP-CHANGER.428 
-16.8 transactions/sec  (15/0.89)
+  15 transactions from DESKTOP-CHANGER.522 
+  14 transactions from DESKTOP-CHANGER.523 
+23.4 transactions/sec  (29/1.24)
